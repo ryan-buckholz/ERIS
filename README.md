@@ -9,6 +9,18 @@ Comments should be added to commits, Containing the card number followed by desc
   -If multiple people are working on the same card/branch, merge conflicts should be resolved between them, and if necessary put to a team vote.
 
 Branch Structure:
-Playing with the idea of branches for Test, dev, then feature
-  -main -> test -> dev -> feature
-  -then merged back in feature -> dev -> test -> main
+Playing with the idea of branches for dev, then feature
+  -main -> dev -> feature
+  -then merged back in feature -> dev -> main
+  
+  main ->
+           dev ->
+                 feature
+                 feature
+                 feature
+                 feature
+Code review:
+  Group for code review: Review in dev, before pushed to main.
+  Individual, then as a group discuss notes.
+  would need a card on Flying Donut
+  Documented and reviewed every sprint.
