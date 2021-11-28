@@ -24,3 +24,15 @@ Code review:
   Individual, then as a group discuss notes.
   would need a card on Flying Donut
   Documented and reviewed every sprint.
+
+Sub-Team Membership:
+  Web:
+    Jason
+    Nataly
+  Mobile:   
+    Trey Hillard        
+    Gia-Huy Gonzalez
+  Database: 
+    Ryan Buckholz
+    Mei Peng
+    Preston Boumann
