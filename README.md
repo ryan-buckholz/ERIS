@@ -27,8 +27,8 @@ Code review:
 
 Sub-Team Membership:
   Web:
-    Jason
-    Nataly
+    Jason Fares
+    Nataly Kurylov
   Mobile:   
     Trey Hillard        
     Gia-Huy Gonzalez
