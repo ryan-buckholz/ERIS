@@ -1,11 +1,16 @@
 import Button from '@mui/material/Button'
+import { useNavigate } from 'react-router-dom';
+
 
 function SubmitSearchButton() {
+    let navigate = useNavigate();
     return (
         <div>
-            <Button variant="contained" disableElevation style={ButtonStyle}>
-                Submit Search
-            </Button>
+                <Button onClick={() => {
+                    navigate("/Home");
+                }} variant="contained" disableElevation style={ButtonStyle}>
+                    Submit Search
+                </Button>           
         </div>
     )
 }

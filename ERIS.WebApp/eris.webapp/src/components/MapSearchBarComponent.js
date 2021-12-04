@@ -9,9 +9,6 @@ export default function MapSearchBarComponent() {
     options: top100Films,
     getOptionLabel: (option: FilmOptionType) => option.title,
   };
-  const flatProps = {
-    options: top100Films.map((option) => option.title),
-  };
 
   return (
       <div className="row">

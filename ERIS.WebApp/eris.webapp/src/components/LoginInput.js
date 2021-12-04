@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
+
 const LoginInput = () => {
+    let navigate = useNavigate();
+
     return (
-        
         <div class="card col-xl-4 border-0"> 
             <div class="card-body">
                 <form action="Home.html">
@@ -10,7 +14,11 @@ const LoginInput = () => {
                     <div class="form-group" >
                         <input type="password" class="form-control" id="inputPassword" placeholder="Password"/>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    
+                    <button onClick={() => {
+                        navigate("/Home")
+                    }} type="submit" class="btn btn-primary">Submit</button>
+
                 </form>
                 </div>
         </div>

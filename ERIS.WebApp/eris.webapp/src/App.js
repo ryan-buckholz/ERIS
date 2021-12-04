@@ -1,20 +1,19 @@
 import './App.css';
-import Header from './components/Header'
-import LoginInput from './components/LoginInput';
-import Logo from './components/Logo';
-import SearchComponent from './components/SearchComponent'
-import SearchResultsGrid from './components/SearchResultsGrid';
-import SearchOptionsContaner from './components/SearchOptionsContaner';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Pages/Login'
+import Home from './Pages/Home';
+
 
 function App() {
   return (
     <div className="App" >
-      <Header />
-      <Logo />
-      <LoginInput />
-      
-      <SearchOptionsContaner />
-      <SearchResultsGrid />
+      <Router>
+        <Routes>
+          <Route path="/Home" element={ <Home /> } />
+          <Route path="/" element={ <Login /> } />
+
+        </Routes>
+      </Router>
     </div>
   );
 }
