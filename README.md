@@ -5,7 +5,8 @@ All work shall be done in their own "feature" branches
   -Feature branches will be created when starting a user story/card
   -Named as the card number
 Nothing should be committed if it is not functional. (You have ran it in simulator)
-Comments should be added to commits, Containing the card number followed by description of feature
+  - Use staging technique
+Comments should be added to commits, Containing the card number followed by similar description of feature as card (flying donut)
   -If multiple people are working on the same card/branch, merge conflicts should be resolved between them, and if necessary put to a team vote.
 
 Branch Structure:
@@ -23,7 +24,7 @@ Code review:
   Group for code review: Review in dev, before pushed to main.
   Individual, then as a group discuss notes.
   would need a card on Flying Donut
-  Documented and reviewed every sprint.
+  Documented and reviewed every sprint (Spring 2022)
 
 Sub-Team Membership:
   Web:
