@@ -18,7 +18,7 @@ namespace CalTrans
 
         }
 
-        private String server = "Server=120.0.0.1;User ID=yowzal;Password=1109;Database=sakila";
+        private String server = "Server=10.0.0.252;User ID=yowzal;Password=1109;Database=sakila";
         //protected override void OnAppearing()
         //{
          //   MySqlConnection sql = new MySqlConnection(server);
@@ -50,6 +50,8 @@ namespace CalTrans
             {
                 DisplayAlert("Oopsies...", "Username or Password is incorrect!", "Ok");
             }
+
+            Navigation.PushAsync(new DraftsPage());
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
