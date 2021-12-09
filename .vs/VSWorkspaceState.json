@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ERIS.Database",
+    "\\ERIS.MobileApp",
+    "\\ERIS.MobileAppWebAPI",
+    "\\ERIS.WebApp",
+    "\\ERIS.WebApp\\eris.webapp"
   ],
-  "SelectedNode": "\\C:\\Users\\rbuck\\Source\\Repos\\ryan-buckholz\\ERIS",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
