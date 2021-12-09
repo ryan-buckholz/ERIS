@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace CalTrans
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegisterPage : ContentPage
+    public partial class DraftsPage : ContentPage
     {
-        public RegisterPage()
+        public DraftsPage()
         {
             InitializeComponent();
         }

@@ -8,5 +8,7 @@ Once you installed MySQL Workbench, you can restore a schema including tables an
 Method of schema restoration:
 Click on the menu of Server -> Data import, choose 'import from Self-Contained file', choose the .sql file, and click on 'Start Import'. If you have same schema, please use a new schema name or replace the existed schema.
 
+* we had the "not really a login" login table on there, and that is not going to be actually in the database, so it should be a note in the Database readme, and not on the erd
+
 ERD: Ryan, Preston, Mei
 Schema: Mei
