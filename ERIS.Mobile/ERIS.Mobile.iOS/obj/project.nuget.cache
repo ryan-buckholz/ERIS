@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zAkFdJkocADlGgaSxteZlNa6KhhmZH2B+Y7gz14lC76MsPeIeHAwTvYQPRihVU1C8vVw4P+APmYlmnuUPCQZ/Q==",
+  "dgSpecHash": "u/BXxb5++HDIOvudd5OzJXa/sjbzvQA3BYF9ou37ibLh845dUzq9dYE212JBsptyLFl2oXGTAtOaNXEGfSS8Mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ryan\\Source\\Repos\\ryan-buckholz\\ERIS\\ERIS.Mobile\\ERIS.Mobile.iOS\\ERIS.Mobile.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Gamer\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.Mobile\\ERIS.Mobile.iOS\\ERIS.Mobile.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ryan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Ryan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Ryan\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Gamer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

@@ -232,20 +232,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ryan\\.nuget\\packages\\": {}
+    "C:\\Users\\Gamer\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ryan\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.MobileWebAPI\\ERIS.MobileWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Gamer\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.MobileWebAPI\\ERIS.MobileWebAPI.csproj",
       "projectName": "ERIS.MobileWebAPI",
-      "projectPath": "C:\\Users\\Ryan\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.MobileWebAPI\\ERIS.MobileWebAPI.csproj",
-      "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ryan\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.MobileWebAPI\\obj\\",
+      "projectPath": "C:\\Users\\Gamer\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.MobileWebAPI\\ERIS.MobileWebAPI.csproj",
+      "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gamer\\source\\repos\\ryan-buckholz\\ERIS\\ERIS.MobileWebAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -289,24 +297,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

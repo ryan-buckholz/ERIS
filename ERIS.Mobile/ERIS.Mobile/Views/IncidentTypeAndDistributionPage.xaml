@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ERIS.Mobile.Views.IncidentTypeAndDistributionPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!-- The following objects correspond to the *Incident Type* section of the ERIS assessment -->
+                <Label Text="Incident Type" FontSize="Medium" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center"></Label>
+                <CheckBox x:Name="RockFallCheckBox" CheckedChanged="RockFallCheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="(Rock) Fall" FontSize="Medium" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="ToppleCheckBox" CheckedChanged="ToppleCheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Topple" FontSize="Medium" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="SlideCheckBox" CheckedChanged="SlideCheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Slide" FontSize="Medium" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="SpreadCheckBox" CheckedChanged="SpreadCheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Spread" FontSize="Medium" Grid.Row="4" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="FlowCheckBox" CheckedChanged="FlowCheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Flow" FontSize="Medium" Grid.Row="5" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="CompoundCheckBox" CheckedChanged="CompoundCheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Compound" FontSize="Medium" Grid.Row="6" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="ErosionCheckBox" CheckedChanged="ErosionCheckBox_CheckedChanged" Grid.Row="7" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Erosion" FontSize="Medium" Grid.Row="7" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="SurfacialSloughingCheckBox" CheckedChanged="SurfacialSloughingCheckBox_CheckedChanged" Grid.Row="8" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Surfacial Sloughing" FontSize="Medium" Grid.Row="8" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="ScouredToeCheckBox" CheckedChanged="ScouredToeCheckBox_CheckedChanged" Grid.Row="9" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Scoured Toe" FontSize="Medium" Grid.Row="9" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="WashoutCheckBox" CheckedChanged="WashoutCheckBox_CheckedChanged" Grid.Row="10" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Washout" FontSize="Medium" Grid.Row="10" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
