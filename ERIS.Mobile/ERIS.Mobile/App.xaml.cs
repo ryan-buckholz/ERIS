@@ -14,7 +14,8 @@ namespace ERIS.Mobile
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new LoginUI();
         }
 
         protected override void OnStart()
