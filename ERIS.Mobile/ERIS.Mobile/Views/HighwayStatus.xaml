@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ERIS.Mobile.Views.HighwayStatus">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Highway Status" FontSize="Medium" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline"></Label>
+
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!-- The following objects correspond to the Highway Status section of the ERIS assessment -->
+                <CheckBox x:Name="OpenCheckBox" CheckedChanged="Open_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Open" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="ShoulderClosedCheckBox" CheckedChanged="Shoulder_Closed_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Shoulder Closed" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="LanesClosedCheckBox" CheckedChanged="Lanes_Closed_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Lane(s) Closed" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="OneWayCheckBox" CheckedChanged="One_Way_Closed_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="One-Way Closed" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"></Label>
+
+                <CheckBox x:Name="TwoWayCheckBox" CheckedChanged="Two_Way_Closed_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Two-Way Closed" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></Label>
+
+                <Entry Placeholder="# Lanes" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="2"></Entry>
+
+            </Grid>
+
+
+            <Button 
+                VerticalOptions="Center"
+                Text="Next"    
+                TextColor="Black"
+                BackgroundColor="LightGray"
+                BorderColor="Black"
+                BorderWidth="1.5"
+                CornerRadius="20"
+                Margin="0,300,0,0"></Button>
+            
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
