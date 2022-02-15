@@ -19,7 +19,7 @@ namespace ERIS.Mobile.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "admin" && txtPassword.Text == "123")
+            if (txtUsername.Text == "" && txtPassword.Text == "")
             {
                 Navigation.PushModalAsync(new DraftsPage());
 
