@@ -20,7 +20,7 @@
             <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Black"></Entry>
             <Entry  Placeholder="Report Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
             <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Longitutde:" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
 
             <Button 
                 VerticalOptions= "Start"
@@ -47,8 +47,7 @@
                 BackgroundColor="LightGray"
                 BorderColor="Black"
                 BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Button_Clicked"></Button>
+                CornerRadius="20"></Button>
 
         </StackLayout>
     </ContentPage.Content>
