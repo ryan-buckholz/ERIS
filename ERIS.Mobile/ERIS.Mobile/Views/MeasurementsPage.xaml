@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ERIS.Mobile.Views.MeasurementsPage"
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="Measurements"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   TextDecorations="Underline"
+                   TextColor="Black"></Label>
+
+            <Entry  Placeholder="Slope Height, ft(H)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Original Slope, deg(a)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Landslide Width, ft(Wd)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Landslide Length (ft(Ld))" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Main Scarp Height, ft(Hs)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Landslide Slope, deg (B)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Length of Roadway Encroached, ft(Lr)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Width of Roadway Encroached, ft(Wr)" TextColor="Black" PlaceholderColor="Black"></Entry>
+            
+            <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
