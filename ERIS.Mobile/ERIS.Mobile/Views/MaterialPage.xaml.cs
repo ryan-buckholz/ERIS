@@ -1,37 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ERIS.Mobile.Views
 {
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HighwayStatus : ContentPage
+    public partial class MaterialPage : ContentPage
     {
-        public HighwayStatus()
+        public MaterialPage()
         {
             InitializeComponent();
         }
 
-        private void Open_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Rock_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void Shoulder_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Bedding_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void Lanes_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Joints_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void One_Way_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Fractures_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void Two_Way_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Soil_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
