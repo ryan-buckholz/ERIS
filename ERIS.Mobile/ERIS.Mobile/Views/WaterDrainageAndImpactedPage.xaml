@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ERIS.Mobile.Views.WaterDrainageAndImpactedPage"
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Label Text="Water/Drainage"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextDecorations="Underline"
+                   TextColor="Black"></Label>
+            
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
+                <CheckBox x:Name="CloggedInletCheckBox" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Clogged Inlet"  Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+
+                <CheckBox x:Name="CompromisedDrainsCheckBox" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Compromised Drains"  Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+
+                <CheckBox x:Name="SurfaceRunoffCheckBox" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Surface Runoff"  Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+
+                <CheckBox x:Name="TorrentSurgeFloodCheckBox" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Torrent, Surge, Flood"  Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+            </Grid>
+
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
+                <Label Text="Impacted"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black"></Label>
+                
+                <Label Text="May be Impacted"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black"></Label>
+                
+                <CheckBox x:Name="AdjacentUtilitiesImpactedCheckBox" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="AdjacentUtilitiesMayBeImpactedCheckBox" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Adjacent Utilities"  Grid.Row="1" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+
+                <CheckBox x:Name="AdjacentPropertiesImpactedCheckBox" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="AdjacentPropertiesMayBeImpactedCheckBox" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Adjacent Properties"  Grid.Row="2" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+
+                <CheckBox x:Name="AdjacentStructuresImpactedCheckBox" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="AdjacentStructuresMayBeImpactedCheckBox" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Adjacent Structures"  Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+            </Grid>
+
+            <Button Text="Save" Margin="0,150,0,0" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
