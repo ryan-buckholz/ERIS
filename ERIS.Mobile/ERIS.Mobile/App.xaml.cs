@@ -14,7 +14,7 @@ namespace ERIS.Mobile
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new ObservationAndNotesPage();
+            MainPage = new AppShell();
             //MainPage = new DraftsPage();
         }
 
