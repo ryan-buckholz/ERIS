@@ -48,6 +48,7 @@
                 <Setter Property="BorderWidth" Value="1.5"></Setter>
                 <Setter Property="CornerRadius" Value="20"></Setter>
             </Style>
+
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

@@ -36,7 +36,15 @@ namespace ERIS.Mobile.Views
 
         }
 
+        private void Save_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
         private void Next_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+        private void Back_Button_Clicked(object sender, EventArgs e)
         {
 
         }
