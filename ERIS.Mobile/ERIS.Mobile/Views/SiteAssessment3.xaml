@@ -43,7 +43,8 @@
                 BackgroundColor="LightGray"
                 BorderColor="Black"
                 BorderWidth="1.5"
-                CornerRadius="20"></Button>
+                CornerRadius="20"
+                Clicked="Button_Clicked"></Button>
             <Button 
                 VerticalOptions= "End"
                 Text="Back"    
