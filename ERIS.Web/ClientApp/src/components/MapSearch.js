@@ -6,7 +6,7 @@ import { Card } from '@mui/material'
 function MapSearch() {
   return (
     <div >
-        <Input 
+        <Input //TODO make autofill with highways in db
           name='mapInput'
           label='Search Highways' />
           <Card variant='outlined'>
