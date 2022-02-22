@@ -1,62 +1,87 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { DataGrid } from '@mui/x-data-grid';
 
-export class SearchResultsGrid extends Component {
+const columns = [
+    { field: 'ProjectID', headerName: 'ProjectID', width: 100 },
+    {
+      field: 'LName',
+      headerName: 'LName',
+      width: 100,
+      editable: true,
+    },
+    {
+      field: 'EmployeeID',
+      headerName: 'EmployeeID',
+      width: 110,
+      editable: true,
+    },
+    {
+      field: 'DateOfIncident',
+      headerName: 'DateOfIncident',
+      width: 130,
+      editable: true,
+    },
+    {
+      field: 'County',
+      headerName: 'County',
+      sortable: false,
+      width: 100,
+    //   valueGetter: (params) =>
+    //     `${params.getValue(params.id, 'firstName') || ''} ${
+    //       params.getValue(params.id, 'lastName') || ''
+    //     }`,
+    },
+    {
+        field: 'District',
+        headerName: 'District',
+        width: 100,
+        editable: true,
+    },
+    {
+        field: 'Route',
+        headerName: 'Route',
+        width: 100,
+        editable: true,
+    },
+    {
+        field: 'HighwayStatus',
+        headerName: 'HighwayStatus',
+        width: 130,
+        editable: true,
+    }
+    
+  ];
 
-    render() {
-        return (
-            <div>
-                <div className="col-md">
-                    <div className="card bg-light">
-                        <div className="card-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">ProjectID</th>
-                                        <th scope="col">LName</th>
-                                        <th scope="col">EmployeeId</th>
-                                        <th scope="col">Incident Date</th>
-                                        <th scope="col">County</th>
-                                        <th scope="col">District</th>
-                                        <th scope="col">Route</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Jones</td>
-                                        <td>123654</td>
-                                        <td>12/24/18</td>
-                                        <td>Sacramento</td>
-                                        <td>2</td>
-                                        <td>66</td>
+  const rows = [
+    {id:1, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
+        HighwayStatus: 'closed'},
+    {id:2, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
+        HighwayStatus: 'closed'},
+    {id:3, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
+        HighwayStatus: 'closed'},
+  ];
 
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Daniels</td>
-                                        <td>123654</td>
-                                        <td>10/08/2012</td>
-                                        <td>Orange</td>
-                                        <td>2</td>
-                                        <td>66</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Test</td>   
-                                        <td>123654</td>
-                                        <td>02/13/2022</td>
-                                        <td>Shasta</td>
-                                        <td>2</td>
-                                        <td>66</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+function SearchResultsGrid() {
+    const options = {
+        filterType: 'checkbox',
+    };
+    
+    return (
+        <div className="card col-xl">
+            <div className="card-body">
+            <div style={{ height: 400, width: '100%' }} className="col-xl-9">
+                <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    pageSize={5}
+                    rowsPerPageOptions={[5]}
+                    checkboxSelection
+                    disableSelectionOnClick />
                 </div>
             </div>
-        );
-    }
+        </div>
+        
+    )
 }
+
+export default SearchResultsGrid

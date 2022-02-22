@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import { Accordion, AccordionSummary, AccordionDetails, Typography} from '@mui/material/';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import StartDateFilter from './DateFilters/StartDateFilter';
+import EndDateFilter from './DateFilters/EndDateFilter';
+import Input from '../controls/Input';
+import Radiogroup from '../controls/Radiogroup';
+
 
 export class SearchFilters extends Component {
     static displayName = SearchFilters.name;
@@ -6,157 +13,112 @@ export class SearchFilters extends Component {
     render() {
         return (
             <div>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Date
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div class="row">
-                                    <div className="col-6">
-                                        <label>Date start:</label>
-                                        <input className="form-control" type="date" />
-                                    </div>
-                                    <div className="col-6">
-                                        <label>Date end:</label>
-                                        <input className="form-control" type="date" />
-                                    </div>
-                                </div>
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography>Date</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            <div class="d-flex justify-content-around">
+                                <StartDateFilter />
+                                <EndDateFilter  />
+                            </div>
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography>Name</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            <div class="d-flex justify-content-around">
+                                <Input
+                                    label='First Name'
+                                    name='firstNameInput' />
+                                <Input
+                                    label='Last Name'
+                                    name='lastnameInput' />
+                                <Input 
+                                    type='number'
+                                    label='Employee Id'
+                                    name='employeeIdInput' />
+                            </div>
+                            
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Name
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div className="row">
-                                    <div className="col-4">
-                                        <label>First Name:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                    <div className="col-4">
-                                        <label>Last Name:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                    <div className="col-4">
-                                        <label>Employee ID:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Location
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div className="row">
-                                    <div className="col-xl-3">
-                                        <label>County:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                    <div className="col-xl-3">
-                                        <label>District:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                    <div className="col-xl-3">
-                                        <label>Latitude:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                    <div className="col-xl-3">
-                                        <label>Latitude:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div className="col-xl-4">
-                                        <label>Route:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
-                                    <div className="col-xl-4">
-                                        <label>Post Mile:</label>
-                                        <input className="form-control" type="number" />
-                                    </div>
-                                    <div className="col-xl-4">
-                                        <label>Highway:</label>
-                                        <input className="form-control" type="text" />
-                                    </div>
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography>Location</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            <div class="row">
+                                <div class="d-flex justify-content-around">
+                                    <Input
+                                        label='County'
+                                        name='countyInput' />
+                                    
+                                    <Input 
+                                        type='number'
+                                        label='Latitude'
+                                        name='latitudeInput' />
+                                    <Input 
+                                        type='number'
+                                        label='Longitude'
+                                        name='longitudeInput' />
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="d-flex justify-content-around">
+                                    <Input
+                                    label='Route'
+                                    name='routeInput' />
 
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Highway Status
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div className="row">
-                                    <div className="col-xl-4">
-                                    </div>
-
-                                    <div className="col-xl-2">
-
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Open
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                                Shoulder Closed
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                                One-Way Closed
-                                            </label>
-                                        </div>
-
-                                    </div>
-                                    <div className="col-xl-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Two-Way closed
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Lane(s) closed
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <Input
+                                    label='Post Mile'
+                                    name='postmileInput' />
+                                    
+                                    <Input
+                                    label='District'
+                                    name='districtInput' />
                                 </div>
+                                    
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <a className="btn btn-primary mt-3 float-end">Search</a>
-                    </div>
-                </div>
+                            
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography> Highway Status</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            <Radiogroup />
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                
             </div>
         );
     }
