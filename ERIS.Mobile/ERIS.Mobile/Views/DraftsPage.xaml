@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ERIS.Mobile.Views.DraftsPage"
+             BackgroundColor="#F8F0E3">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="CalTrans.png" WidthRequest="180" HeightRequest="180"></Image>
+
+            <Button
+                VerticalOptions="Center"
+                Text="Drafts"
+                TextColor="Black"
+                BackgroundColor="LightGray"
+                BorderWidth="1.5"
+                BorderColor="Black"
+                CornerRadius="50"
+                >
+            </Button>
+
+            <Button
+                VerticalOptions="Center"
+                Text="New Report"
+                TextColor="Black"
+                BackgroundColor="LightGray"
+                BorderWidth="1.5"
+                BorderColor="Black"
+                CornerRadius="50"
+                Clicked="Button_Clicked">
+            </Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

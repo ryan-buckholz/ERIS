@@ -27,6 +27,28 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+
+            <Style x:Key="AssessmentCheckBox" TargetType="CheckBox">
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="Color" Value="Black"></Setter>
+            </Style>
+
+            <Style x:Key="AssessmentCheckboxLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+
+            <Color x:Key="AssessmentBackgroundColor">#F8F0E3</Color>
+
+            <Style x:Key="AssessmentButton" TargetType="Button">
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="Background" Value="LightGray"></Setter>
+                <Setter Property="BorderColor" Value="Black"></Setter>
+                <Setter Property="BorderWidth" Value="1.5"></Setter>
+                <Setter Property="CornerRadius" Value="20"></Setter>
+            </Style>
+
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

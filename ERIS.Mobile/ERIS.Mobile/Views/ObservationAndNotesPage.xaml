@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ERIS.Mobile.Views.ObservationAndNotesPage"
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Label Text="Observations and Notes"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextDecorations="Underline"
+                   TextColor="Black"></Label>
+
+            <Label Text="Landslide Moving/Developing Rate, Pavement/Ground Cracks w/ Measurements; Slope and Bedding Orientations in relation to Roadway Alignment, Joints, Fractures; Site Access for further investigation and construction; Drainage; Erosion; Potential Causes of Incident; Constraints; Additional Notes on Checked Boxes; Site History (Interview Maintenance); Map Cracks - Location, Length, Horizontal and Vertical Displacements, Depth, and Direction."
+                   FontSize="Small"
+                   TextColor="Black"></Label>
+
+            <Editor x:Name="notesEditor" HeightRequest="200" BackgroundColor="LightGray"></Editor>
+
+            <Button Text="Save" Margin="0,100,0,0" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

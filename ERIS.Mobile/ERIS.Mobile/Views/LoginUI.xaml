@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#F8F0E3"
+             x:Class="ERIS.Mobile.Views.LoginUI">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="caltrans.png" WidthRequest="180" HeightRequest="180"></Image>
+            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
+                    <Button 
+                VerticalOptions= "Fill"
+                Text="Login"    
+                TextColor="Black"
+                BackgroundColor="LightGray"
+                BorderColor="Black"
+                BorderWidth="1.5"
+                Clicked="Button_Clicked"
+                CornerRadius="50"></Button>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account? " TextColor="Black"/>
+                        <Span Text="Register" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
