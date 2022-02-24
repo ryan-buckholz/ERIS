@@ -22,24 +22,6 @@
 
   <ItemGroup>
     <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
-      <DependentUpon>GeneralReportInfoPart1.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GeneralReportInfoPart2Page.xaml.cs">
-      <DependentUpon>GeneralReportInfoPart2.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GeneralReportInfoPart3.xaml.cs">
-      <DependentUpon>GeneralReportInfoPart3.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
-      <DependentUpon>GeneralReportInfoPart1Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GeneralReportInfoPart2Page.xaml.cs">
-      <DependentUpon>GeneralReportInfoPart2Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GeneralReportInfoPart3Page.xaml.cs">
-      <DependentUpon>GeneralReportInfoPart3Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
       <DependentUpon>GeneralReportInfoPart1Page.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\GeneralReportInfoPart2Page.xaml.cs">
@@ -84,7 +66,7 @@
     <EmbeddedResource Update="Views\GeneralReportInfoPart2Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\GeneralReportInfoPart3.xaml">
+    <EmbeddedResource Update="Views\GeneralReportInfoPart3Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\GeneralReportInfoPart1Page.xaml">
