@@ -48,7 +48,7 @@ namespace ERIS.Mobile.Views
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new WaterDrainageAndImpactedPage());
+            Navigation.PushModalAsync(new WaterDrainagePage());
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {

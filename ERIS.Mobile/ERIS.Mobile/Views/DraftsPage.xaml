@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ERIS.Mobile.Views.DraftsPage"
-             BackgroundColor="#F8F0E3">
+             BackgroundColor="#F8F0E3"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
 

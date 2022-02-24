@@ -10,16 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace ERIS.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WaterDrainageAndImpactedPage : ContentPage
+    public partial class GeneralReportInfoPart2Page : ContentPage
     {
-        public WaterDrainageAndImpactedPage()
+        public GeneralReportInfoPart2Page()
         {
             InitializeComponent();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MeasurementsPage());
+            Navigation.PushModalAsync(new GeneralReportInfoPart3Page());
+
         }
     }
 }

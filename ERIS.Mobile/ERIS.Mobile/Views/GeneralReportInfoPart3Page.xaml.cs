@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ERIS.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SiteAssessment3 : ContentPage
+    public partial class GeneralReportInfoPart3Page : ContentPage
     {
-        public SiteAssessment3()
+        public GeneralReportInfoPart3Page()
         {
             InitializeComponent();
         }

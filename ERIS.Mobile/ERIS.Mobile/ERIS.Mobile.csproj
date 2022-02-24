@@ -21,6 +21,42 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart2Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart3.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart2Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart2Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart3Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart3Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart2Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart2Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GeneralReportInfoPart3Page.xaml.cs">
+      <DependentUpon>GeneralReportInfoPart3Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ObservationsAndNotesPage.xaml.cs">
+      <DependentUpon>ObservationsAndNotesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\WaterDrainagePage.xaml.cs">
+      <DependentUpon>WaterDrainagePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Views\DraftsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -42,16 +78,16 @@
     <EmbeddedResource Update="Views\PavementGroundPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ObservationAndNotesPage.xaml">
+    <EmbeddedResource Update="Views\ObservationsAndNotesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SiteAssessment2.xaml">
+    <EmbeddedResource Update="Views\GeneralReportInfoPart2Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SiteAssessment3.xaml">
+    <EmbeddedResource Update="Views\GeneralReportInfoPart3.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SiteAssignment1.xaml">
+    <EmbeddedResource Update="Views\GeneralReportInfoPart1Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\UploadPhotos.xaml">
@@ -60,7 +96,7 @@
     <EmbeddedResource Update="Views\VegetationSlopeAndWaterContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\WaterDrainageAndImpactedPage.xaml">
+    <EmbeddedResource Update="Views\WaterDrainagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

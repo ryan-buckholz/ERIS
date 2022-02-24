@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ERIS.Mobile.Views.SiteAssignment1"
+             x:Class="ERIS.Mobile.Views.GeneralReportInfoPart3Page"
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
@@ -12,15 +12,21 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-  
-            <Entry  Placeholder="Date:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Report Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="DISTRICT CONTACT" TextColor="Black" FontSize="Large"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <Entry  Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Phone:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Cell Phone:" TextColor="Black" PlaceholderColor="Black"></Entry>
 
             <Button 
                 VerticalOptions= "Start"
@@ -39,16 +45,14 @@
                 BorderWidth="1.5"
                 CornerRadius="20"
                 Clicked="Button_Clicked"></Button>
-
             <Button 
                 VerticalOptions= "End"
-                Text="Use Current Location for Long/Latitude"    
+                Text="Back"    
                 TextColor="Black"
                 BackgroundColor="LightGray"
                 BorderColor="Black"
                 BorderWidth="1.5"
                 CornerRadius="20"></Button>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
