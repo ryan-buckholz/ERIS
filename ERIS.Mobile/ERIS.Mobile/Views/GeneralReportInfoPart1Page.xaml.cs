@@ -17,7 +17,7 @@ namespace ERIS.Mobile.Views
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Next_Button_Clicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart2Page));
         }

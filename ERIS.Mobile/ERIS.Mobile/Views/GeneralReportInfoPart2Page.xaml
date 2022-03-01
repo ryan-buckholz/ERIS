@@ -35,7 +35,7 @@
                 BorderColor="Black"
                 BorderWidth="1.5"
                 CornerRadius="20"
-                Clicked="Button_Clicked"></Button>
+                Clicked="Next_Button_Clicked"></Button>
             <Button 
                 VerticalOptions= "End"
                 Text="Back"    
