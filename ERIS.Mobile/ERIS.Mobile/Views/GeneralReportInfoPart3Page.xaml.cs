@@ -19,8 +19,7 @@ namespace ERIS.Mobile.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new UploadPhotos());
-
+            Shell.Current.GoToAsync("//" + nameof(IncidentTypeAndDistributionPage));
         }
     }
 }
