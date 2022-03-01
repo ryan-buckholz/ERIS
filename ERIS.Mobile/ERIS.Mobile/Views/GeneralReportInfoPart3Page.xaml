@@ -52,7 +52,8 @@
                 BackgroundColor="LightGray"
                 BorderColor="Black"
                 BorderWidth="1.5"
-                CornerRadius="20"></Button>
+                CornerRadius="20"
+                Clicked="Back_Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

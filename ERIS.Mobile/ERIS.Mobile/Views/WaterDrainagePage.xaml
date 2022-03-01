@@ -69,7 +69,7 @@
 
             <Button Text="Save" Margin="0,150,0,0" Style="{StaticResource AssessmentButton}"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
