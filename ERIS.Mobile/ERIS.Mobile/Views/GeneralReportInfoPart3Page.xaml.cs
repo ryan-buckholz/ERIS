@@ -23,7 +23,7 @@ namespace ERIS.Mobile.Views
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {
-
+            Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart2Page));
         }
     }
 }
