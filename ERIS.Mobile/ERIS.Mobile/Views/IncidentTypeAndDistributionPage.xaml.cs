@@ -86,5 +86,9 @@ namespace ERIS.Mobile.Views
         {
             Shell.Current.GoToAsync("//" + nameof(HighwayStatus));
         }
+        private void Back_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

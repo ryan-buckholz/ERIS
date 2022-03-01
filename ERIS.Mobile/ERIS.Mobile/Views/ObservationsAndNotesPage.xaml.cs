@@ -16,5 +16,9 @@ namespace ERIS.Mobile.Views
         {
             InitializeComponent();
         }
+        private void Back_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
