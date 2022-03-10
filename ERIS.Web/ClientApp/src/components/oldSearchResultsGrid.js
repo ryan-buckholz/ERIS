@@ -44,11 +44,41 @@ const columns = [
         editable: true,
     },
     {
+        field: 'Lattitude',
+        headerName: 'Lattitude',
+        width: 90,
+        editable: true,
+    },
+    {
+        field: 'Longitude',
+        headerName: 'Longitude',
+        width: 90,
+        editable: true,
+    },
+    {
         field: 'HighwayStatus',
         headerName: 'HighwayStatus',
         width: 130,
         editable: true,
-    }
+    },
+    {
+        field: 'WaterContent',
+        headerName: 'WaterContent',
+        width: 120,
+        editable: true,
+    },
+    {
+        field: 'AdjacentUtilities',
+        headerName: 'AdjacentUtilities',
+        width: 140,
+        editable: true,
+    },
+    {
+        field: 'AdjacentProperties',
+        headerName: 'AdjacentProperties',
+        width: 160,
+        editable: true,
+    },
   ];
 
   const rows = [
