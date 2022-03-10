@@ -17,10 +17,15 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />  
+    <PackageReference Include="Xamarin.MediaGallery" Version="2.1.1" />  
+    <PackageReference Include="Xamarin.MediaGallery.Permision" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="UploadAssessment.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\DraftsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -7,20 +7,19 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ERIS.Mobile.Views
+namespace ERIS.Mobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MeasurementsPage : ContentPage
+    public partial class UploadAssessment : ContentPage
     {
-        public MeasurementsPage()
+        public UploadAssessment()
         {
             InitializeComponent();
         }
 
-        private void Next_Clicked(object sender, EventArgs e)
+        private void Submit_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new UploadAssessment());
-
+            DisplayAlert("Submitted", "Congrats you submitted the assessment!", "OK");
         }
     }
 }
