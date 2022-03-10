@@ -77,7 +77,7 @@ export class Details extends Component {
 				<div className="card mt-3">
 					<div className="card-body">
 						<div>
-							<div class="col-xs-6">
+							<div class="col-xs-4">
 								<div class="form-group">
 									<input
 										type="text"
@@ -85,16 +85,6 @@ export class Details extends Component {
 										onChange={this.handleDateChange}
 									/>
 
-									<div class="col-xs-9">
-										<label>Date</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<select value={district} onChange={this.handleDistrictChange}>
 										<option value=""></option>
 										<option value="Sacramento">Sacramento</option>
@@ -102,103 +92,51 @@ export class Details extends Component {
 										<option value="Sonoma">Sonoma</option>
 									</select>
 
-									<div class="col-xs-9">
-										<label>District</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<input
 										type="text"
 										value={county}
 										onChange={this.handleCountyChange}
 									/>
-								</div>
 
-								<div class="col-xs-9">
-									<label>County</label>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<input
 										type="text"
 										value={route}
 										onChange={this.handleRouteChange}
 									/>
 
-									<div class="col-xs-9">
-										<label>Route</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<input
 										type="text"
 										value={postmile}
 										onChange={this.handlePostMileChange}
 									/>
-									<div class="col-xs-9">
-										<label>Post Mile</label>
-									</div>
-								</div>
-							</div>
-						</div>
 
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<input
 										type="text"
 										value={ea}
 										onChange={this.handleEaChange}
 									/>
 
-									<div class="col-xs-9">
-										<label>EA</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<input
 										type="text"
 										value={projectid}
 										onChange={this.handleProjecrIDChange}
 									/>
 
-									<div class="col-xs-9">
-										<label>Project ID</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="col-xs-6">
-								<div class="form-group">
 									<input
 										type="text"
-										value={county}
-										onChange={this.handleCountyChange}
+										value={dateincidentreport}
+										onChange={this.handleDateIncidentChange}
 									/>
 
 									<div class="col-xs-9">
+										<label>Date</label>
+										<label>District</label>
 										<label>County</label>
+										<label>Route</label>
+										<label>Post Mile</label>
+										<label>EA</label>
+										<label>Project ID</label>
+										<label>Date Incident Report</label>
 									</div>
 								</div>
 							</div>
