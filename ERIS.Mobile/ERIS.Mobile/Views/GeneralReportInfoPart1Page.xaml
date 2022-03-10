@@ -8,19 +8,19 @@
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Site Location and Dates" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
   
-            <Entry  Placeholder="Date:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Report Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
             <Button 
                 VerticalOptions= "Start"

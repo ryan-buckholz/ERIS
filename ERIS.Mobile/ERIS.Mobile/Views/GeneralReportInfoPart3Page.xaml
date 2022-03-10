@@ -5,13 +5,6 @@
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-            <Label HorizontalOptions="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
 
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
@@ -22,11 +15,11 @@
             </Label>
 
 
-            <Entry  Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Phone:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Cell Phone:" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Phone:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Cell Phone:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
             <Button 
                 VerticalOptions= "Start"

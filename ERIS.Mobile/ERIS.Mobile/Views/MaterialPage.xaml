@@ -1,42 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ERIS.Mobile.Views.MaterialPage">
+             x:Class="ERIS.Mobile.Views.MaterialPage"
+              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
             <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Label Text="Material" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+                <Label Text="Slope Composition" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto">
 
                 <!-- The following objects correspond to the Material section of the ERIS assessment -->
 
-                <CheckBox x:Name="RockCheckbox" CheckedChanged="Rock_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Rock" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="RockCheckbox" CheckedChanged="Rock_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Rock" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="BeddingCheckbox" CheckedChanged="Bedding_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Bedding" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="BeddingCheckbox" CheckedChanged="Bedding_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Bedding" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="JointsCheckbox" CheckedChanged="Joints_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Joints" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="JointsCheckbox" CheckedChanged="Joints_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Joints" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="FracturesCheckbox" CheckedChanged="Fractures_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Fractures" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="FracturesCheckbox" CheckedChanged="Fractures_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Fractures" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="SoilCheckbox" CheckedChanged="Soil_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Soil" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="SoilCheckbox" CheckedChanged="Soil_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Soil" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <Label Text="Clay" FontSize="Medium" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                <Label Text="Clay" FontSize="Medium" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="5" Grid.Column="1"></Entry>
 
-                <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="6" Grid.Column="1"></Entry>
 
-                <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="7" Grid.Column="1"></Entry>
 
-                <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="8" Grid.Column="1"></Entry>
 
 
