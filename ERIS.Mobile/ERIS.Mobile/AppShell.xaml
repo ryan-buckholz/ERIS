@@ -80,17 +80,26 @@
     -->
     
     <!-- We need to put each Flyout Item for each page in the order we want the pages to show-->
-    <FlyoutItem Title="Draft Page">
+    <FlyoutItem Title="Drafts" FlyoutItemIsVisible="False">
         <ShellContent Route="DraftsPage" ContentTemplate="{DataTemplate local:DraftsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Incident Type">
-        <ShellContent Route="IncidentTypeAndDistributionPage" ContentTemplate="{DataTemplate local:IncidentTypeAndDistributionPage}" />
+    <FlyoutItem Title="General Report Information Part 1">
+        <ShellContent Route="GeneralReportInfoPart1Page" ContentTemplate="{DataTemplate local:GeneralReportInfoPart1Page}" />
     </FlyoutItem>
-    <FlyoutItem Title="Item page">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+    <FlyoutItem Title="General Report Information Part 2">
+        <ShellContent Route="GeneralReportInfoPart2Page" ContentTemplate="{DataTemplate local:GeneralReportInfoPart2Page}" />
+    </FlyoutItem>
+    <FlyoutItem Title="General Report Information Part 3">
+        <ShellContent Route="GeneralReportInfoPart3Page" ContentTemplate="{DataTemplate local:GeneralReportInfoPart3Page}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Incident Type and Distribution">
+        <ShellContent Route="IncidentTypeAndDistributionPage" ContentTemplate="{DataTemplate local:IncidentTypeAndDistributionPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Highway Status">
         <ShellContent Route="HighwayStatus" ContentTemplate="{DataTemplate local:HighwayStatus}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Recommended Actions">
+        <ShellContent ContentTemplate="{DataTemplate ContentPage}"/>
     </FlyoutItem>
     <FlyoutItem Title="Pavement/Ground Status">
         <ShellContent Route="PavementGroundPage" ContentTemplate="{DataTemplate local:PavementGroundPage}" />
@@ -100,6 +109,15 @@
     </FlyoutItem>
     <FlyoutItem Title="Material">
         <ShellContent Route="MaterialPage" ContentTemplate="{DataTemplate local:MaterialPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Water/Drainage">
+        <ShellContent Route="WaterDrainagePage" ContentTemplate="{DataTemplate local:WaterDrainagePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Measurements">
+        <ShellContent Route="MeasurementsPage" ContentTemplate="{DataTemplate local:MeasurementsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Observations and Notes">
+        <ShellContent Route="ObservationsAndNotesPage" ContentTemplate="{DataTemplate local:ObservationsAndNotesPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Recommended Immediate Actions P1">
         <ShellContent Route="RecommendedImmediateActionsP1Page" ContentTemplate="{DataTemplate local:RecommendedImmediateActionsP1}" />
@@ -113,11 +131,7 @@
     <FlyoutItem Title="Recommended Follow-up Actions P2">
         <ShellContent Route="RecommendedFollowupActionsP2Page" ContentTemplate="{DataTemplate local:RecommendedFollowupActionsP2}" />
     </FlyoutItem>
-    
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
-    </MenuItem>
-
     <!--
         TabBar lets you define content that won't show up in a flyout menu. When this content is active
         the flyout menu won't be available. This is useful for creating areas of the application where 
@@ -125,9 +139,6 @@
         content you can do so by calling 
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
-    </TabBar>
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.

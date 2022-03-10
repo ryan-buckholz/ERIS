@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ERIS.Mobile.Views.WaterDrainageAndImpactedPage"
+             x:Class="ERIS.Mobile.Views.WaterDrainagePage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
@@ -68,8 +68,8 @@
             </Grid>
 
             <Button Text="Save" Margin="0,150,0,0" Style="{StaticResource AssessmentButton}"></Button>
-            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

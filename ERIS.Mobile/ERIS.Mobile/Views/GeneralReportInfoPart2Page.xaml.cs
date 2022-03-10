@@ -10,20 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace ERIS.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MeasurementsPage : ContentPage
+    public partial class GeneralReportInfoPart2Page : ContentPage
     {
-        public MeasurementsPage()
+        public GeneralReportInfoPart2Page()
         {
             InitializeComponent();
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//" + nameof(ObservationsAndNotesPage));
+            Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart3Page));
         }
+
         private void Back_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//" + nameof(WaterDrainagePage));
+            Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart1Page));
         }
     }
 }
