@@ -154,7 +154,7 @@ export class Details extends Component {
 					<div className="card-body">
 						<div>
 							<label>GEOTECHNICAL INITIAL SITE ASSESSMENT</label>
-							<div class="col-md-6 text-right">GISA-001 (NEW 1/2022)</div>
+							<label>GISA-001 (NEW 1/2022)</label>
 							<hr></hr>
 
 							<div class="col-xs-4">
@@ -308,6 +308,8 @@ export class Details extends Component {
 										<label>Phone</label>
 										<label>Cell Phone</label>
 									</div>
+									<hr></hr>
+									<label>TRB Special Report 24/7</label>
 								</div> 
 							</div>
 
