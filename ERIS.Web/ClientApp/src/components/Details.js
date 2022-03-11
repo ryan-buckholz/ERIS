@@ -320,48 +320,48 @@ export class Details extends Component {
 
 						<div>
 							<label>Incident Type:</label>
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="rock" />(Rock) Fall
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="topple" />Topple
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="slide" />Slide
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="spread" />Spread
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="flow" />Flow
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="compound" />Compound
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="erosion" />Erosion
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="surfacial" />Surfacial Sloughing
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="scoured" />Scoured Toe
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="washout" />Washout
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" />(Rock) Fall
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="topple" />Topple
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" />Slide
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spread" />Spread
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flow" />Flow
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compound" />Compound
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="erosion" />Erosion
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surfacial" />Surfacial Sloughing
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="scoured" />Scoured Toe
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="washout" />Washout
 						</div>
 
 						<div>
 							<label>Distribution:</label>
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="advancing" />Advancing
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="retrogressing" />Retrogressing
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="enlarging" />Enlarging
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="widening" />Widening
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="moving" />Moving
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="confined" />Confined
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="advancing" />Advancing
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="retrogressing" />Retrogressing
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" />Enlarging
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="widening" />Widening
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moving" />Moving
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="confined" />Confined
 						</div>
 
 						<div>
 							<label>Highway Status:</label>
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="open" />Open
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="shoulder" />Shoulder Closed
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="lanesclosed" />Lane(s) Closed
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="lanes" />Lanes
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="oneway" />One-way Closed
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="twoway" />Two-way Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="open" />Open
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" />Shoulder Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" />Lane(s) Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanes" />Lanes
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="oneway" />One-way Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" />Two-way Closed
 						</div>
 
 						<div>
 							<label>Payment/Ground Status:</label>
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="paymentground" />Payment/Ground Checks
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="feetlength" />Feet, Length
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="incheshorizontal" />Inches, Horizontal Disp.
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="sprinchesvertical" />Inches, Vertical Disp.
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="inchesdepth" />Inches, Depth of Crack
-							Settlement<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="inchessettlement" />Inches
-							Bulge<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="inchesbluge" />Inches
-							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="indented" />Indented by Rocks
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="paymentground" />Payment/Ground Checks
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="feetlength" />Feet, Length
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="incheshorizontal" />Inches, Horizontal Disp.
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="sprinchesvertical" />Inches, Vertical Disp.
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="inchesdepth" />Inches, Depth of Crack
+							Settlement<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="inchessettlement" />Inches
+							Bulge<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="inchesbluge" />Inches
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks
 						</div>
 
 						<div class="text-center">
