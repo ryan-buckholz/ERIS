@@ -319,15 +319,6 @@ export class Details extends Component {
 						</div>
 
 						<div>
-							<div class="col-xs-9">
-								
-								<label>Distribution:</label>
-								<label>Highway Status:</label>
-								<label>Payment/Ground Status</label>
-							</div>
-						</div>
-
-						<div>
 							<label>Incident Type:</label>
 							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="rock" />(Rock) Fall
 							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="topple" />Topple
@@ -339,6 +330,38 @@ export class Details extends Component {
 							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="surfacial" />Surfacial Sloughing
 							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="scoured" />Scoured Toe
 							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="washout" />Washout
+						</div>
+
+						<div>
+							<label>Distribution:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="advancing" />Advancing
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="retrogressing" />Retrogressing
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="enlarging" />Enlarging
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="widening" />Widening
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="moving" />Moving
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="confined" />Confined
+						</div>
+
+						<div>
+							<label>Highway Status:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="open" />Open
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="shoulder" />Shoulder Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="lanesclosed" />Lane(s) Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="lanes" />Lanes
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="oneway" />One-way Closed
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="twoway" />Two-way Closed
+						</div>
+
+						<div>
+							<label>Payment/Ground Status:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="paymentground" />Payment/Ground Checks
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="feetlength" />Feet, Length
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="incheshorizontal" />Inches, Horizontal Disp.
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="sprinchesvertical" />Inches, Vertical Disp.
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="inchesdepth" />Inches, Depth of Crack
+							Settlement<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="inchessettlement" />Inches
+							Bulge<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="inchesbluge" />Inches
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="indented" />Indented by Rocks
 						</div>
 
 						<div class="text-center">
