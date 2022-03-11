@@ -98,17 +98,14 @@
     <FlyoutItem Title="Highway Status">
         <ShellContent Route="HighwayStatus" ContentTemplate="{DataTemplate local:HighwayStatus}" />
     </FlyoutItem>
-    <FlyoutItem Title="Recommended Actions">
-        <ShellContent ContentTemplate="{DataTemplate ContentPage}"/>
-    </FlyoutItem>
     <FlyoutItem Title="Pavement/Ground Status">
         <ShellContent Route="PavementGroundPage" ContentTemplate="{DataTemplate local:PavementGroundPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Vegetation on Slope/Water content">
-        <ShellContent Route="VegetationSlopeAndWaterContentPage" ContentTemplate="{DataTemplate local:VegetationSlopeAndWaterContentPage}" />
-    </FlyoutItem>
     <FlyoutItem Title="Material">
         <ShellContent Route="MaterialPage" ContentTemplate="{DataTemplate local:MaterialPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Vegetation on Slope/Water content">
+        <ShellContent Route="VegetationSlopeAndWaterContentPage" ContentTemplate="{DataTemplate local:VegetationSlopeAndWaterContentPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Water/Drainage">
         <ShellContent Route="WaterDrainagePage" ContentTemplate="{DataTemplate local:WaterDrainagePage}" />

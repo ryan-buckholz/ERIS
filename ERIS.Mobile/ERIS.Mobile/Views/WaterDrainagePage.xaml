@@ -5,15 +5,8 @@
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
-            <Label HorizontalOptions="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            
-            <Label Text="Water/Drainage"
+
+            <Label Text="Water / Drainage"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center"
                    HorizontalOptions="Center"

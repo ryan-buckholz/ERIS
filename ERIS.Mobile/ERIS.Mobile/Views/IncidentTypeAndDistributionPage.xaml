@@ -8,7 +8,7 @@
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Slope / Landslide Status" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>

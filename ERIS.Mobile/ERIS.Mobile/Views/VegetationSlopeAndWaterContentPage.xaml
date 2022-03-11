@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ERIS.Mobile.Views.VegetationSlopeAndWaterContentPage">
+             x:Class="ERIS.Mobile.Views.VegetationSlopeAndWaterContentPage"
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
             <Grid RowDefinitions="*" ColumnDefinitions="*, *">
@@ -11,41 +12,41 @@
             <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
 
                 <!-- The following objects correspond to the Vegetation section of the ERIS assessment -->
-                
-                <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"></Label>
+
+                <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1"></Entry>
 
-                <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1"></Entry>
 
-                <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1"></Entry>
 
             </Grid>
                 <!-- The following objects correspond to the Water Content section of the ERIS assessment -->
             
             <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Label Text="Water Content" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+                <Label Text="Presence of Water on the Slope" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
-                <CheckBox x:Name="DryCheckbox" CheckedChanged="Dry_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Dry" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Label>
-                
-                <CheckBox x:Name="MoistCheckbox" CheckedChanged="Moist_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Moist" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"></Label>
-                
-                <CheckBox x:Name="WetCheckbox" CheckedChanged="Wet_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Wet" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"></Label>
-                
-                <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"></Label>
-                
-                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></Label>
-                
-                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="DryCheckbox" CheckedChanged="Dry_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Dry" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="MoistCheckbox" CheckedChanged="Moist_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Moist" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="WetCheckbox" CheckedChanged="Wet_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Wet" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
                 
             </Grid>
 

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ERIS.Mobile.Views.PavementGroundPage">
+             x:Class="ERIS.Mobile.Views.PavementGroundPage"
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
             <Grid RowDefinitions="*" ColumnDefinitions="*">
@@ -9,39 +10,39 @@
             </Grid>
 
             <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
-                <CheckBox x:Name="PavementGroundCheckbox" CheckedChanged="Pavement_Ground_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Pavement/Ground Cracks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="PavementGroundCheckbox" CheckedChanged="Pavement_Ground_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Pavement/Ground Cracks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *, Auto">
 
                 <!-- The following objects correspond to the Pavement Ground Status section of the ERIS assessment -->
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1"></Entry>
-                <Label Text="feet, Length" FontSize="Medium" Grid.Row="1" Grid.Column="2" VerticalOptions="Center"></Label>
+                <Label Text="feet, Length" FontSize="Medium" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1"></Entry>
-                <Label Text="inches, Horizontal Disp." FontSize="Medium" Grid.Row="2" Grid.Column="2" VerticalOptions="Center"></Label>
+                <Label Text="inches, Horizontal Disp." FontSize="Medium" Grid.Row="2" Grid.Column="2" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="3" Grid.Column="1"></Entry>
-                <Label Text="inches, Vertical Disp" FontSize="Medium" Grid.Row="3" Grid.Column="2" VerticalOptions="Center"></Label>
+                <Label Text="inches, Vertical Disp" FontSize="Medium" Grid.Row="3" Grid.Column="2" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="4" Grid.Column="1"></Entry>
-                <Label Text="Inches, Depth of Crack" FontSize="Medium" Grid.Row="4" Grid.Column="2" VerticalOptions="Center"></Label>
+                <Label Text="Inches, Depth of Crack" FontSize="Medium" Grid.Row="4" Grid.Column="2" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <Label Text="Settlement" FontSize="Medium" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center" VerticalOptions="Center"></Label>
+                <Label Text="Settlement" FontSize="Medium" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="Center" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="5" Grid.Column="1"></Entry>
-                <Label Text="inches" FontSize="Medium" Grid.Row="5" Grid.Column="2" VerticalOptions="Center"></Label>
+                <Label Text="inches" FontSize="Medium" Grid.Row="5" Grid.Column="2" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <Label Text="Bulge" FontSize="Medium" Grid.Row="6" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Bulge" FontSize="Medium" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="6" Grid.Column="1"></Entry>
-                <Label Text="inches" FontSize="Medium" Grid.Row="6" Grid.Column="2" VerticalOptions="Center"></Label>
+                <Label Text="inches" FontSize="Medium" Grid.Row="6" Grid.Column="2" VerticalOptions="Center" TextColor="Black"></Label>
 
 
             </Grid>
 
             <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
-                <CheckBox x:Name="IndentedByRocksCheckbox" CheckedChanged="Indented_By_Rocks_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Indented by Rocks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="IndentedByRocksCheckbox" CheckedChanged="Indented_By_Rocks_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Indented by Rocks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
             </Grid>
 
             <Button Text="Save" Style="{StaticResource AssessmentButton}" Margin="0,100,0,0"></Button>
