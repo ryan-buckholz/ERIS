@@ -13,7 +13,17 @@ export class Details extends Component {
 			postmile: '',
 			ea: '',
 			projectid: '',
-			dateincidentreport: ''
+			dateincidentreport: '',
+			latitude: '',
+			longitude: '',
+			dclastname: '',
+			dcfirstname: '',
+			dcsnumber: '',
+			lastname: '',
+			firstname: '',
+			snumber: '',
+			phone: '',
+			cellphone:''
 		}
 	}
 
@@ -65,18 +75,88 @@ export class Details extends Component {
 		})
 	}
 
+	handleLatitudeChange = event => {
+		this.setState({
+			latitude: event.target.value
+		})
+	}
+
+	handleLongitudeChange = event => {
+		this.setState({
+			longitude: event.target.value
+		})
+	}
+
+	handleDcLastnameChange = event => {
+		this.setState({
+			dclastname: event.target.value
+		})
+	}
+
+	handleDcFirstnameChange = event => {
+		this.setState({
+			dcfirstname: event.target.value
+		})
+	}
+
+	handleDcSnumbertChange = event => {
+		this.setState({
+			dcsnumber: event.target.value
+		})
+	}
+
+	handleLastnameChange = event => {
+		this.setState({
+			lastname: event.target.value
+		})
+	}
+
+	handleFirstname = event => {
+		this.setState({
+			firstname: event.target.value
+		})
+	}
+
+	handleSNumberChange = event => {
+		this.setState({
+			snumber: event.target.value
+		})
+	}
+
+	handlePhoneChange = event => {
+		this.setState({
+			phone: event.target.value
+		})
+	}
+
+	handleCellphoneChange = event => {
+		this.setState({
+			cellphone: event.target.value
+		})
+	}
+
 	handleSubmit = event => {
-		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}`)
+		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} 
+			   ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}
+			   ${this.state.latitude} ${this.state.longitude} ${this.state.dclastname} ${this.state.dcfirstname} 
+			   ${this.state.dcsnumber} ${this.state.lastname} ${this.state.firstname} ${this.state.snumber} 
+			   ${this.state.phone} ${this.state.cellphone}`)
 		event.preventDefault()
 	}
 
 	render() {
-		const { date, district, county, route, postmile, ea, projectid, dateincidentreport } = this.state
+		const { date, district, county, route, postmile, ea, projectid, dateincidentreport,
+				latitude, longitude, dclastname, dcfirstname, dcsnumber, lastname, firstname,
+				snumber, phone, cellphone } = this.state
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="card mt-3">
 					<div className="card-body">
 						<div>
+							<label>GEOTECHNICAL INITIAL SITE ASSESSMENT</label>
+							<div class="col-md-6 text-right">GISA-001 (NEW 1/2022)</div>
+							<hr></hr>
+
 							<div class="col-xs-4">
 								<div class="form-group">
 									<input
@@ -140,6 +220,97 @@ export class Details extends Component {
 									</div>
 								</div>
 							</div>
+						</div>
+
+						<div>
+							<div class="col-xs-4">
+								<div class="form-group">
+									<input
+										type="text"
+										value={latitude}
+										onChange={this.handleLatitudeChange}
+									/>
+
+									<input
+										type="text"
+										value={longitude}
+										onChange={this.handleLongitudeChange}
+									/>
+
+									<label>District Contact</label>
+
+									<input
+										type="text"
+										value={dclastname}
+										onChange={this.handleDcLastnameChange}
+									/>
+
+									<input
+										type="text"
+										value={dcfirstname}
+										onChange={this.handleDcFirstnameChange}
+									/>
+
+									<input
+										type="text"
+										value={dcsnumber}
+										onChange={this.handleDcSnumberChange}
+									/>
+
+									<div class="col-xs-9">
+										<label>Latitude</label>
+										<label>Longitude</label>
+										<label>Last Name</label>
+										<label>First Name</label>
+										<label>S Number</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="col-xs-4">
+								<div class="form-group">
+									<input
+										type="text"
+										value={lastname}
+										onChange={this.handleLastnameChange}
+									/>
+
+									<input
+										type="text"
+										value={firstname}
+										onChange={this.handleFirstnameChange}
+									/>
+
+									<input
+										type="text"
+										value={snumber}
+										onChange={this.handleSNumberChange}
+									/>
+
+									<input
+										type="text"
+										value={phone}
+										onChange={this.handlePhoneChange}
+									/>
+
+									<input
+										type="text"
+										value={cellphone}
+										onChange={this.handleCellphoneChange}
+									/>
+									<div class="col-xs-9">
+										<label>Last Name</label>
+										<label>First Name</label>
+										<label>S Number</label>
+										<label>Phone</label>
+										<label>Cell Phone</label>
+									</div>
+								</div> 
+							</div>
+
 						</div>
 
 						<div class="text-center">
