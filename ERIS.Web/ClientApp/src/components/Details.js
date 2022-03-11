@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Col, Row, Form, Button } from "reactstrap";
+import { Button, Container, Col, Row, Form } from "reactstrap";
 
 export class Details extends Component {
 	constructor(props) {
@@ -133,6 +133,10 @@ export class Details extends Component {
 		this.setState({
 			cellphone: event.target.value
 		})
+	}
+
+	handleCheckbox = event => {
+		console.log(event.target.value);
 	}
 
 	handleSubmit = event => {
@@ -312,7 +316,29 @@ export class Details extends Component {
 									<label>TRB Special Report 24/7</label>
 								</div> 
 							</div>
+						</div>
 
+						<div>
+							<div class="col-xs-9">
+								
+								<label>Distribution:</label>
+								<label>Highway Status:</label>
+								<label>Payment/Ground Status</label>
+							</div>
+						</div>
+
+						<div>
+							<label>Incident Type:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="rock" />(Rock) Fall
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="topple" />Topple
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="slide" />Slide
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="spread" />Spread
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="flow" />Flow
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="compound" />Compound
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="erosion" />Erosion
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="surfacial" />Surfacial Sloughing
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="scoured" />Scoured Toe
+							<input onChange={this.handleCheckbox} type="checkbox" name="languages" value="washout" />Washout
 						</div>
 
 						<div class="text-center">
