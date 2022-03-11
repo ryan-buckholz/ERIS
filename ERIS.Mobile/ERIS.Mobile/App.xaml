@@ -49,6 +49,11 @@
                 <Setter Property="CornerRadius" Value="20"></Setter>
             </Style>
 
+            <Style x:Key="ButtonStack" TargetType="StackLayout">
+                <Setter Property="Padding" Value="0,0,0,20"></Setter>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"></Setter>
+            </Style>
+
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

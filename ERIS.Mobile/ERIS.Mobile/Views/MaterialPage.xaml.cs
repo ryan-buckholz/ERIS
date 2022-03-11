@@ -44,11 +44,11 @@ namespace ERIS.Mobile.Views
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//" + nameof(WaterDrainagePage));
+            Shell.Current.GoToAsync("//" + nameof(VegetationSlopeAndWaterContentPage));
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//" + nameof(VegetationSlopeAndWaterContentPage));
+            Shell.Current.GoToAsync("//" + nameof(RecommendedFollowupActionsP2));
         }
     }
 }

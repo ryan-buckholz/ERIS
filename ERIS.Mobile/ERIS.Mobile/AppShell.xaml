@@ -113,20 +113,20 @@
     <FlyoutItem Title="Measurements">
         <ShellContent Route="MeasurementsPage" ContentTemplate="{DataTemplate local:MeasurementsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Observations and Notes">
-        <ShellContent Route="ObservationsAndNotesPage" ContentTemplate="{DataTemplate local:ObservationsAndNotesPage}" />
-    </FlyoutItem>
     <FlyoutItem Title="Recommended Immediate Actions P1">
-        <ShellContent Route="RecommendedImmediateActionsP1Page" ContentTemplate="{DataTemplate local:RecommendedImmediateActionsP1}" />
+        <ShellContent Route="RecommendedImmediateActionsP1" ContentTemplate="{DataTemplate local:RecommendedImmediateActionsP1}" />
     </FlyoutItem>
     <FlyoutItem Title="Recommended Immediate Actions P2">
-        <ShellContent Route="RecommendedImmediateActionsP2Page" ContentTemplate="{DataTemplate local:RecommendedImmediateActionsP2}" />
+        <ShellContent Route="RecommendedImmediateActionsP2" ContentTemplate="{DataTemplate local:RecommendedImmediateActionsP2}" />
     </FlyoutItem>
     <FlyoutItem Title="Recommended Follow-up Actions P1">
-        <ShellContent Route="RecommendedFollowupActionsP1Page" ContentTemplate="{DataTemplate local:RecommendedFollowupActionsP1}" />
+        <ShellContent Route="RecommendedFollowupActionsP1" ContentTemplate="{DataTemplate local:RecommendedFollowupActionsP1}" />
     </FlyoutItem>
     <FlyoutItem Title="Recommended Follow-up Actions P2">
-        <ShellContent Route="RecommendedFollowupActionsP2Page" ContentTemplate="{DataTemplate local:RecommendedFollowupActionsP2}" />
+        <ShellContent Route="RecommendedFollowupActionsP2" ContentTemplate="{DataTemplate local:RecommendedFollowupActionsP2}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Observations and Notes">
+        <ShellContent Route="ObservationsAndNotesPage" ContentTemplate="{DataTemplate local:ObservationsAndNotesPage}" />
     </FlyoutItem>
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <!--
