@@ -23,7 +23,14 @@ export class Details extends Component {
 			firstname: '',
 			snumber: '',
 			phone: '',
-			cellphone:''
+			cellphone: '',
+			lanes: '',
+			feetlength: '',
+			incheshorizontal: '',
+			inchesvertical: '',
+			inchesdepth: '',
+			settleinches: '',
+			bulgeinches: ''
 		}
 	}
 
@@ -139,19 +146,64 @@ export class Details extends Component {
 		console.log(event.target.value);
 	}
 
+	handleLanesChange = event => {
+		this.setState({
+			lanes: event.target.value
+		})
+	}
+
+	handleFeetLengthChange = event => {
+		this.setState({
+			feetlength: event.target.value
+		})
+	}
+
+	handleInchesHorizontalChange = event => {
+		this.setState({
+			incheshorizontal: event.target.value
+		})
+	}
+
+	handleInchesVerticalChange = event => {
+		this.setState({
+			inchesvertical: event.target.value
+		})
+	}
+
+	handleInchesDepthChange = event => {
+		this.setState({
+			inchesdepth: event.target.value
+		})
+	}
+
+	handleSettleInchesChange = event => {
+		this.setState({
+			settleinches: event.target.value
+		})
+	}
+
+	handleBulgeInchesChange = event => {
+		this.setState({
+			bulgeinches: event.target.value
+		})
+	}
+
 	handleSubmit = event => {
 		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} 
 			   ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}
 			   ${this.state.latitude} ${this.state.longitude} ${this.state.dclastname} ${this.state.dcfirstname} 
 			   ${this.state.dcsnumber} ${this.state.lastname} ${this.state.firstname} ${this.state.snumber} 
-			   ${this.state.phone} ${this.state.cellphone}`)
+			   ${this.state.phone} ${this.state.cellphone} ${this.state.lanes} ${this.state.feetlength} 
+			   ${this.state.incheshorizontal} ${this.state.inchesvertical} ${this.state.inchesdepth}
+			   ${this.state.settleinches} ${this.state.bulgeinches}`)
 		event.preventDefault()
 	}
 
 	render() {
 		const { date, district, county, route, postmile, ea, projectid, dateincidentreport,
-				latitude, longitude, dclastname, dcfirstname, dcsnumber, lastname, firstname,
-				snumber, phone, cellphone } = this.state
+			latitude, longitude, dclastname, dcfirstname, dcsnumber, lastname, firstname,
+			snumber, phone, cellphone, lanes, feetlength, incheshorizontal, inchesvertical,
+			inchesdepth, settleinches, bulgeinches } = this.state
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="card mt-3">
@@ -347,7 +399,7 @@ export class Details extends Component {
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="open" />Open
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" />Shoulder Closed
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" />Lane(s) Closed
-							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanes" />Lanes
+							<input onChange={this.handleLanesChange} type="text" value={lanes} />Lanes
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="oneway" />One-way Closed
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" />Two-way Closed
 						</div>
@@ -355,12 +407,12 @@ export class Details extends Component {
 						<div>
 							<label>Payment/Ground Status:</label>
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="paymentground" />Payment/Ground Checks
-							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="feetlength" />Feet, Length
-							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="incheshorizontal" />Inches, Horizontal Disp.
-							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="sprinchesvertical" />Inches, Vertical Disp.
-							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="inchesdepth" />Inches, Depth of Crack
-							Settlement<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="inchessettlement" />Inches
-							Bulge<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="inchesbluge" />Inches
+							<input onChange={this.handleFeetLengthChange} type="text" value={feetlength} />Feet, Length
+							<input onChange={this.handleInchesHorizontalChange} type="text" value={incheshorizontal} />Inches, Horizontal Disp.
+							<input onChange={this.handleInchesVerticalChange} type="text" value={inchesvertical} />Inches, Vertical Disp.
+							<input onChange={this.handleInchesDepthChange} type="text" value={inchesdepth} />Inches, Depth of Crack
+							Settlement<input onChange={this.handleSettleInchesChange} type="text" value={settleinches} />Inches
+							Bulge<input onChange={this.handleBulgeInchesChange} type="text" value={bulgeinches} />Inches
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks
 						</div>
 
