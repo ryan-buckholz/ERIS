@@ -416,6 +416,25 @@ export class Details extends Component {
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks
 						</div>
 
+						<div>
+							<label>Material:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" />Rock
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bedding" />Bedding
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="joints" />Joints
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fractures" />Fractures
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="soil" />Soil
+						</div>
+
+						<div>
+							<label>Water Content:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" />Dry
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moist" />Moist
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="wet" />Wet
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flowing" />Flowing
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="seep" />Seep
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spring" />Spring
+						</div>
+
 						<div class="text-center">
 							<a href="/" className="btn btn-primary ">Back</a>
 							<a href="/Search" className="btn btn-primary">New Search</a>
