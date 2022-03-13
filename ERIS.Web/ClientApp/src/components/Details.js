@@ -617,6 +617,28 @@ export class Details extends Component {
 							<label>Longitude</label>
 						</div>
 
+						<div>
+							<label>Observations and Notes:</label>
+								<p>
+								LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
+								SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
+								FRACTURES; SITE ACCESS FOR FURTHER INVESTIGATION AND CONSTRUCTION; DRAINAGE;
+								EROSION; POTENTIAL CAUSES OF INCIDENT; CONSTRAINTS; ADDITIONAL NOTES ON
+								CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
+								LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
+								OF PHOTOS AND MEASUREMENTS.
+								</p> 
+						</div>
+
+						<div>
+							<label>Sketch:</label>
+							<p>
+								DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW
+								PLAN W/ UP-STATION IDENTIFIED. MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH,
+								& DIRECTION.
+							</p>
+						</div>
+
 						<div class="text-center">
 							<a href="/" className="btn btn-primary ">Back</a>
 							<a href="/Search" className="btn btn-primary">New Search</a>
