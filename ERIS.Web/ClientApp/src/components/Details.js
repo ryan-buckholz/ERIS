@@ -590,6 +590,33 @@ export class Details extends Component {
 							Width of Roadway Encroached, ft (Wr)<input onChange={this.handleWidthofRoadwayChange} type="text" value={widthofroadway} />
 						</div>
 
+						<div>
+							<input type="text" value={date} onChange={this.handleDateChange}/>
+
+							<select value={district} onChange={this.handleDistrictChange}>
+								<option value=""></option>
+								<option value="Sacramento">Sacramento</option>
+								<option value="Placer">Placer</option>
+								<option value="Sonoma">Sonoma</option>
+							</select>
+
+							<input type="text" value={county} onChange={this.handleCountyChange} /> 
+							<input type="text" value={route} onChange={this.handleRouteChange} />
+							<input type="text" value={postmile} onChange={this.handlePostMileChange} />
+							<input type="text" value={latitude} onChange={this.handleLatitudeChange}/>
+							<input type="text" value={longitude} onChange={this.handleLongitudeChange} />
+						</div>
+
+						<div class="col-xs-9">
+							<label>Date</label>
+							<label>District</label>
+							<label>County</label>
+							<label>Route</label>
+							<label>Post Mile</label>
+							<label>Latitude</label>
+							<label>Longitude</label>
+						</div>
+
 						<div class="text-center">
 							<a href="/" className="btn btn-primary ">Back</a>
 							<a href="/Search" className="btn btn-primary">New Search</a>
