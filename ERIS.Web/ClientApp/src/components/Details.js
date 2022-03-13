@@ -30,7 +30,22 @@ export class Details extends Component {
 			inchesvertical: '',
 			inchesdepth: '',
 			settleinches: '',
-			bulgeinches: ''
+			bulgeinches: '',
+			clay: '',
+			silt: '',
+			sand: '',
+			gravel: '',
+			trees: '',
+			bushesshrubs: '',
+			groundcover: '',
+			slope: '',
+			originalslope: '',
+			landslidewidth: '',
+			landslidelength: '',
+			mainscarp: '',
+			landslideslope: '',
+			lengthofroadway: '',
+			widthofroadway: ''
 		}
 	}
 
@@ -188,6 +203,96 @@ export class Details extends Component {
 		})
 	}
 
+	handleClayChange = event => {
+		this.setState({
+			clay: event.target.value
+		})
+	}
+
+	handleSiltChange = event => {
+		this.setState({
+			silt: event.target.value
+		})
+	}
+
+	handleSandChange = event => {
+		this.setState({
+			sand: event.target.value
+		})
+	}
+
+	handleGravelChange = event => {
+		this.setState({
+			gravel: event.target.value
+		})
+	}
+
+	handleTreesChange = event => {
+		this.setState({
+			trees: event.target.value
+		})
+	}
+
+	handleBushesShrubsChange = event => {
+		this.setState({
+			bushesshrubs: event.target.value
+		})
+	}
+
+	handleGroundCoverChange = event => {
+		this.setState({
+			groundcover: event.target.value
+		})
+	}
+
+	handleSlopeChange = event => {
+		this.setState({
+			slope: event.target.value
+		})
+	}
+
+	handleOriginalSlopeChange = event => {
+		this.setState({
+			originalslope: event.target.value
+		})
+	}
+
+	handleLandslideWidthChange = event => {
+		this.setState({
+			landslidewidth: event.target.value
+		})
+	}
+
+	handleLandslideLengthChange = event => {
+		this.setState({
+			landslidelength: event.target.value
+		})
+	}
+
+	handleMainScarpChange = event => {
+		this.setState({
+			mainscarp: event.target.value
+		})
+	}
+
+	handleLandslideSlopeChange = event => {
+		this.setState({
+			landslideslope: event.target.value
+		})
+	}
+
+	handleLengthofRoadwayChange = event => {
+		this.setState({
+			lengthofroadway: event.target.value
+		})
+	}
+
+	handleWidthofRoadwayChange = event => {
+		this.setState({
+			widthofroadway: event.target.value
+		})
+	}
+
 	handleSubmit = event => {
 		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} 
 			   ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}
@@ -195,15 +300,21 @@ export class Details extends Component {
 			   ${this.state.dcsnumber} ${this.state.lastname} ${this.state.firstname} ${this.state.snumber} 
 			   ${this.state.phone} ${this.state.cellphone} ${this.state.lanes} ${this.state.feetlength} 
 			   ${this.state.incheshorizontal} ${this.state.inchesvertical} ${this.state.inchesdepth}
-			   ${this.state.settleinches} ${this.state.bulgeinches}`)
-		event.preventDefault()
+			   ${this.state.settleinches} ${this.state.bulgeinches} ${this.state.clay}
+			   ${this.state.silt} ${this.state.sand} ${this.state.gravel} ${this.state.trees}
+			   ${this.state.brushesshrubs} ${this.state.groundcover} ${this.state.slope} ${this.state.originalslope}
+			   ${this.state.landslidewidth} ${this.state.landslidelength} ${this.state.mainscarp}
+			   ${this.state.landslideslope} ${this.state.lengthofroadway} ${this.state.widthofroadway}`)
+			   event.preventDefault()
 	}
 
 	render() {
 		const { date, district, county, route, postmile, ea, projectid, dateincidentreport,
 			latitude, longitude, dclastname, dcfirstname, dcsnumber, lastname, firstname,
 			snumber, phone, cellphone, lanes, feetlength, incheshorizontal, inchesvertical,
-			inchesdepth, settleinches, bulgeinches } = this.state
+			inchesdepth, settleinches, bulgeinches, clay, silt, sand, gravel, trees, bushesshrubs,
+			groundcover, slope, originalslope, landslidewidth, landslidelength, mainscarp, landslideslope,
+			lengthofroadway, widthofroadway} = this.state
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="card mt-3">
@@ -426,6 +537,14 @@ export class Details extends Component {
 						</div>
 
 						<div>
+							<label>EST. %</label>
+							<input onChange={this.handleClayChange} type="text" value={clay} />Clay
+							<input onChange={this.handleSiltChange} type="text" value={silt} />Silt
+							<input onChange={this.handleSandChange} type="text" value={sand} />Sand
+							<input onChange={this.handleGravelChange} type="text" value={gravel} />Gravel
+						</div>
+
+						<div>
 							<label>Water Content:</label>
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" />Dry
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moist" />Moist
@@ -433,6 +552,42 @@ export class Details extends Component {
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flowing" />Flowing
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="seep" />Seep
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spring" />Spring
+						</div>
+
+						<div>
+							<label>Vegetation on Slope</label>
+							<label>Coverage %</label>
+							Trees<input onChange={this.handleTreesChange} type="text" value={trees} />
+							Bushes/Shrubs<input onChange={this.handleBushesShrubsChange} type="text" value={bushesshrubs} />
+							Groundcover<input onChange={this.handleGroundCoverChange} type="text" value={groundcover} />
+						</div>
+
+						<div>
+							<label>Water/Drainage:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="clogged" />Clogged Inlet
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compromised" />Compromised Drains
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surface" />Surface Runoff
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="torrent" />Torrent, Surge, Flood
+							<label>Impacted:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactone" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impacttwo" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactthree" />
+							<label>May be Impacted:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="utilties" />Adjacent Utilities
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="properties" />Adjacent Properties
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" />Adjacent Structures
+						</div>
+
+						<div>
+							<label>Measurements:</label>
+							Slope Height, ft (H)<input onChange={this.handleSlopeChange} type="text" value={slope} />
+							Original Slope, deg (a)<input onChange={this.handleOriginalSlopeChange} type="text" value={originalslope} />
+							Landslide Width, ft (Wd)<input onChange={this.handleLandslideWidthChange} type="text" value={landslidewidth} />
+							Landslide Length, ft (Ld)<input onChange={this.handleLandslideLengthChange} type="text" value={landslidelength} />
+							Main Scarp Height, ft (Hs)<input onChange={this.handleMainScarpChange} type="text" value={mainscarp} />
+							Landslide Slope, deg (B)<input onChange={this.handleLandslideSlopeChange} type="text" value={landslideslope} />
+							Length of Roadway Encroached, ft (Lr)<input onChange={this.handleLengthofRoadwayChange} type="text" value={lengthofroadway} />
+							Width of Roadway Encroached, ft (Wr)<input onChange={this.handleWidthofRoadwayChange} type="text" value={widthofroadway} />
 						</div>
 
 						<div class="text-center">
