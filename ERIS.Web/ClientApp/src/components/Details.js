@@ -45,7 +45,8 @@ export class Details extends Component {
 			mainscarp: '',
 			landslideslope: '',
 			lengthofroadway: '',
-			widthofroadway: ''
+			widthofroadway: '',
+			lanespagetwo: ''
 		}
 	}
 
@@ -293,6 +294,12 @@ export class Details extends Component {
 		})
 	}
 
+	handleLanesPageTwoChange = event => {
+		this.setState({
+			lanespagetwo: event.target.value
+		})
+	}
+
 	handleSubmit = event => {
 		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} 
 			   ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}
@@ -304,7 +311,8 @@ export class Details extends Component {
 			   ${this.state.silt} ${this.state.sand} ${this.state.gravel} ${this.state.trees}
 			   ${this.state.brushesshrubs} ${this.state.groundcover} ${this.state.slope} ${this.state.originalslope}
 			   ${this.state.landslidewidth} ${this.state.landslidelength} ${this.state.mainscarp}
-			   ${this.state.landslideslope} ${this.state.lengthofroadway} ${this.state.widthofroadway}`)
+			   ${this.state.landslideslope} ${this.state.lengthofroadway} ${this.state.widthofroadway}
+			   ${this.state.lanespagetwo}`)
 			   event.preventDefault()
 	}
 
@@ -314,7 +322,7 @@ export class Details extends Component {
 			snumber, phone, cellphone, lanes, feetlength, incheshorizontal, inchesvertical,
 			inchesdepth, settleinches, bulgeinches, clay, silt, sand, gravel, trees, bushesshrubs,
 			groundcover, slope, originalslope, landslidewidth, landslidelength, mainscarp, landslideslope,
-			lengthofroadway, widthofroadway} = this.state
+			lengthofroadway, widthofroadway, lanespagetwo} = this.state
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="card mt-3">
@@ -610,6 +618,30 @@ export class Details extends Component {
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fifteen" />
 							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="sixteen" />
 							<label>Follow-Up Actions:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="opentraffic" />Open Highway Traffic
+							<input onChange={this.handleLanesPageTwoChange} type="text" value={lanespagetwo} />Lanes
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="openshoulder" />Open Highway Shoulder
+							Close Highway<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="onee" />One <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bothdirections" />Both Directions
+							<label>Remove Landslide Debris From Highway</label>
+							<label>Place K-Rail or Fence</label>
+							<label>Cover Slope with Plastic</label>
+							<label>Divert Surface Water Runoff</label>
+							<label>Remove Culvert Blockage</label>
+							<label>Dewater with Pump, Trench, etc.</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dewater" />Dewater with Horizontal Drains
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="temporaryshoring" />Construct Temporary Shoring
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="buttress" />Buttress Taoe of Landslide
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rockprotection" /> Place Rock Slope Protection (ref. manual)
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="routinemonitor" />Routine Visual Monitor
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slopetooriginal" />Reconstruct Slope to Original Condition
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slopewithgeosyn" />Reconstruct Slope with Geosynthetics
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="repairculvert" />Repair Culvert/Drainage Pipe
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="erosioncontrol" />Install Erosion Control - By Dist. Landscape
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surveysite" />Survey the Site - By Dist Landscape
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="geologicalmapping" />Perform Geological Mapping
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="subsurfaceexploration" />Perform Subsurface Exploration
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="detaileddesign" />Perform Detailed Design & Produce Plans
+
 						</div>
 
 						<div>
