@@ -591,6 +591,28 @@ export class Details extends Component {
 						</div>
 
 						<div>
+							<label>Recommended Actions:</label>
+							<label>Immediate Actions:</label>
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="one" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="two" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="three" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="four" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="five" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="six" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="seven" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="eight" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="nine" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="ten" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="eleven" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twelve" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="thirteen" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fourteen" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fifteen" />
+							<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="sixteen" />
+							<label>Follow-Up Actions:</label>
+						</div>
+
+						<div>
 							<input type="text" value={date} onChange={this.handleDateChange}/>
 
 							<select value={district} onChange={this.handleDistrictChange}>
@@ -618,7 +640,7 @@ export class Details extends Component {
 						</div>
 
 						<div>
-							<label>Observations and Notes:</label>
+							<label>OBSERVATIONS AND NOTES:</label>
 								<p>
 								LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
 								SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
@@ -631,7 +653,7 @@ export class Details extends Component {
 						</div>
 
 						<div>
-							<label>Sketch:</label>
+							<label>SKETCH:</label>
 							<p>
 								DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW
 								PLAN W/ UP-STATION IDENTIFIED. MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH,
