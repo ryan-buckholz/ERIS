@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ERIS.Mobile.ViewModels;
 
 namespace ERIS.Mobile.Views
 {
@@ -15,11 +16,7 @@ namespace ERIS.Mobile.Views
         public DraftsPage()
         {
             InitializeComponent();
-        }
-
-        private void Next_Button_Clicked(object sender, EventArgs e)
-        {
-            Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart1Page));
+            BindingContext = new DraftsViewModel();
         }
     }
 }
