@@ -67,7 +67,7 @@
                 <Label Text="Adjacent Structures"  Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
             </Grid>
 
-            <Button Text="Save" Margin="0,150,0,0" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Save" VerticalOptions="EndAndExpand" Style="{StaticResource AssessmentButton}"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Button_Clicked"></Button>
             <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
         </StackLayout>

@@ -2,39 +2,47 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ERIS.Mobile.Views.HighwayStatus">
+    x:Class="ERIS.Mobile.Views.HighwayStatus"
+    BackgroundColor="#F8F0E3">
     <ContentPage.Content>
         <StackLayout>
-            <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Label Text="Highway Status" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
-            </Grid>
 
-            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+                <Label Text="Highway Status" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
 
                 <!-- The following objects correspond to the Highway Status section of the ERIS assessment -->
-                <CheckBox x:Name="OpenCheckBox" CheckedChanged="Open_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Open" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"></Label>
+                <CheckBox x:Name="OpenCheckBox" CheckedChanged="Open_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></CheckBox>
+                <Label Text="Open" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <CheckBox x:Name="ShoulderClosedCheckBox" CheckedChanged="Shoulder_Closed_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Shoulder Closed" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"></Label>
+                <Label Text="Shoulder Closed" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <CheckBox x:Name="LanesClosedCheckBox" CheckedChanged="Lanes_Closed_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Lane(s) Closed" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"></Label>
+                <Label Text="Lane(s) Closed" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black" ></Label>
 
                 <Entry Placeholder="# Lanes" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="2"></Entry>
-                <Label Text="Lanes" FontSize="Medium" Grid.Row="2" Grid.Column="3" VerticalOptions="Center"></Label>
+                <Label Text="Lanes" FontSize="Medium" Grid.Row="2" Grid.Column="3" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <CheckBox x:Name="OneWayCheckBox" CheckedChanged="One_Way_Closed_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="One-Way Closed" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"></Label>
+                <Label Text="One-Way Closed" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
                 <CheckBox x:Name="TwoWayCheckBox" CheckedChanged="Two_Way_Closed_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Two-Way Closed" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></Label>
+                <Label Text="Two-Way Closed" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black" ></Label>
 
 
             </Grid>
 
 
-            <Button Text="Save" Style="{StaticResource AssessmentButton}" Margin="0,275,0,0"></Button>
+            <Button Text="Save" Style="{StaticResource AssessmentButton}"  VerticalOptions="EndAndExpand"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
             <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
             
