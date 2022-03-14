@@ -34,7 +34,7 @@ namespace ERISMobileWebAPI
             });
             //services.AddTransient<AppDb>(_ => new AppDb(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddDbContext<ERISDbContext>( options => 
-                options.UseSqlServer() );
+                options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection") ) );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

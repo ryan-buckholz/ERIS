@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ERISMobileWebAPI.Models
@@ -32,13 +33,16 @@ namespace ERISMobileWebAPI.Models
         public decimal CrackVerticalDisplacement { get; set; }
         public decimal CrackDepth { get; set; }
         public decimal CrackSettlement { get; set; }
-        public decimal CrackBulge { get; set; }
+
+        public int CrackBulge { get; set; }
         public bool IsIndentedByRocks { get; set; }
         public bool IsRock { get; set; }
         public bool HasBedding { get; set; }
         public bool HasJoints { get; set; }
         public bool HasFractures { get; set; }
         public bool IsSoil { get; set; }
+
+        [Column(TypeName = "decimal(5,3)")]
         public decimal ClayEstimate { get; set; }
         public decimal SoilEstimate { get; set; }
         public decimal SiltEstimate { get; set; }
@@ -52,6 +56,8 @@ namespace ERISMobileWebAPI.Models
         public decimal LandslideWidth { get; set; }
         public decimal LandslideLength { get; set; }
         public decimal MainScarpHeight { get; set; }
+
+        [Column(TypeName = "decimal(7,2)")]
         public decimal LandslideSlope { get; set; }
         public decimal RoadwayEncroachedLength { get; set; }
         public decimal RoadwayEncroachedWidth { get; set; }
@@ -110,7 +116,5 @@ namespace ERISMobileWebAPI.Models
         public bool IsFollowUpActionSubsurfaceExploration { get; set; }
         public bool IsFollowUpActionDesignAndPlans { get; set; }
         public int OpenedLanesCount { get; set; }
-
-        public AssessmentProfile AssessmentProfile { get; set; }
     }
 }

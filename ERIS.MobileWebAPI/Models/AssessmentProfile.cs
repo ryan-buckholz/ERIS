@@ -32,6 +32,5 @@ namespace ERISMobileWebAPI.Models
         public string Notes { get; set; }
         public bool IsUploaded { get; set; }
 
-        public AssessmentDetails AssessmentDetails { get; set; }
     }
 }
