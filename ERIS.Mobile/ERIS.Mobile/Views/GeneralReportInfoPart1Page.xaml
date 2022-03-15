@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart1Page"
-             BackgroundColor="#F8F0E3">
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
             <Label HorizontalOptions="Center">
@@ -12,43 +12,25 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-  
-            <Entry  Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
-            <Button 
-                VerticalOptions= "Start"
-                Text="Save"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"></Button>
-            <Button 
-                VerticalOptions= "End"
-                Text="Next"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Next_Button_Clicked"></Button>
+                <Entry  Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+                <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
-            <Button 
-                VerticalOptions= "End"
-                Text="Use Current Location for Long/Latitude"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"></Button>
+
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Use Current Location for Lat/Long" Style="{StaticResource AssessmentButton}"></Button>
+            </StackLayout>
+            
 
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
