@@ -44,11 +44,11 @@ namespace ERIS.Mobile.Views
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new PavementGroundPage());
+            Shell.Current.GoToAsync("//" + nameof(WaterDrainagePage));
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {
-
+            Shell.Current.GoToAsync("//" + nameof(VegetationSlopeAndWaterContentPage));
         }
     }
 }

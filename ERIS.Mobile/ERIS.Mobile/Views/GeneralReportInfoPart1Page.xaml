@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ERIS.Mobile.Views.SiteAssignment1"
+             x:Class="ERIS.Mobile.Views.GeneralReportInfoPart1Page"
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Site Location and Dates" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
   
-            <Entry  Placeholder="Date:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Report Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
-            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Black"></Entry>
+            <Entry  Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
             <Button 
                 VerticalOptions= "Start"
@@ -38,7 +38,7 @@
                 BorderColor="Black"
                 BorderWidth="1.5"
                 CornerRadius="20"
-                Clicked="Button_Clicked"></Button>
+                Clicked="Next_Button_Clicked"></Button>
 
             <Button 
                 VerticalOptions= "End"
