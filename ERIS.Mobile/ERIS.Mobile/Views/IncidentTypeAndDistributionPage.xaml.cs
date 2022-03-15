@@ -57,27 +57,27 @@ namespace ERIS.Mobile.Views
         {
 
         }
-        private void AdvancingCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void AdvancingRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void RetrogressingCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void RetrogressingRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void EnlargingCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void EnlargingRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void WideningCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void WideningRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void MovingCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void MovingRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void ConfinedCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void ConfinedRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }

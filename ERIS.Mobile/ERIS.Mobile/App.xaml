@@ -49,6 +49,10 @@
                 <Setter Property="CornerRadius" Value="20"></Setter>
             </Style>
 
+            <Style x:Key="RadioButton" TargetType="RadioButton">
+                
+            </Style>
+
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

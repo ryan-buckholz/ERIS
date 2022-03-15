@@ -25,8 +25,8 @@
             </Grid>
                 <!-- The following objects correspond to the Water Content section of the ERIS assessment -->
             
-            <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Label Text="Presence of Water on the Slope" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+            <Grid RowDefinitions="*" ColumnDefinitions="*">
+                <Label Text="Presence of Water on the Slope" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
@@ -42,12 +42,9 @@
                 <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
                 <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <RadioButton Content="Seep"  Grid.Row="4" Grid.Column="1" CheckedChanged="Seep_RadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
+                <RadioButton Content="Spring"  Grid.Row="5" Grid.Column="1" CheckedChanged="Spring_RadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
 
-                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
-                
             </Grid>
 
 
