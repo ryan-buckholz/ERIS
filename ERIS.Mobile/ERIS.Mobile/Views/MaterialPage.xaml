@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ERIS.Mobile.Views.MaterialPage"
-             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
+              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
 
@@ -54,7 +54,7 @@
 
             <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0" Clicked="Back_Button_Clicked"></Button>
 
         </StackLayout>
         
