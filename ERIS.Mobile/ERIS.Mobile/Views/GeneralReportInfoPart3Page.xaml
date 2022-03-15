@@ -21,32 +21,12 @@
             <Entry  Placeholder="Phone:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Cell Phone:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
-            <Button 
-                VerticalOptions= "Start"
-                Text="Save"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"></Button>
-            <Button 
-                VerticalOptions= "End"
-                Text="Next"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Next_Button_Clicked"></Button>
-            <Button 
-                VerticalOptions= "End"
-                Text="Back"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Back_Button_Clicked"></Button>
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
