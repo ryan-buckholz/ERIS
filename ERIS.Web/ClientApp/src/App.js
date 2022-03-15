@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
+import { Details } from './components/Details';
 
 import './custom.css'
 import { Search } from './components/Search';
@@ -18,6 +19,7 @@ export default class App extends Component {
         <Route path='/Search' component={Search} />
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
+        <Route path='/Details' component={Details} />
       </Layout>
     );
   }
