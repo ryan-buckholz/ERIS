@@ -19,14 +19,14 @@
             <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
 
                 <!-- The following objects correspond to the Vegetation section of the ERIS assessment -->
-                
-                <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"></Label>
+
+                <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1"></Entry>
 
-                <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1"></Entry>
 
-                <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"></Label>
+                <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1"></Entry>
 
             </Grid>

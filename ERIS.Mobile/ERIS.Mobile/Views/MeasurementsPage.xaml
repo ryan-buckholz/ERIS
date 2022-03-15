@@ -13,13 +13,7 @@
                 </Label.FormattedText>
             </Label>
 
-            <Label Text="Measurements"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="Start"
-                   VerticalOptions="Center"
-                   TextDecorations="Underline"
-                   TextColor="Black"></Label>
+            <Label Text="Measurements" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
             <Entry  Placeholder="Slope Height, ft(H)" TextColor="Black" PlaceholderColor="Black"></Entry>
             <Entry  Placeholder="Original Slope, deg(a)" TextColor="Black" PlaceholderColor="Black"></Entry>

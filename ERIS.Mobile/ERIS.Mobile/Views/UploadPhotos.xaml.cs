@@ -20,7 +20,7 @@ namespace ERIS.Mobile.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new IncidentTypeAndDistributionPage());
+            Navigation.PushModalAsync(new UploadAssessment());
 
         }
 

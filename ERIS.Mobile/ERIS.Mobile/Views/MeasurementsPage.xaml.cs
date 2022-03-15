@@ -19,7 +19,7 @@ namespace ERIS.Mobile.Views
 
         private void Next_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new UploadAssessment());
+            Navigation.PushModalAsync(new UploadPhotos());
 
         }
     }
