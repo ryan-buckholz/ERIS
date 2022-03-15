@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ERIS.Mobile.Views.RecommendedFollowupActionsP2"
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid RowDefinitions="50" ColumnDefinitions="*">
+                <Label Text="Recommended Follow-up Actions Page 2" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+            </Grid>
+
+            <Grid RowDefinitions="*, *, *, *, *, *" ColumnDefinitions="50 ,*">
+
+                <CheckBox x:Name="ReconSlopeGeoCheckbox" CheckedChanged="Recon_Slope_Geo_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Reconstruct Slope with Geosynthetics" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="RepairCulvertCheckBox" CheckedChanged="Repair_Culvert_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Repair Culvert/Drainage Pipe" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="InstallErosionControlCheckBox" CheckedChanged="Install_Erosion_Control_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Install Erosion Control - by Dist. Landscape" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="SurveySiteCheckBox" CheckedChanged="Survey_Site_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Survey the Site - by Dist. Survey" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="PerformGeoMappingCheckBox" CheckedChanged="Perform_Geo_Mapping_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Perform Geological Mapping" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="PerformSubsurfaceExplorationCheckBox" CheckedChanged="Perform_Subsurface_Exploration_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Perform Subsurface Exploration" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+                <CheckBox x:Name="PerformDetailedDesignCheckBox" CheckedChanged="Perform_Detailed_Design_CheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <Label Text="Perform Detailed Design and Produce Plans" FontSize="Medium" Grid.Row="6" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+
+
+            </Grid>
+
+
+            <Button Text="Save" Style="{StaticResource AssessmentButton}" Margin="0,115,0,0"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
