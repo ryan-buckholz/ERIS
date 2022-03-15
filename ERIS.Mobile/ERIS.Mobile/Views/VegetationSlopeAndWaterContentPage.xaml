@@ -32,8 +32,8 @@
             </Grid>
                 <!-- The following objects correspond to the Water Content section of the ERIS assessment -->
             
-            <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Label Text="Presence of Water on the Slope" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+            <Grid RowDefinitions="*" ColumnDefinitions="*">
+                <Label Text="Presence of Water on the Slope" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
@@ -61,6 +61,7 @@
             <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
             <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0" Clicked="Back_Button_Clicked"></Button>
+
 
         </StackLayout>
     </ContentPage.Content>
