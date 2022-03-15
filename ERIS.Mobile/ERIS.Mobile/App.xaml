@@ -52,6 +52,11 @@
             <Style x:Key="ButtonStack" TargetType="StackLayout">
                 <Setter Property="Padding" Value="0,0,0,20"></Setter>
                 <Setter Property="VerticalOptions" Value="EndAndExpand"></Setter>
+
+            </Style>
+          
+            <Style x:Key="RadioButton" TargetType="RadioButton">
+                
             </Style>
 
         </ResourceDictionary>        

@@ -33,11 +33,11 @@ namespace ERIS.Mobile.Views
         {
 
         }
-        private void Seep_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Seep_RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
-        private void Spring_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void Spring_RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
         }
