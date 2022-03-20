@@ -330,7 +330,7 @@ export class Details extends Component {
 					<div className="card-body">
 						<div>
 							<label>GEOTECHNICAL INITIAL SITE ASSESSMENT</label>
-							<label>GISA-001 (NEW 1/2022) </label>
+							<div class="justify-content-end">GISA-001 (NEW 1/2022)</div>
 							<hr></hr>
 
 							<div class="col-xs-4">
@@ -615,8 +615,8 @@ export class Details extends Component {
 						</div>
 
 						<div class="text-center">
-							<a href="/" className="btn btn-primary ">Back</a>
-							<a href="/Search" className="btn btn-primary">New Search</a>
+							<a href="/" className="btn btn-outline-primary">Back</a>
+							<a href="/Search" className="btn btn-outline-primary">New Search</a>
 						</div>
 					</div>
 				</div>
