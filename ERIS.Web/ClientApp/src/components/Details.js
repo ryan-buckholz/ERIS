@@ -616,9 +616,9 @@ export class Details extends Component {
 							</p>
 						</div>
 
-						<div class="text-center">
-							<a href="/" className="btn btn-outline-secondary">Back</a>
-							<a href="/Search" className="btn btn-outline-secondary">New Search</a>
+						<div class="row justify-content-md-center">
+							<div class="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
+							<div class="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
 						</div>
 					</div>
 				</div>
