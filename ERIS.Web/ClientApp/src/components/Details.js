@@ -329,8 +329,10 @@ export class Details extends Component {
 				<div className="card mt-3">
 					<div className="card-body">
 						<div>
-							<label>GEOTECHNICAL INITIAL SITE ASSESSMENT</label>
-							<div class="justify-content-end">GISA-001 (NEW 1/2022)</div>
+							<div class="row">
+								<div class="col-md">GEOTECHNICAL INITIAL SITE ASSESSMENT</div>
+								<div class="col-md-3">GISA-001 (NEW 1/2022)</div>
+							</div>
 							<hr></hr>
 
 							<div class="col-xs-4">
