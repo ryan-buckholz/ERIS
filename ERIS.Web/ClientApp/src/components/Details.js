@@ -337,6 +337,7 @@ export class Details extends Component {
 
 							<div class="col-xs-4">
 								<div class="form-group">
+
 									<input type="text" value={date} onChange={this.handleDateChange} />
 
 									<select value={district} onChange={this.handleDistrictChange}>
