@@ -595,25 +595,27 @@ export class Details extends Component {
 
 						<div>
 							<label>OBSERVATIONS AND NOTES:</label>
-								<p>
-								LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
-								SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
-								FRACTURES; SITE ACCESS FOR FURTHER INVESTIGATION AND CONSTRUCTION; DRAINAGE;
-								EROSION; POTENTIAL CAUSES OF INCIDENT; CONSTRAINTS; ADDITIONAL NOTES ON
-								CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
-								LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
-								OF PHOTOS AND MEASUREMENTS.
-								</p> 
+							<div class="mb-3">
+								<label for="exampleFormControlTextarea1" class="form-label">LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
+									SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
+									FRACTURES; SITE ACCESS FOR FURTHER INVESTIGATION AND CONSTRUCTION; DRAINAGE;
+									EROSION; POTENTIAL CAUSES OF INCIDENT; CONSTRAINTS; ADDITIONAL NOTES ON
+									CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
+									LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
+									OF PHOTOS AND MEASUREMENTS.</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+							</div>
 							<hr></hr>
 						</div>
 
 						<div>
 							<label>SKETCH:</label>
-							<p>
-								DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW
-								PLAN W/ UP-STATION IDENTIFIED. MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH,
-								& DIRECTION.
-							</p>
+							<div class="mb-3">
+								<label for="exampleFormControlTextarea1" class="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW
+									PLAN W/ UP-STATION IDENTIFIED. MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH,
+									& DIRECTION.</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+							</div>
 						</div>
 
 						<div class="row justify-content-md-center">
