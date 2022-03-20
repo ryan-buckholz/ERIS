@@ -330,16 +330,12 @@ export class Details extends Component {
 					<div className="card-body">
 						<div>
 							<label>GEOTECHNICAL INITIAL SITE ASSESSMENT</label>
-							<label>GISA-001 (NEW 1/2022)</label>
+							<label>GISA-001 (NEW 1/2022) </label>
 							<hr></hr>
 
 							<div class="col-xs-4">
 								<div class="form-group">
-									<input
-										type="text"
-										value={date}
-										onChange={this.handleDateChange}
-									/>
+									<input type="text" value={date} onChange={this.handleDateChange} />
 
 									<select value={district} onChange={this.handleDistrictChange}>
 										<option value=""></option>
@@ -348,41 +344,12 @@ export class Details extends Component {
 										<option value="Sonoma">Sonoma</option>
 									</select>
 
-									<input
-										type="text"
-										value={county}
-										onChange={this.handleCountyChange}
-									/>
-
-									<input
-										type="text"
-										value={route}
-										onChange={this.handleRouteChange}
-									/>
-
-									<input
-										type="text"
-										value={postmile}
-										onChange={this.handlePostMileChange}
-									/>
-
-									<input
-										type="text"
-										value={ea}
-										onChange={this.handleEaChange}
-									/>
-
-									<input
-										type="text"
-										value={projectid}
-										onChange={this.handleProjecrIDChange}
-									/>
-
-									<input
-										type="text"
-										value={dateincidentreport}
-										onChange={this.handleDateIncidentChange}
-									/>
+									<input type="text" value={county} onChange={this.handleCountyChange} />
+									<input type="text" value={route} onChange={this.handleRouteChange} />
+									<input type="text" value={postmile} onChange={this.handlePostMileChange} />
+									<input type="text" value={ea} onChange={this.handleEaChange} />
+									<input type="text" value={projectid} onChange={this.handleProjecrIDChange} />
+									<input type="text" value={dateincidentreport} onChange={this.handleDateIncidentChange} />
 
 									<div class="col-xs-9">
 										<label>Date</label>
@@ -401,37 +368,12 @@ export class Details extends Component {
 						<div>
 							<div class="col-xs-4">
 								<div class="form-group">
-									<input
-										type="text"
-										value={latitude}
-										onChange={this.handleLatitudeChange}
-									/>
-
-									<input
-										type="text"
-										value={longitude}
-										onChange={this.handleLongitudeChange}
-									/>
-
+									<input type="text" value={latitude} onChange={this.handleLatitudeChange} />
+									<input type="text" value={longitude} onChange={this.handleLongitudeChange} />
 									<label>District Contact</label>
-
-									<input
-										type="text"
-										value={dclastname}
-										onChange={this.handleDcLastnameChange}
-									/>
-
-									<input
-										type="text"
-										value={dcfirstname}
-										onChange={this.handleDcFirstnameChange}
-									/>
-
-									<input
-										type="text"
-										value={dcsnumber}
-										onChange={this.handleDcSnumberChange}
-									/>
+									<input type="text" value={dclastname} onChange={this.handleDcLastnameChange} />
+									<input type="text" value={dcfirstname} onChange={this.handleDcFirstnameChange}/>
+									<input type="text" value={dcsnumber} onChange={this.handleDcSnumberChange}/>
 
 									<div class="col-xs-9">
 										<label>Latitude</label>
@@ -448,35 +390,11 @@ export class Details extends Component {
 						<div>
 							<div class="col-xs-4">
 								<div class="form-group">
-									<input
-										type="text"
-										value={lastname}
-										onChange={this.handleLastnameChange}
-									/>
-
-									<input
-										type="text"
-										value={firstname}
-										onChange={this.handleFirstnameChange}
-									/>
-
-									<input
-										type="text"
-										value={snumber}
-										onChange={this.handleSNumberChange}
-									/>
-
-									<input
-										type="text"
-										value={phone}
-										onChange={this.handlePhoneChange}
-									/>
-
-									<input
-										type="text"
-										value={cellphone}
-										onChange={this.handleCellphoneChange}
-									/>
+									<input type="text" value={lastname} onChange={this.handleLastnameChange}/>
+									<input type="text" value={firstname} onChange={this.handleFirstnameChange}/>
+									<input type="text" value={snumber} onChange={this.handleSNumberChange}/>
+									<input type="text" value={phone} onChange={this.handlePhoneChange}/>
+									<input type="text" value={cellphone} onChange={this.handleCellphoneChange}/>
 									<div class="col-xs-9">
 										<label>Last Name</label>
 										<label>First Name</label>
@@ -670,6 +588,7 @@ export class Details extends Component {
 							<label>Post Mile</label>
 							<label>Latitude</label>
 							<label>Longitude</label>
+							<hr></hr>
 						</div>
 
 						<div>
@@ -683,6 +602,7 @@ export class Details extends Component {
 								LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
 								OF PHOTOS AND MEASUREMENTS.
 								</p> 
+							<hr></hr>
 						</div>
 
 						<div>
