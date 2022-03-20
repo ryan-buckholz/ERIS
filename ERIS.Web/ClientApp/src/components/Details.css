@@ -24,3 +24,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
+
+.alert-info {
+    color: #042f45;
+}

@@ -7,7 +7,7 @@ export class Home extends Component {
     render () {
         return (
             <div>
-                <div className="alert alert-success text-center">Hello, Please log in below </div>
+                <div className="alert alert-info alert-dismissible alert-banner">Hello, Please log in below </div>
                 <div className="row">
                     <div className="col-md-6 col-xl-4">
                         <label>Username:</label>
@@ -18,7 +18,7 @@ export class Home extends Component {
                     <div className="col-md-6 col-xl-4">
                         <label>Password:</label>
                         <input className="form-control" type="text" />
-                        <a href="/Search" className="btn btn-primary mt-3 float-end">Login</a>
+                        <a href="/Search" className="btn btn-outline-secondary mt-3 float-end">Login</a>
                     </div>
                 </div>
             </div>

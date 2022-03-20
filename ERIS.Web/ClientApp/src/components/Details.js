@@ -615,8 +615,8 @@ export class Details extends Component {
 						</div>
 
 						<div class="text-center">
-							<a href="/" className="btn btn-outline-primary">Back</a>
-							<a href="/Search" className="btn btn-outline-primary">New Search</a>
+							<a href="/" className="btn btn-outline-secondary">Back</a>
+							<a href="/Search" className="btn btn-outline-secondary">New Search</a>
 						</div>
 					</div>
 				</div>
