@@ -356,6 +356,7 @@ export class Details extends Component {
 								<div class="col-md"><label>Project ID</label></div>
 								<div class="col-md"><label>Date Incident Report</label></div>
 							</div>
+							<br></br>
 
 							<div class="row">
 								<div class="col-md"><input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/></div>
@@ -374,6 +375,7 @@ export class Details extends Component {
 								<div class="col-md"><label>First Name</label></div>
 								<div class="col-md"><label>S Number</label></div>
 							</div>
+							<br></br>
 
 							<div class="row">
 								<div class="col-md"><input type="text" class="form-control" value={lastname} onChange={this.handleLastnameChange} /></div>
@@ -392,8 +394,9 @@ export class Details extends Component {
 							</div>
 							<hr></hr>
 							<label>TRB Special Report 24/7</label>
+							<br></br>
 						
-							<div>
+							<div class="row">
 								<label>Incident Type:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" />(Rock) Fall
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="topple" />Topple
@@ -407,7 +410,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="washout" />Washout
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Distribution:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="advancing" />Advancing
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="retrogressing" />Retrogressing
@@ -417,7 +420,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="confined" />Confined
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Highway Status:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="open" />Open
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" />Shoulder Closed
@@ -427,7 +430,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" />Two-way Closed
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Payment/Ground Status:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="paymentground" />Payment/Ground Checks
 								<input onChange={this.handleFeetLengthChange} type="text" class="form-control" value={feetlength} />Feet, Length
@@ -439,7 +442,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Material:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" />Rock
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bedding" />Bedding
@@ -448,7 +451,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="soil" />Soil
 							</div>
 
-							<div>
+							<div class="row">
 								<label>EST. %</label>
 								<input onChange={this.handleClayChange} type="text" class="form-control" value={clay} />Clay
 								<input onChange={this.handleSiltChange} type="text" class="form-control" value={silt} />Silt
@@ -456,7 +459,7 @@ export class Details extends Component {
 								<input onChange={this.handleGravelChange} type="text" class="form-control" value={gravel} />Gravel
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Water Content:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" />Dry
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moist" />Moist
@@ -466,7 +469,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spring" />Spring
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Vegetation on Slope</label>
 								<label>Coverage %</label>
 								Trees<input onChange={this.handleTreesChange} type="text" class="form-control" value={trees} />
@@ -474,7 +477,7 @@ export class Details extends Component {
 								Groundcover<input onChange={this.handleGroundCoverChange} type="text" class="form-control" value={groundcover} />
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Water/Drainage:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="clogged" />Clogged Inlet
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compromised" />Compromised Drains
@@ -490,7 +493,7 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" />Adjacent Structures
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Measurements:</label>
 								Slope Height, ft (H)<input onChange={this.handleSlopeChange} type="text" class="form-control" value={slope} />
 								Original Slope, deg (a)<input onChange={this.handleOriginalSlopeChange} type="text" class="form-control" value={originalslope} />
@@ -502,7 +505,7 @@ export class Details extends Component {
 								Width of Roadway Encroached, ft (Wr)<input onChange={this.handleWidthofRoadwayChange} type="text" class="form-control" value={widthofroadway} />
 							</div>
 
-							<div>
+							<div class="row">
 								<label>Recommended Actions:</label>
 								<label>Immediate Actions:</label>
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="one" />
@@ -545,32 +548,31 @@ export class Details extends Component {
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="geologicalmapping" />Perform Geological Mapping
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="subsurfaceexploration" />Perform Subsurface Exploration
 								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="detaileddesign" />Perform Detailed Design & Produce Plans
-
 							</div>
 
-							<div>
-								<input type="text" class="form-control" value={date} onChange={this.handleDateChange}/>
-								<div class="col-2"><input type="text" class="form-control" value={district} onChange={this.handleDistrictChange} /></div>
-								<input type="text" class="form-control" value={county} onChange={this.handleCountyChange} />
-								<input type="text" class="form-control" value={route} onChange={this.handleRouteChange} />
-								<input type="text" class="form-control" value={postmile} onChange={this.handlePostMileChange} />
-								<input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/>
-								<input type="text" class="form-control" value={longitude} onChange={this.handleLongitudeChange} />
+							<div class="row">
+								<div class="col-md"><input type="text" class="form-control" value={date} onChange={this.handleDateChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={district} onChange={this.handleDistrictChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={county} onChange={this.handleCountyChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={route} onChange={this.handleRouteChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={postmile} onChange={this.handlePostMileChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={longitude} onChange={this.handleLongitudeChange}/></div>
 							</div>
 
-							<div class="col-xs-9">
-								<label>Date</label>
-								<label>District</label>
-								<label>County</label>
-								<label>Route</label>
-								<label>Post Mile</label>
-								<label>Latitude</label>
-								<label>Longitude</label>
-								<hr></hr>
+							<div class="row">
+								<div class="col-md"><label>Date</label></div>
+								<div class="col-md"><label>District</label></div>
+								<div class="col-md"><label>County</label></div>
+								<div class="col-md"><label>Route</label></div>
+								<div class="col-md"><label>Post Mile</label></div>
+								<div class="col-md"><label>Latitude</label></div>
+								<div class="col-md"><label>Longitude</label></div>
 							</div>
+							<hr></hr>
 
-							<div>
-								<label>OBSERVATIONS AND NOTES:</label>
+							<div class="row">
+								<p class="fw-bold">OBSERVATIONS AND NOTES:</p>
 								<div class="mb-3">
 									<label for="exampleFormControlTextarea1" class="form-label">LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
 										SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
@@ -581,15 +583,13 @@ export class Details extends Component {
 										OF PHOTOS AND MEASUREMENTS.</label>
 									<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
 								</div>
-								<hr></hr>
 							</div>
+							<hr></hr>
 
-							<div>
-								<label>SKETCH:</label>
+							<div class="row">
+								<p class="fw-bold">SKETCH:</p>
 								<div class="mb-3">
-									<label for="exampleFormControlTextarea1" class="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW
-										PLAN W/ UP-STATION IDENTIFIED. MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH,
-										& DIRECTION.</label>
+									<label for="exampleFormControlTextarea1" class="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW PLAN W/ UP-STATION IDENTIFIED. <p class="fst-italic">MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH, & DIRECTION.</p></label>
 									<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
 								</div>
 							</div>
