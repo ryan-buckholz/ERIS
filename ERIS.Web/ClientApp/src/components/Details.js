@@ -422,12 +422,22 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" /> Slide</div>
-								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
-								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed</div>
-								<div class="col"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control" value={incheshorizontal} />Inches, Horizontal Disp.</div>
+								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" /> Slide</div>
+								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
+								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed
+									<div class="col-3"><input type="text" class="form-control" value={lanes} onChange={this.handleLanesChange} />Lanes</div></div>
+
+								<div class="col-md"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control" value={incheshorizontal} /></div>
+								<div class="col-md"><label>Inches Horiz.</label></div>
 							</div>
 
+							<div class="row">
+								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spread" /> Spread</div>
+								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="widening" /> Widening</div>
+								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="oneway" /> One-way Closed</div>
+								<div class="col"><input onChange={this.handleInchesVerticalChange} type="text" class="form-control" value={inchesvertical} /></div>
+								<div class="col"><label>Inches Vert.</label></div>
+							</div>
 
 							<div class="justify-content-start">
 								<div class="col"><p class="text-decoration-underline">Incident Type:</p></div>
