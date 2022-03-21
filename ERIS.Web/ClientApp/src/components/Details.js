@@ -410,36 +410,36 @@ export class Details extends Component {
 								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="washout" /> Washout</div>
 							</div>
 
-							<div class="row">
-								<label>Distribution:</label>
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="advancing" />Advancing
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="retrogressing" />Retrogressing
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" />Enlarging
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="widening" />Widening
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moving" />Moving
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="confined" />Confined
+							<div class="justify-content-center">
+								<div class="col"><p class="text-decoration-underline">Distribution:</p></div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="advancing" /> Advancing</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="retrogressing" /> Retrogressing</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="widening" /> Widening</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moving" /> Moving</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="confined" /> Confined</div>
 							</div>
 
-							<div class="row">
-								<label>Highway Status:</label>
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="open" />Open
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" />Shoulder Closed
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" />Lane(s) Closed
-								<input onChange={this.handleLanesChange} type="text" class="form-control" value={lanes} />Lanes
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="oneway" />One-way Closed
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" />Two-way Closed
+							<div class="justify-content-center">
+								<div class="col"><p class="text-decoration-underline">Highway Staus:</p></div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="open" /> Open</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" /> Shoulder Closed</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed</div>
+								<div class="col"><input type="text" class="form-control" value={lanes} onChange={this.handleLanesChange} />Lanes</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="oneway" /> One-way Closed</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" /> Two-way Closed</div>
 							</div>
 
-							<div class="row">
-								<label>Payment/Ground Status:</label>
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="paymentground" />Payment/Ground Checks
-								<input onChange={this.handleFeetLengthChange} type="text" class="form-control" value={feetlength} />Feet, Length
-								<input onChange={this.handleInchesHorizontalChange} type="text" class="form-control" value={incheshorizontal} />Inches, Horizontal Disp.
-								<input onChange={this.handleInchesVerticalChange} type="text" class="form-control" value={inchesvertical} />Inches, Vertical Disp.
-								<input onChange={this.handleInchesDepthChange} type="text" class="form-control" value={inchesdepth} />Inches, Depth of Crack
-								Settlement<input onChange={this.handleSettleInchesChange} type="text" class="form-control" value={settleinches} />Inches
-								Bulge<input onChange={this.handleBulgeInchesChange} type="text" class="form-control" value={bulgeinches} />Inches
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks
+							<div class="justify-content-center">
+								<div class="col"><p class="text-decoration-underline">Payment/Ground Status:</p></div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="paymentground" /> Payment/Ground Checks </div>
+								<div class="col"><input onChange={this.handleFeetLengthChange} type="text" class="form-control" value={feetlength} />Feet, Length</div>
+								<div class="col"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control" value={incheshorizontal} />Inches, Horizontal Disp.</div>
+								<div class="col"><input onChange={this.handleInchesVerticalChange} type="text" class="form-control" value={inchesvertical} />Inches, Vertical Disp.</div>
+								<div class="col"><input onChange={this.handleInchesDepthChange} type="text" class="form-control" value={inchesdepth} />Inches, Depth of Crack</div>
+								<div class="col">Settlement<input onChange={this.handleSettleInchesChange} type="text" class="form-control" value={settleinches} />Inches</div>
+								<div class="col">Bulge<input onChange={this.handleBulgeInchesChange} type="text" class="form-control" value={bulgeinches} />Inches</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks</div>
 							</div>
 
 							<div class="row">
