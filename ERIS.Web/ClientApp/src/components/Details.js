@@ -8,7 +8,7 @@ export class Details extends Component {
 
 		this.state = {
 			date: '',
-			district: 'react',
+			district: '',
 			county: '',
 			route: '',
 			postmile: '',
@@ -336,65 +336,59 @@ export class Details extends Component {
 							<hr></hr>
 
 							<div class="row">
-								<div class="col-2"><input type="text" class="form-control" value={date} onChange={this.handleDateChange} /></div>
-								
-								<div class="col-2"> <select value={district} onChange={this.handleDistrictChange}>
-										<option value=""></option>
-										<option value="Sacramento">Sacramento</option>
-										<option value="Placer">Placer</option>
-										<option value="Sonoma">Sonoma</option>
-									</select></div>
-
-								<div class="col-2"><input type="text" class="form-control" value={county} onChange={this.handleCountyChange} /></div>
-								<div class="col-2"><input type="text" class="form-control" value={route} onChange={this.handleRouteChange} /></div>
-								<div class="col-2"><input type="text" class="form-control" value={postmile} onChange={this.handlePostMileChange} /></div>
-								<div class="col-2"><input type="text" class="form-control" value={ea} onChange={this.handleEaChange} /></div>
-								<div class="col-2"><input type="text" class="form-control" value={projectid} onChange={this.handleProjecrIDChange} /></div>
-								<div class="col-2"><input type="text" class="form-control" value={dateincidentreport} onChange={this.handleDateIncidentChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={date} onChange={this.handleDateChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={district} onChange={this.handleDistrictChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={county} onChange={this.handleCountyChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={route} onChange={this.handleRouteChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={postmile} onChange={this.handlePostMileChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={ea} onChange={this.handleEaChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={projectid} onChange={this.handleProjecrIDChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={dateincidentreport} onChange={this.handleDateIncidentChange} /></div>
 							</div>
 
 							<div class="row">
-								<div class="col-2"><label>Date</label></div>
-								<div class="col-2"><label>District</label></div>
-								<div class="col-2"><label>County</label></div>
-								<div class="col-2"><label>Route</label></div>
-								<div class="col-2"><label>Post Mile</label></div>
-								<div class="col-2"><label>EA</label></div>
-								<div class="col-2"><label>Project ID</label></div>
-								<div class="col-2"><label>Date Incident Report</label></div>
+								<div class="col-md"><label>Date</label></div>
+								<div class="col-md"><label>District</label></div>
+								<div class="col-md"><label>County</label></div>
+								<div class="col-md"><label>Route</label></div>
+								<div class="col-md"><label>Post Mile</label></div>
+								<div class="col-md"><label>EA</label></div>
+								<div class="col-md"><label>Project ID</label></div>
+								<div class="col-md"><label>Date Incident Report</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col"><input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/></div>
-								<div class="col"><input type="text" class="form-control" value={longitude} onChange={this.handleLongitudeChange} /></div>
-								<div class="col"><label>District Contact</label></div>
-								<div class="col"><input type="text" class="form-control" value={dclastname} onChange={this.handleDcLastnameChange}/></div>
-								<div class="col"><input type="text" class="form-control" value={dcfirstname} onChange={this.handleDcFirstnameChange}/></div>
-								<div class="col"><input type="text" class="form-control" value={dcsnumber} onChange={this.handleDcSnumberChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={longitude} onChange={this.handleLongitudeChange} /></div>
+								<div class="col-md-auto"><label>District Contact:</label></div>
+								<div class="col-md"><input type="text" class="form-control" value={dclastname} onChange={this.handleDcLastnameChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={dcfirstname} onChange={this.handleDcFirstnameChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={dcsnumber} onChange={this.handleDcSnumberChange}/></div>
 							</div>
 
 							<div class="row">
-								<div class="col"><label>Latitude</label></div>
-								<div class="col"><label>Longitude</label></div>
-								<div class="col"><label>Last Name</label></div>
-								<div class="col"><label>First Name</label></div>
-								<div class="col"><label>S Number</label></div>
+								<div class="col-md"><label>Latitude</label></div>
+								<div class="col-md"><label>Longitude</label></div>
+								<div class="col-md"><label></label></div>
+								<div class="col-md"><label>Last Name</label></div>
+								<div class="col-md"><label>First Name</label></div>
+								<div class="col-md"><label>S Number</label></div>
 							</div>
 
 							<div class="row">
-								<input type="text" class="form-control" value={lastname} onChange={this.handleLastnameChange}/>
-								<input type="text" class="form-control" value={firstname} onChange={this.handleFirstnameChange}/>
-								<input type="text" class="form-control" value={snumber} onChange={this.handleSNumberChange}/>
-								<input type="text" class="form-control" value={phone} onChange={this.handlePhoneChange}/>
-								<input type="text" class="form-control" value={cellphone} onChange={this.handleCellphoneChange}/>
+								<div class="col-md"><input type="text" class="form-control" value={lastname} onChange={this.handleLastnameChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={firstname} onChange={this.handleFirstnameChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={snumber} onChange={this.handleSNumberChange}/></div>
+								<div class="col-md"><input type="text" class="form-control" value={phone} onChange={this.handlePhoneChange} /></div>
+								<div class="col-md"><input type="text" class="form-control" value={cellphone} onChange={this.handleCellphoneChange} /></div>
 							</div>
 
 							<div class="row">
-								<label>Last Name</label>
-								<label>First Name</label>
-								<label>S Number</label>
-								<label>Phone</label>
-								<label>Cell Phone</label>
+								<div class="col-md"><label>Last Name</label></div>
+								<div class="col-md"><label>First Name</label></div>
+								<div class="col-md"><label>S Number</label></div>
+								<div class="col-md"><label>Phone</label></div>
+								<div class="col-md"><label>Cell Phone</label></div>
 							</div>
 							<hr></hr>
 							<label>TRB Special Report 24/7</label>
@@ -556,14 +550,7 @@ export class Details extends Component {
 
 							<div>
 								<input type="text" class="form-control" value={date} onChange={this.handleDateChange}/>
-
-								<select value={district} onChange={this.handleDistrictChange}>
-									<option value=""></option>
-									<option value="Sacramento">Sacramento</option>
-									<option value="Placer">Placer</option>
-									<option value="Sonoma">Sonoma</option>
-								</select>
-
+								<div class="col-2"><input type="text" class="form-control" value={district} onChange={this.handleDistrictChange} /></div>
 								<input type="text" class="form-control" value={county} onChange={this.handleCountyChange} />
 								<input type="text" class="form-control" value={route} onChange={this.handleRouteChange} />
 								<input type="text" class="form-control" value={postmile} onChange={this.handlePostMileChange} />
