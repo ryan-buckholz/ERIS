@@ -406,6 +406,21 @@ export class Details extends Component {
 								<div class="col-md"><p class="text-decoration-underline">Payment/Ground Status:</p></div>
 							</div>
 
+							<div class="row">
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> (Rock) Fall</div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="advancing" /> Advancing</div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="open" /> Open</div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="paymentground" /> Payment/Ground Checks </div>
+							</div>
+
+							<div class="row">
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="topple" /> Topple</div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="retrogressing" /> Retrogressing</div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" /> Shoulder Closed</div>
+								<div class="col-md"><input onChange={this.handleFeetLengthChange} type="text" class="form-control" value={feetlength} />Feet, Length</div>
+							</div>
+
+
 							<div class="justify-content-start">
 								<div class="col"><p class="text-decoration-underline">Incident Type:</p></div>
 								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> (Rock) Fall</div>
