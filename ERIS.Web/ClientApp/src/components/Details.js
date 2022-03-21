@@ -354,7 +354,7 @@ export class Details extends Component {
 								<div class="col-md"><label>Post Mile</label></div>
 								<div class="col-md"><label>EA</label></div>
 								<div class="col-md"><label>Project ID</label></div>
-								<div class="col-md"><label>Date Incident Report</label></div>
+								<div class="col-md"><label>Incident</label></div>
 							</div>
 							<br></br>
 
@@ -398,7 +398,14 @@ export class Details extends Component {
 								<div class="col"><label>(TRB Special Report 24/7)</label></div>
 							</div>
 							<br></br>
-						
+
+							<div class="row">
+								<div class="col-md"><p class="text-decoration-underline">Incident Type:</p></div>
+								<div class="col-md"><p class="text-decoration-underline">Distribution:</p></div>
+								<div class="col-md"><p class="text-decoration-underline">Highway Staus:</p></div>
+								<div class="col-md"><p class="text-decoration-underline">Payment/Ground Status:</p></div>
+							</div>
+
 							<div class="justify-content-start">
 								<div class="col"><p class="text-decoration-underline">Incident Type:</p></div>
 								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> (Rock) Fall</div>
