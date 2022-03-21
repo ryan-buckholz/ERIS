@@ -396,18 +396,18 @@ export class Details extends Component {
 							</div>
 							<br></br>
 						
-							<div class="row">
-								<label>Incident Type:</label>
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" />(Rock) Fall
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="topple" />Topple
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" />Slide
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spread" />Spread
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flow" />Flow
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compound" />Compound
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="erosion" />Erosion
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surfacial" />Surfacial Sloughing
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="scoured" />Scoured Toe
-								<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="washout" />Washout
+							<div class="justify-content-start">
+								<div class="col"><p class="text-decoration-underline">Incident Type:</p></div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> (Rock) Fall</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="topple" /> Topple</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" /> Slide</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spread" /> Spread</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flow" /> Flow</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compound" /> Compound</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="erosion" /> Erosion</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surfacial" /> Surfacial Sloughing</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="scoured" /> Scoured </div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="washout" /> Washout</div>
 							</div>
 
 							<div class="row">
