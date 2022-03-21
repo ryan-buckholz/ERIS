@@ -391,9 +391,9 @@ export class Details extends Component {
 								<div class="col-md"><label>S Number</label></div>
 								<div class="col-md"><label>Phone</label></div>
 								<div class="col-md"><label>Cell Phone</label></div>
+								<hr></hr>
+								<label>(TRB Special Report 24/7)</label>
 							</div>
-							<hr></hr>
-							<label>TRB Special Report 24/7</label>
 							<br></br>
 						
 							<div class="row">
