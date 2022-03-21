@@ -335,38 +335,34 @@ export class Details extends Component {
 							</div>
 							<hr></hr>
 
-							<div class="col-xs-4">
-								<div class="form-group">
-
-									<input type="text" value={date} onChange={this.handleDateChange} />
-
-									<select value={district} onChange={this.handleDistrictChange}>
+							<div class="row">
+								<div class="col"><input type="text" value={date} onChange={this.handleDateChange} /></div>
+								
+								<div class="col"> <select value={district} onChange={this.handleDistrictChange}>
 										<option value=""></option>
 										<option value="Sacramento">Sacramento</option>
 										<option value="Placer">Placer</option>
 										<option value="Sonoma">Sonoma</option>
-									</select>
+									</select></div>
 
-									<input type="text" value={county} onChange={this.handleCountyChange} />
-									<input type="text" value={route} onChange={this.handleRouteChange} />
-									<input type="text" value={postmile} onChange={this.handlePostMileChange} />
-									<input type="text" value={ea} onChange={this.handleEaChange} />
-									<input type="text" value={projectid} onChange={this.handleProjecrIDChange} />
-									<input type="text" value={dateincidentreport} onChange={this.handleDateIncidentChange} />
-
-									<div class="col-xs-9">
-										<label>Date</label>
-										<label>District</label>
-										<label>County</label>
-										<label>Route</label>
-										<label>Post Mile</label>
-										<label>EA</label>
-										<label>Project ID</label>
-										<label>Date Incident Report</label>
-									</div>
-								</div>
+								<div class="col"><input type="text" value={county} onChange={this.handleCountyChange} /></div>
+								<div class="col"><input type="text" value={route} onChange={this.handleRouteChange} /></div>
+								<div class="col"><input type="text" value={postmile} onChange={this.handlePostMileChange} /></div>
+								<div class="col"><input type="text" value={ea} onChange={this.handleEaChange} /></div>
+								<div class="col"><input type="text" value={projectid} onChange={this.handleProjecrIDChange} /></div>
+								<div class="col"><input type="text" value={dateincidentreport} onChange={this.handleDateIncidentChange} /></div>
 							</div>
-						</div>
+
+							<div class="row">
+								<div class="col"><label>Date</label></div>
+								<div class="col"><label>District</label></div>
+								<div class="col"><label>County</label></div>
+								<div class="col"><label>Route</label></div>
+								<div class="col"><label>Post Mile</label></div>
+								<div class="col"><label>EA</label></div>
+								<div class="col"><label>Projec ID</label></div>
+								<div class="col"><label>Date Incident Report</label></div>
+							</div>
 
 						<div>
 							<div class="col-xs-4">
@@ -378,13 +374,13 @@ export class Details extends Component {
 									<input type="text" value={dcfirstname} onChange={this.handleDcFirstnameChange}/>
 									<input type="text" value={dcsnumber} onChange={this.handleDcSnumberChange}/>
 
-									<div class="col-xs-9">
-										<label>Latitude</label>
-										<label>Longitude</label>
-										<label>Last Name</label>
-										<label>First Name</label>
-										<label>S Number</label>
-									</div>
+								<div class="row">
+									<div class="col"><label>Latitude</label></div>
+									<div class="col"><label>Longitude</label></div>
+									<div class="col"><label>Last Name</label></div>
+									<div class="col"><label>First Name</label></div>
+									<div class="col"><label>S Number</label></div>
+								</div>
 
 								</div>
 							</div>
@@ -622,6 +618,7 @@ export class Details extends Component {
 						<div class="row justify-content-md-center">
 							<div class="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
 							<div class="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
+						</div>
 						</div>
 					</div>
 				</div>
