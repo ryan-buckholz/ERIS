@@ -560,26 +560,26 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label></label></div>
-								<div class="col-3"><label>Coverage %</label></div>
+								<div class="col-2"><label></label></div>
+								<div class="col-2"><label>Coverage %</label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="clogged" /> Clogged Inlet</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="eight" /></div>
 								<div class="col"><label> Remove Culvert Blockage</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Trees</label></div>
+								<div class="col-2"><label>Trees</label></div>
 								<div class="col-1"><input onChange={this.handleTreesChange} type="text" class="form-control" value={trees} /></div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compromised" /> Compromised Drains</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="nine" /></div>
 								<div class="col"><label> Dewater with Pump, Trench, etc.</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Bushes/Shrubs</label></div>
+								<div class="col-2"><label>Bushes/Shrubs</label></div>
 								<div class="col-1"><input onChange={this.handleBushesShrubsChange} type="text" class="form-control" value={bushesshrubs} /></div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surface" /> Surface Runoff</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="ten" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dewater" /></div>
@@ -587,9 +587,9 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Groundcover</label></div>
+								<div class="col-2"><label>Groundcover</label></div>
 								<div class="col-1"><input onChange={this.handleGroundCoverChange} type="text" class="form-control" value={groundcover} /></div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="torrent" /> Torrent, Surge, Flood</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="eleven" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="temporaryshoring" /></div>
