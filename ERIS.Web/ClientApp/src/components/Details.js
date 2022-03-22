@@ -482,13 +482,30 @@ export class Details extends Component {
 							<hr></hr>
 
 							<div class="row">
-								<div class="col"><p class="text-decoration-underline">Material:</p></div>
-								<div class="col"><p class="text-decoration-underline">Water Content:</p></div>
+								<div class="col-2"><p class="text-decoration-underline">Material:</p></div>
+								<div class="col-2"><label></label></div>
+								<div class="col-4"><p class="text-decoration-underline">Water Content:</p></div>
 								<div class="col"><p class="text-decoration-underline">Recommended Actions:</p></div>
 							</div>
 
 							<div class="row">
-								
+								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> Rock</div>
+								<div class="col-3"><label>EST. %</label></div>
+								<div class="col-4"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" /> Dry</div>
+								<div class="col-1"><label>Immediate Actions:</label></div>
+								<div class="col-1"><label>Follow Up Actions:</label></div>
+							</div>
+
+							<div class="row">
+
+							</div>
+
+							<div class="row">
+
+							</div>
+
+							<div class="row">
+
 							</div>
 
 							<div class="row">
