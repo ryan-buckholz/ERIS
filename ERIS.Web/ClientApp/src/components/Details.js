@@ -619,9 +619,9 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Slope Height, ft</label></div>
+								<div class="col-2"><label>Slope Height, ft</label></div>
 								<div class="col-1"><input onChange={this.handleSlopeChange} type="text" class="form-control" value={slope} /></div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impacttwo" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="properties" /></div>
 								<div class="col-1"><label>Adj. Properties</label></div>
@@ -631,9 +631,9 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Original Slope, deg</label></div>
+								<div class="col-2"><label>Original Slope, deg</label></div>
 								<div class="col-1"><input onChange={this.handleOriginalSlopeChange} type="text" class="form-control" value={originalslope} /></div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactthree" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" /></div>
 								<div class="col-1"><label>Adj. Structures</label></div>
@@ -643,50 +643,50 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Landslide Width, ft</label></div>
+								<div class="col-2"><label>Landslide Width, ft</label></div>
 								<div class="col-1"><input onChange={this.handleLandslideWidthChange} type="text" class="form-control" value={landslidewidth} /></div>
-								<div class="col-5"><label></label></div>
+								<div class="col-4"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="sixteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slopewithgeosyn" /></div>
 								<div class="col"><label>Reconstruct Slope with Geosynthetics</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Landslide Length, ft</label></div>
+								<div class="col-2"><label>Landslide Length, ft</label></div>
 								<div class="col-1"><input onChange={this.handleLandslideLengthChange} type="text" class="form-control" value={landslidelength} /></div>
-								<div class="col-6"><label></label></div>
+								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="repairculvert" /></div>
 								<div class="col"><label>Repair Culvert/Drainage Pipe</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Main Scarp Height, ft</label></div>
+								<div class="col-2"><label>Main Scarp Height, ft</label></div>
 								<div class="col-1"><input onChange={this.handleMainScarpChange} type="text" class="form-control" value={mainscarp} /> </div>
-								<div class="col-6"><label></label></div>
+								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="erosioncontrol" /></div>
 								<div class="col"><label>Install Erosion Control - By Dist. Landscape</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Landslide Slope, deg</label></div>
+								<div class="col-2"><label>Landslide Slope, deg</label></div>
 								<div class="col-1"><input onChange={this.handleLandslideSlopeChange} type="text" class="form-control" value={landslideslope} /></div>
-								<div class="col-6"><label></label></div>
+								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surveysite" /></div>
 								<div class="col"><label>Survey the Site - By Dist Landscape</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Length of Roadway Encroached, ft</label></div>
+								<div class="col-2"><label>Length of Roadway Encroached, ft</label></div>
 								<div class="col-1"><input onChange={this.handleLengthofRoadwayChange} type="text" class="form-control" value={lengthofroadway} /></div>
-								<div class="col-6"><label></label></div>
+								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="geologicalmapping" /></div>
 								<div class="col"><label>Perform Geological Mapping</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><label>Width of Roadway Encroached, ft</label></div>
+								<div class="col-2"><label>Width of Roadway Encroached, ft</label></div>
 								<div class="col-1"><input onChange={this.handleWidthofRoadwayChange} type="text" class="form-control" value={widthofroadway} /></div>
-								<div class="col-6"><label></label></div>
+								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="subsurfaceexploration" /></div>
 								<div class="col"><label>Perform Subsurface Exploration</label></div>
 							</div>
