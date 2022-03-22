@@ -347,14 +347,14 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-md"><label>Date</label></div>
-								<div class="col-md"><label>District</label></div>
-								<div class="col-md"><label>County</label></div>
-								<div class="col-md"><label>Route</label></div>
-								<div class="col-md"><label>Post Mile</label></div>
-								<div class="col-md"><label>EA</label></div>
-								<div class="col-md"><label>Project ID</label></div>
-								<div class="col-md"><label>Date Incident</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Date</label></div>
+								<div class="col-md d-flex justify-content-center"><label>District</label></div>
+								<div class="col-md d-flex justify-content-center"><label>County</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Route</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Post Mile</label></div>
+								<div class="col-md d-flex justify-content-center"><label>EA</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Project ID</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Date Incident</label></div>
 							</div>
 							<br></br>
 
@@ -368,12 +368,12 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-2"><label>Latitude</label></div>
-								<div class="col-2"><label>Longitude</label></div>
-								<div class="col-2"><label></label></div>
-								<div class="col-2"><label>Last Name</label></div>
-								<div class="col-2"><label>First Name</label></div>
-								<div class="col-2"><label>S Number</label></div>
+								<div class="col-2 d-flex justify-content-center"><label>Latitude</label></div>
+								<div class="col-2 d-flex justify-content-center"><label>Longitude</label></div>
+								<div class="col-2 d-flex justify-content-center"><label></label></div>
+								<div class="col-2 d-flex justify-content-center"><label>Last Name</label></div>
+								<div class="col-2 d-flex justify-content-center"><label>First Name</label></div>
+								<div class="col-2 d-flex justify-content-center"><label>S Number</label></div>
 							</div>
 							<br></br>
 
@@ -386,11 +386,11 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-md"><label>Last Name</label></div>
-								<div class="col-md"><label>First Name</label></div>
-								<div class="col-md"><label>S Number</label></div>
-								<div class="col-md"><label>Phone</label></div>
-								<div class="col-md"><label>Cell Phone</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Last Name</label></div>
+								<div class="col-md d-flex justify-content-center"><label>First Name</label></div>
+								<div class="col-md d-flex justify-content-center"><label>S Number</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Phone</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Cell Phone</label></div>
 							</div>
 
 							<hr></hr>
@@ -668,13 +668,13 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-md"><label>Date</label></div>
-								<div class="col-md"><label>District</label></div>
-								<div class="col-md"><label>County</label></div>
-								<div class="col-md"><label>Route</label></div>
-								<div class="col-md"><label>Post Mile</label></div>
-								<div class="col-md"><label>Latitude</label></div>
-								<div class="col-md"><label>Longitude</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Date</label></div>
+								<div class="col-md d-flex justify-content-center"><label>District</label></div>
+								<div class="col-md d-flex justify-content-center"><label>County</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Route</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Post Mile</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Latitude</label></div>
+								<div class="col-md d-flex justify-content-center"><label>Longitude</label></div>
 							</div>
 							<br></br>
 
