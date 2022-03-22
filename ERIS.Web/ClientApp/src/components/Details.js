@@ -417,7 +417,7 @@ export class Details extends Component {
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="topple" /> Topple</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="retrogressing" /> Retrogressing</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="shoulder" /> Shoulder Closed</div>
-								<div class="col"><input onChange={this.handleFeetLengthChange} type="text" class="form-control" value={feetlength} /></div>
+								<div class="col"><input onChange={this.handleFeetLengthChange} type="text" class="form-control form-control-sm" value={feetlength} /></div>
 								<div class="col"><label>Feet, Length</label></div>
 							</div>
 
@@ -425,25 +425,25 @@ export class Details extends Component {
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" /> Slide</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed
-									<div class="col-3"><input type="text" class="form-control" value={lanes} onChange={this.handleLanesChange} />Lanes</div></div>
-								<div class="col-md"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control" value={incheshorizontal} /></div>
-								<div class="col-md"><label>Inches Horizontal</label></div>
+									<div class="col-2"><input type="text" class="form-control form-control-sm" value={lanes} onChange={this.handleLanesChange} />Lanes</div></div>
+								<div class="col-md"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control form-control-sm" value={incheshorizontal} /></div>
+								<div class="col-md"><label>IN. Horizontal</label></div>
 							</div>
 
 							<div class="row">
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="spread" /> Spread</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="widening" /> Widening</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="oneway" /> One-way Closed</div>
-								<div class="col"><input onChange={this.handleInchesVerticalChange} type="text" class="form-control" value={inchesvertical} /></div>
-								<div class="col"><label>Inches Vertical</label></div>
+								<div class="col"><input onChange={this.handleInchesVerticalChange} type="text" class="form-control form-control-sm" value={inchesvertical} /></div>
+								<div class="col"><label>IN. Vertical</label></div>
 							</div>
 
 							<div class="row">
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flow" /> Flow</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moving" /> Moving</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" /> Two-way Closed</div>
-								<div class="col"><input onChange={this.handleInchesDepthChange} type="text" class="form-control" value={inchesdepth} /></div>
-								<div class="col"><label>Inches, Depth of Crack</label></div>
+								<div class="col"><input onChange={this.handleInchesDepthChange} type="text" class="form-control form-control-sm" value={inchesdepth} /></div>
+								<div class="col"><label>IN, Dep. of Crack</label></div>
 							</div>
 
 							<div class="row">
@@ -451,7 +451,7 @@ export class Details extends Component {
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="confined" /> Confined</div>
 								<div class="col-3"><label></label></div>
 								<div class="col"><label>Settlement</label></div>
-								<div class="col"><input onChange={this.handleSettleInchesChange} type="text" class="form-control" value={settleinches} /></div>
+								<div class="col"><input onChange={this.handleSettleInchesChange} type="text" class="form-control form-control-sm" value={settleinches} /></div>
 								<div class="col"><label>Inches</label></div>
 							</div>
 
@@ -460,7 +460,7 @@ export class Details extends Component {
 								<div class="col-3"><label></label></div>
 								<div class="col-3"><label></label></div>
 								<div class="col"><label>Bulge</label></div>
-								<div class="col"><input onChange={this.handleBulgeInchesChange} type="text" class="form-control" value={bulgeinches} /></div>
+								<div class="col"><input onChange={this.handleBulgeInchesChange} type="text" class="form-control form-control-sm" value={bulgeinches} /></div>
 								<div class="col"><label>Inches</label></div>
 
 							</div>
@@ -469,7 +469,7 @@ export class Details extends Component {
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surfacial" /> Surfacial Sloughing</div>
 								<div class="col-3"><label></label></div>
 								<div class="col-3"><label></label></div>
-								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" />Indented by Rocks</div>
+								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="indented" /> Indented by Rocks</div>
 							</div>
 
 							<div class="row">
@@ -480,6 +480,21 @@ export class Details extends Component {
 								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="washout" /> Washout</div>
 							</div>
 							<hr></hr>
+
+							<div class="row">
+								<div class="col"><p class="text-decoration-underline">Material:</p></div>
+								<div class="col"><p class="text-decoration-underline">Water Content:</p></div>
+								<div class="col"><p class="text-decoration-underline">Recommended Actions:</p></div>
+							</div>
+
+							<div class="row">
+								
+							</div>
+
+							<div class="row">
+
+							</div>
+
 
 							<div class="justify-content-center">
 								<div class="col"><p class="text-decoration-underline">Material:</p></div>
