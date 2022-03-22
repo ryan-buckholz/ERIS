@@ -655,6 +655,7 @@ export class Details extends Component {
 								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="subsurfaceexploration" /> Perform Subsurface Exploration</div>
 								<div class="col"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="detaileddesign" /> Perform Detailed Design & Produce Plans</div>
 							</div>
+							<hr></hr>
 
 							<div class="row">
 								<div class="col-md"><input type="text" class="form-control" value={date} onChange={this.handleDateChange}/></div>
@@ -675,7 +676,7 @@ export class Details extends Component {
 								<div class="col-md"><label>Latitude</label></div>
 								<div class="col-md"><label>Longitude</label></div>
 							</div>
-							<hr></hr>
+							<br></br>
 
 							<div class="row">
 								<p class="fw-bold">OBSERVATIONS AND NOTES:</p>
