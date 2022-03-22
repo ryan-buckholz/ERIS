@@ -359,21 +359,21 @@ export class Details extends Component {
 							<br></br>
 
 							<div class="row">
-								<div class="col-md"><input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/></div>
-								<div class="col-md"><input type="text" class="form-control" value={longitude} onChange={this.handleLongitudeChange} /></div>
-								<div class="col-md-auto"><label>District Contact:</label></div>
-								<div class="col-md"><input type="text" class="form-control" value={dclastname} onChange={this.handleDcLastnameChange}/></div>
-								<div class="col-md"><input type="text" class="form-control" value={dcfirstname} onChange={this.handleDcFirstnameChange}/></div>
-								<div class="col-md"><input type="text" class="form-control" value={dcsnumber} onChange={this.handleDcSnumberChange}/></div>
+								<div class="col-2"><input type="text" class="form-control" value={latitude} onChange={this.handleLatitudeChange}/></div>
+								<div class="col-2"><input type="text" class="form-control" value={longitude} onChange={this.handleLongitudeChange} /></div>
+								<div class="col-2 d-flex justify-content-end"><label>District Contact:</label></div>
+								<div class="col-2"><input type="text" class="form-control" value={dclastname} onChange={this.handleDcLastnameChange}/></div>
+								<div class="col-2"><input type="text" class="form-control" value={dcfirstname} onChange={this.handleDcFirstnameChange}/></div>
+								<div class="col-2"><input type="text" class="form-control" value={dcsnumber} onChange={this.handleDcSnumberChange}/></div>
 							</div>
 
 							<div class="row">
-								<div class="col-md"><label>Latitude</label></div>
-								<div class="col-md"><label>Longitude</label></div>
-								<div class="col-md"><label></label></div>
-								<div class="col-md"><label>Last Name</label></div>
-								<div class="col-md"><label>First Name</label></div>
-								<div class="col-md"><label>S Number</label></div>
+								<div class="col-2"><label>Latitude</label></div>
+								<div class="col-2"><label>Longitude</label></div>
+								<div class="col-2"><label></label></div>
+								<div class="col-2"><label>Last Name</label></div>
+								<div class="col-2"><label>First Name</label></div>
+								<div class="col-2"><label>S Number</label></div>
 							</div>
 							<br></br>
 
