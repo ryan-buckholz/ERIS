@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, Container, Col, Row, Form } from "reactstrap";
 import './Details.css';
 
 export class Details extends Component {
