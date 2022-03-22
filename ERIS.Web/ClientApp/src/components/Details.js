@@ -610,8 +610,8 @@ export class Details extends Component {
 							<div class="row">
 								<div class="col-3"><p class="text-decoration-underline">Measurements:</p></div>
 								<div class="col-1"><label></label></div>
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactone" /></div>
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="utilties" /></div>
+								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactone" /></div>
+								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="utilties" /></div>
 								<div class="col-1"><label>Adj. Utilities</label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="thirteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rockprotection" /></div>
@@ -622,8 +622,8 @@ export class Details extends Component {
 								<div class="col-2"><label>Slope Height, ft</label></div>
 								<div class="col-1"><input onChange={this.handleSlopeChange} type="text" class="form-control" value={slope} /></div>
 								<div class="col-1"><label></label></div>
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impacttwo" /></div>
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="properties" /></div>
+								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impacttwo" /></div>
+								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="properties" /></div>
 								<div class="col-1"><label>Adj. Properties</label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fourteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="routinemonitor" /></div>
@@ -634,8 +634,8 @@ export class Details extends Component {
 								<div class="col-2"><label>Original Slope, deg</label></div>
 								<div class="col-1"><input onChange={this.handleOriginalSlopeChange} type="text" class="form-control" value={originalslope} /></div>
 								<div class="col-1"><label></label></div>
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactthree" /></div>
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" /></div>
+								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactthree" /></div>
+								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" /></div>
 								<div class="col-1"><label>Adj. Structures</label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fifteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slopetooriginal" /></div>
