@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Details.css';
 
 export class Details extends Component {
 	constructor(props) {
