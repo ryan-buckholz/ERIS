@@ -11,18 +11,18 @@ namespace ERIS.Mobile.ViewModels
 {
     public class DraftsViewModel : BindableObject
     {
-        AssessmentDetailsJsonFileManager assessmentDetailsJsonFileManager;
+        AssessmentDetailsSerializer assessmentDetailsSerializer;
         public DraftsViewModel()
         {
-            assessmentDetailsJsonFileManager = DependencyService.Get<AssessmentDetailsJsonFileManager>();
+            assessmentDetailsSerializer = DependencyService.Get<AssessmentDetailsSerializer>();
             newReportButtonPressed = new Command(New_Report_Button_Clicked);
         }
         public ICommand newReportButtonPressed { get; }
 
         public void New_Report_Button_Clicked()
         {
-            assessmentDetailsJsonFileManager.CreateNulledJsonFileAndSetAsActive();
-            Console.WriteLine(assessmentDetailsJsonFileManager.activeLocalPath);
+            assessmentDetailsSerializer.CreateNulledJsonFileAndSetAsActive();
+            Console.WriteLine(assessmentDetailsSerializer.activeLocalPath);
             Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart1Page));
         }
     }

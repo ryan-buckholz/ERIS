@@ -8,10 +8,10 @@ namespace ERIS.Mobile.ViewModels
 {
     public class IncidentTypeAndDistributionViewModel : BindableObject
     {
-        AssessmentDetailsJsonFileManager assessmentDetailsJsonFileManager;
+        AssessmentDetailsSerializer AssessmentDetailsSerializer;
         public IncidentTypeAndDistributionViewModel()
         {
-            assessmentDetailsJsonFileManager = DependencyService.Get<AssessmentDetailsJsonFileManager>();
+            AssessmentDetailsSerializer = DependencyService.Get<AssessmentDetailsSerializer>();
         }
     }
 }
