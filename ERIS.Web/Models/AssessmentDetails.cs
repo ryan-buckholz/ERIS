@@ -38,12 +38,11 @@ namespace ERIS.Web
         public bool HasFractures { get; set; }
         public bool IsSoil { get; set; }
         public decimal ClayEstimate { get; set; }
-        public decimal SoilEstimate { get; set; }
         public decimal SiltEstimate { get; set; }
         public decimal SandEstimate { get; set; }
         public decimal GravelEstimate { get; set; }
         public decimal TreesCoverageOnSlope { get; set; }
-        public decimal BrushesShrubsCoverageOnSlope{ get; set; }
+        public decimal BushesShrubsCoverageOnSlope { get; set; }
         public decimal GroundCoverCoverageOnSlope { get; set; }
         public decimal SlopeHeight { get; set; }
         public decimal OriginalSlope { get; set; }

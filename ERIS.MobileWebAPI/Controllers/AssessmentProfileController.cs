@@ -11,27 +11,27 @@ namespace ERIS.MobileWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AssessmentProfilesController : ControllerBase
+    public class AssessmentProfileController : ControllerBase
     {
         private readonly ERISDbContext _context;
 
-        public AssessmentProfilesController(ERISDbContext context)
+        public AssessmentProfileController(ERISDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/AssessmentProfiles
+        // GET: api/AssessmentProfile
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AssessmentProfile>>> GetAssessmentProfiles()
+        public async Task<ActionResult<IEnumerable<AssessmentProfile>>> GetAssessmentProfile()
         {
-            return await _context.AssessmentProfiles.ToListAsync();
+            return await _context.AssessmentProfile.ToListAsync();
         }
 
-        // GET: api/AssessmentProfiles/5
+        // GET: api/AssessmentProfile/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AssessmentProfile>> GetAssessmentProfile(int id)
         {
-            var assessmentProfile = await _context.AssessmentProfiles.FindAsync(id);
+            var assessmentProfile = await _context.AssessmentProfile.FindAsync(id);
 
             if (assessmentProfile == null)
             {
@@ -41,7 +41,7 @@ namespace ERIS.MobileWebAPI.Controllers
             return assessmentProfile;
         }
 
-        // PUT: api/AssessmentProfiles/5
+        // PUT: api/AssessmentProfile/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAssessmentProfile(int id, AssessmentProfile assessmentProfile)
@@ -72,28 +72,28 @@ namespace ERIS.MobileWebAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/AssessmentProfiles
+        // POST: api/AssessmentProfile
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<AssessmentProfile>> PostAssessmentProfile(AssessmentProfile assessmentProfile)
         {
-            _context.AssessmentProfiles.Add(assessmentProfile);
+            _context.AssessmentProfile.Add(assessmentProfile);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAssessmentProfile", new { id = assessmentProfile.AssessmentID }, assessmentProfile);
         }
 
-        // DELETE: api/AssessmentProfiles/5
+        // DELETE: api/AssessmentProfile/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAssessmentProfile(int id)
         {
-            var assessmentProfile = await _context.AssessmentProfiles.FindAsync(id);
+            var assessmentProfile = await _context.AssessmentProfile.FindAsync(id);
             if (assessmentProfile == null)
             {
                 return NotFound();
             }
 
-            _context.AssessmentProfiles.Remove(assessmentProfile);
+            _context.AssessmentProfile.Remove(assessmentProfile);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -101,7 +101,7 @@ namespace ERIS.MobileWebAPI.Controllers
 
         private bool AssessmentProfileExists(int id)
         {
-            return _context.AssessmentProfiles.Any(e => e.AssessmentID == id);
+            return _context.AssessmentProfile.Any(e => e.AssessmentID == id);
         }
     }
 }
