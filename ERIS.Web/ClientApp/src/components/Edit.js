@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import { Route, useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Box from '@mui/material/Box';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
-export class Details extends Component {
+
+
+export class Edit extends Component {
+	
 	constructor(props) {
 		super(props)
 
@@ -50,270 +59,10 @@ export class Details extends Component {
 		}
 	}
 
-	handleDateChange = event => {
-		this.setState({
-			date: event.target.value
-		})
-	}
-
-	handleDistrictChange = event => {
-		this.setState({
-			district: event.target.value
-		})
-	}
-
-	handleCountyChange = event => {
-		this.setState({
-			county: event.target.value
-		})
-	}
-
-	handleRouteChange = event => {
-		this.setState({
-			route: event.target.value
-		})
-	}
-
-	handlePostMileChange = event => {
-		this.setState({
-			postmile: event.target.value
-		})
-	}
-
-	handleEaChange = event => {
-		this.setState({
-			ea: event.target.value
-		})
-	}
-
-	handleProjectIDChange = event => {
-		this.setState({
-			projectid: event.target.value
-		})
-	}
-
-	handleDateIncidentChange = event => {
-		this.setState({
-			dateincidentreport: event.target.value
-		})
-	}
-
-	handleLatitudeChange = event => {
-		this.setState({
-			latitude: event.target.value
-		})
-	}
-
-	handleLongitudeChange = event => {
-		this.setState({
-			longitude: event.target.value
-		})
-	}
-
-	handleDcLastnameChange = event => {
-		this.setState({
-			dclastname: event.target.value
-		})
-	}
-
-	handleDcFirstnameChange = event => {
-		this.setState({
-			dcfirstname: event.target.value
-		})
-	}
-
-	handleDcSnumbertChange = event => {
-		this.setState({
-			dcsnumber: event.target.value
-		})
-	}
-
-	handleLastnameChange = event => {
-		this.setState({
-			lastname: event.target.value
-		})
-	}
-
-	handleFirstname = event => {
-		this.setState({
-			firstname: event.target.value
-		})
-	}
-
-	handleSNumberChange = event => {
-		this.setState({
-			snumber: event.target.value
-		})
-	}
-
-	handlePhoneChange = event => {
-		this.setState({
-			phone: event.target.value
-		})
-	}
-
-	handleCellphoneChange = event => {
-		this.setState({
-			cellphone: event.target.value
-		})
-	}
-
-	handleCheckbox = event => {
-		console.log(event.target.value);
-	}
-
-	handleLanesChange = event => {
-		this.setState({
-			lanes: event.target.value
-		})
-	}
-
-	handleFeetLengthChange = event => {
-		this.setState({
-			feetlength: event.target.value
-		})
-	}
-
-	handleInchesHorizontalChange = event => {
-		this.setState({
-			incheshorizontal: event.target.value
-		})
-	}
-
-	handleInchesVerticalChange = event => {
-		this.setState({
-			inchesvertical: event.target.value
-		})
-	}
-
-	handleInchesDepthChange = event => {
-		this.setState({
-			inchesdepth: event.target.value
-		})
-	}
-
-	handleSettleInchesChange = event => {
-		this.setState({
-			settleinches: event.target.value
-		})
-	}
-
-	handleBulgeInchesChange = event => {
-		this.setState({
-			bulgeinches: event.target.value
-		})
-	}
-
-	handleClayChange = event => {
-		this.setState({
-			clay: event.target.value
-		})
-	}
-
-	handleSiltChange = event => {
-		this.setState({
-			silt: event.target.value
-		})
-	}
-
-	handleSandChange = event => {
-		this.setState({
-			sand: event.target.value
-		})
-	}
-
-	handleGravelChange = event => {
-		this.setState({
-			gravel: event.target.value
-		})
-	}
-
-	handleTreesChange = event => {
-		this.setState({
-			trees: event.target.value
-		})
-	}
-
-	handleBushesShrubsChange = event => {
-		this.setState({
-			bushesshrubs: event.target.value
-		})
-	}
-
-	handleGroundCoverChange = event => {
-		this.setState({
-			groundcover: event.target.value
-		})
-	}
-
-	handleSlopeChange = event => {
-		this.setState({
-			slope: event.target.value
-		})
-	}
-
-	handleOriginalSlopeChange = event => {
-		this.setState({
-			originalslope: event.target.value
-		})
-	}
-
-	handleLandslideWidthChange = event => {
-		this.setState({
-			landslidewidth: event.target.value
-		})
-	}
-
-	handleLandslideLengthChange = event => {
-		this.setState({
-			landslidelength: event.target.value
-		})
-	}
-
-	handleMainScarpChange = event => {
-		this.setState({
-			mainscarp: event.target.value
-		})
-	}
-
-	handleLandslideSlopeChange = event => {
-		this.setState({
-			landslideslope: event.target.value
-		})
-	}
-
-	handleLengthofRoadwayChange = event => {
-		this.setState({
-			lengthofroadway: event.target.value
-		})
-	}
-
-	handleWidthofRoadwayChange = event => {
-		this.setState({
-			widthofroadway: event.target.value
-		})
-	}
-
-	handleLanesPageTwoChange = event => {
-		this.setState({
-			lanespagetwo: event.target.value
-		})
-	}
+	
 
 	handleSubmit = event => {
-		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} 
-			   ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}
-			   ${this.state.latitude} ${this.state.longitude} ${this.state.dclastname} ${this.state.dcfirstname} 
-			   ${this.state.dcsnumber} ${this.state.lastname} ${this.state.firstname} ${this.state.snumber} 
-			   ${this.state.phone} ${this.state.cellphone} ${this.state.lanes} ${this.state.feetlength} 
-			   ${this.state.incheshorizontal} ${this.state.inchesvertical} ${this.state.inchesdepth}
-			   ${this.state.settleinches} ${this.state.bulgeinches} ${this.state.clay}
-			   ${this.state.silt} ${this.state.sand} ${this.state.gravel} ${this.state.trees}
-			   ${this.state.brushesshrubs} ${this.state.groundcover} ${this.state.slope} ${this.state.originalslope}
-			   ${this.state.landslidewidth} ${this.state.landslidelength} ${this.state.mainscarp}
-			   ${this.state.landslideslope} ${this.state.lengthofroadway} ${this.state.widthofroadway}
-			   ${this.state.lanespagetwo}`)
-			   event.preventDefault()
+	
 	}
 
 	render() {
@@ -322,7 +71,8 @@ export class Details extends Component {
 			snumber, phone, cellphone, lanes, feetlength, incheshorizontal, inchesvertical,
 			inchesdepth, settleinches, bulgeinches, clay, silt, sand, gravel, trees, bushesshrubs,
 			groundcover, slope, originalslope, landslidewidth, landslidelength, mainscarp, landslideslope,
-			lengthofroadway, widthofroadway, lanespagetwo} = this.state
+			lengthofroadway, widthofroadway, lanespagetwo, status } = this.state
+
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className="card mt-3">
@@ -742,10 +492,27 @@ export class Details extends Component {
 							</div>
 
 							<div class="row justify-content-md-center">
-								<div class="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
-								<div class="col-auto"><a href="/Sear0ch" className="btn btn-outline-secondary">New Search</a></div>
-								<Button variant='outlined' className='col-auto' a href='/Edit'>Edit </Button>
+								<Box >
+									<FormControl fullWidth>
+										<InputLabel id="demo-simple-select-label">Status</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+											value={status}
+											label="Age"
+										>
+											<MenuItem value={10}>Acitve</MenuItem>
+											<MenuItem value={20}>Closed</MenuItem>
+										</Select>
+									</FormControl>
+								</Box>
 							</div>
+
+							<div class="row justify-content-md-center">
+								<div class="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
+								<div class="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
+							</div>
+							
 							<div>
 							</div>
 						</div>
