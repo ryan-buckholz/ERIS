@@ -21,8 +21,7 @@ namespace ERIS.Mobile.ViewModels
 
         public void New_Report_Button_Clicked()
         {
-            assessmentDetailsSerializer.CreateNulledJsonFileAndSetAsActive();
-            Console.WriteLine(assessmentDetailsSerializer.activeLocalPath);
+            assessmentDetailsSerializer.CreateNulledAssessmentDetailsJsonFile();
             Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart1Page));
         }
     }

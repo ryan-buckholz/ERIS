@@ -14,18 +14,17 @@ namespace ERIS.Mobile.Services
 {
     public class AssessmentDetailsSerializer
     {
-        const string jsonFileNamePrefix = "AssessmentDetails";
-        const string fileExtension = ".json";
-        public string activeLocalPath {get; private set;}
-        
-        public void CreateNulledJsonFileAndSetAsActive()
+        const string jsonFileName = "AssessmentDetails.json";
+
+        public string activeLocalPath;
+
+        AssessmentDetailsSerializer()
         {
-            Guid guid = Guid.NewGuid();
-
-            string jsonFileName = jsonFileNamePrefix + Guid.NewGuid().ToString() + fileExtension;
-
             activeLocalPath = Path.Combine(FileSystem.AppDataDirectory, jsonFileName);
+        }
 
+        public void CreateNulledAssessmentDetailsJsonFile()
+        {
             AssessmentDetails assessmentDetails = new AssessmentDetails();
             string nulledAssessmentDetailsJson = JsonConvert.SerializeObject(assessmentDetails);
             File.WriteAllText(activeLocalPath, nulledAssessmentDetailsJson);
