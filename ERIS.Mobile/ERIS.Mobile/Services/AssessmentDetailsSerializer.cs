@@ -18,13 +18,10 @@ namespace ERIS.Mobile.Services
 
         public string activeLocalPath;
 
-        AssessmentDetailsSerializer()
-        {
-            activeLocalPath = Path.Combine(FileSystem.AppDataDirectory, jsonFileName);
-        }
-
         public void CreateNulledAssessmentDetailsJsonFile()
         {
+            activeLocalPath = Path.Combine(FileSystem.AppDataDirectory, jsonFileName);
+
             AssessmentDetails assessmentDetails = new AssessmentDetails();
             string nulledAssessmentDetailsJson = JsonConvert.SerializeObject(assessmentDetails);
             File.WriteAllText(activeLocalPath, nulledAssessmentDetailsJson);
