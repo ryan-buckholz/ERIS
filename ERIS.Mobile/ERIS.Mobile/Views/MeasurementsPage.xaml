@@ -22,10 +22,13 @@
             <Entry  Placeholder="Landslide Slope, deg (B)" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Length of Roadway Encroached, ft(Lr)" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Width of Roadway Encroached, ft(Wr)" TextColor="Black" PlaceholderColor="Gray"></Entry>
+
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            </StackLayout>
             
-            <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
-            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -53,9 +53,11 @@
             </Grid>
 
 
-            <Button Text="Save" Style="{StaticResource AssessmentButton}" Margin="0,50,0,0"></Button>
-            <Button Text="Next" Style="{StaticResource AssessmentButton}"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0"></Button>
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            </StackLayout>
 
         </StackLayout>
     </ContentPage.Content>
