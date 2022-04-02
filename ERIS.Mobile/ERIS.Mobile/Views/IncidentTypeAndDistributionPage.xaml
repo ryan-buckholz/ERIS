@@ -20,53 +20,53 @@
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto">
                 <!-- The following objects correspond to the *Incident Type* section of the ERIS assessment -->
-                <CheckBox x:Name="RockFallCheckBox" CheckedChanged="RockFallCheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="RockFallCheckBox" IsChecked="{Binding IsFall}" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="(Rock) Fall"  Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ToppleCheckBox" CheckedChanged="ToppleCheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ToppleCheckBox" IsChecked="{Binding IsTopple}" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Topple"  Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="SlideCheckBox" CheckedChanged="SlideCheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="SlideCheckBox" IsChecked="{Binding IsSlide}" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Slide"  Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="SpreadCheckBox" CheckedChanged="SpreadCheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="SpreadCheckBox" IsChecked="{Binding IsSpread}" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Spread"  Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="FlowCheckBox" CheckedChanged="FlowCheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="FlowCheckBox" IsChecked="{Binding IsFlow}" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Flow"  Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="CompoundCheckBox" CheckedChanged="CompoundCheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="CompoundCheckBox" IsChecked="{Binding IsCompound}" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Compound"  Grid.Row="5" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ErosionCheckBox" CheckedChanged="ErosionCheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ErosionCheckBox" IsChecked="{Binding IsErosion}" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Erosion"  Grid.Row="6" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="SurfacialSloughingCheckBox" CheckedChanged="SurfacialSloughingCheckBox_CheckedChanged" Grid.Row="7" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="SurfacialSloughingCheckBox" IsChecked="{Binding IsSurfacialSloughing}" Grid.Row="7" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Surfacial Sloughing"  Grid.Row="7" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ScouredToeCheckBox" CheckedChanged="ScouredToeCheckBox_CheckedChanged" Grid.Row="8" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ScouredToeCheckBox" IsChecked="{Binding IsScouredToe}" Grid.Row="8" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Scoured Toe"  Grid.Row="8" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="WashoutCheckBox" CheckedChanged="WashoutCheckBox_CheckedChanged" Grid.Row="9" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="WashoutCheckBox" IsChecked="{Binding IsWashout}" Grid.Row="9" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Washout"  Grid.Row="9" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <!-- The following objects correspond to the *Distribution* section of the ERIS assessment -->
-                <CheckBox x:Name="AdvancingCheckBox" CheckedChanged="AdvancingCheckBox_CheckedChanged" Grid.Row="0" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="AdvancingCheckBox" IsChecked="{Binding IsAdvancing}" Grid.Row="0" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Advancing"  Grid.Row="0" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="RetrogressingCheckBox" CheckedChanged="RetrogressingCheckBox_CheckedChanged" Grid.Row="1" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="RetrogressingCheckBox" IsChecked="{Binding IsRetrogressing}" Grid.Row="1" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Retrogressing"  Grid.Row="1" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="EnlargingCheckBox" CheckedChanged="EnlargingCheckBox_CheckedChanged" Grid.Row="2" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="EnlargingCheckBox" IsChecked="{Binding IsEnlarging}" Grid.Row="2" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Enlarging"  Grid.Row="2" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="WideningCheckBox" CheckedChanged="WideningCheckBox_CheckedChanged" Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="WideningCheckBox" IsChecked="{Binding IsWidening}" Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Widening"  Grid.Row="3" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="MovingCheckBox" CheckedChanged="MovingCheckBox_CheckedChanged" Grid.Row="4" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="MovingCheckBox" IsChecked="{Binding IsMoving}" Grid.Row="4" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Moving"  Grid.Row="4" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ConfinedCheckBox" CheckedChanged="ConfinedCheckBox_CheckedChanged" Grid.Row="5" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ConfinedCheckBox" IsChecked="{Binding IsConfined}" Grid.Row="5" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Confined"  Grid.Row="5" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
             </Grid>
 

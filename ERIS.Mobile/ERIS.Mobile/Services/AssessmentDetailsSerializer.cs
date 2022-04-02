@@ -26,21 +26,17 @@ namespace ERIS.Mobile.Services
             string nulledAssessmentDetailsJson = JsonConvert.SerializeObject(assessmentDetails);
             File.WriteAllText(activeLocalPath, nulledAssessmentDetailsJson);
         }
-        public void SerializeModelToActiveJsonFile(AssessmentDetails assessmentDetails)
+        public void SerializeModelToJsonFile(AssessmentDetails assessmentDetails)
         {
             string serializedModel = JsonConvert.SerializeObject(assessmentDetails);
             File.WriteAllText(activeLocalPath, serializedModel);
         }
-        public AssessmentDetails DeserializeActiveJsonFileToModel()
+        public AssessmentDetails DeserializeJsonFileToModel()
         {
             string assessmentDetailsJson = File.ReadAllText(activeLocalPath);
             AssessmentDetails assessmentDetails = JsonConvert.DeserializeObject<AssessmentDetails>(assessmentDetailsJson);
             
             return assessmentDetails;
-        }
-        public void SelectActiveFileByFileName(string jsonFileName)
-        {
-            activeLocalPath = Path.Combine(FileSystem.AppDataDirectory, jsonFileName);
         }
     }
 }
