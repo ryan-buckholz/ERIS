@@ -1,6 +1,8 @@
+using ERISMobileWebAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,7 +32,9 @@ namespace ERISMobileWebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ERISMobileWebAPI", Version = "v1" });
             });
-            services.AddTransient<AppDb>(_ => new AppDb(Configuration["ConnectionStrings:DefaultConnection"]));
+            //services.AddTransient<AppDb>(_ => new AppDb(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddDbContext<ERISDbContext>( options => 
+                options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection") ) );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

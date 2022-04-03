@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart1Page"
-             BackgroundColor="#F8F0E3">
+             BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
             <Label HorizontalOptions="Center">
@@ -23,24 +23,6 @@
             <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" x:Name="Longitude"></Entry>
 
             <Button 
-                VerticalOptions= "Start"
-                Text="Save"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"></Button>
-            <Button 
-                VerticalOptions= "End"
-                Text="Next"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Next_Button_Clicked"></Button>
-
-            <Button 
                 VerticalOptions= "End"
                 Text="Use Current Location for Long/Latitude"    
                 TextColor="Black"
@@ -50,6 +32,15 @@
                 CornerRadius="20"
                 Clicked="Geolocate_Clicked"></Button>
 
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Use Current Location for Lat/Long" Style="{StaticResource AssessmentButton}"></Button>
+            </StackLayout>
+            
+
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

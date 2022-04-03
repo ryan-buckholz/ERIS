@@ -17,7 +17,7 @@
             <Label Text="Pavement/Ground Status" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
             <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
-                <CheckBox x:Name="PavementGroundCheckbox" CheckedChanged="Pavement_Ground_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
+                <CheckBox x:Name="PavementGroundCheckbox" CheckedChanged="Pavement_Ground_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Pavement/Ground Cracks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
             </Grid>
 
@@ -51,7 +51,6 @@
                 <CheckBox x:Name="IndentedByRocksCheckbox" CheckedChanged="Indented_By_Rocks_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Indented by Rocks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
             </Grid>
-
             <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
             <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
