@@ -43,13 +43,14 @@
                 <Label Text="Bulge" FontSize="Medium" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
                 <Entry TextColor="Black" PlaceholderColor="Gray" Grid.Row="6" Grid.Column="1"></Entry>
                 <Label Text="inches" FontSize="Medium" Grid.Row="6" Grid.Column="2" VerticalOptions="Center" TextColor="Black" ></Label>
-
+               
 
             </Grid>
 
             <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
                 <CheckBox x:Name="IndentedByRocksCheckbox" CheckedChanged="Indented_By_Rocks_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Indented by Rocks" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="0" Grid.Column="2"  VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
             </Grid>
 
 

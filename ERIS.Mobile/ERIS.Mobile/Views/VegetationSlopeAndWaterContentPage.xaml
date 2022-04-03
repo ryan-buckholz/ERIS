@@ -48,19 +48,20 @@
                 
                 <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
-                
-                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+
+                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_RadioButton_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
-                
-                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+
+                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_RadioButton_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="5" Grid.Column="2"  VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
                 
             </Grid>
 
 
             <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0" Clicked="Back_Button_Clicked"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
 
 
         </StackLayout>

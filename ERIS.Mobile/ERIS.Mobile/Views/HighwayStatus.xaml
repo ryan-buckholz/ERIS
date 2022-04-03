@@ -38,19 +38,15 @@
                 <CheckBox x:Name="TwoWayCheckBox" CheckedChanged="Two_Way_Closed_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Two-Way Closed" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black" ></Label>
 
-
             </Grid>
 
             <StackLayout Style="{StaticResource ButtonStack}">
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
                 <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>
 
-            <Button Text="Save" Style="{StaticResource AssessmentButton}"  VerticalOptions="EndAndExpand"></Button>
-            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
-            
         </StackLayout>
 
     </ContentPage.Content>

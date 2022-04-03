@@ -15,7 +15,7 @@
             </Label>
 
 
-            <Label Text="Material" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+            <Label Text="Slope Composition" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto">
 
@@ -47,7 +47,7 @@
 
                 <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="8" Grid.Column="1"></Entry>
-
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="8" Grid.Column="4" Clicked="OnPickImagesClick"></Button>
 
             </Grid>
 

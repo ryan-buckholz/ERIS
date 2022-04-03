@@ -9,9 +9,8 @@
             <Label Text="Measurements"
                    FontSize="Medium"
                    HorizontalTextAlignment="Center"
-                   HorizontalOptions="Start"
+                   HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   TextDecorations="Underline"
                    TextColor="Black"></Label>
 
             <Entry  Placeholder="Slope Height, ft(H)" TextColor="Black" PlaceholderColor="Gray"></Entry>
