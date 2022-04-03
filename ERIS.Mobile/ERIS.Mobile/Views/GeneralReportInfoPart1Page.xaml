@@ -19,8 +19,8 @@
             <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" x:Name="Latitude"></Entry>
+            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" x:Name="Longitude"></Entry>
 
             <Button 
                 VerticalOptions= "Start"
@@ -49,7 +49,6 @@
                 BorderWidth="1.5"
                 CornerRadius="20"
                 Clicked="Geolocate_Clicked"></Button>
-            <Label x:Name="LabelLocation"/>
 
         </StackLayout>
     </ContentPage.Content>
