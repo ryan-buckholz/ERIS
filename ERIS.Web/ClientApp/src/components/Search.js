@@ -8,7 +8,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import MapSearch from './MapSearch';
 
-
 export class Search extends Component {
     static displayName = Search.name;
     
@@ -16,7 +15,7 @@ export class Search extends Component {
     render () {
         return (
             <div>   
-                <div className="alert alert-primary text-center">Hello, Please enter the search criteria below </div>
+                <div className="alert alert-primary text-center">Search</div>
 
                 <Form /* onSubmit={}*/> 
                     <Grid containerxl>
@@ -35,16 +34,13 @@ export class Search extends Component {
                                     <MapSearch />
                                 </TabPanel>
                             </Tabs>
-                            
                             </CardContent>
                             <CardActions>
-                                
                             </CardActions>
                         </Card>
                         </Grid>
                     </Grid> 
                 </Form> 
-                
                 <SearchResultsGrid />
             </div>
         );

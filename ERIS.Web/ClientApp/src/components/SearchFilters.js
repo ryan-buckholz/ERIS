@@ -36,33 +36,6 @@ export class SearchFilters extends Component {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography>Name</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <Typography>
-                            <div class="d-flex justify-content-around">
-                                <Input
-                                    label='First Name'
-                                    name='firstNameInput' />
-                                <Input
-                                    label='Last Name'
-                                    name='lastnameInput' />
-                                <Input 
-                                    type='number'
-                                    label='Employee Id'
-                                    name='employeeIdInput' />
-                            </div>
-                            
-                        </Typography>
-                    </AccordionDetails>
-                </Accordion>
-
-                <Accordion>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2a-content"
-                        id="panel2a-header"
-                    >
                         <Typography>Location</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -70,40 +43,30 @@ export class SearchFilters extends Component {
                             <div class="row">
                                 <div class="d-flex justify-content-around">
                                     <Input
+                                    label='District'
+                                    name='districtInput' />
+                                    <Input
                                         label='County'
                                         name='countyInput' />
-                                    
-                                    <Input 
-                                        type='number'
-                                        label='Latitude'
-                                        name='latitudeInput' />
-                                    <Input 
-                                        type='number'
-                                        label='Longitude'
-                                        name='longitudeInput' />
+                                    <Input
+                                    label='Route'
+                                    name='routeInput' />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="d-flex justify-content-around">
-                                    <Input
-                                    label='Route'
-                                    name='routeInput' />
 
                                     <Input
-                                    label='Post Mile'
-                                    name='postmileInput' />
-                                    
+                                    label='Begin Post Mile'
+                                        name='beginPostmileInput' />
                                     <Input
-                                    label='District'
-                                    name='districtInput' />
+                                        label='End Post Mile'
+                                        name='endPostmileInput' />
                                 </div>
-                                    
                             </div>
-                            
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -118,7 +81,6 @@ export class SearchFilters extends Component {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-                
             </div>
         );
     }
