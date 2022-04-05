@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart3Page"
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
@@ -15,11 +15,11 @@
             </Label>
 
 
-            <Entry  Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Phone:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Cell Phone:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Last Name:" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
+            <Entry  Placeholder="First Name:" IsPassword ="True" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
+            <Entry  Placeholder="S Number:" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
+            <Entry  Placeholder="Phone:" IsPassword ="True" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
+            <Entry  Placeholder="Cell Phone:" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
 
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
