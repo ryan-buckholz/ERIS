@@ -60,11 +60,11 @@
                 <Label Text="Adjacent Structures"  Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
             </Grid>
 
-            <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
-                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
-            </StackLayout>
+            <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand" Clicked="OnPickImagesClick"></Button>
+            <Button Text="Save"  Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+
 
         </StackLayout>
     </ContentPage.Content>

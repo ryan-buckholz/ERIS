@@ -37,32 +37,33 @@
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
-                <CheckBox x:Name="DryCheckbox" CheckedChanged="Dry_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Dry" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <CheckBox x:Name="DryCheckbox" CheckedChanged="Dry_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Dry" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                
+                <CheckBox x:Name="MoistCheckbox" CheckedChanged="Moist_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Moist" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                
+                <CheckBox x:Name="WetCheckbox" CheckedChanged="Wet_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Wet" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                
+                <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="MoistCheckbox" CheckedChanged="Moist_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Moist" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_RadioButton_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="WetCheckbox" CheckedChanged="Wet_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Wet" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_RadioButton_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="5" Grid.Column="2"  VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
 
-                <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_RadioButton_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_RadioButton_CheckedChanged" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 
             </Grid>
 
 
-            <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
-                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
-            </StackLayout>
+            <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
+            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+
 
 
         </StackLayout>

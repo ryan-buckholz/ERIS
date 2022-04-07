@@ -20,5 +20,10 @@ namespace ERIS.Mobile.Views
         {
             Shell.Current.GoToAsync("//" + nameof(RecommendedFollowupActionsP2));
         }
+
+        private void Submit_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Submitted", "Congrats you submitted the assessment!", "OK");
+        }
     }
 }
