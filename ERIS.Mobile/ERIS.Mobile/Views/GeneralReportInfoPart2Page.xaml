@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart2Page"
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource MainStackLayout}">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>

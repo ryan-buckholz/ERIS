@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.MaterialPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
@@ -21,41 +21,42 @@
 
                 <!-- The following objects correspond to the Material section of the ERIS assessment -->
 
-                <CheckBox x:Name="RockCheckbox" CheckedChanged="Rock_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Rock" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black" ></Label>
+                <CheckBox x:Name="RockCheckbox" CheckedChanged="Rock_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Rock" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}" ></Label>
 
-                <CheckBox x:Name="BeddingCheckbox" CheckedChanged="Bedding_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Bedding" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="BeddingCheckbox" CheckedChanged="Bedding_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Bedding" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="JointsCheckbox" CheckedChanged="Joints_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Joints" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="JointsCheckbox" CheckedChanged="Joints_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Joints" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="FracturesCheckbox" CheckedChanged="Fractures_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Fractures" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="FracturesCheckbox" CheckedChanged="Fractures_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Fractures" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="SoilCheckbox" CheckedChanged="Soil_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
-                <Label Text="Soil" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="SoilCheckbox" CheckedChanged="Soil_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Soil" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Label Text="Clay" FontSize="Medium" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Clay" FontSize="Medium" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="5" Grid.Column="1"></Entry>
 
-                <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="6" Grid.Column="1"></Entry>
 
-                <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="7" Grid.Column="1"></Entry>
 
-                <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="8" Grid.Column="1"></Entry>
                 <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="8" Grid.Column="4" Clicked="OnPickImagesClick"></Button>
 
             </Grid>
 
 
-
-            <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
-            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Margin="0,0,0,0" Clicked="Back_Button_Clicked"></Button>
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            </StackLayout>
 
 
         </StackLayout>

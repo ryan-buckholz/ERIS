@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.WaterDrainagePage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Label Text="Water / Drainage"
                    FontSize="Medium"
@@ -64,6 +64,7 @@
             <Button Text="Save"  Style="{StaticResource AssessmentButton}"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
             <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+
 
         </StackLayout>
     </ContentPage.Content>

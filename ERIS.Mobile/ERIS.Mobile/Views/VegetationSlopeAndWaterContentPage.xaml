@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.VegetationSlopeAndWaterContentPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
@@ -20,13 +20,13 @@
 
                 <!-- The following objects correspond to the Vegetation section of the ERIS assessment -->
 
-                <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1"></Entry>
 
-                <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1"></Entry>
 
-                <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" TextColor="Black"></Label>
+                <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1"></Entry>
 
             </Grid>
@@ -55,6 +55,7 @@
                 <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_RadioButton_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
                 <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="5" Grid.Column="2"  VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
+
                 
             </Grid>
 
@@ -62,6 +63,7 @@
             <Button Text="Save" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand"></Button>
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
             <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+
 
 
         </StackLayout>
