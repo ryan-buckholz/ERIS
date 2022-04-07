@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.IncidentTypeAndDistributionPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
@@ -49,6 +49,7 @@
 
                 <CheckBox x:Name="WashoutCheckBox" CheckedChanged="WashoutCheckBox_CheckedChanged" Grid.Row="9" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Washout"  Grid.Row="9" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="9" Grid.Column="2" Clicked="OnPickImagesClick"></Button>
 
                 <!-- The following objects correspond to the *Distribution* section of the ERIS assessment -->
                 <RadioButton Content="Advancing"  Grid.Row="0" Grid.Column="2" CheckedChanged="AdvancingRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>

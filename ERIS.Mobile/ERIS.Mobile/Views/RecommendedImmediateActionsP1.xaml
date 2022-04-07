@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.RecommendedImmediateActionsP1"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Grid RowDefinitions="50" ColumnDefinitions="*">
                 <Label Text="Recommended Immediate Actions Page 1" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
@@ -12,42 +12,42 @@
 
             <Grid RowDefinitions="*, *, *" ColumnDefinitions="50 ,*, 100">
 
-                <CheckBox x:Name="OpenHighwayTrafficCheckbox" CheckedChanged="Open_Highway_Traffic_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Open Highway Traffic" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="OpenHighwayTrafficCheckbox" CheckedChanged="Open_Highway_Traffic_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Open Highway Traffic" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry  Placeholder="Lanes" TextColor="Black" PlaceholderColor="LightGray" Grid.Row="0" Grid.Column="2" MinimumWidthRequest="1"></Entry>
 
-                <CheckBox x:Name="OpenHighwayShoulderCheckbox" CheckedChanged="Open_Highway_Shoulder_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Open Highway Shoulder" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="OpenHighwayShoulderCheckbox" CheckedChanged="Open_Highway_Shoulder_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Open Highway Shoulder" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="CloseHighwayCheckbox" CheckedChanged="Close_Highway_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Close Highway" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="CloseHighwayCheckbox" CheckedChanged="Close_Highway_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Close Highway" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
             </Grid>
 
             <Grid  RowDefinitions="*" ColumnDefinitions="50, 50, 50, 50, *">
-                <CheckBox x:Name="OneDirectionCheckbox" CheckedChanged="One_Direction_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="One" FontSize="Medium" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Black"></Label>
+                <CheckBox x:Name="OneDirectionCheckbox" CheckedChanged="One_Direction_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="One" FontSize="Medium" Grid.Row="0" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="BothDirectionsCheckbox" CheckedChanged="Both_Directions_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Both Directions" FontSize="Medium" Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Start" TextColor="Black"></Label>
+                <CheckBox x:Name="BothDirectionsCheckbox" CheckedChanged="Both_Directions_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="3" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Both Directions" FontSize="Medium" Grid.Row="0" Grid.Column="4" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 
              </Grid>
 
             <Grid RowDefinitions="*, *, *, *, *" ColumnDefinitions="50, *">
 
-                <CheckBox x:Name="RemoveLandslideDebrisCheckbox" CheckedChanged="Remove_Landslide_Debris_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Remove Landslide Debris from the Highway" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="RemoveLandslideDebrisCheckbox" CheckedChanged="Remove_Landslide_Debris_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Remove Landslide Debris from the Highway" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="PlaceKRailOrFenceCheckbox" CheckedChanged="Place_KRail_Or_Fence_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Place K-Rail or Fence" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="PlaceKRailOrFenceCheckbox" CheckedChanged="Place_KRail_Or_Fence_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Place K-Rail or Fence" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="CoverSlopeWithPlasticCheckbox" CheckedChanged="Cover_Slope_With_Plastic_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Cover Slope with Plastic" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="CoverSlopeWithPlasticCheckbox" CheckedChanged="Cover_Slope_With_Plastic_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Cover Slope with Plastic" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="DivertSurfaceWaterRunoffCheckbox" CheckedChanged="Divert_Surface_Water_Runoff_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Divert Surface Water Runoff" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="DivertSurfaceWaterRunoffCheckbox" CheckedChanged="Divert_Surface_Water_Runoff_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Divert Surface Water Runoff" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="RemoveCulvertBlockageCheckbox" CheckedChanged="Remove_Culvert_Blockage_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" Color="Black"></CheckBox>
-                <Label Text="Remove Culvert Blockage" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
+                <CheckBox x:Name="RemoveCulvertBlockageCheckbox" CheckedChanged="Remove_Culvert_Blockage_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <Label Text="Remove Culvert Blockage" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
 
             </Grid>
