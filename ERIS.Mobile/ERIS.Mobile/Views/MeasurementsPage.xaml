@@ -4,15 +4,10 @@
              x:Class="ERIS.Mobile.Views.MeasurementsPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
-            <Label Text="Measurements"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="Start"
-                   VerticalOptions="Center"
-                   TextDecorations="Underline"
-                   TextColor="Black"></Label>
+            <Label Text="Measurements" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+
 
             <Entry  Placeholder="Slope Height, ft(H)" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Original Slope, deg(a)" TextColor="Black" PlaceholderColor="Gray"></Entry>
