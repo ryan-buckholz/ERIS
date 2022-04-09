@@ -71,7 +71,7 @@
             </Grid>
 
             <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Entry Placeholder="Others" Grid.Row="0" Grid.Column="0"></Entry>
+                <Entry Placeholder="Others" Grid.Row="0" Grid.Column="0"/>
             </Grid>
 
             <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>

@@ -1,24 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ERIS.Mobile.Services;
-using ERIS.Mobile.Models;
-using Xamarin.Forms;
-using System.Reflection;
-
-namespace ERIS.Mobile.ViewModels
+﻿namespace ERIS.Mobile.ViewModels
 {
-    public class IncidentTypeAndDistributionViewModel : BindableObject
+    public class IncidentTypeAndDistributionViewModel : AssessmentDetailsUpdater
     {
-        AssessmentDetailsSerializer assessmentDetailsSerializer;
-        AssessmentDetails assessmentDetails;
-
-        public IncidentTypeAndDistributionViewModel()
-        {
-            assessmentDetailsSerializer = DependencyService.Get<AssessmentDetailsSerializer>();
-            assessmentDetails = assessmentDetailsSerializer.DeserializeJsonFileToModel();
-        }
-
         public bool IsFall
         {
             get { return assessmentDetails.IsFall; }
@@ -94,31 +77,10 @@ namespace ERIS.Mobile.ViewModels
             get { return assessmentDetails.IsMoving; }
             set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsMoving), value); }
         }
-        public bool IsConfined 
+        public bool IsConfined
         {
             get { return assessmentDetails.IsConfined; }
             set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsConfined), value); }
-        }
-
-        private void SetAssessmentDetailsBoolAndUpdateJsonFile(string boolPropertyName, bool inputBool)
-        {
-
-            PropertyInfo propertyInfo = assessmentDetails.GetType().GetProperty(boolPropertyName, BindingFlags.Public | BindingFlags.Instance);
-            if (null != propertyInfo && propertyInfo.CanWrite)
-            {
-                // This if statement stops the app from updating the Json file when a bool property's setter is called at every checkbox's initialization.
-                if ((bool)propertyInfo.GetValue(assessmentDetails) != inputBool)
-                {
-
-                    propertyInfo.SetValue(assessmentDetails, inputBool, null);
-                    UpdateAssessmentDetailsJsonFile();
-                }
-            }
-        }
-
-        private void UpdateAssessmentDetailsJsonFile()
-        {
-            assessmentDetailsSerializer.SerializeModelToJsonFile(assessmentDetails);
         }
     }
 }
