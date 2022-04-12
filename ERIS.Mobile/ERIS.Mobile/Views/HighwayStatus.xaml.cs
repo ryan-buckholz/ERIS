@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NativeMedia;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -42,11 +43,32 @@ namespace ERIS.Mobile.Views
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.DisplayAlert("Error", "Recommended Actions page not avaliable", "Ok");
+            Shell.Current.GoToAsync("//" + nameof(RecommendedImmediateActionsP1));
+
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync("//" + nameof(IncidentTypeAndDistributionPage));
+        }
+
+        private async void OnPickImagesClick(object sender, EventArgs e)
+        {
+            var results = await MediaGallery.PickAsync(1, MediaFileType.Image, MediaFileType.Video);
+
+            if (results?.Files == null)
+            {
+                return;
+            }
+
+            foreach (var media in results.Files)
+            {
+                var fileName = media.NameWithoutExtension;
+                var extension = media.Extension;
+                var contentType = media.ContentType;
+
+                await DisplayAlert(fileName, $"Extension: {extension}, Content-Type:{contentType}", "Ok");
+            }
+
         }
     }
 }

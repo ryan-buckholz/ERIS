@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart2Page"
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource MainStackLayout}">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
@@ -19,32 +19,12 @@
             <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray"></Entry>
 
-            <Button 
-                VerticalOptions= "Start"
-                Text="Save"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"></Button>
-            <Button 
-                VerticalOptions= "End"
-                Text="Next"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Next_Button_Clicked"></Button>
-            <Button 
-                VerticalOptions= "End"
-                Text="Back"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Back_Button_Clicked"></Button>
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

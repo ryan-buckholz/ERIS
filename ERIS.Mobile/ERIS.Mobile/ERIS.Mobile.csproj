@@ -26,6 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v12.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\GeneralReportInfoPart1Page.xaml.cs">
       <DependentUpon>GeneralReportInfoPart1Page.xaml</DependentUpon>
     </Compile>

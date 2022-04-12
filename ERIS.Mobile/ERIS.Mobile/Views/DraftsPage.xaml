@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
 
-            <Image Source="CalTrans.png" WidthRequest="180" HeightRequest="180"></Image>
+            <Image Source="ERIS.png" WidthRequest="180" HeightRequest="180"></Image>
 
             <Button
                 VerticalOptions="Center"

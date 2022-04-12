@@ -6,7 +6,7 @@ export class Home extends Component {
     render () {
         return (
             <div>
-                <div className="alert alert-success text-center">Hello, Please log in below </div>
+                <div className="alert alert-success text-center">Log in </div>
                 <div className="row">
                     <div className="col-md-6 col-xl-4">
                         <label>Username:</label>

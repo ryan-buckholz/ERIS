@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.IncidentTypeAndDistributionPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStackLayout}">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
@@ -49,34 +49,28 @@
 
                 <CheckBox x:Name="WashoutCheckBox" IsChecked="{Binding IsWashout}" Grid.Row="9" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Washout"  Grid.Row="9" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="9" Grid.Column="2" Clicked="OnPickImagesClick"></Button>
 
                 <!-- The following objects correspond to the *Distribution* section of the ERIS assessment -->
-                <CheckBox x:Name="AdvancingCheckBox" IsChecked="{Binding IsAdvancing}" Grid.Row="0" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Advancing"  Grid.Row="0" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="RetrogressingCheckBox" IsChecked="{Binding IsRetrogressing}" Grid.Row="1" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Retrogressing"  Grid.Row="1" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="EnlargingCheckBox" IsChecked="{Binding IsEnlarging}" Grid.Row="2" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Enlarging"  Grid.Row="2" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="WideningCheckBox" IsChecked="{Binding IsWidening}" Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Widening"  Grid.Row="3" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="MovingCheckBox" IsChecked="{Binding IsMoving}" Grid.Row="4" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Moving"  Grid.Row="4" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-
-                <CheckBox x:Name="ConfinedCheckBox" IsChecked="{Binding IsConfined}" Grid.Row="5" Grid.Column="2" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
-                <Label Text="Confined"  Grid.Row="5" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <!-- TODO: Add data bindings for each radiobutton that bind to viewmodel properties. -->
+                <RadioButton Content="Advancing"  Grid.Row="0" Grid.Column="2" CheckedChanged="AdvancingRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
+                <RadioButton Content="Retrogressing"  Grid.Row="1" Grid.Column="2" CheckedChanged="RetrogressingRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
+                <RadioButton Content="Enlarging"  Grid.Row="2" Grid.Column="2" CheckedChanged="EnlargingRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
+                <RadioButton Content="Widening"  Grid.Row="3" Grid.Column="2" CheckedChanged="WideningRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
+                <RadioButton Content="Moving"  Grid.Row="4" Grid.Column="2" CheckedChanged="MovingRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
+                <RadioButton Content="Confined"  Grid.Row="5" Grid.Column="2" CheckedChanged="ConfinedRadioButton_CheckedChanged" Style="{StaticResource RadioButton}"></RadioButton>
             </Grid>
 
             <Grid RowDefinitions="*" ColumnDefinitions="*, *">
                 <Entry Placeholder="Others" Grid.Row="0" Grid.Column="0"/>
             </Grid>
 
-            <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
-            <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            <StackLayout Style="{StaticResource ButtonStack}">
+                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
+                <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
