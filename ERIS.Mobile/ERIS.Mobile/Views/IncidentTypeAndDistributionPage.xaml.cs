@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ERIS.Mobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +17,7 @@ namespace ERIS.Mobile.Views
         public IncidentTypeAndDistributionPage()
         {
             InitializeComponent();
+            BindingContext = new IncidentTypeAndDistributionViewModel();
         }
 
         private void RockFallCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -80,7 +82,7 @@ namespace ERIS.Mobile.Views
         }
         private void ConfinedRadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+        
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)

@@ -29,7 +29,7 @@
                 BorderWidth="1.5"
                 BorderColor="Black"
                 CornerRadius="50"
-                Clicked="Next_Button_Clicked">
+                Command="{Binding newReportButtonPressed}">
             </Button>
 
         </StackLayout>
