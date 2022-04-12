@@ -8,7 +8,6 @@ using System.IO;
 using ERIS.Mobile.Models;
 using Newtonsoft.Json;
 
-
 [assembly: Dependency(typeof(AssessmentDetailsSerializer))]
 namespace ERIS.Mobile.Services
 {

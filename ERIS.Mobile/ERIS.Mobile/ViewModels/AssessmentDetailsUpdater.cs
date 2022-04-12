@@ -7,15 +7,18 @@ using System;
 
 namespace ERIS.Mobile.ViewModels
 {
-    public abstract class AssessmentDetailsUpdater : BindableObject
+    public abstract class AssessmentDetailsUpdater : BindableObject, IObserver<AssessmentDetails>
     {
         private AssessmentDetailsSerializer assessmentDetailsSerializer;
         protected AssessmentDetails assessmentDetails;
-
+        private AssessmentDetailsChangeTracker assessmentDetailsChangeTracker;
+        private IDisposable unsubscriber;
         public AssessmentDetailsUpdater()
         {
             assessmentDetailsSerializer = DependencyService.Get<AssessmentDetailsSerializer>();
+            assessmentDetailsChangeTracker = DependencyService.Get<AssessmentDetailsChangeTracker>();
             assessmentDetails = assessmentDetailsSerializer.DeserializeJsonFileToModel();
+            Subscribe(assessmentDetailsChangeTracker);
         }
 
         protected void SetAssessmentDetailsBoolAndUpdateJsonFile(string boolPropertyName, bool inputBool)
@@ -44,6 +47,27 @@ namespace ERIS.Mobile.ViewModels
         private void UpdateAssessmentDetailsJsonFile()
         {
             assessmentDetailsSerializer.SerializeModelToJsonFile(assessmentDetails);
+        }
+
+        public void OnCompleted()
+        {
+        }
+
+        public void OnError(Exception error)
+        {
+        }
+
+        public void OnNext(AssessmentDetails value)
+        {
+            assessmentDetails = value;
+        }
+        public void Subscribe(IObservable<AssessmentDetails> provider)
+        {
+            unsubscriber = provider.Subscribe(this);
+        }
+        private void Unsubscribe()
+        {
+            unsubscriber.Dispose();
         }
     }
 }
