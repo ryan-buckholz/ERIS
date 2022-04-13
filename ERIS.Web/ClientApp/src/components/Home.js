@@ -8,9 +8,7 @@ export class Home extends Component {
             <div className="card mt-3">
                 <div className="card-body">
                     <div>
-                        <div class="row justify-content-md-center">
-                        <div className="col-auto">
-                        <div className="alert alert-primary text-center">Hello, Please log in below </div></div></div>
+                        <div className="alert alert-primary text-center">Log in </div>
                         <div class="row justify-content-md-center">
                             <div className="col-auto">
                                 <label>Username:</label>
