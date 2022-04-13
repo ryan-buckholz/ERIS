@@ -9,7 +9,7 @@ export class Home extends Component {
                 <div className="card-body">
                     <div>
                         <div class="row justify-content-md-center">
-                            <div className="col-auto">
+                        <div className="col-auto">
                         <div className="alert alert-primary text-center">Hello, Please log in below </div></div></div>
                         <div class="row justify-content-md-center">
                             <div className="col-auto">

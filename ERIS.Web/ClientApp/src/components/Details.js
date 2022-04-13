@@ -423,8 +423,8 @@ export class Details extends Component {
 							<div class="row">
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" /> Slide</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
-								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed
-									<div class="col-2"><input type="text" class="form-control form-control-sm" value={lanes} onChange={this.handleLanesChange} />Lanes</div></div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed</div>
+								<div class="col-md"><input type="text" class="form-control form-control-sm" value={lanes} onChange={this.handleLanesChange} />Lanes</div>
 								<div class="col-md"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control form-control-sm" value={incheshorizontal} /></div>
 								<div class="col-md"><label>IN. Horizontal</label></div>
 							</div>
