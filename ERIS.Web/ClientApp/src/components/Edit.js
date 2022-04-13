@@ -507,7 +507,7 @@ export class Edit extends Component {
 									</FormControl>
 								</Box>
 							</div>
-
+							<br></br>
 							<div class="row justify-content-md-center">
 								<div class="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
 								<div class="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
