@@ -489,7 +489,7 @@ export class Details extends Component {
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> Rock</div>
-								<div class="col-3"><label>EST. %</label></div>
+								<div class="col-3 d-flex justify-content-center"><label>EST. %</label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" /> Dry</div>
 								<div class="col-1"><label>Immediate Actions:</label></div>
 								<div class="col-1"><label>Follow Up Actions:</label></div>
@@ -497,8 +497,9 @@ export class Details extends Component {
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bedding" /> Bedding</div>
-								<div class="col-1"><input onChange={this.handleClayChange} type="text" class="form-control form-control-sm" value={clay} />Clay</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-md d-flex justify-content-end"><label>Clay</label></div>
+								<div class="col-md"><input onChange={this.handleClayChange} type="text" class="form-control form-control-sm" value={clay} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moist" /> Moist</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="one" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="opentraffic" /></div>
@@ -508,31 +509,34 @@ export class Details extends Component {
 							</div>
 
 							<div class="row">
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="joints" /> Joints</div>
-								<div class="col-1"><input onChange={this.handleSiltChange} type="text" class="form-control" value={silt} />Silt</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="joints"/> Joints</div>
+								<div class="col-md d-flex justify-content-end"><label>Silt</label></div>
+								<div class="col-md"><input onChange={this.handleSiltChange} type="text" class="form-control form-control-sm" value={silt} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="wet" /> Wet</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="two" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="openshoulder" /></div>
-								<div class="col"><label>Open Highway Shoulder</label></div>
+								<div class="col-3"><label>Open Highway Shoulder</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fractures" /> Fractures</div>
-								<div class="col-1"><input onChange={this.handleSandChange} type="text" class="form-control" value={sand} />Sand</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fractures" /> Fracture</div>
+								<div class="col-md d-flex justify-content-end"><label>Sand</label></div>
+								<div class="col-md"><input onChange={this.handleSandChange} type="text" class="form-control form-control-sm" value={sand} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flowing" /> Flowing</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="three" /></div>
-								<div class="col">Close Highway<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="onee" /> One <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bothdirections" /> Both Directions</div>
+								<div class="col-3">Close Highway <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="onee" /> One <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bothdirections" /> Both Directions</div>
 							</div>
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="soil" /> Soil</div>
-								<div class="col-1"><input onChange={this.handleGravelChange} type="text" class="form-control" value={gravel} />Gravel</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-md d-flex justify-content-end"><label>Gravel</label></div>
+								<div class="col-md"><input onChange={this.handleGravelChange} type="text" class="form-control" value={gravel} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="seep" /> Seep</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="four" /></div>
-								<div class="col"><label> Remove Landslide Debris From Highway</label></div>
+								<div class="col-3"><label> Remove Landslide Debris From Highway</label></div>
 							</div>
 
 							<div class="row">
