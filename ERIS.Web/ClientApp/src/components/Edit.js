@@ -173,8 +173,8 @@ export class Edit extends Component {
 							<div class="row">
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slide" /> Slide</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
-								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed
-									<div class="col-2"><input type="text" class="form-control form-control-sm" value={lanes} onChange={this.handleLanesChange} />Lanes</div></div>
+								<div class="col-md"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed</div>
+								<div class="col-md"><input type="text" class="form-control form-control-sm" placeholder="Lanes" value={lanes} onChange={this.handleLanesChange} /></div>
 								<div class="col-md"><input onChange={this.handleInchesHorizontalChange} type="text" class="form-control form-control-sm" value={incheshorizontal} /></div>
 								<div class="col-md"><label>IN. Horizontal</label></div>
 							</div>
@@ -192,7 +192,7 @@ export class Edit extends Component {
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moving" /> Moving</div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="twoway" /> Two-way Closed</div>
 								<div class="col"><input onChange={this.handleInchesDepthChange} type="text" class="form-control form-control-sm" value={inchesdepth} /></div>
-								<div class="col"><label>IN, Dep. of Crack</label></div>
+								<div class="col"><label>IN. Dep. of Crack</label></div>
 							</div>
 
 							<div class="row">
@@ -239,50 +239,53 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rock" /> Rock</div>
-								<div class="col-3"><label>EST. %</label></div>
-								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" /> Dry</div>
-								<div class="col-1"><label>Immediate Actions:</label></div>
-								<div class="col-1"><label>Follow Up Actions:</label></div>
+								<div class="col-3 d-flex justify-content-center"><label>EST. %</label></div>
+								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="dry" /> Dry</div>
+								<div class="col-2 d-flex justify-content-end"><label>Immediate Actions:</label></div>
+								<div class="col-2"><label>Follow Up Actions:</label></div>
 							</div>
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bedding" /> Bedding</div>
-								<div class="col-1"><input onChange={this.handleClayChange} type="text" class="form-control form-control-sm" value={clay} />Clay</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-md d-flex justify-content-end"><label>Clay</label></div>
+								<div class="col-md"><input onChange={this.handleClayChange} type="text" class="form-control form-control-sm" value={clay} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="moist" /> Moist</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="one" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="opentraffic" /></div>
-								<div class="col"><label>Open Highway Traffic</label></div>
-								<div class="col-1"><input onChange={this.handleLanesPageTwoChange} type="text" class="form-control form-control-sm" value={lanespagetwo} /></div>
-								<div class="col-1"><label>Lanes</label></div>
+								<div class="col-2"><label>Open Highway Traffic</label></div>
+								<div class="col-md "><input onChange={this.handleLanesPageTwoChange} type="text" class="form-control form-control-sm" placeholder="Lanes" value={lanespagetwo} /></div>
 							</div>
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="joints" /> Joints</div>
-								<div class="col-1"><input onChange={this.handleSiltChange} type="text" class="form-control" value={silt} />Silt</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-md d-flex justify-content-end"><label>Silt</label></div>
+								<div class="col-md"><input onChange={this.handleSiltChange} type="text" class="form-control form-control-sm" value={silt} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="wet" /> Wet</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="two" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="openshoulder" /></div>
-								<div class="col"><label>Open Highway Shoulder</label></div>
+								<div class="col-3"><label>Open Highway Shoulder</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fractures" /> Fractures</div>
-								<div class="col-1"><input onChange={this.handleSandChange} type="text" class="form-control" value={sand} />Sand</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fractures" /> Fracture</div>
+								<div class="col-md d-flex justify-content-end"><label>Sand</label></div>
+								<div class="col-md"><input onChange={this.handleSandChange} type="text" class="form-control form-control-sm" value={sand} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flowing" /> Flowing</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="three" /></div>
-								<div class="col">Close Highway<input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="onee" /> One <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bothdirections" /> Both Directions</div>
+								<div class="col-3">Close Highway <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="onee" /> One <input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="bothdirections" /> Both Directions</div>
 							</div>
 
 							<div class="row">
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="soil" /> Soil</div>
-								<div class="col-1"><input onChange={this.handleGravelChange} type="text" class="form-control" value={gravel} />Gravel</div>
-								<div class="col-2"><label></label></div>
+								<div class="col-md d-flex justify-content-end"><label>Gravel</label></div>
+								<div class="col-md"><input onChange={this.handleGravelChange} type="text" class="form-control form-control-sm" value={gravel} /></div>
+								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="seep" /> Seep</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="four" /></div>
-								<div class="col"><label> Remove Landslide Debris From Highway</label></div>
+								<div class="col-3"><label> Remove Landslide Debris From Highway</label></div>
 							</div>
 
 							<div class="row">
@@ -318,7 +321,7 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Trees</label></div>
-								<div class="col-1"><input onChange={this.handleTreesChange} type="text" class="form-control" value={trees} /></div>
+								<div class="col-1"><input onChange={this.handleTreesChange} type="text" class="form-control form-control-sm" value={trees} /></div>
 								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="compromised" /> Compromised Drains</div>
 								<div class="col-2"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="nine" /></div>
@@ -327,7 +330,7 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Bushes/Shrubs</label></div>
-								<div class="col-1"><input onChange={this.handleBushesShrubsChange} type="text" class="form-control" value={bushesshrubs} /></div>
+								<div class="col-1"><input onChange={this.handleBushesShrubsChange} type="text" class="form-control form-control-sm" value={bushesshrubs} /></div>
 								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surface" /> Surface Runoff</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="ten" /></div>
@@ -337,7 +340,7 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Groundcover</label></div>
-								<div class="col-1"><input onChange={this.handleGroundCoverChange} type="text" class="form-control" value={groundcover} /></div>
+								<div class="col-1"><input onChange={this.handleGroundCoverChange} type="text" class="form-control form-control-sm" value={groundcover} /></div>
 								<div class="col-1"><label></label></div>
 								<div class="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="torrent" /> Torrent, Surge, Flood</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="eleven" /></div>
@@ -359,9 +362,8 @@ export class Edit extends Component {
 							<div class="row">
 								<div class="col-3"><p class="text-decoration-underline">Measurements:</p></div>
 								<div class="col-1"><label></label></div>
-								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactone" /></div>
-								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="utilties" /></div>
-								<div class="col-1"><label>Adj. Utilities</label></div>
+								<div class="col-1 d-flex justify-content-center align-items-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactone" /></div>
+								<div class="col-2 d-flex justify-content-around align-items-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="utilties" /> Adj. Utilities</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="thirteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="rockprotection" /></div>
 								<div class="col"><label>Place Rock Slope Protection</label></div>
@@ -369,11 +371,10 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Slope Height, ft</label></div>
-								<div class="col-1"><input onChange={this.handleSlopeChange} type="text" class="form-control" value={slope} /></div>
-								<div class="col-1"><label></label></div>
+								<div class="col-1"><input onChange={this.handleSlopeChange} type="text" class="form-control form-control-sm" value={slope} /></div>
+								<div class="col-1 "><label></label></div>
 								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impacttwo" /></div>
-								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="properties" /></div>
-								<div class="col-1"><label>Adj. Properties</label></div>
+								<div class="col-2 d-flex justify-content-evenly"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="properties" /> Adj. Properties</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fourteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="routinemonitor" /></div>
 								<div class="col"><label>Routine Visual Monitor</label></div>
@@ -381,11 +382,10 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Original Slope, deg</label></div>
-								<div class="col-1"><input onChange={this.handleOriginalSlopeChange} type="text" class="form-control" value={originalslope} /></div>
+								<div class="col-1"><input onChange={this.handleOriginalSlopeChange} type="text" class="form-control form-control-sm" value={originalslope} /></div>
 								<div class="col-1"><label></label></div>
 								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="impactthree" /></div>
-								<div class="col-1 d-flex justify-content-center"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" /></div>
-								<div class="col-1"><label>Adj. Structures</label></div>
+								<div class="col-2 d-flex justify-content-evenly"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="structures" /> Adj. Structures</div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="fifteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slopetooriginal" /></div>
 								<div class="col"><label>Reconstruct Slope to Original Condition</label></div>
@@ -393,7 +393,7 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Landslide Width, ft</label></div>
-								<div class="col-1"><input onChange={this.handleLandslideWidthChange} type="text" class="form-control" value={landslidewidth} /></div>
+								<div class="col-1"><input onChange={this.handleLandslideWidthChange} type="text" class="form-control form-control-sm" value={landslidewidth} /></div>
 								<div class="col-4"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="sixteen" /></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="slopewithgeosyn" /></div>
@@ -402,7 +402,7 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Landslide Length, ft</label></div>
-								<div class="col-1"><input onChange={this.handleLandslideLengthChange} type="text" class="form-control" value={landslidelength} /></div>
+								<div class="col-1"><input onChange={this.handleLandslideLengthChange} type="text" class="form-control form-control-sm" value={landslidelength} /></div>
 								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="repairculvert" /></div>
 								<div class="col"><label>Repair Culvert/Drainage Pipe</label></div>
@@ -410,31 +410,31 @@ export class Edit extends Component {
 
 							<div class="row">
 								<div class="col-2"><label>Main Scarp Height, ft</label></div>
-								<div class="col-1"><input onChange={this.handleMainScarpChange} type="text" class="form-control" value={mainscarp} /> </div>
+								<div class="col-1"><input onChange={this.handleMainScarpChange} type="text" class="form-control form-control-sm" value={mainscarp} /> </div>
 								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="erosioncontrol" /></div>
-								<div class="col"><label>Install Erosion Control - By Dist. Landscape</label></div>
+								<div class="col"><label>Install Erosion Ctrl - By Dist. Landscape</label></div>
 							</div>
 
 							<div class="row">
 								<div class="col-2"><label>Landslide Slope, deg</label></div>
-								<div class="col-1"><input onChange={this.handleLandslideSlopeChange} type="text" class="form-control" value={landslideslope} /></div>
+								<div class="col-1"><input onChange={this.handleLandslideSlopeChange} type="text" class="form-control form-control-sm" value={landslideslope} /></div>
 								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="surveysite" /></div>
 								<div class="col"><label>Survey the Site - By Dist Landscape</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-2"><label>Length of Roadway Encroached, ft</label></div>
-								<div class="col-1"><input onChange={this.handleLengthofRoadwayChange} type="text" class="form-control" value={lengthofroadway} /></div>
+								<div class="col-2"><label>Length of Roadway, ft</label></div>
+								<div class="col-1"><input onChange={this.handleLengthofRoadwayChange} type="text" class="form-control form-control-sm" value={lengthofroadway} /></div>
 								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="geologicalmapping" /></div>
 								<div class="col"><label>Perform Geological Mapping</label></div>
 							</div>
 
 							<div class="row">
-								<div class="col-2"><label>Width of Roadway Encroached, ft</label></div>
-								<div class="col-1"><input onChange={this.handleWidthofRoadwayChange} type="text" class="form-control" value={widthofroadway} /></div>
+								<div class="col-2"><label>Width of Roadway, ft</label></div>
+								<div class="col-1"><input onChange={this.handleWidthofRoadwayChange} type="text" class="form-control form-control-sm" value={widthofroadway} /></div>
 								<div class="col-5"><label></label></div>
 								<div class="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="subsurfaceexploration" /></div>
 								<div class="col"><label>Perform Subsurface Exploration</label></div>
