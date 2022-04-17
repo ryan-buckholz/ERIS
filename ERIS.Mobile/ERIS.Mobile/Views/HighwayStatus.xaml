@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="ERIS.Mobile.Views.HighwayStatus"
     BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
@@ -20,22 +21,26 @@
                 <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
 
                 <!-- The following objects correspond to the Highway Status section of the ERIS assessment -->
-                <CheckBox x:Name="OpenCheckBox" CheckedChanged="Open_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="OpenCheckBox" IsChecked="{Binding IsHighwayOpen}" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Open" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ShoulderClosedCheckBox" CheckedChanged="Shoulder_Closed_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ShoulderClosedCheckBox" IsChecked="{Binding IsShoulderClosed}" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Shoulder Closed" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="LanesClosedCheckBox" CheckedChanged="Lanes_Closed_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="LanesClosedCheckBox" IsChecked="{Binding IsLaneClosed}" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Lane(s) Closed" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Entry Placeholder="# Lanes" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="2"></Entry>
+                <Entry Placeholder="# Lanes" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="2">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding closedLanesUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
                 <Label Text="Lanes" FontSize="Medium" Grid.Row="2" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="OneWayCheckBox" CheckedChanged="One_Way_Closed_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="OneWayCheckBox" IsChecked="{Binding IsOneWayClosed}" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="One-Way Closed" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="TwoWayCheckBox" CheckedChanged="Two_Way_Closed_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="TwoWayCheckBox" IsChecked="{Binding IsTwoWayClosed}" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Two-Way Closed" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
             </Grid>
