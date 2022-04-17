@@ -44,6 +44,26 @@ namespace ERIS.Mobile.ViewModels
                 UpdateAssessmentDetailsJsonFile();
             }
         }
+        protected void SetAssessmentDetailsDecimalAndUpdateJsonFile(string decimalPropertyName, Entry entry)
+        {
+            string inputDecimalString = entry.Text;
+            PropertyInfo propertyInfo = assessmentDetails.GetType().GetProperty(decimalPropertyName, BindingFlags.Public | BindingFlags.Instance);
+            if (null != propertyInfo && propertyInfo.CanWrite)
+            {
+                decimal inputDecimal = 0;
+                try
+                {
+                    inputDecimal = Convert.ToDecimal(inputDecimalString);
+                }
+                catch
+                {
+                    entry.Text = "";
+                    Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                }
+                propertyInfo.SetValue(assessmentDetails, inputDecimal, null);
+                UpdateAssessmentDetailsJsonFile();
+            }
+        }
         private void UpdateAssessmentDetailsJsonFile()
         {
             assessmentDetailsSerializer.SerializeModelToJsonFile(assessmentDetails);
