@@ -32,8 +32,6 @@ namespace ERIS.Mobile.Models
         public decimal CrackSettlement { get; set; }
         public decimal CrackBulge { get; set; }
         public bool IsIndentedByRocks { get; set; }
-        //
-        //
         public bool IsRock { get; set; }
         public bool HasBedding { get; set; }
         public bool HasJoints { get; set; }
@@ -44,8 +42,6 @@ namespace ERIS.Mobile.Models
         public decimal SiltEstimate { get; set; }
         public decimal SandEstimate { get; set; }
         public decimal GravelEstimate { get; set; }
-        //
-        //
         public decimal TreesCoverageOnSlope { get; set; }
         public decimal BrushesShrubsCoverageOnSlope{ get; set; }
         public decimal GroundCoverCoverageOnSlope { get; set; }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.VegetationSlopeAndWaterContentPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
@@ -21,13 +21,25 @@
                 <!-- The following objects correspond to the Vegetation section of the ERIS assessment -->
 
                 <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1"></Entry>
+                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding treesCoverageOnSlopeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1"></Entry>
+                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding brushesShrubsCoverageOnSlopeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1"></Entry>
+                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding groundCoverCoverageOnSlopeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
             </Grid>
                 <!-- The following objects correspond to the Water Content section of the ERIS assessment -->
@@ -37,22 +49,22 @@
             </Grid>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
-                <CheckBox x:Name="DryCheckbox" CheckedChanged="Dry_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <CheckBox x:Name="DryCheckbox" IsChecked="{Binding IsDry}" CheckedChanged="Dry_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Dry" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
                 
-                <CheckBox x:Name="MoistCheckbox" CheckedChanged="Moist_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <CheckBox x:Name="MoistCheckbox" IsChecked="{Binding IsMoist}" CheckedChanged="Moist_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Moist" FontSize="Medium" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
                 
-                <CheckBox x:Name="WetCheckbox" CheckedChanged="Wet_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <CheckBox x:Name="WetCheckbox" IsChecked="{Binding IsWet}" CheckedChanged="Wet_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Wet" FontSize="Medium" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
                 
-                <CheckBox x:Name="FlowingCheckbox" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <CheckBox x:Name="FlowingCheckbox" IsChecked="{Binding IsFlowingWater}" CheckedChanged="Flowing_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Flowing" FontSize="Medium" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="SeepCheckbox" CheckedChanged="Seep_RadioButton_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <CheckBox x:Name="SeepCheckbox" IsChecked="{Binding IsSeep}" CheckedChanged="Seep_RadioButton_CheckedChanged" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Seep" FontSize="Medium" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
 
-                <CheckBox x:Name="SpringCheckbox" CheckedChanged="Spring_RadioButton_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
+                <CheckBox x:Name="SpringCheckbox" IsChecked="{Binding IsSpring}" CheckedChanged="Spring_RadioButton_CheckedChanged" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"></CheckBox>
                 <Label Text="Spring" FontSize="Medium" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
                 <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="5" Grid.Column="2"  VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
 
