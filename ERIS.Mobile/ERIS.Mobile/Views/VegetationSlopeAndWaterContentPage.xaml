@@ -21,21 +21,21 @@
                 <!-- The following objects correspond to the Vegetation section of the ERIS assessment -->
 
                 <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1">
+                <Entry Placeholder="Coverage %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="0" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding treesCoverageOnSlopeUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
 
                 <Label Text="Bushes/Shrubs" FontSize="Medium" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="1">
+                <Entry Placeholder="Coverage %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="1" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding brushesShrubsCoverageOnSlopeUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
 
                 <Label Text="Groundcover" FontSize="Medium" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Coverage %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="2" Grid.Column="1">
+                <Entry Placeholder="Coverage %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding groundCoverCoverageOnSlopeUnfocused}"/>
                     </Entry.Behaviors>

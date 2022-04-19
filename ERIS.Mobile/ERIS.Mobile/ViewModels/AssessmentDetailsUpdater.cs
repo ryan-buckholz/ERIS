@@ -70,10 +70,10 @@ namespace ERIS.Mobile.ViewModels
             PropertyInfo propertyInfo = assessmentDetails.GetType().GetProperty(intPropertyName, BindingFlags.Public | BindingFlags.Instance);
             if (null != propertyInfo && propertyInfo.CanWrite)
             {
-                decimal inputInt = 0;
+                int inputInt = 0;
                 try
                 {
-                    inputInt = Convert.ToInt64(inputIntString);
+                    inputInt = Convert.ToInt32(inputIntString);
                 }
                 catch
                 {

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.RecommendedFollowupActionsP1"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
@@ -12,33 +12,37 @@
 
             <Grid RowDefinitions="*" ColumnDefinitions="50 ,*, 100">
 
-                <CheckBox x:Name="OpenHighwayTrafficCheckbox" CheckedChanged="Open_Highway_Traffic_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="OpenHighwayTrafficCheckbox" IsChecked="{Binding IsFollowUpActionOpenHighwayTraffic}" CheckedChanged="Open_Highway_Traffic_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Open Highway Traffic" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
-                <Entry  Placeholder="Lanes" TextColor="Black" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="2"></Entry>
+                <Entry  Placeholder="Lanes" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="0" Grid.Column="2">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding openedLanesCountUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
             </Grid>
 
             <Grid RowDefinitions="*, *, *, *, 50, *, *" ColumnDefinitions="50 ,*">
 
-                <CheckBox x:Name="OpenHighwayShoulderCheckbox" CheckedChanged="Open_Highway_Shoulder_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="OpenHighwayShoulderCheckbox" IsChecked="{Binding IsFollowUpActionOpenHighwayShoulder}" CheckedChanged="Open_Highway_Shoulder_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Open Highway Shoulder" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="DewaterWithHorizontalDrains" CheckedChanged="Dewater_With_Horizontal_Drains_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="DewaterWithHorizontalDrains" IsChecked="{Binding IsFollowUpActionDewaterWithHorizontalDrains}" CheckedChanged="Dewater_With_Horizontal_Drains_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Dewater with Horizontal Drains" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ConstructTempShoringCheckBox" CheckedChanged="Construct_Temp_Shoring_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ConstructTempShoringCheckBox" IsChecked="{Binding IsFollowUpActionConstructTemporaryShoring}" CheckedChanged="Construct_Temp_Shoring_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Construct Temporary Shoring" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ButtressToeOfLandslideCheckBox" CheckedChanged="Buttress_Toe_of_Landslide_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ButtressToeOfLandslideCheckBox" IsChecked="{Binding IsFollowUpActionButtressToeOfLandslide}" CheckedChanged="Buttress_Toe_of_Landslide_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Buttress Toe of Landslide" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="PlaceRockProtectionCheckBox" CheckedChanged="Place_Rock_Protection_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="PlaceRockProtectionCheckBox" IsChecked="{Binding IsFollowUpActionPlaceRockSlopeProtection}" CheckedChanged="Place_Rock_Protection_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Place Rock Slope Protection (ref. Manual)" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="RoutineVisualMonitorCheckBox" CheckedChanged="Routine_Visual_Monitor_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="RoutineVisualMonitorCheckBox" IsChecked="{Binding IsFollowUpActionRoutineVisualMonitor}" CheckedChanged="Routine_Visual_Monitor_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Routine Visual Monitor" FontSize="Medium" Grid.Row="5" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="ReconSlopeToOriginalCheckBox" CheckedChanged="Recon_Slope_To_Original_CheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ReconSlopeToOriginalCheckBox" IsChecked="{Binding IsFollowUpActionReconstructSlopeToOriginalCondition}" CheckedChanged="Recon_Slope_To_Original_CheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Reconstruct Slope to Original Condition" FontSize="Medium" Grid.Row="6" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
 
