@@ -87,6 +87,7 @@ namespace ERIS.Mobile.ViewModels
         private void UpdateAssessmentDetailsJsonFile()
         {
             assessmentDetailsSerializer.SerializeModelToJsonFile(assessmentDetails);
+            assessmentDetailsChangeTracker.NotifyObservers();
         }
 
         public void OnCompleted()

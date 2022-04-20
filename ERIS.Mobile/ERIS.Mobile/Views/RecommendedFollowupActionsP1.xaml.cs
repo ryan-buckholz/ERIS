@@ -18,6 +18,7 @@ namespace ERIS.Mobile.Views
             InitializeComponent();
             BindingContext = new RecommendedFollowupActionsP1ViewModel();
         }
+
         private void Open_Highway_Traffic_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 

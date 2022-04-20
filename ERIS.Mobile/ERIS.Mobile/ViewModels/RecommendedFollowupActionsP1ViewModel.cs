@@ -8,7 +8,12 @@ namespace ERIS.Mobile.ViewModels
 {
     public class RecommendedFollowupActionsP1ViewModel : AssessmentDetailsUpdater
     {
+        public ICommand getOpenedLanesOnAppearing { get; }
         public ICommand openedLanesCountUnfocused { get; }
+        private void GetOpenedLanesOnAppearing()
+        {
+            OnPropertyChanged("OpenedLanesCount");
+        }
         private void SetOpenedLanesCount(FocusEventArgs args)
         {
             SetAssessmentDetailsIntAndUpdateJsonFile(nameof(assessmentDetails.OpenedLanesCount), ((Entry)(args.VisualElement)));
@@ -17,6 +22,12 @@ namespace ERIS.Mobile.ViewModels
         public RecommendedFollowupActionsP1ViewModel()
         {
             openedLanesCountUnfocused = new Command<FocusEventArgs>(SetOpenedLanesCount);
+            getOpenedLanesOnAppearing = new Command(GetOpenedLanesOnAppearing);
+        }
+
+        public string OpenedLanesCount
+        {
+            get { return Convert.ToString(assessmentDetails.OpenedLanesCount); }
         }
 
         public bool IsFollowUpActionOpenHighwayTraffic

@@ -3,7 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.RecommendedFollowupActionsP1"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior
+                EventName="Appearing"
+                Command="{Binding getOpenedLanesOnAppearing}" />
+    </ContentPage.Behaviors>
     <ContentPage.Content>
+        
         <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Grid RowDefinitions="50" ColumnDefinitions="*">
@@ -14,7 +20,7 @@
 
                 <CheckBox x:Name="OpenHighwayTrafficCheckbox" IsChecked="{Binding IsFollowUpActionOpenHighwayTraffic}" CheckedChanged="Open_Highway_Traffic_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Open Highway Traffic" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
-                <Entry  Placeholder="Lanes" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="0" Grid.Column="2">
+                <Entry Placeholder="Lanes" Style="{StaticResource NumericAssessmentEntry}" Text="{Binding OpenedLanesCount, Mode=OneWay}" Grid.Row="0" Grid.Column="2">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding openedLanesCountUnfocused}"/>
                     </Entry.Behaviors>
