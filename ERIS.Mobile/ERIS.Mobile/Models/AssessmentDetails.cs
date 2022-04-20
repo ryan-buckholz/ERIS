@@ -84,6 +84,7 @@ namespace ERIS.Mobile.Models
         public bool IsImmediateActionCoverSlopeWithPlastic { get; set; }
         public bool IsImmediateActionDivertSurfaceWaterRunoff { get; set; }
         public bool IsImmediateActionRemoveCulvertBlockage { get; set; }
+        //
         public bool IsImmediateActionDewaterWithPumpTrench { get; set; }
         public bool IsImmediateActionDewaterWithHorizontalDrains { get; set; }
         public bool IsImmediateActionConstructTemporaryShoring { get; set; }
@@ -92,6 +93,7 @@ namespace ERIS.Mobile.Models
         public bool IsImmediateActionRoutineVisualMonitor { get; set; }
         public bool IsImmediateActionReconstructSlopeToOriginalCondition { get; set; }
         public bool IsImmediateActionReconstructSlopeWIthGeosynthetics { get; set; }
+        //
         public bool IsFollowUpActionOpenHighwayTraffic { get; set; }
         public bool IsFollowUpActionOpenHighwayShoulder { get; set; }
         public bool IsFollowUpActionDewaterWithHorizontalDrains { get; set; }
