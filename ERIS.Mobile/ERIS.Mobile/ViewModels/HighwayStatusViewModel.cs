@@ -42,7 +42,7 @@ namespace ERIS.Mobile.ViewModels
         }
         private void SetClosedLanes(FocusEventArgs args)
         {
-            SetAssessmentDetailsIntAndUpdateJsonFile(nameof(assessmentDetails.CrackLength), ((Entry)(args.VisualElement)));
+            SetAssessmentDetailsIntAndUpdateJsonFile(nameof(assessmentDetails.ClosedLanes), ((Entry)(args.VisualElement)));
         }
     }
 }
