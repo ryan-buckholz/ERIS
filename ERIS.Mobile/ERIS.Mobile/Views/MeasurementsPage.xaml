@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.MeasurementsPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
@@ -9,14 +9,46 @@
             <Label Text="Measurements" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
 
-            <Entry  Placeholder="Slope Height, ft(H)" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Original Slope, deg(a)" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Landslide Width, ft(Wd)" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Landslide Length (ft(Ld))" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Main Scarp Height, ft(Hs)" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Landslide Slope, deg (B)" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Length of Roadway Encroached, ft(Lr)" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Width of Roadway Encroached, ft(Wr)" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Slope Height, ft(H)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding slopeHeightUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Original Slope, deg(a)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding originalSlopeUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Landslide Width, ft(Wd)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideWidthUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Landslide Length (ft(Ld))" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideLengthUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Main Scarp Height, ft(Hs)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding mainScarpHeightUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Landslide Slope, deg (B)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideSlopeUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Length of Roadway Encroached, ft(Lr)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding roadwayEncroachedLengthUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry  Placeholder="Width of Roadway Encroached, ft(Wr)" Style="{StaticResource NumericAssessmentEntry}">
+                <Entry.Behaviors>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding roadwayEncroachedWidthUnfocused}"/>
+                </Entry.Behaviors>
+            </Entry>
 
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
