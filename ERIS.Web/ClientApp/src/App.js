@@ -16,15 +16,12 @@ export default class App extends Component {
   render () {
     return (
       <Layout>
-        <Router>
           <Route exact path='/' component={Home} />
           <Route path='/Search' component={Search} />
           <Route path='/counter' component={Counter} />
           <Route path='/fetch-data' component={FetchData} />
           <Route path='/Details' component={Details} />
-          <Route path='/Edit' component={Edit} />
-        </Router>
-        
+          <Route path='/Edit' component={Edit} />        
       </Layout>
     );
   }
