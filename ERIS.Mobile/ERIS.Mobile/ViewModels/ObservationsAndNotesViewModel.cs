@@ -8,16 +8,16 @@ namespace ERIS.Mobile.ViewModels
 {
     public class ObservationsAndNotesViewModel : AssessmentDetailsUpdater
     {
-        public ICommand observationAndNotesUnfocused { get; }
+        public ICommand observationsAndNotesUnfocused { get; }
         public ObservationsAndNotesViewModel()
         {
-            observationAndNotesUnfocused = new Command<FocusEventArgs>(SetObservationAndNotes);
+            observationsAndNotesUnfocused = new Command<FocusEventArgs>(SetObservationsAndNotes);
         }
         
 
-        private void SetObservationAndNotes(FocusEventArgs args)
+        private void SetObservationsAndNotes(FocusEventArgs args)
         {
-            SetAssessmentDetailsStringAndUpdateJsonFile(nameof(assessmentDetails.ObservationAndNotes), ((Editor)(args.VisualElement)));
+            SetAssessmentDetailsStringAndUpdateJsonFile(nameof(assessmentDetails.ObservationsAndNotes), ((Editor)(args.VisualElement)));
         }
     }
 }

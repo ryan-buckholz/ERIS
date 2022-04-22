@@ -105,6 +105,6 @@
 
     
     [OpenedLanesCount] INT NULL, 
-    [ObservationAndNotes] VARCHAR(MAX),
+    [ObservationsAndNotes] VARCHAR(MAX),
     CONSTRAINT [FK_Details_AssessmentId] FOREIGN KEY ([AssessmentID]) REFERENCES [AssessmentProfile]([AssessmentId]) 
 )

@@ -27,7 +27,7 @@
 
             <Editor x:Name="notesEditor" HeightRequest="200" BackgroundColor="LightGray">
                 <Editor.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding observationAndNotesUnfocused}"/>
+                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding observationsAndNotesUnfocused}"/>
                 </Editor.Behaviors>
             </Editor>
 

@@ -107,6 +107,6 @@ namespace ERIS.Mobile.Models
         public bool IsFollowUpActionSubsurfaceExploration { get; set; }
         public bool IsFollowUpActionDesignAndPlans { get; set; }
         public int? OpenedLanesCount { get; set; }
-        public string ObservationAndNotes { get; set; }
+        public string ObservationsAndNotes { get; set; }
     }
 }
