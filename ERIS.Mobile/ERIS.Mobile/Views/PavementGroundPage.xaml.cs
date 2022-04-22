@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ERIS.Mobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,15 +17,7 @@ namespace ERIS.Mobile.Views
         public PavementGroundPage()
         {
             InitializeComponent();
-        }
-        private void Pavement_Ground_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-
-        private void Indented_By_Rocks_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
+            BindingContext = new PavementGroundViewModel();
         }
 
         private void Save_Button_Clicked(object sender, EventArgs e)

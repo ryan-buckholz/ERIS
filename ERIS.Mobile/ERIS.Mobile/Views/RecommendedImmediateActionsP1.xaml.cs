@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERIS.Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ERIS.Mobile.Views
         public RecommendedImmediateActionsP1()
         {
             InitializeComponent();
+            BindingContext = new RecommendedImmediateActionsP1ViewModel();
         }
 
         private void Open_Highway_Traffic_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)

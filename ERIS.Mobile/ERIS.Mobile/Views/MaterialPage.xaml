@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.MaterialPage"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
@@ -21,32 +21,48 @@
 
                 <!-- The following objects correspond to the Material section of the ERIS assessment -->
 
-                <CheckBox x:Name="RockCheckbox" CheckedChanged="Rock_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="RockCheckbox" IsChecked="{Binding IsRock}" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Rock" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}" ></Label>
 
-                <CheckBox x:Name="BeddingCheckbox" CheckedChanged="Bedding_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="BeddingCheckbox" IsChecked="{Binding HasBedding}" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Bedding" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="JointsCheckbox" CheckedChanged="Joints_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="JointsCheckbox" IsChecked="{Binding HasJoints}" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Joints" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="FracturesCheckbox" CheckedChanged="Fractures_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="FracturesCheckbox" IsChecked="{Binding HasFractures}" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Fractures" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="SoilCheckbox" CheckedChanged="Soil_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="SoilCheckbox" IsChecked="{Binding IsSoil}" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Soil" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Clay" FontSize="Medium" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="5" Grid.Column="1"></Entry>
+                <Entry Placeholder="Est %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="5" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding clayEstimateUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="6" Grid.Column="1"></Entry>
+                <Entry Placeholder="Est %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="6" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding siltEstimateUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="7" Grid.Column="1"></Entry>
+                <Entry Placeholder="Est %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="7" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sandEstimateUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" TextColor="Black" PlaceholderColor="Gray" Grid.Row="8" Grid.Column="1"></Entry>
+                <Entry Placeholder="Est %" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="8" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding gravelEstimateUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
                 <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="8" Grid.Column="4" Clicked="OnPickImagesClick"></Button>
 
             </Grid>
