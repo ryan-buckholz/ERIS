@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[AssessmentProfile]
+(
+	[AssessmentId] INT NOT NULL PRIMARY KEY, 
+    [Date] DATE NULL, 
+    [District] VARCHAR(2) NULL, 
+    [County] VARCHAR(3) NULL, 
+    [Route] VARCHAR(3) NULL, 
+    [PostMile] INT NULL, 
+    [EA] VARCHAR(5) NULL, 
+    [ProjectID] VARCHAR(10) NULL, 
+    [DateIncidentReported] DATE NULL, 
+    [Latitude] VARCHAR(45) NULL, 
+    [Longitude] VARCHAR(45) NULL, 
+    [LastName] VARCHAR(50) NULL, 
+    [FirstName] VARCHAR(20) NULL, 
+    [SNumber] VARCHAR(10) NULL, 
+    [DistrictContactLastName] VARCHAR(50) NULL, 
+    [DistrictContactFirstName] VARCHAR(50) NULL, 
+    [DistrictContactSNumber] NCHAR(10) NULL, 
+    [DistrictContactPhone] VARCHAR(20) NULL, 
+    [DistrictContactCellPhone] VARCHAR(20) NULL, 
+    [AssessmentStatus] VARCHAR(30) NULL, 
+    [Notes] VARCHAR(150) NULL, 
+    [IsUploaded] BIT NULL
+)
