@@ -160,7 +160,7 @@ namespace ERIS.MobileWebAPI.Migrations
                     b.Property<bool>("IsFollowUpActionReconstructSlopeToOriginalCondition")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsFollowUpActionReconstructSlopeWIthGeosynthetics")
+                    b.Property<bool>("IsFollowUpActionReconstructSlopeWithGeosynthetics")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsFollowUpActionRepairCulvertDrainagePipe")
@@ -217,7 +217,7 @@ namespace ERIS.MobileWebAPI.Migrations
                     b.Property<bool>("IsImmediateActionReconstructSlopeToOriginalCondition")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsImmediateActionReconstructSlopeWIthGeosynthetics")
+                    b.Property<bool>("IsImmediateActionReconstructSlopeWithGeosynthetics")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsImmediateActionRemoveCulvertBlockage")
