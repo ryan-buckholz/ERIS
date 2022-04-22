@@ -1,4 +1,5 @@
-﻿using NativeMedia;
+﻿using ERIS.Mobile.ViewModels;
+using NativeMedia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace ERIS.Mobile.Views
         public VegetationSlopeAndWaterContentPage()
         {
             InitializeComponent();
+            BindingContext = new VegetationSlopeAndWaterContentViewModel();
         }
 
         private void Dry_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)

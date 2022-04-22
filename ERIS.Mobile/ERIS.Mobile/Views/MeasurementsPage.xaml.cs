@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERIS.Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ERIS.Mobile.Views
         public MeasurementsPage()
         {
             InitializeComponent();
+            BindingContext = new MeasurementsViewModel();
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)

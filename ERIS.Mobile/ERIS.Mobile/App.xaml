@@ -52,17 +52,21 @@
             <Style x:Key="ButtonStack" TargetType="StackLayout">
                 <Setter Property="Padding" Value="0,0,0,20"></Setter>
                 <Setter Property="VerticalOptions" Value="EndAndExpand"></Setter>
-
             </Style>
           
             <Style x:Key="RadioButton" TargetType="RadioButton">
-                
+
             </Style>
 
             <Style x:Key="MainStackLayout" TargetType="StackLayout">
                 <Setter Property="Padding" Value="20"></Setter>
                 <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>
+            </Style>
 
+            <Style x:Key="NumericAssessmentEntry" TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="PlaceholderColor" Value="Gray"></Setter>
+                <Setter Property="Keyboard" Value="Numeric"></Setter>
             </Style>
 
         </ResourceDictionary>        

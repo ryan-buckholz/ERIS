@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ERIS.Mobile.ViewModels;
 using NativeMedia;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,7 @@ namespace ERIS.Mobile.Views
         public WaterDrainagePage()
         {
             InitializeComponent();
+            BindingContext = new WaterDrainageViewModel();
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)

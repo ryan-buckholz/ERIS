@@ -1,4 +1,5 @@
-﻿using NativeMedia;
+﻿using ERIS.Mobile.ViewModels;
+using NativeMedia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,27 +17,7 @@ namespace ERIS.Mobile.Views
         public MaterialPage()
         {
             InitializeComponent();
-        }
-
-        private void Rock_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Bedding_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Joints_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Fractures_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Soil_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
+            BindingContext = new MaterialViewModel();
         }
 
         private void Save_Button_Clicked(object sender, EventArgs e)
