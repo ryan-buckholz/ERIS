@@ -90,7 +90,7 @@ namespace ERIS.Web
         public bool IsImmediateActionPlaceRockSlopeProtection { get; set; }
         public bool IsImmediateActionRoutineVisualMonitor { get; set; }
         public bool IsImmediateActionReconstructSlopeToOriginalCondition { get; set; }
-        public bool IsImmediateActionReconstructSlopeWIthGeosynthetics { get; set; }
+        public bool IsImmediateActionReconstructSlopeWithGeosynthetics { get; set; }
         public bool IsFollowUpActionOpenHighwayTraffic { get; set; }
         public bool IsFollowUpActionOpenHighwayShoulder { get; set; }
         public bool IsFollowUpActionDewaterWithHorizontalDrains { get; set; }
@@ -99,7 +99,7 @@ namespace ERIS.Web
         public bool IsFollowUpActionPlaceRockSlopeProtection { get; set; }
         public bool IsFollowUpActionRoutineVisualMonitor { get; set; }
         public bool IsFollowUpActionReconstructSlopeToOriginalCondition { get; set; }
-        public bool IsFollowUpActionReconstructSlopeWIthGeosynthetics { get; set; }
+        public bool IsFollowUpActionReconstructSlopeWithGeosynthetics { get; set; }
         public bool IsFollowUpActionRepairCulvertDrainagePipe { get; set; }
         public bool IsFollowUpActionInstallErosionControl { get; set; }
         public bool IsFollowUpActionSurveySite { get; set; }
