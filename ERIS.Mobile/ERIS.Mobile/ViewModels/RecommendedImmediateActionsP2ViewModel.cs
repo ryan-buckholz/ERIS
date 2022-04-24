@@ -41,10 +41,10 @@ namespace ERIS.Mobile.ViewModels
             get { return assessmentDetails.IsImmediateActionReconstructSlopeToOriginalCondition; }
             set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsImmediateActionReconstructSlopeToOriginalCondition), value); }
         }
-        public bool IsImmediateActionReconstructSlopeWIthGeosynthetics
+        public bool IsImmediateActionReconstructSlopeWithGeosynthetics
         {
-            get { return assessmentDetails.IsImmediateActionReconstructSlopeWIthGeosynthetics; }
-            set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsImmediateActionReconstructSlopeWIthGeosynthetics), value); }
+            get { return assessmentDetails.IsImmediateActionReconstructSlopeWithGeosynthetics; }
+            set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsImmediateActionReconstructSlopeWithGeosynthetics), value); }
         }
     }
 }

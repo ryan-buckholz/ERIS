@@ -7,10 +7,10 @@ namespace ERIS.Mobile.ViewModels
     public class RecommendedFollowupActionsP2ViewModel : AssessmentDetailsUpdater
     {
 
-        public bool IsFollowUpActionReconstructSlopeWIthGeosynthetics
+        public bool IsFollowUpActionReconstructSlopeWithGeosynthetics
         {
-            get { return assessmentDetails.IsFollowUpActionReconstructSlopeWIthGeosynthetics; }
-            set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsFollowUpActionReconstructSlopeWIthGeosynthetics), value); }
+            get { return assessmentDetails.IsFollowUpActionReconstructSlopeWithGeosynthetics; }
+            set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsFollowUpActionReconstructSlopeWithGeosynthetics), value); }
         }
         public bool IsFollowUpActionRepairCulvertDrainagePipe
         {
