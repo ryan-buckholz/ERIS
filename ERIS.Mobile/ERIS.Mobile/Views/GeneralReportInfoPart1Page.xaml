@@ -15,14 +15,15 @@
             </Label>
 
             <Entry Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="District" Placeholder="District:"  TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="Country" Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Route:"  TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="District" Placeholder="District:"  TextColor="Black" PlaceholderColor="Gray" MaxLength="2"
+                   ></Entry>
+            <Entry x:Name="County" Placeholder="County:" TextColor="Black" PlaceholderColor="Gray" MaxLength="3"></Entry>
+            <Entry  Placeholder="Route:"  TextColor="Black" PlaceholderColor="Gray" MaxLength="3"></Entry>
             <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Entry  Placeholder="Incident Date:" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" Clicked="Geolocate_Clicked"></Button>
-            <Entry x:Name="Latitude" Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  x:Name="Longitude" Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="Latitude" Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45"></Entry>
+            <Entry  x:Name="Longitude" Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45"></Entry>
 
 
             <StackLayout Style="{StaticResource ButtonStack}">

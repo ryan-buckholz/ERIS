@@ -15,9 +15,9 @@
 
             <Image Source="caltrans.png" WidthRequest="180" HeightRequest="180"></Image>
 
-            <Entry x:Name="LastN" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="FirstN" Placeholder="First Name:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="Snumber" Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="LastN" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50"></Entry>
+            <Entry x:Name="FirstN" Placeholder="First Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50"></Entry>
+            <Entry x:Name="Snumber" Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10"></Entry>
 
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>
