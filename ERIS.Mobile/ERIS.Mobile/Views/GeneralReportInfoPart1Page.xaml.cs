@@ -16,7 +16,7 @@ namespace ERIS.Mobile.Views
         {
             InitializeComponent();
             District.Text = Preferences.Get("DistrictText", String.Empty);
-            Country.Text = Preferences.Get("CountryText", String.Empty);
+            County.Text = Preferences.Get("CountryText", String.Empty);
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace ERIS.Mobile.Views
         private void Save_Button_Clicked(object sender, EventArgs e)
         {
             Preferences.Set("DistrictText", District.Text);
-            Preferences.Set("CountryText", Country.Text);
+            Preferences.Set("CountryText", County.Text);
         }
 
         private void Clear_Button_Clicked(object sender, EventArgs e)

@@ -30,7 +30,7 @@
                 <CheckBox x:Name="LanesClosedCheckBox" IsChecked="{Binding IsLaneClosed}" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Lane(s) Closed" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Entry Placeholder="# Lanes" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="2">
+                <Entry Placeholder="# Lanes" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="2" MaxLength="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding closedLanesUnfocused}"/>
                     </Entry.Behaviors>
