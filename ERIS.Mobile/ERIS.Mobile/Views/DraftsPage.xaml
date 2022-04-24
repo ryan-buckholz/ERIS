@@ -12,17 +12,6 @@
 
             <Button
                 VerticalOptions="Center"
-                Text="Drafts"
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderWidth="1.5"
-                BorderColor="Black"
-                CornerRadius="50"
-                >
-            </Button>
-
-            <Button
-                VerticalOptions="Center"
                 Text="New Report"
                 TextColor="Black"
                 BackgroundColor="LightGray"
@@ -31,6 +20,17 @@
                 CornerRadius="50"
                 Command="{Binding newReportButtonPressed}">
             </Button>
+            <Button
+                VerticalOptions="Center"
+                Text="Continue Current Report"
+                TextColor="Black"
+                BackgroundColor="LightGray"
+                BorderWidth="1.5"
+                BorderColor="Black"
+                CornerRadius="50"
+                Command="{Binding continueCurrentReportButtonPressed}">
+            </Button>
+            
 
         </StackLayout>
     </ContentPage.Content>
