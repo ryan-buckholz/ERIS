@@ -35,6 +35,10 @@ namespace ERIS.Mobile.ViewModels
         }
 
         public ICommand closedLanesUnfocused { get; }
+        public string ClosedLanes
+        {
+            get { return Convert.ToString(assessmentDetails.ClosedLanes); }
+        }
 
         public HighwayStatusViewModel()
         {

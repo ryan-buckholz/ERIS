@@ -9,13 +9,53 @@ namespace ERIS.Mobile.ViewModels
     public class MeasurementsViewModel : AssessmentDetailsUpdater
     {
         public ICommand slopeHeightUnfocused { get; }
+        public string SlopeHeight
+        {
+            get { return Convert.ToString(assessmentDetails.SlopeHeight); }
+        }
+
         public ICommand originalSlopeUnfocused { get; }
+        public string OriginalSlope
+        {
+            get { return Convert.ToString(assessmentDetails.OriginalSlope); }
+        }
+
         public ICommand landslideWidthUnfocused { get; }
+        public string LandslideWidth
+        {
+            get { return Convert.ToString(assessmentDetails.LandslideWidth); }
+        }
+
         public ICommand landslideLengthUnfocused { get; }
+        public string LandslideLength
+        {
+            get { return Convert.ToString(assessmentDetails.LandslideLength); }
+        }
+
         public ICommand mainScarpHeightUnfocused { get; }
+        public string MainScarpHeight
+        {
+            get { return Convert.ToString(assessmentDetails.MainScarpHeight); }
+        }
+
         public ICommand landslideSlopeUnfocused { get; }
+        public string LandslideSlope
+        {
+            get { return Convert.ToString(assessmentDetails.LandslideSlope); }
+        }
+
         public ICommand roadwayEncroachedLengthUnfocused { get; }
+        public string RoadwayEncroachedLength
+        {
+            get { return Convert.ToString(assessmentDetails.RoadwayEncroachedLength); }
+        }
+
         public ICommand roadwayEncroachedWidthUnfocused { get; }
+        public string RoadwayEncroachedWidth
+        {
+            get { return Convert.ToString(assessmentDetails.RoadwayEncroachedWidth); }
+        }
+
 
         public MeasurementsViewModel()
         {

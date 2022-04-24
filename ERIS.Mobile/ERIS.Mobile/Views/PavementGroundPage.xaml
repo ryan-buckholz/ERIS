@@ -24,28 +24,28 @@
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *, Auto">
                 <!-- The following objects correspond to the Pavement Ground Status section of the ERIS assessment -->
-                <Entry Style="{StaticResource NumericAssessmentEntry}" Grid.Row="1" Grid.Column="1">
+                <Entry Style="{StaticResource NumericAssessmentEntry}" Text="{Binding CrackLength, Mode=OneWay}" Grid.Row="1" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding crackLengthUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="feet, Length" FontSize="Medium" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Entry Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="1">
+                <Entry Style="{StaticResource NumericAssessmentEntry}" Text="{Binding CrackHorizontalDisplacement, Mode=OneWay}" Grid.Row="2" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding crackHorizontalDisplacementUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="inches, Horizontal Disp." FontSize="Medium" Grid.Row="2" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Entry Style="{StaticResource NumericAssessmentEntry}" Grid.Row="3" Grid.Column="1">
+                <Entry Style="{StaticResource NumericAssessmentEntry}" Text="{Binding CrackVerticalDisplacement, Mode=OneWay}" Grid.Row="3" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding crackVerticalDisplacementUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
                 <Label Text="inches, Vertical Disp" FontSize="Medium" Grid.Row="3" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Entry Style="{StaticResource NumericAssessmentEntry}" Grid.Row="4" Grid.Column="1">
+                <Entry Style="{StaticResource NumericAssessmentEntry}" Text="{Binding CrackDepth, Mode=OneWay}" Grid.Row="4" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding crackDepthUnfocused}"/>
                     </Entry.Behaviors>
@@ -53,7 +53,7 @@
                 <Label Text="Inches, Depth of Crack" FontSize="Medium" Grid.Row="4" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Settlement" FontSize="Medium" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Style="{StaticResource NumericAssessmentEntry}" Grid.Row="5" Grid.Column="1">
+                <Entry Style="{StaticResource NumericAssessmentEntry}" Text="{Binding CrackSettlement, Mode=OneWay}" Grid.Row="5" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding crackSettlementUnfocused}"/>
                     </Entry.Behaviors>
@@ -61,7 +61,7 @@
                 <Label Text="inches" FontSize="Medium" Grid.Row="5" Grid.Column="2" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Bulge" FontSize="Medium" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Style="{StaticResource NumericAssessmentEntry}" Grid.Row="6" Grid.Column="1">
+                <Entry Style="{StaticResource NumericAssessmentEntry}" Text="{Binding CrackBulge, Mode=OneWay}" Grid.Row="6" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding crackBulgeUnfocused}"/>
                     </Entry.Behaviors>
