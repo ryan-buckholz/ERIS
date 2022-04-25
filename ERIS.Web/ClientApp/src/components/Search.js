@@ -17,7 +17,7 @@ export class Search extends Component {
                 <div className="alert alert-primary text-center">Hello, Please enter the search criteria below </div>
 
                 <Form /* onSubmit={}*/> 
-                    <Grid containerxl>
+                    <Grid>
                         <Grid item>
                             <Card sx={{ minWidth: 275 }} variant='outlined'>
                             <CardHeader title="Search" />

@@ -9,13 +9,13 @@ export class Home extends Component {
                 <div className="card-body">
                     <div>
                         <div className="alert alert-primary text-center">Hello, Please log in below </div>
-                        <div class="row justify-content-md-center">
+                        <div className="row justify-content-md-center">
                             <div className="col-auto">
                                 <label>Username:</label>
                                 <input className="form-control" type="text" />
                             </div>
                         </div>
-                        <div class="row justify-content-md-center">
+                        <div className="row justify-content-md-center">
                             <div className="col-auto">
                                 <label>Password:</label>
                                 <input className="form-control" type="text" />
