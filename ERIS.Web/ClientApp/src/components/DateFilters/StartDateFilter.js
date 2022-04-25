@@ -19,21 +19,15 @@ function StartDateFilter() {
     return (
         <div>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <Grid container justify='space-around'>
-                    <KeyboardDatePicker
-                    //disableToolbar
+                <KeyboardDatePicker
                     initialFocusedDate={null}
-                    variant='inline'
+                    variant='outline'
                     format='MM/dd/yyy'
-                    margin='normal'
                     id='start-date-picker'
                     label='Start Date'
                     value={selectedDate}
                     onChange={handleDateChange}
-                    KeyboardButtonProps={(
-                        'aria-label':'change date'
-                    )} />
-                </Grid>
+                    KeyboardButtonProps={{ 'aria-label': 'change date'}} />
             </MuiPickersUtilsProvider>
         </div>
     )

@@ -19,20 +19,14 @@ function EndDateFilter() {
     return (
         <div>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <Grid container justify='space-around'>
-                    <KeyboardDatePicker
-                    //disableToolbar
-                    variant='inline'
-                    format='MM/dd/yyy'
-                    margin='normal'
-                    id='End-date-picker'
-                    label='End Date'
-                    value={selectedDate}
-                    onChange={handleDateChange}
-                    KeyboardButtonProps={(
-                        'aria-label':'change date'
-                    )} />
-                </Grid>
+                <KeyboardDatePicker
+                    variant='outlined' 
+                    format='MM/dd/yyy' 
+                    id='End-date-picker' 
+                    label='End Date' 
+                    value={selectedDate} 
+                    onChange={handleDateChange} 
+                    KeyboardButtonProps={{ 'aria-label': 'change date' }} />
             </MuiPickersUtilsProvider>
         </div>
     )
