@@ -6,6 +6,7 @@ namespace ERIS.Mobile.Models
 {
     public class AssessmentDetails
     {
+        public static string serializedModel { get; internal set; }
         public int? AssessmentDetailsID { get; set; }
         public int? AssessmentID { get; set; }
         public bool IsFall { get; set; }

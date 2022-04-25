@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ERIS.Mobile.ViewModels;
 
 namespace ERIS.Mobile.Views
 {
@@ -15,6 +16,8 @@ namespace ERIS.Mobile.Views
         public ObservationsAndNotesPage()
         {
             InitializeComponent();
+
+            BindingContext = new DataStore();
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {
