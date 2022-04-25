@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import { createAPIEndpoint, ENDPOINTS } from '../api';
 
 const columns = [
     { field: 'ProjectID', headerName: 'ProjectID', width: 100 },
@@ -62,6 +63,16 @@ const columns = [
   ];
 
 function SearchResultsGrid() {
+
+    const [x, setX] = useState();
+    useEffect(() => {
+        createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchAll()
+        .then(res => {
+            console.log(`got the data: ${res.data}`)
+        })
+        .catch(err => console.log(err))
+    }, [])
+
     const options = {
         filterType: 'checkbox',
     };

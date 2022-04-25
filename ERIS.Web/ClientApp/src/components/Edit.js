@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Route, useNavigate } from 'react-router-dom';
-import { Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
@@ -62,7 +60,19 @@ export class Edit extends Component {
 	
 
 	handleSubmit = event => {
-	
+		alert(`${this.state.date} ${this.state.district} ${this.state.county} ${this.state.route} 
+			   ${this.state.postmile} ${this.state.ea} ${this.state.projectid} ${this.state.dateincident}
+			   ${this.state.latitude} ${this.state.longitude} ${this.state.dclastname} ${this.state.dcfirstname} 
+			   ${this.state.dcsnumber} ${this.state.lastname} ${this.state.firstname} ${this.state.snumber} 
+			   ${this.state.phone} ${this.state.cellphone} ${this.state.lanes} ${this.state.feetlength} 
+			   ${this.state.incheshorizontal} ${this.state.inchesvertical} ${this.state.inchesdepth}
+			   ${this.state.settleinches} ${this.state.bulgeinches} ${this.state.clay}
+			   ${this.state.silt} ${this.state.sand} ${this.state.gravel} ${this.state.trees}
+			   ${this.state.brushesshrubs} ${this.state.groundcover} ${this.state.slope} ${this.state.originalslope}
+			   ${this.state.landslidewidth} ${this.state.landslidelength} ${this.state.mainscarp}
+			   ${this.state.landslideslope} ${this.state.lengthofroadway} ${this.state.widthofroadway}
+			   ${this.state.lanespagetwo}`)
+			   event.preventDefault()
 	}
 
 	render() {
