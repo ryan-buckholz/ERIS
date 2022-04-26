@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
 
-
-
 const columns = [
     { field: 'ProjectID', headerName: 'ProjectID', width: 100 },
     {

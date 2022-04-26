@@ -5,6 +5,7 @@ export class Home extends Component {
 
     render () {
         return (
+
             <div className = "row justify-content-md-center">
                 <div className="col-md-6">
                     <div className="card mt-3">
