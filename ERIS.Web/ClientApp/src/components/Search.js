@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { SearchFilters } from './SearchFilters';
 import SearchResultsGrid from './SearchResultsGrid';
 import { Grid } from '@material-ui/core';
-import {  Card, CardActions, CardContent} from '@mui/material/';
+import {  Button, Card, CardActions, CardContent, CardHeader } from '@mui/material/';
 import Form from '../layouts/Form';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import MapSearch from './MapSearch';
 
 export class Search extends Component {
     static displayName = Search.name;
@@ -18,26 +16,19 @@ export class Search extends Component {
                 <div className="alert alert-primary text-center">Search</div>
 
                 <Form /* onSubmit={}*/> 
-                    <Grid containerxl>
+                    <Grid>
                         <Grid item>
-                        <Card sx={{ minWidth: 275 }} variant='outlined'>
-                            <CardContent>
-                            <Tabs>
-                                <TabList>
-                                <Tab>Search</Tab>
-                                <Tab>Map Search</Tab>
-                                </TabList>
-                                <TabPanel>
+                            <Card sx={{ minWidth: 275 }} variant='outlined'>
+                            <CardHeader title="Search" />
+                                <CardContent>
                                     <SearchFilters />
-                                </TabPanel>
-                                <TabPanel>
-                                    <MapSearch />
-                                </TabPanel>
-                            </Tabs>
-                            </CardContent>
-                            <CardActions>
-                            </CardActions>
-                        </Card>
+                                </CardContent>
+
+                                <CardActions style={{justifyContent:'center'}}>
+                                    <Button variant="contained">Submit</Button>
+                                </CardActions>
+                            </Card>                            
+
                         </Grid>
                     </Grid> 
                 </Form> 
