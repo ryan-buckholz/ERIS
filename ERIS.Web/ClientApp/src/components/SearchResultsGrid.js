@@ -68,7 +68,7 @@ function SearchResultsGrid() {
     useEffect(() => {
         createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchAll()
         .then(res => {
-            console.log(`got the data: ${res.data}`)
+            console.log(res.data)
         })
         .catch(err => console.log(err))
     }, [])
