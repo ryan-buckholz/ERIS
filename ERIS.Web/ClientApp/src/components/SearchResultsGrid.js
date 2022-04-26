@@ -46,8 +46,10 @@ function SearchResultsGrid() {
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
-                    checkboxSelection
-                    disableSelectionOnClick />
+                    onRowClick={ rowData => {
+                        console.log(rowData)
+                    }}
+                    />
                 </div>
             </div>
         </div>
