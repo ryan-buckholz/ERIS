@@ -177,6 +177,7 @@ export class Details extends Component {
 									<div className="col-2"><input type="text" className="form-control form-control-sm" value={lanes} onChange={this.handleLanesChange} />Lanes</div></div>
 								<div className="col-md"><input onChange={this.handleInchesHorizontalChange} type="text" className="form-control form-control-sm" value={incheshorizontal} /></div>
 								<div className="col-md"><label>IN. Horizontal</label></div>
+
 							</div>
 
 							<div className="row">
@@ -186,6 +187,7 @@ export class Details extends Component {
 								<div className="col"><input onChange={this.handleInchesVerticalChange} type="text" className="form-control form-control-sm" value={inchesvertical} /></div>
 								<div className="col"><label>IN. Vertical</label></div>
 							</div>
+
 
 							<div className="row">
 								<div className="col-3"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="flow" /> Flow</div>
@@ -444,6 +446,7 @@ export class Details extends Component {
 								<div className="col-8"><label></label></div>
 								<div className="col-1"><input onChange={this.handleCheckbox} type="checkbox" name="formoptions" value="detaileddesign" /></div>
 								<div className="col"><label>Perform Detailed Design & Produce Plans</label></div>
+
 							</div>
 							<hr></hr>
 

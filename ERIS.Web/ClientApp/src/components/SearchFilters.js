@@ -34,6 +34,7 @@ export class SearchFilters extends Component {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
+                          
                         <Typography>Name</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -92,9 +93,9 @@ export class SearchFilters extends Component {
                             </div>
                                 
                         </div>
+
                     </AccordionDetails>
                 </Accordion>
-
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -107,7 +108,6 @@ export class SearchFilters extends Component {
                         <Radiogroup />
                     </AccordionDetails>
                 </Accordion>
-                
             </div>
         );
     }

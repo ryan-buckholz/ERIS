@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ERIS.Mobile.ViewModels;
+using NativeMedia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,27 +17,7 @@ namespace ERIS.Mobile.Views
         public MaterialPage()
         {
             InitializeComponent();
-        }
-
-        private void Rock_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Bedding_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Joints_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Fractures_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Soil_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
+            BindingContext = new MaterialViewModel();
         }
 
         private void Save_Button_Clicked(object sender, EventArgs e)
@@ -50,5 +32,26 @@ namespace ERIS.Mobile.Views
         {
             Shell.Current.GoToAsync("//" + nameof(RecommendedFollowupActionsP2));
         }
+
+        private async void OnPickImagesClick(object sender, EventArgs e)
+        {
+            var results = await MediaGallery.PickAsync(1, MediaFileType.Image, MediaFileType.Video);
+
+            if (results?.Files == null)
+            {
+                return;
+            }
+
+            foreach (var media in results.Files)
+            {
+                var fileName = media.NameWithoutExtension;
+                var extension = media.Extension;
+                var contentType = media.ContentType;
+
+                await DisplayAlert(fileName, $"Extension: {extension}, Content-Type:{contentType}", "Ok");
+            }
+
+        }
+
     }
 }

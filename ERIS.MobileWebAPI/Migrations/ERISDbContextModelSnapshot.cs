@@ -29,17 +29,17 @@ namespace ERIS.MobileWebAPI.Migrations
                     b.Property<int>("AssessmentID")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("BrushesShrubsCoverageOnSlope")
+                    b.Property<decimal>("BushesShrubsCoverageOnSlope")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("ClayEstimate")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(5,3)");
 
                     b.Property<int>("ClosedLanes")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("CrackBulge")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("CrackBulge")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("CrackDepth")
                         .HasColumnType("decimal(18,2)");
@@ -158,7 +158,7 @@ namespace ERIS.MobileWebAPI.Migrations
                     b.Property<bool>("IsFollowUpActionReconstructSlopeToOriginalCondition")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsFollowUpActionReconstructSlopeWIthGeosynthetics")
+                    b.Property<bool>("IsFollowUpActionReconstructSlopeWithGeosynthetics")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsFollowUpActionRepairCulvertDrainagePipe")
@@ -215,7 +215,7 @@ namespace ERIS.MobileWebAPI.Migrations
                     b.Property<bool>("IsImmediateActionReconstructSlopeToOriginalCondition")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsImmediateActionReconstructSlopeWIthGeosynthetics")
+                    b.Property<bool>("IsImmediateActionReconstructSlopeWithGeosynthetics")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsImmediateActionRemoveCulvertBlockage")
@@ -294,13 +294,16 @@ namespace ERIS.MobileWebAPI.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("LandslideSlope")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(7,2)");
 
                     b.Property<decimal>("LandslideWidth")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("MainScarpHeight")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ObservationsAndNotes")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("OpenedLanesCount")
                         .HasColumnType("int");
@@ -321,9 +324,6 @@ namespace ERIS.MobileWebAPI.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("SlopeHeight")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("SoilEstimate")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("TreesCoverageOnSlope")
@@ -406,7 +406,7 @@ namespace ERIS.MobileWebAPI.Migrations
 
                     b.HasKey("AssessmentID");
 
-                    b.ToTable("AssessmentProfiles");
+                    b.ToTable("AssessmentProfile");
                 });
 
             modelBuilder.Entity("ERISMobileWebAPI.Models.Photo", b =>
@@ -427,7 +427,7 @@ namespace ERIS.MobileWebAPI.Migrations
 
                     b.HasKey("PhotoID");
 
-                    b.ToTable("Photos");
+                    b.ToTable("Photo");
                 });
 #pragma warning restore 612, 618
         }

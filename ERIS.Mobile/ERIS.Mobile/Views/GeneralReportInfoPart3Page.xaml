@@ -4,7 +4,7 @@
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart3Page"
              BackgroundColor="#F8F0E3">
     <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
@@ -15,14 +15,15 @@
             </Label>
 
 
-            <Entry  Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Phone:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Cell Phone:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="DLastN" Placeholder="Last Name:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50"></Entry>
+            <Entry x:Name="DFirstN" Placeholder="First Name:"  Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50"></Entry>
+            <Entry x:Name="DSnumber" Placeholder="S Number:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="10"></Entry>
+            <Entry x:Name="DPhone" Placeholder="Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20"></Entry>
+            <Entry x:Name="DCellPhone" Placeholder="Cell Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20"></Entry>
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>
+                <Button Text="Clear My Info" Style="{StaticResource AssessmentButton}" Clicked="Clear_Button_Clicked"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>

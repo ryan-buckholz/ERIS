@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
 
-            <Image Source="CalTrans.png" WidthRequest="180" HeightRequest="180"></Image>
+            <Image Source="ERIS.png" WidthRequest="180" HeightRequest="180"></Image>
 
             <Button
                 VerticalOptions="Center"
@@ -29,7 +29,7 @@
                 BorderWidth="1.5"
                 BorderColor="Black"
                 CornerRadius="50"
-                Clicked="Next_Button_Clicked">
+                Command="{Binding newReportButtonPressed}">
             </Button>
 
         </StackLayout>

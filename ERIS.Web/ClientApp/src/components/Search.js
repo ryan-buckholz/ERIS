@@ -6,7 +6,6 @@ import {  Button, Card, CardActions, CardContent, CardHeader } from '@mui/materi
 import Form from '../layouts/Form';
 import 'react-tabs/style/react-tabs.css';
 
-
 export class Search extends Component {
     static displayName = Search.name;
     
@@ -14,7 +13,7 @@ export class Search extends Component {
     render () {
         return (
             <div>   
-                <div className="alert alert-primary text-center">Hello, Please enter the search criteria below </div>
+                <div className="alert alert-primary text-center">Search</div>
 
                 <Form /* onSubmit={}*/> 
                     <Grid>
@@ -29,10 +28,10 @@ export class Search extends Component {
                                     <Button variant="contained">Submit</Button>
                                 </CardActions>
                             </Card>                            
+
                         </Grid>
                     </Grid> 
                 </Form> 
-                
                 <SearchResultsGrid />
             </div>
         );

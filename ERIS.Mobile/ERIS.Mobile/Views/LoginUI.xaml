@@ -4,7 +4,7 @@
              BackgroundColor="#F8F0E3"
              x:Class="ERIS.Mobile.Views.LoginUI">
     <ContentPage.Content>
-        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource MainStackLayout}">
 
             <Image Source="caltrans.png" WidthRequest="180" HeightRequest="180"></Image>
             <Entry x:Name="txtUsername" Placeholder="Username" TextColor="Black" PlaceholderColor="Black"></Entry>
