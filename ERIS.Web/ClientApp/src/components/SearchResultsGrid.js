@@ -3,78 +3,32 @@ import { DataGrid } from '@mui/x-data-grid';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
 
 const columns = [
-    { field: 'ProjectID', headerName: 'ProjectID', width: 100 },
-    {
-      field: 'LName',
-      headerName: 'LName',
-      width: 100,
-      editable: true,
-    },
-    {
-      field: 'EmployeeID',
-      headerName: 'EmployeeID',
-      width: 110,
-      editable: true,
-    },
-    {
-      field: 'DateOfIncident',
-      headerName: 'DateOfIncident',
-      width: 130,
-      editable: true,
-    },
-    {
-      field: 'County',
-      headerName: 'County',
-      sortable: false,
-      width: 100,
-    //   valueGetter: (params) =>
-    //     `${params.getValue(params.id, 'firstName') || ''} ${
-    //       params.getValue(params.id, 'lastName') || ''
-    //     }`,
-    },
-    {
-        field: 'District',
-        headerName: 'District',
-        width: 100,
-        editable: true,
-    },
-    {
-        field: 'Route',
-        headerName: 'Route',
-        width: 100,
-        editable: true,
-    },
-    {
-        field: 'HighwayStatus',
-        headerName: 'HighwayStatus',
-        width: 130,
-        editable: true,
-    }
-    
-  ];
-
-  const rows = [
-    {id:0, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
-        HighwayStatus: 'closed'}
+    { field: 'ProjectID', headerName: 'ProjectID', flex : 1 },
+    { field: 'LName', headerName: 'LName', flex : 1 },
+    { field: 'EmployeeName', headerName: 'EmployeeName', flex : 1 },
+    { field: 'DateOfIncident', headerName: 'DateOfIncident', flex : 1 },
+    { field: 'County',headerName: 'County',sortable: false, flex : 1},
+    { field: 'District', headerName: 'District', flex : 1 },
+    { field: 'Route', headerName: 'Route', flex : 1 },
+    { field: 'HighwayStatus', headerName: 'Highway Status', flex : 1 },
+    // { field: 'idButton', headerName: '', width: 130 }    
   ];
 
 function SearchResultsGrid() {
     
     const [x, setX] = useState();
 
-    const [assessmentsList, setAssessmentList] = useState([]);
+    const [ tableData, setTableData ] = useState([]);
     useEffect(() => {
         createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchAll()
         .then(res => {
             let assessmentsList = res.data.map( item => ({
-                id : item.AssessmentID,
-                title : item.ProjectID
+                id : item['assessmentID'], ProjectID:item['projectID'], LName:item['lastName'],
+                EmployeeName: item['firstName'], DateOfIncident: item['dateIncidentReported'], County : item['county'],
+                District : item['district'], Route : 99, HighwayStatus: item['assessmentStatus']
             }));
-            assessmentsList = [{id:0, title: 0}].concat(assessmentsList);
-            assessmentsList.map( data => {
-                rows.concat({id:data.id, ProjectID:data.ProjectID, LName:data.LastName});
-            })
-            console.log(res.data)
+
+            setTableData(assessmentsList)
         })
         .catch(err => console.log(err))
     }, [])
@@ -88,7 +42,7 @@ function SearchResultsGrid() {
             <div className="card-body">
             <div style={{ height: 400, width: '100%' }} className="col-xl-9">
                 <DataGrid
-                    rows={rows}
+                    rows={tableData}
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
