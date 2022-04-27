@@ -19,5 +19,10 @@ namespace ERIS.Mobile.ViewModels
         {
             SetAssessmentDetailsStringAndUpdateJsonFile(nameof(assessmentDetails.ObservationsAndNotes), ((Editor)(args.VisualElement)));
         }
+
+        public string ObservationsAndNotes
+        {
+            get { return Convert.ToString(assessmentDetails.ObservationsAndNotes); }
+        }
     }
 }
