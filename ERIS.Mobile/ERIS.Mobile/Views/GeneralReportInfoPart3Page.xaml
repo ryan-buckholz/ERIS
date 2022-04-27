@@ -15,14 +15,15 @@
             </Label>
 
 
-            <Entry  Placeholder="Last Name:" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
-            <Entry  Placeholder="First Name:" IsPassword ="True" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
-            <Entry  Placeholder="S Number:" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
-            <Entry  Placeholder="Phone:" IsPassword ="True" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
-            <Entry  Placeholder="Cell Phone:" Style="{StaticResource AssessmentCheckboxLabel}"></Entry>
+            <Entry x:Name="DLastN" Placeholder="Last Name:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50"></Entry>
+            <Entry x:Name="DFirstN" Placeholder="First Name:"  Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50"></Entry>
+            <Entry x:Name="DSnumber" Placeholder="S Number:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="10"></Entry>
+            <Entry x:Name="DPhone" Placeholder="Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20"></Entry>
+            <Entry x:Name="DCellPhone" Placeholder="Cell Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20"></Entry>
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>
+                <Button Text="Clear My Info" Style="{StaticResource AssessmentButton}" Clicked="Clear_Button_Clicked"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>

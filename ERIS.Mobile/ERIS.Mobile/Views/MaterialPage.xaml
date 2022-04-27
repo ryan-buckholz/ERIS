@@ -37,28 +37,28 @@
                 <Label Text="Soil" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Clay" FontSize="Medium" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" Text="{Binding ClayEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="5" Grid.Column="1">
+                <Entry Placeholder="Est %" Text="{Binding ClayEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="5" Grid.Column="1" MaxLength="9">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding clayEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
 
                 <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" Text="{Binding SiltEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="6" Grid.Column="1">
+                <Entry Placeholder="Est %" Text="{Binding SiltEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="6" Grid.Column="1" MaxLength="9">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding siltEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
 
                 <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" Text="{Binding SandEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="7" Grid.Column="1">
+                <Entry Placeholder="Est %" Text="{Binding SandEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="7" Grid.Column="1" MaxLength="9">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sandEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
 
                 <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
-                <Entry Placeholder="Est %" Text="{Binding GravelEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="8" Grid.Column="1">
+                <Entry Placeholder="Est %" Text="{Binding GravelEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="8" Grid.Column="1" MaxLength="9">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding gravelEstimateUnfocused}"/>
                     </Entry.Behaviors>
@@ -70,7 +70,6 @@
 
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>

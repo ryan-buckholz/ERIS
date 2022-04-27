@@ -30,7 +30,7 @@
                 <CheckBox x:Name="LanesClosedCheckBox" IsChecked="{Binding IsLaneClosed}" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Lane(s) Closed" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <Entry Placeholder="# Lanes" Text="{Binding ClosedLanes, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="2">
+                <Entry Placeholder="# Lanes" Text="{Binding ClosedLanes, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="2" Grid.Column="2" MaxLength="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding closedLanesUnfocused}"/>
                     </Entry.Behaviors>
@@ -47,7 +47,6 @@
 
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" VerticalOptions="Center" Clicked="OnPickImagesClick"></Button>
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>

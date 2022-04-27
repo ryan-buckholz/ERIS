@@ -4,7 +4,8 @@
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart1Page"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource MainStackLayout}">
+        <ScrollView HeightRequest="3000">
+            <StackLayout Style="{StaticResource MainStackLayout}">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
@@ -12,44 +13,29 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-  
-            <Entry  Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" x:Name="Latitude"></Entry>
-            <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" x:Name="Longitude"></Entry>
 
-            <Button 
-                VerticalOptions= "End"
-                Text="Use Current Location for Long/Latitude"    
-                TextColor="Black"
-                BackgroundColor="LightGray"
-                BorderColor="Black"
-                BorderWidth="1.5"
-                CornerRadius="20"
-                Clicked="Geolocate_Clicked"></Button>
-                <Entry  Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Entry  Placeholder="District:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Entry  Placeholder="County:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Entry  Placeholder="Route:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Entry  Placeholder="Incident Date:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" HeightRequest="35"></Button>
-                <Entry  Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-                <Entry  Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="District" Placeholder="District:"  TextColor="Black" PlaceholderColor="Gray" MaxLength="2"
+                   ></Entry>
+            <Entry x:Name="County" Placeholder="County:" TextColor="Black" PlaceholderColor="Gray" MaxLength="3"></Entry>
+            <Entry  Placeholder="Route:"  TextColor="Black" PlaceholderColor="Gray" MaxLength="3"></Entry>
+            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry  Placeholder="Incident Date:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" Clicked="Geolocate_Clicked"></Button>
+            <Entry x:Name="Latitude" Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45"></Entry>
+            <Entry  x:Name="Longitude" Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45"></Entry>
 
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}" HeightRequest="35"></Button>
-                <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked" HeightRequest="35"></Button>
+                    <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>
+                    <Button Text="Clear My Info" Style="{StaticResource AssessmentButton}" Clicked="Clear_Button_Clicked"></Button>
+                    <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
             </StackLayout>
-            
 
 
-        </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>

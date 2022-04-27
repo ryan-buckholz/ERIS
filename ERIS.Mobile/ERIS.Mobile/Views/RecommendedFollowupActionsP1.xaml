@@ -20,7 +20,7 @@
 
                 <CheckBox x:Name="OpenHighwayTrafficCheckbox" IsChecked="{Binding IsFollowUpActionOpenHighwayTraffic}" CheckedChanged="Open_Highway_Traffic_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Open Highway Traffic" FontSize="Medium" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" TextColor="Black"></Label>
-                <Entry Placeholder="Lanes" Style="{StaticResource NumericAssessmentEntry}" Text="{Binding OpenedLanesCount, Mode=OneWay}" Grid.Row="0" Grid.Column="2">
+                <Entry Placeholder="Lanes" Style="{StaticResource NumericAssessmentEntry}" Text="{Binding OpenedLanesCount, Mode=OneWay}" Grid.Row="0" Grid.Column="2" MaxLength="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding openedLanesCountUnfocused}"/>
                     </Entry.Behaviors>
@@ -56,7 +56,6 @@
 
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>

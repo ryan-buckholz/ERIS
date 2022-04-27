@@ -15,6 +15,8 @@ namespace ERIS.Mobile.Views
         public GeneralReportInfoPart1Page()
         {
             InitializeComponent();
+            District.Text = Preferences.Get("DistrictText", String.Empty);
+            County.Text = Preferences.Get("CountryText", String.Empty);
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)
@@ -53,6 +55,17 @@ namespace ERIS.Mobile.Views
             {
                 DisplayAlert("Error: No Location Found", "Pls try again, or type in location manually", "OK");
             }
+        }
+
+        private void Save_Button_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Set("DistrictText", District.Text);
+            Preferences.Set("CountryText", County.Text);
+        }
+
+        private void Clear_Button_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Clear();
         }
     }
 }
