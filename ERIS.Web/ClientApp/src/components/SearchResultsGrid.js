@@ -16,8 +16,6 @@ const columns = [
   ];
 
 function SearchResultsGrid() {
-    
-    const [x, setX] = useState();
     const [ tableData, setTableData ] = useState([]);
 
     const navigate = useNavigate();
@@ -50,7 +48,7 @@ function SearchResultsGrid() {
                     rowsPerPageOptions={[5]}
                     onRowClick={ rowData => {
                         console.log(rowData['row'])
-                        navigate('/Details')
+                        navigate('/Details/' + rowData['row']['id'], rowData['row'])
                     }}
                     />
                 </div>

@@ -20,6 +20,7 @@ export default class App extends Component {
           <Route path='/Search' element={<Search/>} />
           <Route path='/fetch-data' element={<FetchData/>} />
           <Route path='/Details' element={<Details/>} />
+          <Route path='/Details/:id' element={<Details/>} />
           <Route path='/Edit' element={<Edit/>} />              
         </Routes>
       </Router>
