@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DataGrid } from '@mui/x-data-grid';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
 
@@ -17,8 +18,9 @@ const columns = [
 function SearchResultsGrid() {
     
     const [x, setX] = useState();
-
     const [ tableData, setTableData ] = useState([]);
+
+    const navigate = useNavigate();
     useEffect(() => {
         createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchAll()
         .then(res => {
@@ -47,7 +49,8 @@ function SearchResultsGrid() {
                     pageSize={5}
                     rowsPerPageOptions={[5]}
                     onRowClick={ rowData => {
-                        console.log(rowData)
+                        console.log(rowData['row'])
+                        navigate('/Details')
                     }}
                     />
                 </div>

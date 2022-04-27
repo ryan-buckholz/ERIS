@@ -4,15 +4,14 @@ import SearchResultsGrid from './SearchResultsGrid';
 import { Grid } from '@material-ui/core';
 import {  Button, Card, CardActions, CardContent, CardHeader } from '@mui/material/';
 import Form from '../layouts/Form';
-import 'react-tabs/style/react-tabs.css';
-
+import { Layout } from './Layout';
 export class Search extends Component {
     static displayName = Search.name;
     
 
     render () {
         return (
-            <div>   
+            <Layout>   
                 <div className="alert alert-primary text-center">Search</div>
 
                 <Form /* onSubmit={}*/> 
@@ -33,7 +32,7 @@ export class Search extends Component {
                     </Grid> 
                 </Form> 
                 <SearchResultsGrid />
-            </div>
+            </Layout>
         );
     }
 }
