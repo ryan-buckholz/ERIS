@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.ObservationsAndNotesPage"
+             xmlns:vm="clr-namespace:ERIS.Mobile.ViewModels" x:DataType="vm:DataStore"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
@@ -32,7 +33,7 @@
             </Editor>
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Submit" Style="{StaticResource AssessmentButton}" Clicked="Submit_Clicked"></Button>
+                <Button Text="Submit" Style="{StaticResource AssessmentButton}" Clicked="Submit_Clicked" Command="{Binding checkSubmitButton}"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>
         </StackLayout>
