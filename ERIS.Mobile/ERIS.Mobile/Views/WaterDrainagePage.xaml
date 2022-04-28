@@ -64,7 +64,7 @@
             <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" VerticalOptions="EndAndExpand" Clicked="OnPickImagesClick"></Button>
 
             <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
-            <Button Text="Back" Style="{StaticResource AssessmentButton}"></Button>
+            <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
 
 
         </StackLayout>
