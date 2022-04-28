@@ -1,4 +1,5 @@
-﻿using NativeMedia;
+﻿using ERIS.Mobile.ViewModels;
+using NativeMedia;
 using System;
 using System.Collections.Generic;
 
@@ -14,32 +15,7 @@ namespace ERIS.Mobile.Views
         public HighwayStatus()
         {
             InitializeComponent();
-        }
-
-        private void Open_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Shoulder_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Lanes_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void One_Way_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-        private void Two_Way_Closed_CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-
-        }
-
-        private void Save_Button_Clicked(object sender, EventArgs e)
-        {
-
+            BindingContext = new HighwayStatusViewModel();
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {

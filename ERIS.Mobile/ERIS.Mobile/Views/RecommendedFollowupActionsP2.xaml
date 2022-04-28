@@ -12,25 +12,25 @@
 
             <Grid RowDefinitions="*, *, *, *, *, *" ColumnDefinitions="50 ,*">
 
-                <CheckBox x:Name="ReconSlopeGeoCheckbox" CheckedChanged="Recon_Slope_Geo_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="ReconSlopeGeoCheckbox" IsChecked="{Binding IsFollowUpActionReconstructSlopeWIthGeosynthetics}" CheckedChanged="Recon_Slope_Geo_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Reconstruct Slope with Geosynthetics" FontSize="Medium" Grid.Row="0" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="RepairCulvertCheckBox" CheckedChanged="Repair_Culvert_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="RepairCulvertCheckBox" IsChecked="{Binding IsFollowUpActionRepairCulvertDrainagePipe}" CheckedChanged="Repair_Culvert_CheckBox_CheckedChanged" Grid.Row="1" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Repair Culvert/Drainage Pipe" FontSize="Medium" Grid.Row="1" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="InstallErosionControlCheckBox" CheckedChanged="Install_Erosion_Control_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="InstallErosionControlCheckBox" IsChecked="{Binding IsFollowUpActionInstallErosionControl}" CheckedChanged="Install_Erosion_Control_CheckBox_CheckedChanged" Grid.Row="2" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Install Erosion Control - by Dist. Landscape" FontSize="Medium" Grid.Row="2" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="SurveySiteCheckBox" CheckedChanged="Survey_Site_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="SurveySiteCheckBox" IsChecked="{Binding IsFollowUpActionSurveySite}" CheckedChanged="Survey_Site_CheckBox_CheckedChanged" Grid.Row="3" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Survey the Site - by Dist. Survey" FontSize="Medium" Grid.Row="3" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="PerformGeoMappingCheckBox" CheckedChanged="Perform_Geo_Mapping_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="PerformGeoMappingCheckBox" IsChecked="{Binding IsFollowUpActionGeologicalMapping}" CheckedChanged="Perform_Geo_Mapping_CheckBox_CheckedChanged" Grid.Row="4" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Perform Geological Mapping" FontSize="Medium" Grid.Row="4" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="PerformSubsurfaceExplorationCheckBox" CheckedChanged="Perform_Subsurface_Exploration_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="PerformSubsurfaceExplorationCheckBox" IsChecked="{Binding IsFollowUpActionSubsurfaceExploration}" CheckedChanged="Perform_Subsurface_Exploration_CheckBox_CheckedChanged" Grid.Row="5" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Perform Subsurface Exploration" FontSize="Medium" Grid.Row="5" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
-                <CheckBox x:Name="PerformDetailedDesignCheckBox" CheckedChanged="Perform_Detailed_Design_CheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
+                <CheckBox x:Name="PerformDetailedDesignCheckBox" IsChecked="{Binding IsFollowUpActionDesignAndPlans}" CheckedChanged="Perform_Detailed_Design_CheckBox_CheckedChanged" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>
                 <Label Text="Perform Detailed Design and Produce Plans" FontSize="Medium" Grid.Row="6" Grid.Column="1" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
 
@@ -38,7 +38,6 @@
 
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>

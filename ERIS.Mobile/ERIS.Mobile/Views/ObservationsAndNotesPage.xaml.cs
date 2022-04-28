@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERIS.Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,8 +17,7 @@ namespace ERIS.Mobile.Views
         public ObservationsAndNotesPage()
         {
             InitializeComponent();
-
-            BindingContext = new DataStore();
+            BindingContext = new ObservationsAndNotesViewModel();
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {

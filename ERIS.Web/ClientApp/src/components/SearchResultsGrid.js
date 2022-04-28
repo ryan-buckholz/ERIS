@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import { createAPIEndpoint, ENDPOINTS } from '../api';
 
 const columns = [
     { field: 'ProjectID', headerName: 'ProjectID', width: 100 },
@@ -53,15 +54,31 @@ const columns = [
   ];
 
   const rows = [
-    {id:1, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
-        HighwayStatus: 'closed'},
-    {id:2, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
-        HighwayStatus: 'closed'},
-    {id:3, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
-        HighwayStatus: 'closed'},
+    {id:0, ProjectID: 1, LName: 'test', EmployeeID: 14, DateOfIncident: '10/12/2021', County : 'Sacramento', District : 12, Route : 99,
+        HighwayStatus: 'closed'}
   ];
 
 function SearchResultsGrid() {
+    
+    const [x, setX] = useState();
+
+    const [assessmentsList, setAssessmentList] = useState([]);
+    useEffect(() => {
+        createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchAll()
+        .then(res => {
+            let assessmentsList = res.data.map( item => ({
+                id : item.AssessmentID,
+                title : item.ProjectID
+            }));
+            assessmentsList = [{id:0, title: 0}].concat(assessmentsList);
+            assessmentsList.map( data => {
+                rows.concat({id:data.id, ProjectID:data.ProjectID, LName:data.LastName});
+            })
+            console.log(res.data)
+        })
+        .catch(err => console.log(err))
+    }, [])
+
     const options = {
         filterType: 'checkbox',
     };

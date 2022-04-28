@@ -15,12 +15,13 @@
 
             <Image Source="caltrans.png" WidthRequest="180" HeightRequest="180"></Image>
 
-            <Entry  Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="First Name:" IsPassword ="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="LastN" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50"></Entry>
+            <Entry x:Name="FirstN" Placeholder="First Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50"></Entry>
+            <Entry x:Name="Snumber" Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10"></Entry>
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Save" Style="{StaticResource AssessmentButton}"></Button>
+                <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>
+                <Button Text="Clear My Info" Style="{StaticResource AssessmentButton}" Clicked="Clear_Button_Clicked"></Button>
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>
