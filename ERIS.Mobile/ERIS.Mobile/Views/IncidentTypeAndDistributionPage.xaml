@@ -13,7 +13,7 @@
                 </Label.FormattedText>
             </Label>
             
-            <Grid RowDefinitions="*" ColumnDefinitions="*, *">
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*, *">
                 <Label Text="Incident Type" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
                 <Label Text="Distribution" Grid.Row="0" Grid.Column="1" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
             </Grid>
@@ -58,11 +58,6 @@
                 <RadioButton Content="Widening" IsChecked="{Binding IsWidening}" Grid.Row="3" Grid.Column="2" Style="{StaticResource RadioButton}"></RadioButton>
                 <RadioButton Content="Moving" IsChecked="{Binding IsMoving}" Grid.Row="4" Grid.Column="2" Style="{StaticResource RadioButton}"></RadioButton>
                 <RadioButton Content="Confined" IsChecked="{Binding IsConfined}" Grid.Row="5" Grid.Column="2" Style="{StaticResource RadioButton}"></RadioButton>
-            </Grid>
-            
-            <!-- TODO: Add data bindings to Others Entry. -->
-            <Grid RowDefinitions="*" ColumnDefinitions="*, *">
-                <Entry Placeholder="Others" Grid.Row="0" Grid.Column="0"/>
             </Grid>
 
             <StackLayout Style="{StaticResource ButtonStack}">
