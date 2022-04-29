@@ -121,11 +121,10 @@ export function Details() {
 								<div className="row">
 									<div className="col-3"><input type="checkbox" name="formoptions" value="slide" /> Slide</div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="enlarging" /> Enlarging</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed
-										<div className="col-2"><input type="text" className="form-control form-control-sm" />Lanes</div></div>
+									<div className="col-md"><input type="checkbox" name="formoptions" value="lanesclosed" /> Lane(s) Closed </div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" placeholder="Lanes"/> </div>
 									<div className="col-md"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-md"><label>IN. Horizontal</label></div>
-
 								</div>
 
 								<div className="row">
@@ -142,7 +141,7 @@ export function Details() {
 									<div className="col-3"><input type="checkbox" name="formoptions" value="moving" /> Moving</div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="twoway" /> Two-way Closed</div>
 									<div className="col"><input type="text" className="form-control form-control-sm" /></div>
-									<div className="col"><label>IN, Dep. of Crack</label></div>
+									<div className="col"><label>IN. Dep. of Crack</label></div>
 								</div>
 
 								<div className="row">
@@ -189,50 +188,53 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-1"><input type="checkbox" name="formoptions" value="rock" /> Rock</div>
-									<div className="col-3"><label>EST. %</label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value="dry" /> Dry</div>
-									<div className="col-1"><label>Immediate Actions:</label></div>
-									<div className="col-1"><label>Follow Up Actions:</label></div>
+									<div className="col-3 d-flex justify-content-center"><label>EST. %</label></div>
+									<div className="col-2"><input type="checkbox" name="formoptions"/> Dry</div>
+									<div className="col-2 d-flex justify-content-end"><label>Immediate Actions:</label></div>
+									<div className="col-2"><label>Follow Up Actions:</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-1"><input type="checkbox" name="formoptions" value="bedding" /> Bedding</div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm"/>Clay</div>
-									<div className="col-2"><label></label></div>
+									<div className="col-md d-flex justify-content-end"><label>Clay</label></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm"  /></div>
+									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="moist" /> Moist</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="one" /></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="opentraffic" /></div>
-									<div className="col"><label>Open Highway Traffic</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" /></div>
-									<div className="col-1"><label>Lanes</label></div>
+									<div className="col-2"><label>Open Highway Traffic</label></div>
+									<div className="col-md "><input type="text" className="form-control form-control-sm" placeholder="Lanes" /></div>
 								</div>
 
 								<div className="row">
 									<div className="col-1"><input type="checkbox" name="formoptions" value="joints" /> Joints</div>
-									<div className="col-1"><input type="text" className="form-control"/>Silt</div>
-									<div className="col-2"><label></label></div>
+									<div className="col-md d-flex justify-content-end"><label>Silt</label></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" /></div>
+									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="wet" /> Wet</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="two" /></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="openshoulder" /></div>
-									<div className="col"><label>Open Highway Shoulder</label></div>
+									<div className="col-3"><label>Open Highway Shoulder</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-1"><input type="checkbox" name="formoptions" value="fractures" /> Fractures</div>
-									<div className="col-1"><input type="text" className="form-control" />Sand</div>
-									<div className="col-2"><label></label></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value="fractures" /> Fracture</div>
+									<div className="col-md d-flex justify-content-end"><label>Sand</label></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" /></div>
+									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="flowing" /> Flowing</div>
 									<div className="col-2"><input type="checkbox" name="formoptions" value="three" /></div>
-									<div className="col">Close Highway<input type="checkbox" name="formoptions" value="onee" /> One <input type="checkbox" name="formoptions" value="bothdirections"/> Both Directions</div>
+									<div className="col-3">Close Highway <input type="checkbox" name="formoptions" value="onee" /> One <input  type="checkbox" name="formoptions" value="bothdirections" /> Both Directions</div>
 								</div>
 
 								<div className="row">
 									<div className="col-1"><input type="checkbox" name="formoptions" value="soil" /> Soil</div>
-									<div className="col-1"><input type="text" className="form-control"/>Gravel</div>
-									<div className="col-2"><label></label></div>
+									<div className="col-md d-flex justify-content-end"><label>Gravel</label></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" /></div>
+									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="seep" /> Seep</div>
 									<div className="col-2"><input type="checkbox" name="formoptions" value="four" /></div>
-									<div className="col"><label> Remove Landslide Debris From Highway</label></div>
+									<div className="col-3"><label> Remove Landslide Debris From Highway</label></div>
 								</div>
 
 								<div className="row">
@@ -268,7 +270,7 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Trees</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="compromised" /> Compromised Drains</div>
 									<div className="col-2"><input type="checkbox" name="formoptions" value="nine" /></div>
@@ -277,7 +279,7 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Bushes/Shrubs</label></div>
-									<div className="col-1"><input type="text" className="form-control" /></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" /></div>
 									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="surface" /> Surface Runoff</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="ten" /></div>
@@ -287,7 +289,7 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Groundcover</label></div>
-									<div className="col-1"><input type="text" className="form-control" /></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" /></div>
 									<div className="col-1"><label></label></div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="torrent" /> Torrent, Surge, Flood</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="eleven" /></div>
@@ -309,9 +311,8 @@ export function Details() {
 								<div className="row">
 									<div className="col-3"><p className="text-decoration-underline">Measurements:</p></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value="impactone" /></div>
-									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value="utilties" /></div>
-									<div className="col-1"><label>Adj. Utilities</label></div>
+									<div className="col-1 d-flex justify-content-center align-items-center"><input type="checkbox" name="formoptions"  /></div>
+									<div className="col-2 d-flex justify-content-around align-items-center"><input type="checkbox" name="formoptions" /> Adj. Utilities</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="thirteen" /></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="rockprotection" /></div>
 									<div className="col"><label>Place Rock Slope Protection</label></div>
@@ -319,11 +320,10 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Slope Height, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-1"><label></label></div>
 									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value="impacttwo" /></div>
-									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value="properties" /></div>
-									<div className="col-1"><label>Adj. Properties</label></div>
+									<div className="col-2 d-flex justify-content-evenly"><input type="checkbox" name="formoptions" /> Adj. Properties</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="fourteen" /></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="routinemonitor" /></div>
 									<div className="col"><label>Routine Visual Monitor</label></div>
@@ -331,11 +331,10 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Original Slope, deg</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-1"><label></label></div>
 									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value="impactthree" /></div>
-									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value="structures" /></div>
-									<div className="col-1"><label>Adj. Structures</label></div>
+									<div className="col-2 d-flex justify-content-evenly"><input type="checkbox" name="formoptions" /> Adj. Structures</div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="fifteen" /></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="slopetooriginal" /></div>
 									<div className="col"><label>Reconstruct Slope to Original Condition</label></div>
@@ -343,7 +342,7 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Landslide Width, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-4"><label></label></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="sixteen" /></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="slopewithgeosyn" /></div>
@@ -352,7 +351,7 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Landslide Length, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-5"><label></label></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="repairculvert"/></div>
 									<div className="col"><label>Repair Culvert/Drainage Pipe</label></div>
@@ -360,31 +359,31 @@ export function Details() {
 
 								<div className="row">
 									<div className="col-2"><label>Main Scarp Height, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control"/> </div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/> </div>
 									<div className="col-5"><label></label></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="erosioncontrol" /></div>
-									<div className="col"><label>Install Erosion Control - By Dist. Landscape</label></div>
+									<div className="col"><label>Install Erosion Ctrl - By Dist. Landscape</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Landslide Slope, deg</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-5"><label></label></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="surveysite" /></div>
 									<div className="col"><label>Survey the Site - By Dist Landscape</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-2"><label>Length of Roadway Encroached, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-2"><label>Length of Roadway, ft</label></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-5"><label></label></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="geologicalmapping" /></div>
 									<div className="col"><label>Perform Geological Mapping</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-2"><label>Width of Roadway Encroached, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control"/></div>
+									<div className="col-2"><label>Width of Roadway, ft</label></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm"/></div>
 									<div className="col-5"><label></label></div>
 									<div className="col-1"><input type="checkbox" name="formoptions" value="subsurfaceexploration"/></div>
 									<div className="col"><label>Perform Subsurface Exploration</label></div>
