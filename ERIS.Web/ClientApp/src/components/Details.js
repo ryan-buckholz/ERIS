@@ -7,22 +7,32 @@ import { createAPIEndpoint, ENDPOINTS } from '../api';
 
 export function Details() {
 		let { id } = useParams();
-		const [ values, setValues ] = useState();
-		
+		const [ profile, setProfile ] = useState([]);
+		const [ details, setDetails ] = useState([]);
+
+
+
 		const navigate = useNavigate();
 		useEffect(() => {
-			createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchById(id)
+			createAPIEndpoint(ENDPOINTS.ASSESSMENTDETAILS).fetchById(1)
 			.then(res => {
-				setValues(res.data);
-				console.log(`value is: ${values}`)
+				console.log(res.data);
+				setDetails(res.data);
 			})
 			.catch(err => console.log(err))
+
+			createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchById(1)
+			.then( res => {
+				console.log(res.data)
+				setProfile(res.data);
+			}).catch(err=> console.log(err))
 		}, [])
 
-		
+
 		return (
 			<Layout>
 				<form >
+					{console.log('asdfasdfasdf')}
 					<div className="card mt-3">
 						<div className="card-body">
 							<div>
@@ -33,14 +43,14 @@ export function Details() {
 								<hr></hr>
 
 								<div className="row">
+									<div className="col-md"><input type="text" className="form-control" value={profile.date} /></div>
 									<div className="col-md"><input type="text" className="form-control" /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
+									<div className="col-md"><input type="text" className="form-control" /></div>
+									<div className="col-md"><input type="text" className="form-control" /></div>
+									<div className="col-md"><input type="text" className="form-control" /></div>
+									<div className="col-md"><input type="text" className="form-control" /></div>
+									<div className="col-md"><input type="text" className="form-control" /></div>
+									<div className="col-md"><input type="text" className="form-control" /></div>
 								</div>
 
 								<div className="row">

@@ -47,7 +47,6 @@ function SearchResultsGrid() {
                     pageSize={5}
                     rowsPerPageOptions={[5]}
                     onRowClick={ rowData => {
-                        console.log(rowData['row'])
                         navigate('/Details/' + rowData['row']['id'], rowData['row'])
                     }}
                     />
