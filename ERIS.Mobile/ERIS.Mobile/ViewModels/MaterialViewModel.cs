@@ -35,9 +35,29 @@ namespace ERIS.Mobile.ViewModels
         }
 
         public ICommand clayEstimateUnfocused { get; }
+        public string ClayEstimate
+        {
+            get { return Convert.ToString(assessmentDetails.ClayEstimate); }
+        }
+
         public ICommand siltEstimateUnfocused { get; }
+        public string SiltEstimate
+        {
+            get { return Convert.ToString(assessmentDetails.SiltEstimate); }
+        }
+
         public ICommand sandEstimateUnfocused { get; }
+        public string SandEstimate
+        {
+            get { return Convert.ToString(assessmentDetails.SandEstimate); }
+        }
+
         public ICommand gravelEstimateUnfocused { get; }
+        public string GravelEstimate
+        {
+            get { return Convert.ToString(assessmentDetails.GravelEstimate); }
+        }
+
 
         public MaterialViewModel()
         {

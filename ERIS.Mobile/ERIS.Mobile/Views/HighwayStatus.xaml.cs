@@ -19,7 +19,7 @@ namespace ERIS.Mobile.Views
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//" + nameof(RecommendedImmediateActionsP1));
+            Shell.Current.GoToAsync("//" + nameof(PavementGroundPage));
 
         }
         private void Back_Button_Clicked(object sender, EventArgs e)

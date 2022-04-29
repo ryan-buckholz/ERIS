@@ -25,14 +25,14 @@
                    FontSize="Small"
                    TextColor="Black"></Label>
 
-            <Editor x:Name="notesEditor" HeightRequest="200" BackgroundColor="LightGray" MaxLength="150">
+            <Editor x:Name="notesEditor" HeightRequest="200" BackgroundColor="LightGray" Text="{Binding ObservationsAndNotes, Mode=OneWay}" MaxLength="150">
                 <Editor.Behaviors>
                     <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding observationsAndNotesUnfocused}"/>
                 </Editor.Behaviors>
             </Editor>
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Submit" Style="{StaticResource AssessmentButton}" Clicked="Submit_Clicked"></Button>
+                <Button Text="Submit" Style="{StaticResource AssessmentButton}" Clicked="Submit_Clicked" Command="{Binding checkSubmitButton}"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>
         </StackLayout>

@@ -57,7 +57,7 @@ namespace ERIS.Mobile.Views
         }
         private void Next_Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//" + nameof(MaterialPage));
+            Shell.Current.GoToAsync("//" + nameof(ObservationsAndNotesPage));
         }
         private void Back_Button_Clicked(object sender, EventArgs e)
         {

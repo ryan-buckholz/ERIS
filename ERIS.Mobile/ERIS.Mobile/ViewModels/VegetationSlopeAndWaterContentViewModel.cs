@@ -13,17 +13,30 @@ namespace ERIS.Mobile.ViewModels
         {
             SetAssessmentDetailsDecimalAndUpdateJsonFile(nameof(assessmentDetails.TreesCoverageOnSlope), ((Entry)(args.VisualElement)));
         }
-        
+        public string TreesCoverageOnSlope
+        {
+            get { return Convert.ToString(assessmentDetails.TreesCoverageOnSlope); }
+        }
+
         public ICommand brushesShrubsCoverageOnSlopeUnfocused { get; }
         private void SetBrushesShrubsCoverageOnSlope(FocusEventArgs args)
         {
             SetAssessmentDetailsDecimalAndUpdateJsonFile(nameof(assessmentDetails.BrushesShrubsCoverageOnSlope), ((Entry)(args.VisualElement)));
+        }
+        public string BrushesShrubsCoverageOnSlope
+        {
+            get { return Convert.ToString(assessmentDetails.BrushesShrubsCoverageOnSlope); }
+        
         }
 
         public ICommand groundCoverCoverageOnSlopeUnfocused { get; }
         private void SetGroundCoverCoverageOnSlope(FocusEventArgs args)
         {
             SetAssessmentDetailsDecimalAndUpdateJsonFile(nameof(assessmentDetails.GroundCoverCoverageOnSlope), ((Entry)(args.VisualElement)));
+        }
+        public string GroundCoverCoverageOnSlope
+        {
+            get { return Convert.ToString(assessmentDetails.GroundCoverCoverageOnSlope); }
         }
 
         public VegetationSlopeAndWaterContentViewModel()

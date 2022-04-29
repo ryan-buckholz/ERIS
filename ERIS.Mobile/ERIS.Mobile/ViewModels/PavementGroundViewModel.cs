@@ -19,11 +19,40 @@ namespace ERIS.Mobile.ViewModels
             set { SetAssessmentDetailsBoolAndUpdateJsonFile(nameof(IsIndentedByRocks), value); }
         }
         public ICommand crackLengthUnfocused { get; }
+        public string CrackLength
+        {
+            get { return Convert.ToString(assessmentDetails.CrackLength); }
+        }
+
         public ICommand crackHorizontalDisplacementUnfocused { get; }
+        public string CrackHorizontalDisplacement
+        {
+            get { return Convert.ToString(assessmentDetails.CrackHorizontalDisplacement); }
+        }
+
         public ICommand crackVerticalDisplacementUnfocused { get; }
+        public string CrackVerticalDisplacement
+        {
+            get { return Convert.ToString(assessmentDetails.CrackVerticalDisplacement); }
+        }
+
         public ICommand crackDepthUnfocused { get; }
+        public string CrackDepth
+        {
+            get { return Convert.ToString(assessmentDetails.CrackDepth); }
+        }
+
         public ICommand crackSettlementUnfocused { get; }
+        public string CrackSettlement
+        {
+            get { return Convert.ToString(assessmentDetails.CrackSettlement); }
+        }
+
         public ICommand crackBulgeUnfocused { get; }
+        public string CrackBulge
+        {
+            get { return Convert.ToString(assessmentDetails.CrackBulge); }
+        }
 
         public PavementGroundViewModel()
         {
