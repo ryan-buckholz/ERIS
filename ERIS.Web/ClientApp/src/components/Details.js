@@ -42,14 +42,14 @@ export function Details() {
 								<hr></hr>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" value={profile.data}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.date}/></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.district}/></div>
-									<div className="col-md"><input type="text" className="form-control" /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
-									<div className="col-md"><input type="text" className="form-control"  /></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.county}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.route}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.postMile}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.ea}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.projectID}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.dateIncidentReported}/></div>
 								</div>
 
 								<div className="row">
@@ -65,12 +65,12 @@ export function Details() {
 								<br></br>
 
 								<div className="row">
-									<div className="col-2"><input type="text" className="form-control" /></div>
-									<div className="col-2"><input type="text" className="form-control" /></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.latitude}/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.longitude}/></div>
 									<div className="col-2 d-flex justify-content-end"><label>District Contact:</label></div>
-									<div className="col-2"><input type="text" className="form-control" /></div>
-									<div className="col-2"><input type="text" className="form-control" /></div>
-									<div className="col-2"><input type="text" className="form-control" /></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.lastName}/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.firstName}/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.sNumber}/></div>
 								</div>
 
 								<div className="row">
@@ -84,11 +84,11 @@ export function Details() {
 								<br></br>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" /></div>
-									<div className="col-md"><input type="text" className="form-control" /></div>
-									<div className="col-md"><input type="text" className="form-control" /></div>
-									<div className="col-md"><input type="text" className="form-control" /></div>
-									<div className="col-md"><input type="text" className="form-control" /></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactLastName}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactFirstName}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactSNumber}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactPhone}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactCellPhone}/></div>
 								</div>
 
 								<div className="row">
@@ -154,7 +154,7 @@ export function Details() {
 								</div>
 
 								<div className="row">
-									<div className="col-3"><inpu  type="checkbox" name="formoptions" value="compound" /> Compound</div>
+									<div className="col-3"><input  type="checkbox" name="formoptions" value="compound" /> Compound</div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value="confined" /> Confined</div>
 									<div className="col-3"><label></label></div>
 									<div className="col"><label>Settlement</label></div>
@@ -407,13 +407,13 @@ export function Details() {
 								<hr></hr>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control"/></div>
-									<div className="col-md"><input type="text" className="form-control"/></div>
-									<div className="col-md"><input type="text" className="form-control"/></div>
-									<div className="col-md"><input type="text" className="form-control"/></div>
-									<div className="col-md"><input type="text" className="form-control"/></div>
-									<div className="col-md"><input type="text" className="form-control"/></div>
-									<div className="col-md"><input type="text" className="form-control"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.date}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.district}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.county}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.route}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profil.postMile}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.latitude}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.longitude}/></div>
 								</div>
 
 								<div className="row">
