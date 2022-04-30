@@ -131,8 +131,8 @@ export function Details() {
 									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSlide} /> Slide</div>
 									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isEnlarging} /> Enlarging</div>
 									<div className="col-md"><input type="checkbox" name="formoptions" value={details.isLaneClosed} /> Lane(s) Closed </div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" placeholder="Lanes" /> value={details.closedLanes} </div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" /> value={details.crackHorizontalDisplacement}</div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" placeholder="Lanes" value={details.closedLanes}/> </div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.crackHorizontalDisplacement}/></div>
 									<div className="col-md"><label>IN. Horizontal</label></div>
 								</div>
 
