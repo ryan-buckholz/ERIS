@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using ERIS.Mobile.ViewModels;
 
 namespace ERIS.Mobile.Views
 {
@@ -16,12 +17,7 @@ namespace ERIS.Mobile.Views
         public GeneralReportInfoPart3Page()
         {
             InitializeComponent();
-
-            DLastN.Text = Preferences.Get("DLastNameText", String.Empty);
-            DFirstN.Text = Preferences.Get("DFirstNText", String.Empty);
-            DSnumber.Text = Preferences.Get("DSnumberText", String.Empty);
-            DPhone.Text = Preferences.Get("DPhoneText", String.Empty);
-            DCellPhone.Text = Preferences.Get("DCellPhoneText", String.Empty);
+            BindingContext = new GeneralReportInfoPart3ViewModel();
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)
