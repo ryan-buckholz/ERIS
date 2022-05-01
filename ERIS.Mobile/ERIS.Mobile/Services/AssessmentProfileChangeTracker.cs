@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace ERIS.Mobile.Services
 {
-    public class AssessmentProfileChangeTracker
+    public class AssessmentProfileChangeTracker : IObservable<AssessmentProfile>
     {
         AssessmentProfileSerializer assessmentProfileSerializer;
         List<IObserver<AssessmentProfile>> observers;
