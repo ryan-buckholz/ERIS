@@ -25,12 +25,12 @@
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding countyUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
-                <Entry  Placeholder="Route:" Text="{Binding Route, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}"  TextColor="Black" PlaceholderColor="Gray" MaxLength="3">
+                <Entry  Placeholder="Route:" Text="{Binding Route, Mode=OneWay}" TextColor="Black" PlaceholderColor="Gray">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding routeUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
-                <Entry  Placeholder="Post Mile:" Text="{Binding PostMile, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" TextColor="Black" PlaceholderColor="Gray">
+                <Entry  Placeholder="Post Mile:" Text="{Binding PostMile, Mode=OneWay}" TextColor="Black" PlaceholderColor="Gray">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding postMileUnfocused}"/>
                     </Entry.Behaviors>

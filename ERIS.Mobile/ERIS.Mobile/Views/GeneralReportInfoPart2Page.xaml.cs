@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using ERIS.Mobile.ViewModels;
 
 namespace ERIS.Mobile.Views
 {
@@ -16,9 +17,7 @@ namespace ERIS.Mobile.Views
         public GeneralReportInfoPart2Page()
         {
             InitializeComponent();
-            LastN.Text = Preferences.Get("LastNameText", String.Empty);
-            FirstN.Text = Preferences.Get("FirstNText", String.Empty);
-            Snumber.Text = Preferences.Get("SnumberText", String.Empty);
+            BindingContext = new GeneralReportInfoPart2ViewModel();
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)
