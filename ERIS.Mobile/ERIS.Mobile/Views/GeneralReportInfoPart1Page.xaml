@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart1Page"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
@@ -14,16 +14,39 @@
                 </Label.FormattedText>
             </Label>
 
-            <Entry Placeholder="Site Visit Date (Todays Date):" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="District" Placeholder="District:"  TextColor="Black" PlaceholderColor="Gray" MaxLength="2"
-                   ></Entry>
-            <Entry x:Name="County" Placeholder="County:" TextColor="Black" PlaceholderColor="Gray" MaxLength="3"></Entry>
-            <Entry  Placeholder="Route:"  TextColor="Black" PlaceholderColor="Gray" MaxLength="3"></Entry>
-            <Entry  Placeholder="Post Mile:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry  Placeholder="Incident Date:" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" Clicked="Geolocate_Clicked"></Button>
-            <Entry x:Name="Latitude" Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45"></Entry>
-            <Entry  x:Name="Longitude" Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45"></Entry>
+            <DatePicker Date="{Binding Date}"></DatePicker>
+                <Entry x:Name="District" Placeholder="District:" Text="{Binding District, Mode=OneWay}" TextColor="Black" PlaceholderColor="Gray" MaxLength="100">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="County" Placeholder="County:" Text="{Binding County, Mode=OneWay}" TextColor="Black" PlaceholderColor="Gray" MaxLength="100">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding countyUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry  Placeholder="Route:" Text="{Binding Route, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}"  TextColor="Black" PlaceholderColor="Gray" MaxLength="3">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding routeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry  Placeholder="Post Mile:" Text="{Binding PostMile, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" TextColor="Black" PlaceholderColor="Gray">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding postMileUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <DatePicker Date="{Binding DateIncidentReported}"></DatePicker>
+                <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" Clicked="Geolocate_Clicked"></Button>
+                <Entry x:Name="Latitude" Text="{Binding Latitude, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding latitudeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry  x:Name="Longitude" Text="{Binding Longitude, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Placeholder="Longitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding longitudeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
 
 
             <StackLayout Style="{StaticResource ButtonStack}">

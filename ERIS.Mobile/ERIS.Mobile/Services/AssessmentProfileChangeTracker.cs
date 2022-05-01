@@ -1,9 +1,11 @@
 ﻿using ERIS.Mobile.Models;
+using ERIS.Mobile.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
+[assembly: Dependency(typeof(AssessmentProfileChangeTracker))]
 namespace ERIS.Mobile.Services
 {
     public class AssessmentProfileChangeTracker : IObservable<AssessmentProfile>

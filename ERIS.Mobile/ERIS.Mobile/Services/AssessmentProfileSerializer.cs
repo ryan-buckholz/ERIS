@@ -8,7 +8,7 @@ using System.Text;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(AssessmentDetailsSerializer))]
+[assembly: Dependency(typeof(AssessmentProfileSerializer))]
 namespace ERIS.Mobile.Services
 {
     public class AssessmentProfileSerializer
