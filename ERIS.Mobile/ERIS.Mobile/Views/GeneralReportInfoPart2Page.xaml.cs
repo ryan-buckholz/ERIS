@@ -30,16 +30,25 @@ namespace ERIS.Mobile.Views
             Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart1Page));
         }
 
-        private void Save_Button_Clicked(object sender, EventArgs e)
+        private async void Save_Button_Clicked(object sender, EventArgs e)
         {
-            Preferences.Set("LastNameText", LastN.Text);
-            Preferences.Set("FirstNText", FirstN.Text);
-            Preferences.Set("SnumberText", Snumber.Text);
+            bool alertResult = await DisplayAlert("WARNING", "Are you sure you want to save new default report data and override all current defaults?", "Yes", "No");
+            if (alertResult == true)
+            {
+                Preferences.Set("LastNameText", LastN.Text);
+                Preferences.Set("FirstNText", FirstN.Text);
+                Preferences.Set("SnumberText", Snumber.Text);
+            }
         }
 
-        private void Clear_Button_Clicked(object sender, EventArgs e)
+        private async void Clear_Button_Clicked(object sender, EventArgs e)
         {
-            Preferences.Clear();
+            bool alertResult = await DisplayAlert("WARNING", "Are you sure you want to clear ALL of your saved default report data?", "Yes", "No");
+            if (alertResult == true) 
+            { 
+                Preferences.Clear(); 
+            }
+            
         }
     }
 }
