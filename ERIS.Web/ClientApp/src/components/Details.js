@@ -444,7 +444,7 @@ export function Details() {
 											CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
 											LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
 											OF PHOTOS AND MEASUREMENTS.</label>
-										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
+									<textarea className="form-control" id="exampleFormControlTextarea1" value={details.observationsAndNotes} rows="5" disabled="enabled"></textarea>
 									</div>
 								</div>
 								<hr></hr>
@@ -463,7 +463,7 @@ export function Details() {
 								<p className="fw-bold">SKETCH:</p>
 								<div className="mb-3">
 									<label htmlFor="exampleFormControlTextarea1" className="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW PLAN W/ UP-STATION IDENTIFIED. <p className="fst-italic">MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH, & DIRECTION.</p></label>
-									<textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+								<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
 								</div>
 							</div>
 							<div className="row justify-content-md-center">
