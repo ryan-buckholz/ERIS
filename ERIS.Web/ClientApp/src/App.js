@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Details } from './components/Details';
@@ -21,7 +20,7 @@ export default class App extends Component {
           <Route path='/fetch-data' element={<FetchData/>} />
           <Route path='/Details' element={<Details/>} />
           <Route path='/Details/:id' element={<Details/>} />
-          <Route path='/Edit' element={<Edit/>} />              
+          <Route path='/Edit/:id' element={<Edit/>} />              
         </Routes>
       </Router>
                 
