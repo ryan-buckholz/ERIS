@@ -1,11 +1,23 @@
 import { Button } from '@mui/material'
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { createAPIEndpoint, ENDPOINTS } from '../api';
 
 
 function Login() {
     
+    const [loginItems, setlogins] = useState([]);
+
     const navigate = useNavigate();
+    useEffect(() => {
+        createAPIEndpoint(ENDPOINTS.LOGIN).fetchAll()
+            .then(res => {
+                setlogins(res.data);
+            })
+            .catch(err => setlogins.log(err))
+    }, [])
+
+
   return (
     <div className = "row justify-content-md-center">
         <div className="col-md-6">
