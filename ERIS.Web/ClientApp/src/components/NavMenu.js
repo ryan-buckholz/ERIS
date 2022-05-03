@@ -22,26 +22,26 @@ export class NavMenu extends Component {
     }
 
 
-  render () {
-    return (
-        <header style={{ backgroundColor: '#ffcc33' }}>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
-          <Container>
-            <NavbarBrand tag={Link} to="/"><img src="images/ERIS.jpg" width="35" height="35"></img></NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-              <ul className="navbar-nav flex-grow">
-                <NavItem>
-                    <NavLink tag={Link} className="text-dark" to="/">Login</NavLink>
-                </NavItem>
-                <NavItem className="loginPageCheck">
-                    <NavLink tag={Link} className="text-dark" to="/Search">Search</NavLink>
-                </NavItem>
-              </ul>
-            </Collapse>
-          </Container>
-        </Navbar>
-      </header>
-    );
+    render() {
+        return (
+            <header style={{ backgroundColor: '#ffcc33' }}>
+                <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
+                    <Container>
+                        <NavbarBrand tag={Link} to="/"><img src="images/ERIS.jpg" width="35" height="35"></img></NavbarBrand>
+                        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+                        <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+                            <ul className="navbar-nav flex-grow">
+                                <NavItem>
+                                    <NavLink tag={Link} className="text-dark" to="/">Login</NavLink>
+                                </NavItem>
+                                {/*<NavItem>*/}
+                                {/*    <NavLink tag={Link} className="text-dark" to="/Search">Search</NavLink>*/}
+                                {/*</NavItem>*/}
+                            </ul>
+                        </Collapse>
+                    </Container>
+                </Navbar>
+            </header>
+        );
   }
 }
