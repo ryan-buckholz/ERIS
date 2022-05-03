@@ -476,7 +476,6 @@ export function Details() {
 							</div>
 
 							<div className="row justify-content-md-center">
-								<div className="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
 								<div className="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
 								<Button variant='outlined' className='col-auto'
 									onClick={ data => {

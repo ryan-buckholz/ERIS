@@ -12,11 +12,14 @@ export function Edit() {
 	const [ details, setDetails ] = useState([]);
 	const navigate = useNavigate();
 	const [isImmediateActionCloseHighWay, setCloseHighway] = useState([]);
+	const [detailsUrl, setDetailsUrl] = useState([]);
 
 	useEffect(() => {
 		createAPIEndpoint(ENDPOINTS.ASSESSMENTDETAILS).fetchById(id)
 		.then(res => {
 			setDetails(res.data);
+			setDetailsUrl('/Details/' + id);
+
 			if (res.data.isImmediateActionCloseHighwayOneDirection || res.data.isImmediateActionCloseHighWayBothDirections) {
 				setCloseHighway(true);
 			}
@@ -40,6 +43,7 @@ export function Edit() {
 		})
 		.catch(err => console.log(err))
 	}
+
 
 	return (
 		<Layout>
@@ -496,7 +500,7 @@ export function Edit() {
 							</div>
 
 							<div className="row justify-content-md-center">
-								<div className="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
+							<div className="col-auto"><button href={detailsUrl} className="btn btn-outline-secondary">Back</button></div>
 								<div className="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
 								<Button className='col-auto' variant='outlined' type='submit'>Submit</Button>
 							</div>
