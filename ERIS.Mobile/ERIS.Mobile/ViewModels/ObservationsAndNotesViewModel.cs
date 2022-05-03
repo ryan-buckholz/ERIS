@@ -29,7 +29,8 @@ namespace ERIS.Mobile.ViewModels
 
         private void SubmitPressed()
         {
-            send.PostDetails();
+            send.PostAssessmentProfile();
+            send.PostAssessmentDetails();
         }
 
         public string ObservationsAndNotes
