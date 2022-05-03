@@ -37,11 +37,11 @@ namespace ERIS.Mobile.ViewModels
         }
         protected void SetAssessmentDetailsStringAndUpdateJsonFile(string stringPropertyName, Editor editor)
         {
-            string inputDecimalString = editor.Text;
+            string inputString = editor.Text;
             PropertyInfo propertyInfo = assessmentDetails.GetType().GetProperty(stringPropertyName, BindingFlags.Public | BindingFlags.Instance);
             if (null != propertyInfo && propertyInfo.CanWrite)
             {
-                propertyInfo.SetValue(assessmentDetails, inputDecimalString, null);
+                propertyInfo.SetValue(assessmentDetails, inputString, null);
                 UpdateAssessmentDetailsJsonFile();
             }
         }
@@ -58,8 +58,11 @@ namespace ERIS.Mobile.ViewModels
                 }
                 catch
                 {
-                    entry.Text = "";
-                    Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                    if(entry.Text != "")
+                    {
+                        entry.Text = "";
+                        Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                    }
                 }
                 propertyInfo.SetValue(assessmentDetails, inputDecimal, null);
                 UpdateAssessmentDetailsJsonFile();
@@ -78,8 +81,11 @@ namespace ERIS.Mobile.ViewModels
                 }
                 catch
                 {
-                    entry.Text = "";
-                    Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                    if (entry.Text != "")
+                    {
+                        entry.Text = "";
+                        Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                    }
                 }
                 propertyInfo.SetValue(assessmentDetails, inputInt, null);
                 UpdateAssessmentDetailsJsonFile();
