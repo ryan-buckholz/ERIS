@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from './Layout';
-import { Button, InputLabel, Select, MenuItem, FormControl } from '@mui/material';
+import { Button, InputLabel, Select, MenuItem, FormControl, TextField, Box } from '@mui/material';
 import { useNavigate, useParams } from 'react-router';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
 import Moment from 'moment';
@@ -13,16 +13,14 @@ export function Details() {
 
 	const navigate = useNavigate();
 	useEffect(() => {
-		createAPIEndpoint(ENDPOINTS.ASSESSMENTDETAILS).fetchById(1)
+		createAPIEndpoint(ENDPOINTS.ASSESSMENTDETAILS).fetchById(id)
 			.then(res => {
-				console.log(res.data);
 				setDetails(res.data);
 			})
 			.catch(err => console.log(err))
 
-		createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchById(1)
+		createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).fetchById(id)
 			.then(res => {
-				console.log(res.data);
 				setProfile(res.data);
 			})
 			.catch(err => console.log(err))
@@ -32,7 +30,6 @@ export function Details() {
 	return (
 		<Layout>
 			<form >
-				{console.log('asdfasdfasdf')}
 				<div className="card mt-3">
 					<div className="card-body">
 						<div>
@@ -462,21 +459,10 @@ export function Details() {
 							</div>
 							<div className="row justify-content-md-center">
 								<div className="col-md">
-									<FormControl>
-										<InputLabel>Staus</InputLabel>
-										<Select
-											labelId="demo-simple-select-label"
-											id="demo-simple-select"
-											value={1} //change this to value of status
-											label="Age"
-											// onChange={}
-											>
-										<MenuItem value={1}>Not yet started</MenuItem>
-										{/* set values to respective status */}
-										<MenuItem value={2}>Working</MenuItem>
-										<MenuItem value={3}>Complete</MenuItem>
-										</Select>
-									</FormControl>
+									<Box component='span' sx={{ p: 2, border: 'grey' }} >STATUS: {profile.assessmentStatus}</Box>
+									{/* <TextField id="outlined" label={profile.assessmentStatus} InputProps={{
+									readOnly: true,
+									}} variant="outlined" /> */}
 								</div>
 							</div>
 
@@ -485,8 +471,9 @@ export function Details() {
 								<div className="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
 								<Button variant='outlined' className='col-auto'
 									onClick={ data => {
-										console.log(id)
-										navigate('/Edit/' + id)
+										let status = profile.assessmentStatus;
+										console.log(status)
+										navigate('/Edit/' + id, status)
 									}}>Edit </Button>
 							</div>
 							<div>
