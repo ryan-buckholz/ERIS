@@ -38,6 +38,7 @@ export function Edit() {
 	const handleSubmit = e => {
 		e.preventDefault()
 		createAPIEndpoint(ENDPOINTS.ASSESSMENTPROFILE).update(id, profile)
+		createAPIEndpoint(ENDPOINTS.ASSESSMENTDETAILS).update(id, details)
 		.then( res => {
 			navigate('/Details/'+id);
 		})
@@ -454,7 +455,12 @@ export function Edit() {
 										CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
 										LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
 										OF PHOTOS AND MEASUREMENTS.</label>
-									<textarea className="form-control" id="exampleFormControlTextarea1" value={details.observationsAndNotes} rows="5"></textarea>
+									<textarea className="form-control" id="exampleFormControlTextarea1" defaultValue={details.observationsAndNotes} rows="5"
+									onChange={e => {
+										console.log(e.target.value);
+										details.observationsAndNotes = e.target.value;
+										console.log(details);
+									}}									></textarea>
 								</div>
 							</div>
 							<hr></hr>
