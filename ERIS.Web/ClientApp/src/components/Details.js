@@ -42,14 +42,14 @@ export function Details() {
 								<hr></hr>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" value={profile.date}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.district}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.county}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.route}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.postMile}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.ea}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.projectID}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.dateIncidentReported}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.date} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.district} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.county} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.route} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.postMile} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.ea} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.projectID} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.dateIncidentReported} disabled="enabled"/></div>
 								</div>
 
 								<div className="row">
@@ -65,12 +65,12 @@ export function Details() {
 								<br></br>
 
 								<div className="row">
-									<div className="col-2"><input type="text" className="form-control" value={profile.latitude}/></div>
-									<div className="col-2"><input type="text" className="form-control" value={profile.longitude}/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.latitude} disabled="enabled"/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.longitude} disabled="enabled"/></div>
 									<div className="col-2 d-flex justify-content-end"><label>District Contact:</label></div>
-									<div className="col-2"><input type="text" className="form-control" value={profile.lastName}/></div>
-									<div className="col-2"><input type="text" className="form-control" value={profile.firstName}/></div>
-									<div className="col-2"><input type="text" className="form-control" value={profile.sNumber}/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.lastName} disabled="enabled"/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.firstName} disabled="enabled"/></div>
+									<div className="col-2"><input type="text" className="form-control" value={profile.sNumber} disabled="enabled"/></div>
 								</div>
 
 								<div className="row">
@@ -84,11 +84,11 @@ export function Details() {
 								<br></br>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactLastName}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactFirstName}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactSNumber}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactPhone}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactCellPhone}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactLastName} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactFirstName} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactSNumber} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactPhone} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.districtContactCellPhone} disabled="enabled"/></div>
 								</div>
 
 								<div className="row">
@@ -113,78 +113,78 @@ export function Details() {
 								</div>
 
 								<div className="row">
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isFall} /> (Rock) Fall</div>
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isAdvancing} /> Advancing</div>
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isHighwayOpen} /> Open</div>
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isPavementGroundChecks} /> Payment/Ground Checks </div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isFall} disabled="enabled"/> (Rock) Fall</div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isAdvancing} disabled="enabled"/> Advancing</div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isHighwayOpen} disabled="enabled"/> Open</div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isPavementGroundChecks} disabled="enabled"/> Payment/Ground Checks </div>
 								</div>
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isTopple} /> Topple</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isRetrogressing} /> Retrogressing</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isShoulderClosed} /> Shoulder Closed</div>
-									<div className="col"> <input type="text" className="form-control form-control-sm" value={details.crackLength} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isTopple} disabled="enabled"/> Topple</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isRetrogressing} disabled="enabled" /> Retrogressing</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isShoulderClosed} disabled="enabled"/> Shoulder Closed</div>
+									<div className="col"> <input type="text" className="form-control form-control-sm" value={details.crackLength} disabled="enabled" /></div>
 									<div className="col"><label>Feet, Length</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSlide} /> Slide</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isEnlarging} /> Enlarging</div>
-									<div className="col-md"><input type="checkbox" name="formoptions" value={details.isLaneClosed} /> Lane(s) Closed </div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" placeholder="Lanes" value={details.closedLanes}/> </div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.crackHorizontalDisplacement}/></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSlide} disabled="enabled"/> Slide</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isEnlarging} disabled="enabled"/> Enlarging</div>
+									<div className="col-md"><input type="checkbox" name="formoptions" value={details.isLaneClosed} disabled="enabled"/> Lane(s) Closed </div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" placeholder="Lanes" value={details.closedLanes} disabled="enabled"/> </div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.crackHorizontalDisplacement} disabled="enabled"/></div>
 									<div className="col-md"><label>IN. Horizontal</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSpread} /> Spread</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isWidening} /> Widening</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isOneWayClosed} /> One-way Closed</div>
-									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackVerticalDisplacement}/></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSpread} disabled="enabled"/> Spread</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isWidening} disabled="enabled"/> Widening</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isOneWayClosed} disabled="enabled" /> One-way Closed</div>
+									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackVerticalDisplacement} disabled="enabled"/></div>
 									<div className="col"><label>IN. Vertical</label></div>
 								</div>
 
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isFlow} /> Flow</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isMoving} /> Moving</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isTwoWayClosed} /> Two-way Closed</div>
-									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackDepth}/></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isFlow} disabled="enabled"/> Flow</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isMoving} disabled="enabled" /> Moving</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isTwoWayClosed} disabled="enabled" /> Two-way Closed</div>
+									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackDepth} disabled="enabled"/></div>
 									<div className="col"><label>IN. Dep. of Crack</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isCompound} /> Compound</div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isConfined} /> Confined</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isCompound} disabled="enabled"/> Compound</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isConfined} disabled="enabled" /> Confined</div>
 									<div className="col-3"><label></label></div>
 									<div className="col"><label>Settlement</label></div>
-									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackSettlement}/></div>
+									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackSettlement} disabled="enabled"/></div>
 									<div className="col"><label>Inches</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isErosion} /> Erosion</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isErosion} disabled="enabled" /> Erosion</div>
 									<div className="col-3"><label></label></div>
 									<div className="col-3"><label></label></div>
 									<div className="col"><label>Bulge</label></div>
-									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackBulge}/></div>
+									<div className="col"><input type="text" className="form-control form-control-sm" value={details.crackBulge} disabled="enabled"/></div>
 									<div className="col"><label>Inches</label></div>
 
 								</div>
 
 								<div className="row">
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSurfacialSloughing} /> Surfacial Sloughing</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSurfacialSloughing} disabled="enabled"/> Surfacial Sloughing</div>
 									<div className="col-3"><label></label></div>
 									<div className="col-3"><label></label></div>
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isIndentedByRocks} /> Indented by Rocks</div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isIndentedByRocks} disabled="enabled"/> Indented by Rocks</div>
 								</div>
 
 								<div className="row">
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isScouredToe} /> Scoured </div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isScouredToe} disabled="enabled"/> Scoured </div>
 								</div>
 
 								<div className="row">
-									<div className="col"><input type="checkbox" name="formoptions" value={details.isWashout} /> Washout</div>
+									<div className="col"><input type="checkbox" name="formoptions" value={details.isWashout} disabled="enabled"/> Washout</div>
 								</div>
 								<hr></hr>
 
@@ -196,53 +196,53 @@ export function Details() {
 								</div>
 
 								<div className="row">
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isRock} /> Rock</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isRock} disabled="enabled"/> Rock</div>
 									<div className="col-3 d-flex justify-content-center"><label>EST. %</label></div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isDry} /> Dry</div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isDry} disabled="enabled"/> Dry</div>
 									<div className="col-2 d-flex justify-content-end"><label>Immediate Actions:</label></div>
 									<div className="col-2"><label>Follow Up Actions:</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.hasBedding} /> Bedding</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.hasBedding} disabled="enabled"/> Bedding</div>
 									<div className="col-md d-flex justify-content-end"><label>Clay</label></div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.clayEstimate} /></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.clayEstimate} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isMoist} /> Moist</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionOpenHighwayTraffic} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionOpenHighwayTraffic} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isMoist} disabled="enabled"/> Moist</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionOpenHighwayTraffic} disabled="enabled" /></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionOpenHighwayTraffic} disabled="enabled"/></div>
 									<div className="col-2"><label>Open Highway Traffic</label></div>
-									<div className="col-md "><input type="text" className="form-control form-control-sm" placeholder="Lanes" value={details.openedLanesCount} /></div>
+									<div className="col-md "><input type="text" className="form-control form-control-sm" placeholder="Lanes" value={details.openedLanesCount} disabled="enabled" /></div>
 								</div>
 
 								<div className="row">
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.hasJoints} /> Joints</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.hasJoints} disabled="enabled" /> Joints</div>
 									<div className="col-md d-flex justify-content-end"><label>Silt</label></div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.siltEstimate} /></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.siltEstimate} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isWet} /> Wet</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionOpenHighwayShoulder} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionOpenHighwayShoulder} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isWet} disabled="enabled"/> Wet</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionOpenHighwayShoulder} disabled="enabled"/></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionOpenHighwayShoulder} disabled="enabled"/></div>
 									<div className="col-3"><label>Open Highway Shoulder</label></div>
 								</div>
 
 								<div className="row">
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.hasFractures} /> Fracture</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.hasFractures} disabled="enabled"/> Fracture</div>
 									<div className="col-md d-flex justify-content-end"><label>Sand</label></div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.sandEstimate}/></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.sandEstimate} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isFlowingWater} /> Flowing</div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value="three" /></div>
-									<div className="col-3">Close Highway <input type="checkbox" name="formoptions" value={details.isImmediateActionCloseHighwayOneDirection} /> One <input type="checkbox" name="formoptions" value={details.isImmediateActionCloseHighWayBothDirections} /> Both Directions</div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isFlowingWater} disabled="enabled"/> Flowing</div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value="three" disabled="enabled"/></div>
+									<div className="col-3">Close Highway <input type="checkbox" name="formoptions" value={details.isImmediateActionCloseHighwayOneDirection} disabled="enabled" /> One <input type="checkbox" name="formoptions" value={details.isImmediateActionCloseHighWayBothDirections} disabled="enabled"/> Both Directions</div>
 								</div>
 
 								<div className="row">
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isSoil} /> Soil</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isSoil} disabled="enabled"/> Soil</div>
 									<div className="col-md d-flex justify-content-end"><label>Gravel</label></div>
-									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.gravelEstimate}/></div>
+									<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.gravelEstimate} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSeep} /> Seep</div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionRemoveLandslideDebris} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSeep} disabled="enabled" /> Seep</div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionRemoveLandslideDebris} disabled="enabled"/></div>
 									<div className="col-3"><label> Remove Landslide Debris From Highway</label></div>
 								</div>
 
@@ -250,59 +250,59 @@ export function Details() {
 									<div className="col-1"><label></label></div>
 									<div className="col-1"><label></label></div>
 									<div className="col-2"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSpring} /> Spring</div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionPlaceKRailOrFence} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isSpring} disabled="enabled"/> Spring</div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionPlaceKRailOrFence} disabled="enabled"/></div>
 									<div className="col"><label> Place K-Rail or Fence</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-4"><label></label></div>
 									<div className="col-3"><label></label></div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionCoverSlopeWithPlastic} /></div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionCoverSlopeWithPlastic} disabled="enabled"/></div>
 									<div className="col"><label> Cover Slope with Plastic</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-4"><p className="text-decoration-underline">Vegetation on Slope:</p></div>
 									<div className="col-3"><p className="text-decoration-underline">Water/Drainage:</p></div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionDivertSurfaceWaterRunoff} /></div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionDivertSurfaceWaterRunoff} disabled="enabled"/></div>
 									<div className="col"><label> Divert Surface Water Runoff</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label></label></div>
 									<div className="col-2"><label>Coverage %</label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isCloggedInlet} /> Clogged Inlet</div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionRemoveCulvertBlockage} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isCloggedInlet} disabled="enabled"/> Clogged Inlet</div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionRemoveCulvertBlockage} disabled="enabled"/></div>
 									<div className="col"><label> Remove Culvert Blockage</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Trees</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.treesCoverageOnSlope}/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.treesCoverageOnSlope} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isCompromisedDrains} /> Compromised Drains</div>
-									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionDewaterWithPumpTrench} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.isCompromisedDrains} disabled="enabled"/> Compromised Drains</div>
+									<div className="col-2"><input type="checkbox" name="formoptions" value={details.isImmediateActionDewaterWithPumpTrench} disabled="enabled"/></div>
 									<div className="col"><label> Dewater with Pump, Trench, etc.</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Bushes/Shrubs</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.bushesShrubsCoverageOnSlope}/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.bushesShrubsCoverageOnSlope} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.hasSurfaceRunoff} /> Surface Runoff</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionDewaterWithHorizontalDrains} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionDewaterWithHorizontalDrains} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.hasSurfaceRunoff} disabled="enabled"/> Surface Runoff</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionDewaterWithHorizontalDrains} disabled="enabled"/></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionDewaterWithHorizontalDrains} disabled="enabled"/></div>
 									<div className="col"><label>Dewater with Horizontal Drains</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Groundcover</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.groundCoverCoverageOnSlope}/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.groundCoverCoverageOnSlope} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-3"><input type="checkbox" name="formoptions" value={details.hasTorrentSurgeFlood} /> Torrent, Surge, Flood</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionConstructTemporaryShoring} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionConstructTemporaryShoring} /></div>
+									<div className="col-3"><input type="checkbox" name="formoptions" value={details.hasTorrentSurgeFlood} disabled="enabled"/> Torrent, Surge, Flood</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionConstructTemporaryShoring} disabled="enabled" /></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionConstructTemporaryShoring} disabled="enabled"/></div>
 									<div className="col"><label>Construct Temporary Shoring</label></div>
 								</div>
 
@@ -312,108 +312,108 @@ export function Details() {
 									<div className="col-2"><label></label></div>
 									<div className="col-1"><label>Impacted:</label></div>
 									<div className="col-2"><label>May be Impacted:</label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionButtressToeOfLandslide} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionButtressToeOfLandslide} /></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionButtressToeOfLandslide} disabled="enabled"/></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionButtressToeOfLandslide} disabled="enabled"/></div>
 									<div className="col"><label>Buttress Taoe of Landslide</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-3"><p className="text-decoration-underline">Measurements:</p></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-1 d-flex justify-content-center align-items-center"><input type="checkbox" name="formoptions" value={details.hasImpactedAdjacentUtilities} /></div>
-									<div className="col-2 d-flex justify-content-around align-items-center"><input type="checkbox" name="formoptions" value={details.hasMaybeImpactedAdjacentUtilities}/> Adj. Utilities</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionPlaceRockSlopeProtection} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionPlaceRockSlopeProtection} /></div>
+									<div className="col-1 d-flex justify-content-center align-items-center"><input type="checkbox" name="formoptions" value={details.hasImpactedAdjacentUtilities} disabled="enabled" /></div>
+									<div className="col-2 d-flex justify-content-around align-items-center"><input type="checkbox" name="formoptions" value={details.hasMaybeImpactedAdjacentUtilities} disabled="enabled"/> Adj. Utilities</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionPlaceRockSlopeProtection} disabled="enabled"/></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionPlaceRockSlopeProtection} disabled="enabled"/></div>
 									<div className="col"><label>Place Rock Slope Protection</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Slope Height, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.slopeHeight}/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.slopeHeight} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value={details.hasImpactedAdjacentProperties} /></div>
-									<div className="col-2 d-flex justify-content-evenly"><input type="checkbox" name="formoptions" value={details.hasMaybeImpactedAdjacentProperties} /> Adj. Properties</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionRoutineVisualMonitor} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionRoutineVisualMonitor} /></div>
+									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value={details.hasImpactedAdjacentProperties} disabled="enabled"/></div>
+									<div className="col-2 d-flex justify-content-evenly"><input type="checkbox" name="formoptions" value={details.hasMaybeImpactedAdjacentProperties} disabled="enabled"/> Adj. Properties</div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionRoutineVisualMonitor} disabled="enabled"/></div>
+									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionRoutineVisualMonitor} disabled="enabled"/></div>
 									<div className="col"><label>Routine Visual Monitor</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Original Slope, deg</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.originalSlope}/></div>
+									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.originalSlope} disabled="enabled"/></div>
 									<div className="col-1"><label></label></div>
-									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value={details.hasImpactedAdjacentStructures} /></div>
-									<div className="col-2 d-flex justify-content-evenly"><input type="checkbox" name="formoptions" value={details.hasMaybeImpactedAdjacentStructures} /> Adj. Structures</div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionReconstructSlopeToOriginalCondition} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionReconstructSlopeToOriginalCondition} /></div>
+									<div className="col-1 d-flex justify-content-center"><input type="checkbox" name="formoptions" value={details.hasImpactedAdjacentStructures} disabled = "enabled" /></div>
+										<div className="col-2 d-flex justify-content-evenly"><input type="checkbox" name="formoptions" value={details.hasMaybeImpactedAdjacentStructures} disabled="enabled"/> Adj. Structures</div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionReconstructSlopeToOriginalCondition} disabled="enabled" /></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionReconstructSlopeToOriginalCondition} disabled="enabled" /></div>
 									<div className="col"><label>Reconstruct Slope to Original Condition</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Landslide Width, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.landslideWidth}/></div>
+										<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.landslideWidth} disabled="enabled"/></div>
 									<div className="col-4"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionReconstructSlopeWithGeosynthetics} /></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionReconstructSlopeWithGeosynthetics} /></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isImmediateActionReconstructSlopeWithGeosynthetics} disabled="enabled"/></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionReconstructSlopeWithGeosynthetics} disabled="enabled"/></div>
 									<div className="col"><label>Reconstruct Slope with Geosynthetics</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Landslide Length, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.landslideLength}/></div>
+										<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.landslideLength} disabled="enabled"/></div>
 									<div className="col-5"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionRepairCulvertDrainagePipe}/></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionRepairCulvertDrainagePipe} disabled="enabled"/></div>
 									<div className="col"><label>Repair Culvert/Drainage Pipe</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Main Scarp Height, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.mainScarpHeight} /> </div>
+										<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.mainScarpHeight} disabled="enabled"/> </div>
 									<div className="col-5"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionInstallErosionControl} /></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionInstallErosionControl} disabled="enabled"/></div>
 									<div className="col"><label>Install Erosion Ctrl - By Dist. Landscape</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Landslide Slope, deg</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.landslideSlope} /></div>
+										<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.landslideSlope} disabled="enabled"/></div>
 									<div className="col-5"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionSurveySite} /></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionSurveySite} disabled="enabled"/></div>
 									<div className="col"><label>Survey the Site - By Dist Landscape</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Length of Roadway, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.roadwayEncroachedLength} /></div>
+										<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.roadwayEncroachedLength} disabled="enabled"/></div>
 									<div className="col-5"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionGeologicalMapping} /></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionGeologicalMapping} disabled="enabled"/></div>
 									<div className="col"><label>Perform Geological Mapping</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-2"><label>Width of Roadway, ft</label></div>
-									<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.roadwayEncroachedWidth} /></div>
+										<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.roadwayEncroachedWidth} disabled="enabled" /></div>
 									<div className="col-5"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionSubsurfaceExploration}/></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionSubsurfaceExploration} disabled="enabled"/></div>
 									<div className="col"><label>Perform Subsurface Exploration</label></div>
 								</div>
 
 								<div className="row">
 									<div className="col-8"><label></label></div>
-									<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionDesignAndPlans} /></div>
+										<div className="col-1"><input type="checkbox" name="formoptions" value={details.isFollowUpActionDesignAndPlans} disabled="enabled"/></div>
 									<div className="col"><label>Perform Detailed Design & Produce Plans</label></div>
 
 								</div>
 								<hr></hr>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" value={profile.date}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.district}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.county}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.route}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.postMile}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.latitude}/></div>
-									<div className="col-md"><input type="text" className="form-control" value={profile.longitude}/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.date} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.district} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.county} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.route} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.postMile} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.latitude} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={profile.longitude} disabled="enabled"/></div>
 								</div>
 
 								<div className="row">
@@ -437,7 +437,7 @@ export function Details() {
 											CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
 											LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
 											OF PHOTOS AND MEASUREMENTS.</label>
-										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
 									</div>
 								</div>
 								<hr></hr>
@@ -446,7 +446,7 @@ export function Details() {
 									<p className="fw-bold">SKETCH:</p>
 									<div className="mb-3">
 										<label htmlFor="exampleFormControlTextarea1" className="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW PLAN W/ UP-STATION IDENTIFIED. <p className="fst-italic">MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH, & DIRECTION.</p></label>
-										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
 									</div>
 								</div>
 
