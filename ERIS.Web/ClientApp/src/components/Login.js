@@ -42,8 +42,5 @@ function Login() {
   )
 }
 
-$(window).ready(function () {
-    $(".errorMessage").hide();
-})
 
 export default Login
