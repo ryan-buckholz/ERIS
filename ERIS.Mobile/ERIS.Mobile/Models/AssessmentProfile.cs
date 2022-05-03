@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ERIS.Mobile.Models
 {
-    internal class AssessmentProfile
+    public class AssessmentProfile
     {
         public int AssessmentID { get; set; }
         public DateTime Date { get; set; }

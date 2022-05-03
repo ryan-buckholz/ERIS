@@ -11,9 +11,11 @@ namespace ERIS.Mobile.ViewModels
 {
     public class DraftsViewModel : BindableObject
     {
+        AssessmentProfileSerializer assessmentProfileSerializer;
         AssessmentDetailsSerializer assessmentDetailsSerializer;
         public DraftsViewModel()
         {
+            assessmentProfileSerializer = DependencyService.Get<AssessmentProfileSerializer>();
             assessmentDetailsSerializer = DependencyService.Get<AssessmentDetailsSerializer>();
             newReportButtonPressed = new Command(New_Report_Button_Clicked);
             continueCurrentReportButtonPressed = new Command(GoToAssessmentIfAssessmentDataExists);
@@ -25,7 +27,9 @@ namespace ERIS.Mobile.ViewModels
         {
             bool answer = await Application.Current.MainPage.DisplayAlert("Warning", "Creating a new report will delete all data from any previously created report. Are you sure you want to create a new report?", "Yes", "No");
             if(answer == true) {
+                assessmentProfileSerializer.CreateNulledAssessmentProfileJsonFile();
                 assessmentDetailsSerializer.CreateNulledAssessmentDetailsJsonFile();
+                
                 await Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart1Page));
             }
         }

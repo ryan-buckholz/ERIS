@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using ERIS.Mobile.ViewModels;
 
 namespace ERIS.Mobile.Views
 {
@@ -16,12 +17,7 @@ namespace ERIS.Mobile.Views
         public GeneralReportInfoPart3Page()
         {
             InitializeComponent();
-
-            DLastN.Text = Preferences.Get("DLastNameText", String.Empty);
-            DFirstN.Text = Preferences.Get("DFirstNText", String.Empty);
-            DSnumber.Text = Preferences.Get("DSnumberText", String.Empty);
-            DPhone.Text = Preferences.Get("DPhoneText", String.Empty);
-            DCellPhone.Text = Preferences.Get("DCellPhoneText", String.Empty);
+            BindingContext = new GeneralReportInfoPart3ViewModel();
         }
 
         private void Next_Button_Clicked(object sender, EventArgs e)
@@ -33,18 +29,26 @@ namespace ERIS.Mobile.Views
             Shell.Current.GoToAsync("//" + nameof(GeneralReportInfoPart2Page));
         }
 
-        private void Save_Button_Clicked(object sender, EventArgs e)
+        private async void Save_Button_Clicked(object sender, EventArgs e)
         {
-            Preferences.Set("DLastNameText", DLastN.Text);
-            Preferences.Set("DFirstNText", DFirstN.Text);
-            Preferences.Set("DSnumberText", DSnumber.Text);
-            Preferences.Set("DPhoneText", DPhone.Text);
-            Preferences.Set("DCellPhoneText", DCellPhone.Text);
+            bool alertResult = await DisplayAlert("WARNING", "Are you sure you want to save new default report data and override all current defaults?", "Yes", "No");
+            if (alertResult == true)
+            {
+                Preferences.Set("DLastNameText", DLastN.Text);
+                Preferences.Set("DFirstNText", DFirstN.Text);
+                Preferences.Set("DSnumberText", DSnumber.Text);
+                Preferences.Set("DPhoneText", DPhone.Text);
+                Preferences.Set("DCellPhoneText", DCellPhone.Text);
+            }
         }
 
-        private void Clear_Button_Clicked(object sender, EventArgs e)
+        private async void Clear_Button_Clicked(object sender, EventArgs e)
         {
-            Preferences.Clear();
+            bool alertResult = await DisplayAlert("WARNING", "Are you sure you want to clear ALL of your saved default report data?", "Yes", "No");
+            if (alertResult == true)
+            {
+                Preferences.Clear();
+            }
         }
     }
 }

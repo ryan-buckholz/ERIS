@@ -37,11 +37,11 @@ namespace ERIS.Mobile.ViewModels
         }
         protected void SetAssessmentDetailsStringAndUpdateJsonFile(string stringPropertyName, Editor editor)
         {
-            string inputDecimalString = editor.Text;
+            string inputString = editor.Text;
             PropertyInfo propertyInfo = assessmentDetails.GetType().GetProperty(stringPropertyName, BindingFlags.Public | BindingFlags.Instance);
             if (null != propertyInfo && propertyInfo.CanWrite)
             {
-                propertyInfo.SetValue(assessmentDetails, inputDecimalString, null);
+                propertyInfo.SetValue(assessmentDetails, inputString, null);
                 UpdateAssessmentDetailsJsonFile();
             }
         }
