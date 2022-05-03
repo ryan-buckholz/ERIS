@@ -3,6 +3,7 @@ import { Layout } from './Layout';
 import { Button } from '@mui/material';
 import { useNavigate, useParams } from 'react-router';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
+import Moment from 'moment';
 
 
 export function Details() {
@@ -42,7 +43,7 @@ export function Details() {
 								<hr></hr>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" value={profile.date} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={Moment(profile.date).format("MM-DD-YYYY")} disabled="enabled"/></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.district} disabled="enabled"/></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.county} disabled="enabled"/></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.route} disabled="enabled"/></div>
@@ -407,7 +408,7 @@ export function Details() {
 								<hr></hr>
 
 								<div className="row">
-									<div className="col-md"><input type="text" className="form-control" value={profile.date} disabled="enabled"/></div>
+									<div className="col-md"><input type="text" className="form-control" value={Moment(profile.date).format("MM-DD-YYYY")} disabled="enabled" /></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.district} disabled="enabled"/></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.county} disabled="enabled"/></div>
 									<div className="col-md"><input type="text" className="form-control" value={profile.route} disabled="enabled"/></div>
