@@ -10,12 +10,19 @@ export function Details() {
 	let { id } = useParams();
 	const [profile, setProfile] = useState([]);
 	const [details, setDetails] = useState([]);
+	const [isImmediateActionCloseHighWay, setCloseHighway] = useState([]);
 
 	const navigate = useNavigate();
 	useEffect(() => {
 		createAPIEndpoint(ENDPOINTS.ASSESSMENTDETAILS).fetchById(id)
 			.then(res => {
 				setDetails(res.data);
+				if (res.data.isImmediateActionCloseHighwayOneDirection || res.data.isImmediateActionCloseHighWayBothDirections) {
+					setCloseHighway(true);
+				}
+				else {
+					setCloseHighway(false);
+                }
 			})
 			.catch(err => console.log(err))
 
@@ -26,6 +33,7 @@ export function Details() {
 			.catch(err => console.log(err))
 	}, [])
 
+	
 
 	return (
 		<Layout>
@@ -230,7 +238,8 @@ export function Details() {
 								<div className="col-md"><input type="text" className="form-control form-control-sm" value={details.sandEstimate} disabled="enabled" /></div>
 								<div className="col-1"><label></label></div>
 								<div className="col-3"><input type="checkbox" name="formoptions" checked={details.isFlowingWater} disabled="enabled" /> Flowing</div>
-								<div className="col-2"><input type="checkbox" name="formoptions" value="three" disabled="enabled" /></div>
+								
+								<div className="col-2"><input type="checkbox" name="formoptions" checked={isImmediateActionCloseHighWay} disabled="enabled" /></div>
 								<div className="col-3">Close Highway <input type="checkbox" name="formoptions" checked={details.isImmediateActionCloseHighwayOneDirection} disabled="enabled" /> One <input type="checkbox" name="formoptions" checked={details.isImmediateActionCloseHighWayBothDirections} disabled="enabled" /> Both Directions</div>
 							</div>
 

@@ -3,13 +3,17 @@ import { Button, Card, CardActions, CardContent, CardHeader } from '@mui/materia
 import { Grid } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
 import { DataGrid } from '@mui/x-data-grid';
+import $ from 'jquery';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material/';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import StartDateFilter from './DateFilters/StartDateFilter';
-import EndDateFilter from './DateFilters/EndDateFilter';
 import Input from '../controls/Input';
-import Radiogroup from '../controls/Radiogroup';
+import '@date-io/date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+    MuiPickersUtilsProvider,
+    KeyboardDatePicker
+} from '@material-ui/pickers';
 import Form from '../layouts/Form';
 
 const columns = [
@@ -51,6 +55,8 @@ function SearchResultsGrid() {
     const options = {
         filterType: 'checkbox',
     };
+    const [selectedEndDate, setSelectedEndDate] = React.useState(null)
+    const [selectedBeginDate, setSelectedBeginDate] = React.useState(null)
 
     const handleDistrictChange = value => {
         setSearchText(value);
@@ -73,12 +79,37 @@ function SearchResultsGrid() {
         setSearchText(value);
         filterLTNumericalData(value, excludeColumnsPostMile);
     }
-    const filterLTNumericalData = (value, searchItem) => {
+
+    const handleBeginDateChange = value => {
+        setSelectedBeginDate(value);
+        setSearchText(value);
+        filterGTDateData(value, excludeColumnsDate);
+    }
+    const handleEndDateChange = value => {
+        setSelectedEndDate(value);
+        setSearchText(value);
+        filterLTDateData(value, excludeColumnsDate);
+    }
+
+
+    const filterGTDateData = (value, searchItem) => {
         if (value === "") setTableData(tableData);
         else {
             const filteredData = tableData.filter(item => {
                 return Object.keys(item).some(key =>
-                    searchItem.includes(key) ? false : item[key].toString().includes(value)
+                    searchItem.includes(key) ? false : new Date(item[key]) - value >= 0
+                );
+            });
+            setTableData(filteredData);
+        }
+    }
+
+    const filterLTDateData = (value, searchItem) => {
+        if (value === "") setTableData(tableData);
+        else {
+            const filteredData = tableData.filter(item => {
+                return Object.keys(item).some(key =>
+                    searchItem.includes(key) ? false : new Date(item[key]) - value <= 0
                 );
             });
             setTableData(filteredData);
@@ -90,7 +121,19 @@ function SearchResultsGrid() {
         else {
             const filteredData = tableData.filter(item => {
                 return Object.keys(item).some(key =>
-                    searchItem.includes(key) ? false : item[key].toString().includes(value)
+                    searchItem.includes(key) ? false : item[key] >= value
+                );
+            });
+            setTableData(filteredData);
+        }
+    }
+
+    const filterLTNumericalData = (value, searchItem) => {
+        if (value === "") setTableData(tableData);
+        else {
+            const filteredData = tableData.filter(item => {
+                return Object.keys(item).some(key =>
+                    searchItem.includes(key) ? false : item[key] <= value
                 );
             });
             setTableData(filteredData);
@@ -127,8 +170,31 @@ function SearchResultsGrid() {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <div className="d-flex justify-content-around">
-                                    <StartDateFilter />
-                                    <EndDateFilter />
+                                        <div>
+                                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                                <KeyboardDatePicker
+                                                    initialFocusedDate={null}
+                                                    variant='outline'
+                                                    format='MM/dd/yyy'
+                                                    id='start-date-picker'
+                                                    label='Start Date'
+                                                    value={selectedBeginDate}
+                                                    onChange={handleBeginDateChange}
+                                                    KeyboardButtonProps={{ 'aria-label': 'change date' }} />
+                                            </MuiPickersUtilsProvider>
+                                        </div>
+                                        <div>
+                                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                                <KeyboardDatePicker
+                                                    variant='outlined'
+                                                    format='MM/dd/yyy'
+                                                    id='End-date-picker'
+                                                    label='End Date'
+                                                    value={selectedEndDate}
+                                                    onChange={handleEndDateChange}
+                                                    KeyboardButtonProps={{ 'aria-label': 'change date' }} />
+                                            </MuiPickersUtilsProvider>
+                                        </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>

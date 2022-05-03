@@ -13,7 +13,7 @@ function StartDateFilter() {
     const [ selectedDate, setSelectedDate ] = React.useState(null)
 
     const handleDateChange = (date) => {
-        setSelectedDate(date)
+        setSelectedDate(date);
     }
     return (
         <div>
