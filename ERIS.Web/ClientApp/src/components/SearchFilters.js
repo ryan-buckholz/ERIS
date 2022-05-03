@@ -28,30 +28,6 @@ export class SearchFilters extends Component {
                             </div>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2a-content"
-                        id="panel2a-header"
-                    >
-                          
-                        <Typography>Name</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                            <div className="d-flex justify-content-around">
-                                <Input
-                                    label='First Name'
-                                    name='firstNameInput' />
-                                <Input
-                                    label='Last Name'
-                                    name='lastnameInput' />
-                                <Input 
-                                    type='number'
-                                    label='Employee Id'
-                                    name='employeeIdInput' />
-                            </div>  
-                    </AccordionDetails>
-                </Accordion>
 
                 <Accordion>
                     <AccordionSummary
@@ -64,34 +40,25 @@ export class SearchFilters extends Component {
                         <div className="row">
                             <div className="d-flex justify-content-around">
                                 <Input
+                                label='District'
+                                    name='districtInput' />
+                                <Input
                                     label='County'
                                     name='countyInput' />
-                                
-                                <Input 
-                                    type='number'
-                                    label='Latitude'
-                                    name='latitudeInput' />
-                                <Input 
-                                    type='number'
-                                    label='Longitude'
-                                    name='longitudeInput' />
+                                <Input
+                                label='Route'
+                                name='routeInput' />
                             </div>
                         </div>
                         <div className="row">
                             <div className="d-flex justify-content-around">
                                 <Input
-                                label='Route'
-                                name='routeInput' />
-
+                                label='Begin Post Mile'
+                                    name='postmileBeginInput' />
                                 <Input
-                                label='Post Mile'
-                                name='postmileInput' />
-                                
-                                <Input
-                                label='District'
-                                name='districtInput' />
+                                    label='End Post Mile'
+                                    name='postmileEndInput' />
                             </div>
-                                
                         </div>
 
                     </AccordionDetails>

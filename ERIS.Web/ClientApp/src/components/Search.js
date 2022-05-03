@@ -13,24 +13,6 @@ export class Search extends Component {
         return (
             <Layout>   
                 <div className="alert alert-primary text-center">Search</div>
-
-                <Form /* onSubmit={}*/> 
-                    <Grid>
-                        <Grid item>
-                            <Card sx={{ minWidth: 275 }} variant='outlined'>
-                            <CardHeader title="Search" />
-                                <CardContent>
-                                    <SearchFilters />
-                                </CardContent>
-
-                                <CardActions style={{justifyContent:'center'}}>
-                                    <Button variant="contained">Submit</Button>
-                                </CardActions>
-                            </Card>                            
-
-                        </Grid>
-                    </Grid> 
-                </Form> 
                 <SearchResultsGrid />
             </Layout>
         );
