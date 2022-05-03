@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from './Layout';
-import { Button } from '@mui/material';
+import { Button, InputLabel, Select, MenuItem, FormControl } from '@mui/material';
 import { useNavigate, useParams } from 'react-router';
 import { createAPIEndpoint, ENDPOINTS } from '../api';
 import Moment from 'moment';
@@ -428,17 +428,27 @@ export function Details() {
 							</div>
 							<br></br>
 
-							<div className="row">
-								<p className="fw-bold">OBSERVATIONS AND NOTES:</p>
-								<div className="mb-3">
-									<label htmlFor="exampleFormControlTextarea1" className="form-label">LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
-										SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
-										FRACTURES; SITE ACCESS FOR FURTHER INVESTIGATION AND CONSTRUCTION; DRAINAGE;
-										EROSION; POTENTIAL CAUSES OF INCIDENT; CONSTRAINTS; ADDITIONAL NOTES ON
-										CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
-										LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
-										OF PHOTOS AND MEASUREMENTS.</label>
-									<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
+								<div className="row">
+									<p className="fw-bold">OBSERVATIONS AND NOTES:</p>
+									<div className="mb-3">
+										<label htmlFor="exampleFormControlTextarea1" className="form-label">LANDSLIDE MOVING/DEVELOPING RATE, PAVEMENT/GROUND CRACKS W/ MEASUREMENTS;
+											SLOPE AND BEDDING ORIENTATIONS IN RELATION TO ROADWAY ALIGNMENT, JOINTS,
+											FRACTURES; SITE ACCESS FOR FURTHER INVESTIGATION AND CONSTRUCTION; DRAINAGE;
+											EROSION; POTENTIAL CAUSES OF INCIDENT; CONSTRAINTS; ADDITIONAL NOTES ON
+											CHECKED BOXES; SITE HISTORY (INTERVIEW MAINTENANCE); MAP CRACKS - LOCATION,
+											LENGTH, HORIZONTAL & VERTICAL DISPLACEMENTS, DEPTH, & DIRECTION. TAKE PLENTY
+											OF PHOTOS AND MEASUREMENTS.</label>
+										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
+									</div>
+								</div>
+								<hr></hr>
+
+								<div className="row">
+									<p className="fw-bold">SKETCH:</p>
+									<div className="mb-3">
+										<label htmlFor="exampleFormControlTextarea1" className="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW PLAN W/ UP-STATION IDENTIFIED. <p className="fst-italic">MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH, & DIRECTION.</p></label>
+										<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
+									</div>
 								</div>
 							</div>
 							<hr></hr>
@@ -447,17 +457,39 @@ export function Details() {
 								<p className="fw-bold">SKETCH:</p>
 								<div className="mb-3">
 									<label htmlFor="exampleFormControlTextarea1" className="form-label">DRAW CROSS SECTION FACING UP-STATION OR PERPENDICULAR TO MOVEMENT; DRAW PLAN W/ UP-STATION IDENTIFIED. <p className="fst-italic">MAP CRACKS - LOCATIONS, LENGTH, WIDTH, DEPTH, & DIRECTION.</p></label>
-									<textarea className="form-control" id="exampleFormControlTextarea1" rows="5" disabled="enabled"></textarea>
+									<textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+								</div>
+							</div>
+							<div className="row justify-content-md-center">
+								<div className="col-md">
+									<FormControl>
+										<InputLabel>Staus</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+											value={1} //change this to value of status
+											label="Age"
+											// onChange={}
+											>
+										<MenuItem value={1}>Not yet started</MenuItem>
+										{/* set values to respective status */}
+										<MenuItem value={2}>Working</MenuItem>
+										<MenuItem value={3}>Complete</MenuItem>
+										</Select>
+									</FormControl>
 								</div>
 							</div>
 
 							<div className="row justify-content-md-center">
 								<div className="col-auto"><a href="/" className="btn btn-outline-secondary">Back</a></div>
-								<div className="col-auto"><a href="/Sear0ch" className="btn btn-outline-secondary">New Search</a></div>
-								<Button variant='outlined' className='col-auto' a href='/Edit'>Edit </Button>
+								<div className="col-auto"><a href="/Search" className="btn btn-outline-secondary">New Search</a></div>
+								<Button variant='outlined' className='col-auto'
+									onClick={ data => {
+										console.log(id)
+										navigate('/Edit/' + id)
+									}}>Edit </Button>
 							</div>
 							<div>
-							</div>
 						</div>
 					</div>
 				</div>
