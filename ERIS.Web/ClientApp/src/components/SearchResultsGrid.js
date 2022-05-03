@@ -11,7 +11,7 @@ const columns = [
     { field: 'County',headerName: 'County',sortable: false, flex : 1},
     { field: 'District', headerName: 'District', flex : 1 },
     { field: 'Route', headerName: 'Route', flex : 1 },
-    { field: 'HighwayStatus', headerName: 'Highway Status', flex : 1 },
+    { field: 'AssessmentStatus', headerName: 'Assessment Status', flex : 1 },
     // { field: 'idButton', headerName: '', width: 130 }    
   ];
 
@@ -25,7 +25,7 @@ function SearchResultsGrid() {
             let assessmentsList = res.data.map( item => ({
                 id : item['assessmentID'], ProjectID:item['projectID'], LName:item['lastName'],
                 EmployeeName: item['firstName'], DateOfIncident: item['dateIncidentReported'], County : item['county'],
-                District : item['district'], Route : 99, HighwayStatus: item['assessmentStatus']
+                District : item['district'], Route : 99, AssessmentStatus: item['assessmentStatus']
             }));
 
             setTableData(assessmentsList)

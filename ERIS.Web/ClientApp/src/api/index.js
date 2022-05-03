@@ -5,7 +5,8 @@ const BASE_URL = 'http://localhost:50188/api/';
 export const ENDPOINTS = {
     ASSESSMENTPROFILE: 'AssessmentProfile',
     ASSESSMENTDETAILS: 'AssessmentDetails',
-    PHOTO: 'PHOTO'
+    PHOTO: 'PHOTO',
+    LOGIN: "Login"
 }
 
 export const createAPIEndpoint = endpoint => {
