@@ -279,7 +279,7 @@ export function Details() {
 							<div className="row">
 								<div className="col-2"><label></label></div>
 								<div className="col-2"><label>Coverage %</label></div>
-								<div className="col-3"><input type="checkbox" name="formoptions" checked={details.isCloggedInlet} disabled="enabled" /> Clogged Inlet</div>
+								<div className="col-3"><input type="checkbox" name="formoptions" checked={details.hasCloggedInlet} disabled="enabled" /> Clogged Inlet</div>
 								<div className="col-2"><input type="checkbox" name="formoptions" checked={details.isImmediateActionRemoveCulvertBlockage} disabled="enabled" /></div>
 								<div className="col"><label> Remove Culvert Blockage</label></div>
 							</div>
@@ -288,7 +288,7 @@ export function Details() {
 								<div className="col-2"><label>Trees</label></div>
 								<div className="col-1"><input type="text" className="form-control form-control-sm" value={details.treesCoverageOnSlope} disabled="enabled" /></div>
 								<div className="col-1"><label></label></div>
-								<div className="col-3"><input type="checkbox" name="formoptions" checked={details.isCompromisedDrains} disabled="enabled" /> Compromised Drains</div>
+								<div className="col-3"><input type="checkbox" name="formoptions" checked={details.hasCompromisedDrains} disabled="enabled" /> Compromised Drains</div>
 								<div className="col-2"><input type="checkbox" name="formoptions" checked={details.isImmediateActionDewaterWithPumpTrench} disabled="enabled" /></div>
 								<div className="col"><label> Dewater with Pump, Trench, etc.</label></div>
 							</div>
