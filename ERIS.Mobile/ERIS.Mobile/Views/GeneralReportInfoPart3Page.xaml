@@ -14,33 +14,38 @@
                 </Label.FormattedText>
             </Label>
 
-
-            <Entry x:Name="DLastN" Text="{Binding DistrictContactLastName, Mode=OneWay}" Placeholder="Last Name:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactLastNameUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry x:Name="DFirstN" Text="{Binding DistrictContactFirstName, Mode=OneWay}" Placeholder="First Name:"  Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactFirstNameUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry x:Name="DSnumber" Text="{Binding DistrictContactSNumber, Mode=OneWay}" Placeholder="S Number:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactSNumberUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry x:Name="DPhone" Text="{Binding DistrictContactPhone, Mode=OneWay}" Keyboard="Telephone" Placeholder="Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactPhoneUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry x:Name="DCellPhone" Text="{Binding DistrictContactCellPhone, Mode=OneWay}" Keyboard="Telephone" Placeholder="Cell Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactCellPhoneUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+                <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Last Name</Label>
+                <Label Grid.Row="1" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">First Name</Label>
+                <Label Grid.Row="2" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">S Number</Label>
+                <Label Grid.Row="3" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Phone</Label>
+                <Label Grid.Row="4" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Cell phone</Label>
+                <Entry x:Name="DLastN" Text="{Binding DistrictContactLastName, Mode=OneWay}" Placeholder="Last Name:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50" Grid.Row="0" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactLastNameUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="DFirstN" Text="{Binding DistrictContactFirstName, Mode=OneWay}" Placeholder="First Name:"  Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="50" Grid.Row="1" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactFirstNameUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="DSnumber" Text="{Binding DistrictContactSNumber, Mode=OneWay}" Placeholder="S Number:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="10" Grid.Row="2" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactSNumberUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="DPhone" Text="{Binding DistrictContactPhone, Mode=OneWay}" Keyboard="Telephone" Placeholder="Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20" Grid.Row="3" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactPhoneUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="DCellPhone" Text="{Binding DistrictContactCellPhone, Mode=OneWay}" Keyboard="Telephone" Placeholder="Cell Phone:" Style="{StaticResource AssessmentCheckboxLabel}" MaxLength="20" Grid.Row="4" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding districtContactCellPhoneUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </Grid>
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>
                 <Button Text="Clear My Info" Style="{StaticResource AssessmentButton}" Clicked="Clear_Button_Clicked"></Button>

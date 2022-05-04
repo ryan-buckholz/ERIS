@@ -13,23 +13,28 @@
                 </Label.FormattedText>
             </Label>
 
-            <Image Source="caltrans.png" WidthRequest="180" HeightRequest="180"></Image>
+            <Image Source="ERIS.png" WidthRequest="180" HeightRequest="180"></Image>
 
-            <Entry x:Name="LastN" Text="{Binding LastName, Mode=OneWay}" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding lastNameUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry x:Name="FirstN" Text="{Binding FirstName, Mode=OneWay}" Placeholder="First Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding firstNameUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry x:Name="Snumber" Text="{Binding SNumber, Mode=OneWay}" Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sNumberUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
+            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+                <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Last Name</Label>
+                <Label Grid.Row="1" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">First Name</Label>
+                <Label Grid.Row="2" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">S Number</Label>
+                <Entry x:Name="LastN" Text="{Binding LastName, Mode=OneWay}" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50" Grid.Row="0" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding lastNameUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="FirstN" Text="{Binding FirstName, Mode=OneWay}" Placeholder="First Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50"  Grid.Row="1" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding firstNameUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="Snumber" Text="{Binding SNumber, Mode=OneWay}" Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10" Grid.Row="2" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sNumberUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </Grid>
 
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button Text="Save My Info" Style="{StaticResource AssessmentButton}" Clicked="Save_Button_Clicked"></Button>

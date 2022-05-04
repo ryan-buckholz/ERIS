@@ -8,47 +8,60 @@
 
             <Label Text="Measurements" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
 
-            <Entry  Placeholder="Slope Height, ft(H)" Text="{Binding SlopeHeight, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding slopeHeightUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Original Slope, deg(a)" Text="{Binding OriginalSlope, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding originalSlopeUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Landslide Width, ft(Wd)" Text="{Binding LandslideWidth, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideWidthUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Landslide Length (ft(Ld))" Text="{Binding LandslideLength, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideLengthUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Main Scarp Height, ft(Hs)" Text="{Binding MainScarpHeight, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding mainScarpHeightUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Landslide Slope, deg (B)" Text="{Binding LandslideSlope, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideSlopeUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Length of Roadway Encroached, ft(Lr)" Text="{Binding RoadwayEncroachedLength, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding roadwayEncroachedLengthUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry  Placeholder="Width of Roadway Encroached, ft(Wr)" Text="{Binding RoadwayEncroachedWidth, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
-                <Entry.Behaviors>
-                    <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding roadwayEncroachedWidthUnfocused}"/>
-                </Entry.Behaviors>
-            </Entry>
+                <Label Grid.Row="0" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Slope Height, ft(H)</Label>
+                <Label Grid.Row="1" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Original Slope, deg(a)</Label>
+                <Label Grid.Row="2" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Landslide Width, ft(Wd)</Label>
+                <Label Grid.Row="3" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Landslide Length (ft(Ld))</Label>
+                <Label Grid.Row="4" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Main Scrap Height, ft(Hs)</Label>
+                <Label Grid.Row="5" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Landslide Slope, deg (B)</Label>
+                <Label Grid.Row="6" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Length of Roadway Encroached, ft(Lr)</Label>
+                <Label Grid.Row="7" Grid.Column="0" FontSize="Small" TextColor="Black" Padding="7">Width of Roadway Encroached, ft(Wr)</Label>
+
+
+                <Entry Grid.Row="0" Grid.Column="1" Placeholder="Slope Height, ft(H)" Text="{Binding SlopeHeight, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding slopeHeightUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="1" Grid.Column="1" Placeholder="Original Slope, deg(a)" Text="{Binding OriginalSlope, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding originalSlopeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="2" Grid.Column="1" Placeholder="Landslide Width, ft(Wd)" Text="{Binding LandslideWidth, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideWidthUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="3" Grid.Column="1" Placeholder="Landslide Length (ft(Ld))" Text="{Binding LandslideLength, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideLengthUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="4" Grid.Column="1" Placeholder="Main Scarp Height, ft(Hs)" Text="{Binding MainScarpHeight, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding mainScarpHeightUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="5" Grid.Column="1" Placeholder="Landslide Slope, deg (B)" Text="{Binding LandslideSlope, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding landslideSlopeUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="6" Grid.Column="1" Placeholder="Length of Roadway Encroached, ft(Lr)" Text="{Binding RoadwayEncroachedLength, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding roadwayEncroachedLengthUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Grid.Row="7" Grid.Column="1" Placeholder="Width of Roadway Encroached, ft(Wr)" Text="{Binding RoadwayEncroachedWidth, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" MaxLength="10">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding roadwayEncroachedWidthUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+
+            </Grid>
 
             <StackLayout Style="{StaticResource ButtonStack}">
                 <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>

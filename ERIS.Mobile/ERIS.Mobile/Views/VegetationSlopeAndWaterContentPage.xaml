@@ -16,9 +16,13 @@
 
             <Label Text="Vegetation on Slope" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
-            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
+            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
 
                 <!-- The following objects correspond to the Vegetation section of the ERIS assessment -->
+
+                <Label Text="Coverage%" FontSize="Medium" Grid.Row="0" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <Label Text="Coverage%" FontSize="Medium" Grid.Row="1" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                <Label Text="Coverage%" FontSize="Medium" Grid.Row="2" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Trees" FontSize="Medium" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Coverage %" Style="{StaticResource NumericAssessmentEntry}" Text="{Binding TreesCoverageOnSlope, Mode=OneWay}" Grid.Row="0" Grid.Column="1" MaxLength="9">
