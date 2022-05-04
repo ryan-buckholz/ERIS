@@ -50,14 +50,18 @@ namespace ERIS.Mobile.Services
          */
         public async Task PostAssessmentDetails()
         {
-            
+
             AssessmentDetails details = new AssessmentDetails();
+
+            string detailsJson = File.ReadAllText(detailsActiveLocalPath);
+
+            details = JsonConvert.DeserializeObject<AssessmentDetails>(detailsJson);
 
             details.AssessmentID = assessmentID;
 
-            string detailsJson = JsonConvert.SerializeObject(details);
+            string detJson = JsonConvert.SerializeObject(details);
 
-            StringContent content = new StringContent(detailsJson, Encoding.UTF8, "application/json");
+            StringContent content = new StringContent(detJson, Encoding.UTF8, "application/json");
 
             try
             {
