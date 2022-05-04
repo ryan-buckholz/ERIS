@@ -66,7 +66,7 @@ export function Edit() {
 								<div className="col-md"><input type="text" className="form-control" value={profile.postMile} disabled="enabled" /></div>
 								<div className="col-md"><input type="text" className="form-control" value={profile.ea} disabled="enabled" /></div>
 								<div className="col-md"><input type="text" className="form-control" value={profile.projectID} disabled="enabled" /></div>
-								<div className="col-md"><input type="text" className="form-control" value={profile.dateIncidentReported} disabled="enabled" /></div>
+								<div className="col-md"><input type="text" className="form-control" value={Moment(profile.dateIncidentReported).format("MM-DD-YYYY")} disabled="enabled" /></div>
 							</div>
 
 							<div className="row">
