@@ -28,6 +28,8 @@ namespace ERIS.Mobile.Services
 
         const string BaseUrl = "http://10.0.2.2:50188/";
 
+        private int assessmentID = 0;
+
         public SendData()
         {
             detailsActiveLocalPath = Path.Combine(FileSystem.AppDataDirectory, detailsJsonFileName);
@@ -46,19 +48,12 @@ namespace ERIS.Mobile.Services
          * POST details using swagger
          * 
          */
-        public async void PostAssessmentDetails()
+        public async Task PostAssessmentDetails()
         {
-
+            
             AssessmentDetails details = new AssessmentDetails();
 
-            string profJson = File.ReadAllText(profileActiveLocalPath);
-
-            AssessmentProfile profile = JsonConvert.DeserializeObject<AssessmentProfile>(profJson);
-
-            Console.WriteLine("here");
-
-            details.AssessmentID = profile.AssessmentID;
-
+            details.AssessmentID = assessmentID;
 
             string detailsJson = JsonConvert.SerializeObject(details);
 
@@ -93,18 +88,9 @@ namespace ERIS.Mobile.Services
          * POST profile using swagger
          * 
          */
-        public async void PostAssessmentProfile()
+        public async Task PostAssessmentProfile()
         {
             AssessmentProfile prof = new AssessmentProfile();
-
-
-            /* For testing purposes
-            Console.WriteLine(detailsActiveLocalPath);
-
-            Console.WriteLine(profileActiveLocalPath);
-            */
-
-            //string profileJson = File.ReadAllText(profileActiveLocalPath);
 
             string profJson = JsonConvert.SerializeObject(prof);
 
@@ -117,6 +103,10 @@ namespace ERIS.Mobile.Services
                 int code = (int)response.StatusCode;
 
                 string body = await response.Content.ReadAsStringAsync();
+
+                AssessmentProfile newJson = JsonConvert.DeserializeObject<AssessmentProfile>(body);
+
+                assessmentID = newJson.AssessmentID;
 
                 Console.WriteLine(code);
                 if (response.IsSuccessStatusCode)
@@ -133,8 +123,7 @@ namespace ERIS.Mobile.Services
                 Console.WriteLine(ex.Message);
             }
 
+
         }
-
-
     }
 }

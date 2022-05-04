@@ -27,10 +27,10 @@ namespace ERIS.Mobile.ViewModels
             SetAssessmentDetailsStringAndUpdateJsonFile(nameof(assessmentDetails.ObservationsAndNotes), ((Editor)(args.VisualElement)));
         }
 
-        private void SubmitPressed()
+        private async void SubmitPressed()
         {
-            send.PostAssessmentProfile();
-            send.PostAssessmentDetails();
+            await send.PostAssessmentProfile();
+            await send.PostAssessmentDetails();
         }
 
         public string ObservationsAndNotes
