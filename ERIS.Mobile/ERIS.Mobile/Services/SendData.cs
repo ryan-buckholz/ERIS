@@ -92,6 +92,12 @@ namespace ERIS.Mobile.Services
         {
             AssessmentProfile prof = new AssessmentProfile();
 
+            string profileJson = File.ReadAllText(profileActiveLocalPath);
+
+            prof = JsonConvert.DeserializeObject<AssessmentProfile>(profileJson);
+
+            prof.AssessmentStatus = "Not started";
+
             string profJson = JsonConvert.SerializeObject(prof);
 
             StringContent content = new StringContent(profJson, Encoding.UTF8, "application/json");
