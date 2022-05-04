@@ -15,5 +15,6 @@ namespace ERISMobileWebAPI.Models
         public DbSet<AssessmentDetails> AssessmentDetails { get; set; }
         public DbSet<AssessmentProfile> AssessmentProfile { get; set; }
         public DbSet<Photo> Photo { get; set; }
+        public DbSet<Login> Login { get; set; }
     }
 }

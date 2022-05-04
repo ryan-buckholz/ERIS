@@ -4,14 +4,16 @@ using ERISMobileWebAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ERIS.MobileWebAPI.Migrations
 {
     [DbContext(typeof(ERISDbContext))]
-    partial class ERISDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220503020831_AssessmentStatus")]
+    partial class AssessmentStatus
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -407,24 +409,6 @@ namespace ERIS.MobileWebAPI.Migrations
                     b.HasKey("AssessmentID");
 
                     b.ToTable("AssessmentProfile");
-                });
-
-            modelBuilder.Entity("ERISMobileWebAPI.Models.Login", b =>
-                {
-                    b.Property<int>("LoginID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("LoginID");
-
-                    b.ToTable("Login");
                 });
 
             modelBuilder.Entity("ERISMobileWebAPI.Models.Photo", b =>
