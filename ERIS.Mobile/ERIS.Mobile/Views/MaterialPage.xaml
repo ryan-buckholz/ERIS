@@ -42,6 +42,7 @@
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding clayEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
+                <Label Text="Est%" FontSize="Medium" Grid.Row="5" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Silt" FontSize="Medium" Grid.Row="6" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" Text="{Binding SiltEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="6" Grid.Column="1" MaxLength="9">
@@ -49,13 +50,15 @@
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding siltEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
-
+                <Label Text="Est%" FontSize="Medium" Grid.Row="6" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
+                
                 <Label Text="Sand" FontSize="Medium" Grid.Row="7" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" Text="{Binding SandEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="7" Grid.Column="1" MaxLength="9">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sandEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
+                <Label Text="Est%" FontSize="Medium" Grid.Row="7" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
 
                 <Label Text="Gravel" FontSize="Medium" Grid.Row="8" Grid.Column="0" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Entry Placeholder="Est %" Text="{Binding GravelEstimate, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Grid.Row="8" Grid.Column="1" MaxLength="9">
@@ -63,6 +66,7 @@
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding gravelEstimateUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
+                <Label Text="Est%" FontSize="Medium" Grid.Row="8" Grid.Column="3" Style="{StaticResource AssessmentCheckboxLabel}"></Label>
                 <Button  Text="Add photo" Style="{StaticResource AssessmentButton}" Grid.Row="8" Grid.Column="4" Clicked="OnPickImagesClick"></Button>
 
             </Grid>
