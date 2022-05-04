@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ERIS.MobileWebAPI.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,27 +36,26 @@ namespace ERIS.MobileWebAPI.Migrations
                     CrackVerticalDisplacement = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CrackDepth = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CrackSettlement = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CrackBulge = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    CrackBulge = table.Column<int>(type: "int", nullable: false),
                     IsIndentedByRocks = table.Column<bool>(type: "bit", nullable: false),
                     IsRock = table.Column<bool>(type: "bit", nullable: false),
                     HasBedding = table.Column<bool>(type: "bit", nullable: false),
                     HasJoints = table.Column<bool>(type: "bit", nullable: false),
                     HasFractures = table.Column<bool>(type: "bit", nullable: false),
                     IsSoil = table.Column<bool>(type: "bit", nullable: false),
-                    ClayEstimate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SoilEstimate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ClayEstimate = table.Column<decimal>(type: "decimal(5,3)", nullable: false),
                     SiltEstimate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SandEstimate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     GravelEstimate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     TreesCoverageOnSlope = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    BrushesShrubsCoverageOnSlope = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    BushesShrubsCoverageOnSlope = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     GroundCoverCoverageOnSlope = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SlopeHeight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     OriginalSlope = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     LandslideWidth = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     LandslideLength = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MainScarpHeight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    LandslideSlope = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    LandslideSlope = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
                     RoadwayEncroachedLength = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     RoadwayEncroachedWidth = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IsDry = table.Column<bool>(type: "bit", nullable: false),
@@ -97,7 +96,7 @@ namespace ERIS.MobileWebAPI.Migrations
                     IsImmediateActionPlaceRockSlopeProtection = table.Column<bool>(type: "bit", nullable: false),
                     IsImmediateActionRoutineVisualMonitor = table.Column<bool>(type: "bit", nullable: false),
                     IsImmediateActionReconstructSlopeToOriginalCondition = table.Column<bool>(type: "bit", nullable: false),
-                    IsImmediateActionReconstructSlopeWIthGeosynthetics = table.Column<bool>(type: "bit", nullable: false),
+                    IsImmediateActionReconstructSlopeWithGeosynthetics = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionOpenHighwayTraffic = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionOpenHighwayShoulder = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionDewaterWithHorizontalDrains = table.Column<bool>(type: "bit", nullable: false),
@@ -106,14 +105,15 @@ namespace ERIS.MobileWebAPI.Migrations
                     IsFollowUpActionPlaceRockSlopeProtection = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionRoutineVisualMonitor = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionReconstructSlopeToOriginalCondition = table.Column<bool>(type: "bit", nullable: false),
-                    IsFollowUpActionReconstructSlopeWIthGeosynthetics = table.Column<bool>(type: "bit", nullable: false),
+                    IsFollowUpActionReconstructSlopeWithGeosynthetics = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionRepairCulvertDrainagePipe = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionInstallErosionControl = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionSurveySite = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionGeologicalMapping = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionSubsurfaceExploration = table.Column<bool>(type: "bit", nullable: false),
                     IsFollowUpActionDesignAndPlans = table.Column<bool>(type: "bit", nullable: false),
-                    OpenedLanesCount = table.Column<int>(type: "int", nullable: false)
+                    OpenedLanesCount = table.Column<int>(type: "int", nullable: false),
+                    ObservationsAndNotes = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -121,7 +121,7 @@ namespace ERIS.MobileWebAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AssessmentProfiles",
+                name: "AssessmentProfile",
                 columns: table => new
                 {
                     AssessmentID = table.Column<int>(type: "int", nullable: false)
@@ -150,11 +150,11 @@ namespace ERIS.MobileWebAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AssessmentProfiles", x => x.AssessmentID);
+                    table.PrimaryKey("PK_AssessmentProfile", x => x.AssessmentID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Photos",
+                name: "Photo",
                 columns: table => new
                 {
                     PhotoID = table.Column<int>(type: "int", nullable: false)
@@ -165,7 +165,7 @@ namespace ERIS.MobileWebAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Photos", x => x.PhotoID);
+                    table.PrimaryKey("PK_Photo", x => x.PhotoID);
                 });
         }
 
@@ -175,10 +175,10 @@ namespace ERIS.MobileWebAPI.Migrations
                 name: "AssessmentDetails");
 
             migrationBuilder.DropTable(
-                name: "AssessmentProfiles");
+                name: "AssessmentProfile");
 
             migrationBuilder.DropTable(
-                name: "Photos");
+                name: "Photo");
         }
     }
 }

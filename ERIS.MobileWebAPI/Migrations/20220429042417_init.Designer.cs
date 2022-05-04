@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ERIS.MobileWebAPI.Migrations
 {
     [DbContext(typeof(ERISDbContext))]
-    [Migration("20220422044827_observationAndNotes")]
-    partial class observationAndNotes
+    [Migration("20220429042417_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

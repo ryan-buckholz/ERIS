@@ -9,7 +9,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using Newtonsoft.Json;
 using System.Text.Json;
 
 namespace ERIS.Mobile.Services
@@ -17,17 +16,25 @@ namespace ERIS.Mobile.Services
     public class SendData
     {
 
-        const string jsonFileName = "AssessmentDetails.json";
+        const string detailsJsonFileName = "AssessmentDetails.json";
 
-        public string activeLocalPath;
+        const string profileJsonFileName = "AssessmentProfile.json";
+
+        public string detailsActiveLocalPath;
+
+        public string profileActiveLocalPath;
 
         static HttpClient client;
 
-        const string BaseUrl = "http://10.0.2.2:50188/api/AssessmentDetails";
+        const string BaseUrl = "http://10.0.2.2:50188/";
+
+        private int assessmentID = 0;
 
         public SendData()
         {
-            activeLocalPath = Path.Combine(FileSystem.AppDataDirectory, jsonFileName);
+            detailsActiveLocalPath = Path.Combine(FileSystem.AppDataDirectory, detailsJsonFileName);
+
+            profileActiveLocalPath = Path.Combine(FileSystem.AppDataDirectory, profileJsonFileName);
 
             client = new HttpClient()
             {
@@ -37,21 +44,28 @@ namespace ERIS.Mobile.Services
 
         }
 
-
-        public async void PostDetails()
+        /*
+         * POST details using swagger
+         * 
+         */
+        public async Task PostAssessmentDetails()
         {
+            
+            AssessmentDetails details = new AssessmentDetails();
 
-            Console.WriteLine(activeLocalPath);
+            details.AssessmentID = assessmentID;
 
-            string json = File.ReadAllText(activeLocalPath);
+            string detailsJson = JsonConvert.SerializeObject(details);
 
-            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+            StringContent content = new StringContent(detailsJson, Encoding.UTF8, "application/json");
 
             try
             {
                 var response = await client.PostAsync("api/AssessmentDetails", content);
 
                 int code = (int)response.StatusCode;
+
+                string body = await response.Content.ReadAsStringAsync();
 
                 Console.WriteLine(code);
                 if (response.IsSuccessStatusCode)
@@ -67,12 +81,49 @@ namespace ERIS.Mobile.Services
             {
                 Console.WriteLine(ex.Message);
             }
-            
+
         }
-        
-        
+
+        /*
+         * POST profile using swagger
+         * 
+         */
+        public async Task PostAssessmentProfile()
+        {
+            AssessmentProfile prof = new AssessmentProfile();
+
+            string profJson = JsonConvert.SerializeObject(prof);
+
+            StringContent content = new StringContent(profJson, Encoding.UTF8, "application/json");
+
+            try
+            {
+                var response = await client.PostAsync("api/AssessmentProfile", content);
+
+                int code = (int)response.StatusCode;
+
+                string body = await response.Content.ReadAsStringAsync();
+
+                AssessmentProfile newJson = JsonConvert.DeserializeObject<AssessmentProfile>(body);
+
+                assessmentID = newJson.AssessmentID;
+
+                Console.WriteLine(code);
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Details Posted");
+                }
+                else
+                {
+                    Console.WriteLine("Not posted");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
-
+        }
     }
 }

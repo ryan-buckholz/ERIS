@@ -30,7 +30,7 @@ namespace ERIS.Mobile.Models
         public decimal CrackVerticalDisplacement { get; set; }
         public decimal CrackDepth { get; set; }
         public decimal CrackSettlement { get; set; }
-        public decimal CrackBulge { get; set; }
+        public int CrackBulge { get; set; }
         public bool IsIndentedByRocks { get; set; }
         public bool IsRock { get; set; }
         public bool HasBedding { get; set; }
