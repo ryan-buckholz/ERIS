@@ -126,14 +126,14 @@ export function Edit() {
 								<div className="col-md"><p className="text-decoration-underline">Incident Type:</p></div>
 								<div className="col-md"><p className="text-decoration-underline">Distribution:</p></div>
 								<div className="col-md"><p className="text-decoration-underline">Highway Staus:</p></div>
-								<div className="col-md"><p className="text-decoration-underline">Payment/Ground Status:</p></div>
+								<div className="col-md"><p className="text-decoration-underline">Pavement/Ground Status:</p></div>
 							</div>
 
 							<div className="row">
 								<div className="col"><input type="checkbox" name="formoptions" checked={details.isFall} disabled="enabled" /> (Rock) Fall</div>
 								<div className="col"><input type="checkbox" name="formoptions" checked={details.isAdvancing} disabled="enabled" /> Advancing</div>
 								<div className="col"><input type="checkbox" name="formoptions" checked={details.isHighwayOpen} disabled="enabled" /> Open</div>
-								<div className="col"><input type="checkbox" name="formoptions" checked={details.isPavementGroundChecks} disabled="enabled" /> Payment/Ground Checks </div>
+								<div className="col"><input type="checkbox" name="formoptions" checked={details.isPavementGroundCracks} disabled="enabled" /> Pavement/Ground Cracks </div>
 							</div>
 
 							<div className="row">
