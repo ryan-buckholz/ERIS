@@ -26,7 +26,7 @@ namespace ERIS.Mobile.Services
 
         static HttpClient client;
 
-        const string BaseUrl = "http://10.0.2.2:50188/";
+        const string BaseUrl = "http://10.0.2.2:5000/";
 
         private int assessmentID = 0;
 
@@ -101,6 +101,8 @@ namespace ERIS.Mobile.Services
             prof = JsonConvert.DeserializeObject<AssessmentProfile>(profileJson);
 
             prof.AssessmentStatus = "Not started";
+
+            prof.ProjectID = "11";
 
             string profJson = JsonConvert.SerializeObject(prof);
 
