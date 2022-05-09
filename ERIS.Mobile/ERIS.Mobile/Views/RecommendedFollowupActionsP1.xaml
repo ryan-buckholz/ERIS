@@ -11,10 +11,13 @@
     <ContentPage.Content>
         
         <StackLayout Style="{StaticResource MainStackLayout}">
-
-            <Grid RowDefinitions="50" ColumnDefinitions="*">
-                <Label Text="Recommended Follow-up Actions Page 1" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
-            </Grid>
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Recommended Followup Actions Part 1"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
             <Grid RowDefinitions="*" ColumnDefinitions="50 ,*, 100">
 

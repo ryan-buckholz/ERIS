@@ -5,22 +5,14 @@
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
-            <Label HorizontalOptions="Center">
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Observation and Notes"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
             
-            <Label Text="Observations and Notes"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   TextDecorations="Underline"
-                   TextColor="Black"></Label>
-
             <Label Text="Landslide Moving/Developing Rate, Pavement/Ground Cracks w/ Measurements; Slope and Bedding Orientations in relation to Roadway Alignment, Joints, Fractures; Site Access for further investigation and construction; Drainage; Erosion; Potential Causes of Incident; Constraints; Additional Notes on Checked Boxes; Site History (Interview Maintenance); Map Cracks - Location, Length, Horizontal and Vertical Displacements, Depth, and Direction."
                    FontSize="Small"
                    TextColor="Black"></Label>

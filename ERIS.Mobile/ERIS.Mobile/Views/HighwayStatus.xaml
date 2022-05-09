@@ -8,17 +8,15 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
 
-            <Label HorizontalOptions="Center">
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Highway Status" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            
-                <Label Text="Highway Status" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
-                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto">
 
                 <!-- The following objects correspond to the Highway Status section of the ERIS assessment -->
                 <CheckBox x:Name="OpenCheckBox" IsChecked="{Binding IsHighwayOpen}" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>

@@ -6,13 +6,13 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
 
-            <Label Text="Water / Drainage"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   TextDecorations="Underline"
-                   TextColor="Black"></Label>
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Water/Drainage"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             
             <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto">
                 <CheckBox x:Name="CloggedInletCheckBox" IsChecked="{Binding HasCloggedInlet}" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>

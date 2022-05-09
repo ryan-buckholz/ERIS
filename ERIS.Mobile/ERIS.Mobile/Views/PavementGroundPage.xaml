@@ -7,15 +7,13 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
 
-            <Label HorizontalOptions="Center">
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Pavement/Ground Status"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-
-            <Label Text="Pavement/Ground Status" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
 
             <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
                 <CheckBox Style="{StaticResource AssessmentCheckBox}" IsChecked="{Binding IsPavementGroundCracks}" Grid.Row="0" Grid.Column="0"></CheckBox>

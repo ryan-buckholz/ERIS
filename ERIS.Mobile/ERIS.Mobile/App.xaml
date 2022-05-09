@@ -27,7 +27,13 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-
+            
+            <Style x:Key="AssessmentTitleLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            
             <Style x:Key="AssessmentCheckBox" TargetType="CheckBox">
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
                 <Setter Property="Color" Value="Black"></Setter>
@@ -55,7 +61,7 @@
             </Style>
           
             <Style x:Key="RadioButton" TargetType="RadioButton">
-
+                
             </Style>
 
             <Style x:Key="MainStackLayout" TargetType="StackLayout">
