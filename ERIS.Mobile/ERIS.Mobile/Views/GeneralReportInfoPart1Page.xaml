@@ -42,7 +42,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <DatePicker Date="{Binding DateIncidentReported}" Grid.Row="4" Grid.Column="1"></DatePicker>
-                    <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" Clicked="Geolocate_Clicked" Grid.Row="5" Grid.Column="1" MinimumHeightRequest="70"></Button>
+                <Button Text="Acquire Latitude/Longitude by phone" Style="{StaticResource AssessmentButton}" Command="{Binding geolocateButtonClicked}" Grid.Row="5" Grid.Column="1" MinimumHeightRequest="70"></Button>
                     <Entry x:Name="Latitude" Text="{Binding Latitude, Mode=OneWay}" Style="{StaticResource NumericAssessmentEntry}" Placeholder="Latitude:" TextColor="Black" PlaceholderColor="Gray" MaxLength="45" Grid.Row="6" Grid.Column="1">
                         <Entry.Behaviors>
                             <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding latitudeUnfocused}"/>

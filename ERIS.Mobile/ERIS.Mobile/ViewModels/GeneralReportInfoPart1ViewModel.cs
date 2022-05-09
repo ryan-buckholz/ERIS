@@ -15,6 +15,7 @@ namespace ERIS.Mobile.ViewModels
         public ICommand postMileUnfocused { get; }
         public ICommand latitudeUnfocused { get; }
         public ICommand longitudeUnfocused { get; }
+        public ICommand geolocateButtonClicked { get; }
         public GeneralReportInfoPart1ViewModel()
         {
             if(Date.Year <= 1) 
@@ -40,7 +41,39 @@ namespace ERIS.Mobile.ViewModels
             postMileUnfocused = new Command<FocusEventArgs>(SetPostMile);
             latitudeUnfocused = new Command<FocusEventArgs>(SetLatitude);
             longitudeUnfocused = new Command<FocusEventArgs>(SetLongitude);
+            geolocateButtonClicked = new Command(GeolocateClicked);
         }
+
+        private async void GeolocateClicked()
+        {
+            try
+            {
+
+                var location = await Geolocation.GetLastKnownLocationAsync();
+                if (location == null)
+                {
+                    location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                    {
+                        DesiredAccuracy = GeolocationAccuracy.Medium,
+                        Timeout = TimeSpan.FromSeconds(30)
+                    });
+                }
+
+                if (location != null)
+                {
+                    SetAssessmentProfileStringAndUpdateJsonFile(nameof(assessmentProfile.Latitude), $"{location.Latitude}");
+                    SetAssessmentProfileStringAndUpdateJsonFile(nameof(assessmentProfile.Longitude), $"{location.Longitude}");
+                    OnPropertyChanged(nameof(assessmentProfile.Latitude));
+                    OnPropertyChanged(nameof(assessmentProfile.Longitude));
+                }
+
+            }
+            catch
+            {
+                await Application.Current.MainPage.DisplayAlert("Error: Could not retrieve location for latitude and longitude", "Please try again or type the location data manually.", "OK");
+            }
+        }
+
         public DateTime Date
         {
             get
