@@ -6,10 +6,10 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
 
-            <Label HorizontalOptions="Center">
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Geotechnical Site Assessment" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Span Text="Vegetation on Slope/Water Content"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>

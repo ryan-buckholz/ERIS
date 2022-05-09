@@ -5,10 +5,13 @@
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
-
-            <Grid RowDefinitions="50" ColumnDefinitions="*">
-                <Label Text="Recommended Immediate Actions Page 2" Grid.Row="0" Grid.Column="0" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
-            </Grid>
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Recommended Immediate Actions Part 2"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
             <Grid RowDefinitions="*, *, *, *, 50, *, *, *" ColumnDefinitions="50, Auto">
                 <CheckBox x:Name="DewaterWithPumpCheckbox" IsChecked="{Binding IsImmediateActionDewaterWithPumpTrench}" CheckedChanged="Dewater_With_Pump_CheckBox_CheckedChanged" Grid.Row="0" Grid.Column="0" Style="{StaticResource AssessmentCheckBox}"></CheckBox>

@@ -6,7 +6,13 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStackLayout}">
 
-            <Label Text="Measurements" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextDecorations="Underline" TextColor="Black"></Label>
+            <Label HorizontalOptions="Center" Style="{StaticResource AssessmentTitleLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Measurements"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
             <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
 
