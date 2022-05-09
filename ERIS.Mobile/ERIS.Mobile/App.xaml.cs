@@ -12,9 +12,7 @@ namespace ERIS.Mobile
         public App()
         {
             InitializeComponent();
-
             MainPage = new AppShell();
-            //MainPage = new DraftsPage();
         }
 
         protected override void OnStart()
