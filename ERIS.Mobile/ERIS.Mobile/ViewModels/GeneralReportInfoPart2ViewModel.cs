@@ -12,6 +12,7 @@ namespace ERIS.Mobile.ViewModels
         public ICommand lastNameUnfocused { get; }
         public ICommand firstNameUnfocused { get; }
         public ICommand sNumberUnfocused { get; }
+        public ICommand projectIDUnfocused { get; }
         public GeneralReportInfoPart2ViewModel()
         {
             if (LastName == null || LastName == "")
@@ -30,6 +31,7 @@ namespace ERIS.Mobile.ViewModels
             lastNameUnfocused = new Command<FocusEventArgs>(SetLastName);
             firstNameUnfocused = new Command<FocusEventArgs>(SetFirstName);
             sNumberUnfocused = new Command<FocusEventArgs>(SetSnumber);
+            projectIDUnfocused = new Command<FocusEventArgs>(SetProjectID);
         }
 
         public string LastName
@@ -57,6 +59,15 @@ namespace ERIS.Mobile.ViewModels
         private void SetSnumber(FocusEventArgs args)
         {
             SetAssessmentProfileStringAndUpdateJsonFile(nameof(assessmentProfile.SNumber), (Entry)args.VisualElement);
+        }
+
+        public string ProjectID
+        {
+            get { return assessmentProfile.ProjectID; }
+        }
+        private void SetProjectID(FocusEventArgs args)
+        {
+            SetAssessmentProfileStringAndUpdateJsonFile(nameof(assessmentProfile.ProjectID), (Entry)args.VisualElement);
         }
     }
 }

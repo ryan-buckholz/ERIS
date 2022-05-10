@@ -12,6 +12,9 @@ namespace ERIS.Mobile.ViewModels
         private SendData send;
         public ICommand checkSubmitButton { get; }
         public ICommand observationsAndNotesUnfocused { get; }
+        
+        private AssessmentProfileSerializer assessmentProfileSerializer;
+        private AssessmentDetailsSerializer assessmentDetailsSerializer;
 
         public ObservationsAndNotesViewModel()
         {
@@ -20,6 +23,8 @@ namespace ERIS.Mobile.ViewModels
             send = new SendData();
             
             checkSubmitButton = new Command(SubmitPressed);
+            assessmentProfileSerializer = DependencyService.Get<AssessmentProfileSerializer>();
+            assessmentDetailsSerializer = DependencyService.Get<AssessmentDetailsSerializer>();
         }
         
         private void SetObservationsAndNotes(FocusEventArgs args)
@@ -29,8 +34,19 @@ namespace ERIS.Mobile.ViewModels
 
         private async void SubmitPressed()
         {
-            await send.PostAssessmentProfile();
-            await send.PostAssessmentDetails();
+            Application.Current.MainPage.DisplayAlert("Attempting Upload", "Attempting to upload the assessment data. Another popup will notify you of upload success or failure.", "OK");
+            try
+            {
+                await send.UploadAssessmentData();
+                Application.Current.MainPage.DisplayAlert("Upload Successful", "The assessment data has been submitted.", "OK");
+                Application.Current.MainPage = new AppShell();
+                assessmentProfileSerializer.RemoveAssessmentProfileJsonFile();
+                assessmentDetailsSerializer.RemoveAssessmentDetailsJsonFile();
+            }
+            catch
+            {
+                Application.Current.MainPage.DisplayAlert("ERROR: Upload Failed.", "The upload has failed. Please check your internet connection and the ERIS server's status, then try again.", "OK");
+            }
         }
 
         public string ObservationsAndNotes

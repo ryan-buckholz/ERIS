@@ -24,7 +24,7 @@
             </Editor>
 
             <StackLayout Style="{StaticResource ButtonStack}">
-                <Button Text="Submit" Style="{StaticResource AssessmentButton}" Clicked="Submit_Clicked" Command="{Binding checkSubmitButton}"></Button>
+                <Button Text="Submit" Style="{StaticResource AssessmentButton}" Command="{Binding checkSubmitButton}"></Button>
                 <Button Text="Back" Style="{StaticResource AssessmentButton}" Clicked="Back_Button_Clicked"></Button>
             </StackLayout>
         </StackLayout>

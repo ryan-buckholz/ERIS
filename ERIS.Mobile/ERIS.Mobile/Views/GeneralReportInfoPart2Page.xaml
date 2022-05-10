@@ -15,10 +15,11 @@
 
             <Image Source="ERIS.png" WidthRequest="180" HeightRequest="180"></Image>
 
-            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
                 <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Last Name*</Label>
                 <Label Grid.Row="1" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">First Name*</Label>
                 <Label Grid.Row="2" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">S Number*</Label>
+                <Label Grid.Row="3" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Project ID(10 digits)</Label>
                 <Entry x:Name="LastN" Text="{Binding LastName, Mode=OneWay}" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="50" Grid.Row="0" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding lastNameUnfocused}"/>
@@ -29,9 +30,14 @@
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding firstNameUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
-                <Entry x:Name="Snumber" Text="{Binding SNumber, Mode=OneWay}" Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10" Grid.Row="2" Grid.Column="1">
+                <Entry x:Name="Snumber" Text="{Binding SNumber, Mode=OneWay}"  Placeholder="S Number:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10" Grid.Row="2" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sNumberUnfocused}"/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry Text="{Binding ProjectID, Mode=OneWay}" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10" Grid.Row="3" Grid.Column="1">
+                    <Entry.Behaviors>
+                        <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding projectIDUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
             </Grid>
