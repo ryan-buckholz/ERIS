@@ -54,8 +54,11 @@ namespace ERIS.Mobile.ViewModels
                 }
                 catch
                 {
-                    entry.Text = "";
-                    Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                    if(entry.Text != "")
+                    {
+                        Application.Current.MainPage.DisplayAlert("Error", "An error as occured with the number entry. Please enter the number again with the proper format.", "Ok");
+                        entry.Text = "";
+                    }
                 }
                 propertyInfo.SetValue(assessmentProfile, inputInt, null);
                 UpdateAssessmentProfileJsonFile();
