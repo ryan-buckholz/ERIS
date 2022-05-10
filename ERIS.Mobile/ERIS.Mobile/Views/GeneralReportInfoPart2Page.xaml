@@ -35,7 +35,7 @@
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding sNumberUnfocused}"/>
                     </Entry.Behaviors>
                 </Entry>
-                <Entry Text="{Binding ProjectID, Mode=OneWay}" Placeholder="Last Name:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10" Grid.Row="3" Grid.Column="1">
+                <Entry Text="{Binding ProjectID, Mode=OneWay}" Placeholder="Project ID:" TextColor="Black" PlaceholderColor="Gray" MaxLength="10" Grid.Row="3" Grid.Column="1">
                     <Entry.Behaviors>
                         <xct:EventToCommandBehavior EventName="Unfocused" Command="{Binding projectIDUnfocused}"/>
                     </Entry.Behaviors>
