@@ -16,10 +16,11 @@ namespace ERIS.Mobile.Services
 {
     public class SendData
     {
-
         const string detailsJsonFileName = "AssessmentDetails.json";
 
         const string profileJsonFileName = "AssessmentProfile.json";
+
+        const string BaseUrl = "http://10.0.2.2:5000/";
 
         public string detailsActiveLocalPath;
 
@@ -27,7 +28,6 @@ namespace ERIS.Mobile.Services
 
         static HttpClient client;
 
-        const string BaseUrl = "http://10.0.2.2:5000/";
         const int uploadTimeoutSeconds = 10;
 
         private int assessmentID = 0;
