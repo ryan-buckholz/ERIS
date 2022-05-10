@@ -4,7 +4,8 @@
              x:Class="ERIS.Mobile.Views.GeneralReportInfoPart1Page"
              BackgroundColor="{StaticResource AssessmentBackgroundColor}">
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource MainStackLayout}">
+        <ScrollView>
+            <StackLayout Style="{StaticResource MainStackLayout}">
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
@@ -64,6 +65,6 @@
                     <Button Text="Next" Style="{StaticResource AssessmentButton}" Clicked="Next_Button_Clicked"></Button>
                 </StackLayout>
             </StackLayout>
-
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
