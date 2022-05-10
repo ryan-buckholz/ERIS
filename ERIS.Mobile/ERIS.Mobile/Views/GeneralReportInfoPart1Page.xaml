@@ -13,12 +13,18 @@
                     </Label.FormattedText>
                 </Label>
 
-                <DatePicker Date="{Binding Date}"></DatePicker>
+
+            <Grid RowDefinitions="*" ColumnDefinitions="Auto, *">
+                <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Date</Label>
+                <DatePicker Grid.Row="0" Grid.Column="1" Date="{Binding Date}"></DatePicker>
+            </Grid>
+                
                 <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto,Auto" ColumnDefinitions="Auto, *">
                     <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">District*</Label>
                     <Label Grid.Row="1" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">County*</Label>
                     <Label Grid.Row="2" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Route</Label>
                     <Label Grid.Row="3" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Post Mile</Label>
+                    <Label Grid.Row="4" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Date Reported</Label>
                     <Label Grid.Row="6" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Latitude</Label>
                     <Label Grid.Row="7" Grid.Column="0" FontSize="Medium" TextColor="Black" Padding="7">Longtitude</Label>
                     <Entry x:Name="District" Placeholder="District:" Text="{Binding District, Mode=OneWay}" TextColor="Black" PlaceholderColor="Gray" MaxLength="100" Grid.Row="0" Grid.Column="1">
