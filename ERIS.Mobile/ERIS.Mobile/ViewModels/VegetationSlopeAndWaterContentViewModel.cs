@@ -21,11 +21,11 @@ namespace ERIS.Mobile.ViewModels
         public ICommand brushesShrubsCoverageOnSlopeUnfocused { get; }
         private void SetBrushesShrubsCoverageOnSlope(FocusEventArgs args)
         {
-            SetAssessmentDetailsDecimalAndUpdateJsonFile(nameof(assessmentDetails.BrushesShrubsCoverageOnSlope), ((Entry)(args.VisualElement)));
+            SetAssessmentDetailsDecimalAndUpdateJsonFile(nameof(assessmentDetails.BushesShrubsCoverageOnSlope), ((Entry)(args.VisualElement)));
         }
         public string BrushesShrubsCoverageOnSlope
         {
-            get { return Convert.ToString(assessmentDetails.BrushesShrubsCoverageOnSlope); }
+            get { return Convert.ToString(assessmentDetails.BushesShrubsCoverageOnSlope); }
         
         }
 
