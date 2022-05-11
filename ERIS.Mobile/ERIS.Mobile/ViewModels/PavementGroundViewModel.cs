@@ -85,7 +85,7 @@ namespace ERIS.Mobile.ViewModels
         }
         private void SetCrackBulge(FocusEventArgs args)
         {
-            SetAssessmentDetailsDecimalAndUpdateJsonFile(nameof(assessmentDetails.CrackBulge), ((Entry)(args.VisualElement)));
+            SetAssessmentDetailsIntAndUpdateJsonFile(nameof(assessmentDetails.CrackBulge), ((Entry)(args.VisualElement)));
         }
     }
 }
