@@ -1,39 +1,72 @@
 # ERIS
 
-Commmit Rules:
-All work shall be done in their own "feature" branches
-  -Feature branches will be created when starting a user story/card
-  -Named as the card number
-Nothing should be committed if it is not functional. (You have ran it in simulator)
-  - Use staging technique
-Comments should be added to commits, Containing the card number followed by similar description of feature as card (flying donut)
-  -If multiple people are working on the same card/branch, merge conflicts should be resolved between them, and if necessary put to a team vote.
+# Building The Mobile App
 
-Branch Structure:
-Playing with the idea of branches for dev, then feature
-  -main -> dev -> feature
-  -then merged back in feature -> dev -> main
-  
-  main ->
-           dev ->
-                 feature
-                 feature
-                 feature
-                 feature
-Code review:
-  Group for code review: Review in dev, before pushed to main.
-  Individual, then as a group discuss notes.
+You must use Visual Studio 2019 or Visual Studio 2022 in order to build the mobile app because Xamarin depends on Visual Studio.
+
+## Setup your environment
+
+### Visual Studio Setup
+
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+* Mobile development with .NET (Through Visual Studio Installer. Includes Xamarin.)
+* Xamarin.Essentials (Through NuGet Package manager in Visual Studio.)
+* Xamarin.CommunityToolkit (Through NuGet Package manager in Visual Studio)
+* Newtonsoft.Json (Through NuGet Package manager in Visual Studio.)
+
+## Setup Deployment Device or Emulator
+
+### Android Device
+* [Set Up Device for Development (Microsoft)](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/set-up-device-for-development/)
+
+### Android Emulator
+We use the emulator that comes packaged with Visual Studio.
+
+#### You MUST use Hardware Acceleration with the emulator.
+* Emulation speed without hardware acceleration is too slow for successful deployment.
+
+#### Installation
+* Visual Studio will automatically open the installation process when trying to build the mobile app for the first time.
+* These emulator tools can be also be accessed through the tool bar: Tools -> android
+* [Official Microsoft documentation can help with any installation issues](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/)
+
+## Deploying and Running the Mobile App
+1) Set the ERIS.Mobile.Android project as the Startup Project.
+2) Connect your android device or ensure the emulator is setup.
+3) "Start" the project in Visual Studio.
+
+# The Code Forge Team Commit Rules:
+
+Our rules depend on the Flying Donut scrum software.
+
+### All work shall be done in their own "feature" branches
+  * Feature branches will be created when starting a user story/card.
+  * Name branches with the card number.
+
+### Nothing should be committed if it is not functional. (You must run and test the software)
+  * Use the staging technique.
+
+### Comments should be added to commits, containing the card number followed by similar description of the feature from the card
+
+### If multiple people are working on the same card/branch, merge conflicts should be resolved between them, and if necessary put to a team vote.
+
+### Branch Structure:
+main -> featureBranch
+
+### Code review:
+  Group for code review: Review pull requests, before pushing to main.
+  Review individually at first, then as a group discuss notes.
   would need a card on Flying Donut
-  Documented and reviewed every sprint (Spring 2022)
+  Document and review every sprint (Spring 2022)
 
-Sub-Team Membership:
-  Web:
+# Sub-Team Membership:
+  ### Web:
     Jason Fares
     Nataly Kurylov
-  Mobile:   
+  ### Mobile:   
     Trey Hillard        
     Gia-Huy Gonzalez
-  Database: 
+  ### Database: 
     Ryan Buckholz
     Mei Peng
     Preston Boumann
