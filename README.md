@@ -25,6 +25,10 @@ We use the emulator that comes packaged with Visual Studio.
 #### You MUST use Hardware Acceleration with the emulator.
 * Emulation speed without hardware acceleration is too slow for successful deployment.
 
+### You need to add a line of code to the applicationhost.config file, which is in a hidden folder
+* To view hidden files use this doc (https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5)
+* Then add this line of code after line 163 - <binding protocol="http" bindingInformation="*:50188:127.0.0.1" />
+
 #### Installation
 * Visual Studio will automatically open the installation process when trying to build the mobile app for the first time.
 * These emulator tools can be also be accessed through the tool bar: Tools -> android
