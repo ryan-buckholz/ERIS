@@ -35,7 +35,7 @@ We use the emulator that comes packaged with Visual Studio.
 * These emulator tools can be also be accessed through the tool bar: Tools -> android
 * [Official Microsoft documentation can help with any installation issues](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/)
 
-## Deploying and Running the WebApi
+## Deploying and Running the Web Api
 1) Open ERIS.sln using Visual Studio
 2) Set the ERIS.MobileWebApi project as the Startup Project3) 
 4) "Start" the project in Visual Studio with ISS Express
