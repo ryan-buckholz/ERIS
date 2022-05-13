@@ -1,5 +1,15 @@
 # ERIS
 
+# Project Description
+Client: Deh-Jeng Jang(David), Office of Geotechnical Design Policy and Practice (GDPP), CalTrans
+        GDPP operates and maintains the California State Highway System and ensures the safety and efficient flow of travelers and goods on vehicles on the highways.
+
+Problem: Engineers will be deployed to the site to access the situation when California State Highway System is disrupted by accidents or natural disasters such as landslides and mudflow. However, they have recorded the situation by manually filling out assessment forms, depicting diagrams, and submitting them to relevant divisions. It results in the assessments might be low effective and time-consuming.
+
+Proposed Solution:
+     Mobile app: engineers can efficiently record the site conditions and document the proposed mitigation measures and timely transmit the information to a centralized database system.
+     Web app: emergency response coordinators, supervisor, and managers can acquire the information and make decisions timely.
+
 # Building The Mobile App
 
 You must use Visual Studio 2019 or Visual Studio 2022 in order to build the mobile app because Xamarin depends on Visual Studio.
