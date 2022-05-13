@@ -35,10 +35,19 @@ We use the emulator that comes packaged with Visual Studio.
 * These emulator tools can be also be accessed through the tool bar: Tools -> android
 * [Official Microsoft documentation can help with any installation issues](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/)
 
+## Deploying and Running the WebApi
+1) Open ERIS.sln using Visual Studio
+2) Set the ERIS.MobileWebApi project as the Startup Project3) 
+4) "Start" the project in Visual Studio with ISS Express
+
 ## Deploying and Running the Mobile App
 1) Set the ERIS.Mobile.Android project as the Startup Project.
 2) Connect your android device or ensure the emulator is setup.
 3) "Start" the project in Visual Studio.
+
+## Running the Web App
+1) Set the ERIS.Web project as the Startup Project
+2) "Start" the project in Visual Studio 
 
 # The Code Forge Team Commit Rules:
 
