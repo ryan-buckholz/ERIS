@@ -17,6 +17,7 @@ namespace ERIS.Mobile
 
         protected override void OnStart()
         {
+            //this line was used for the mx manual
         }
 
         protected override void OnSleep()
